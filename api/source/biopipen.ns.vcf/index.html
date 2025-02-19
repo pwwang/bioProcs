@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>biopipen.ns.vcf - biopipen</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.ns.vcf";
+        var mkdocs_page_input_path = "api/source/biopipen.ns.vcf.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">biopipen.ns.vcf</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/source/biopipen.ns.vcf.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">biopipen.ns.</span><span class="mkapi-object-name">vcf</span>
+<span id="biopipen.ns.vcf"></span><a class="mkapi-docs-link" href="../../biopipen.ns.vcf">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Tools to handle VCF files&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">..core.proc</span> <span class="kn">import</span> <span class="n">Proc</span>
+<span class="kn">from</span> <span class="nn">..core.config</span> <span class="kn">import</span> <span class="n">config</span>
+
+
+<span class="k">class</span> <span class="nc">VcfLiftOver</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.VcfLiftOver"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.VcfLiftOver" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.VcfLiftOver">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Liftover a VCF file using GATK</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        invcf: The input VCF file</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outvcf: The output VCF file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        gatk: The path to gatk4, which should be installed via conda</span>
+<span class="sd">        chain: The map chain file for liftover</span>
+<span class="sd">        tmpdir: Directory for temporary storage of working files</span>
+<span class="sd">        args: Other CLI arguments for `gatk LiftoverVcf`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;invcf:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outvcf:file:{{in.invcf | basename}}&quot;</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;gatk&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">gatk4</span><span class="p">,</span>
+        <span class="s2">&quot;chain&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">liftover_chain</span><span class="p">,</span>
+        <span class="s2">&quot;tmpdir&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">tmpdir</span><span class="p">,</span>
+        <span class="s2">&quot;reffa&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">reffa</span><span class="p">,</span>
+        <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">}</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">bash</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/VcfLiftOver.sh&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">VcfFilter</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.VcfFilter"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.VcfFilter" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.VcfFilter">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Filter records in vcf file</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        invcf: The input vcf file, could be bgzipped.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The filtered vcf file. If `in.invcf` is bgzipped, then</span>
+<span class="sd">            this will be bgzipped.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        filters: A dict of filters with keys the filter names.</span>
+<span class="sd">            &gt;&gt;&gt; # Typically</span>
+<span class="sd">            &gt;&gt;&gt; lambda variant: &lt;expression&gt;</span>
+<span class="sd">            Things to notice</span>
+<span class="sd">            1. Filters should return `False` to get variant filtered out</span>
+<span class="sd">            2. See https://brentp.github.io/cyvcf2/docstrings.html#cyvcf2.cyvcf2.Variant</span>
+<span class="sd">            For what you can do with the variant</span>
+<span class="sd">            3. The filter python functions should be in string representation</span>
+<span class="sd">            4. Builtin filters can have parameters `{&quot;QUAL&quot;: 30}`</span>
+<span class="sd">            5. List of builtin filters. Specify them like: `{&quot;FILTER&quot;: params}`</span>
+<span class="sd">            `SNPONLY`: keeps only SNPs (`{&quot;SNPONLY&quot;: False}` to filter SNPs out)</span>
+<span class="sd">            `QUAL`: keeps variants with QUAL&gt;=param (`{&quot;QUAL&quot;: (30, False)}`)</span>
+<span class="sd">            to keep only variants with QUAL&lt;30</span>
+<span class="sd">        filter_descs: Descriptions for the filters. Will be saved to the header</span>
+<span class="sd">            of the output vcf file</span>
+<span class="sd">        helper: Some helper code for the filters</span>
+<span class="sd">        keep: Keep the variants not passing the filters?</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;invcf:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.invcf | basename}}&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;filters&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;keep&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;helper&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;filter_descs&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/VcfFilter.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">VcfIndex</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.VcfIndex"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.VcfIndex" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.VcfIndex">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Index VCF files. If they are already index, use the index files</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input VCF file</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output VCF file (bgzipped)</span>
+<span class="sd">        outidx: The index file of the output VCF file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        tabix: Path to tabix</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        {</span><span class="si">%- i</span><span class="s2">f in.infile.endswith(&quot;.gz&quot;) %}</span>
+<span class="s2">            outfile:file:{{in.infile | basename}},</span>
+<span class="s2">            outidx:file:{{in.infile | basename | append: &quot;.tbi&quot;}}</span>
+<span class="s2">        {</span><span class="si">%- e</span><span class="s2">lse -%}</span>
+<span class="s2">            outfile:file:{{in.infile | basename | append: &quot;.gz&quot;}},</span>
+<span class="s2">            outidx:file:{{in.infile | basename | append: &quot;.gz.tbi&quot;}}</span>
+<span class="s2">        {</span><span class="si">% e</span><span class="s2">ndif -%}</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;tabix&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">tabix</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/VcfIndex.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Vcf2Bed</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.Vcf2Bed"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.Vcf2Bed" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.Vcf2Bed">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert Vcf file to Bed file</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The vcf file</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The converted bed file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        inbase: The coordinate base of the vcf file</span>
+<span class="sd">        outbase: The coordinate base of the base file</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        cyvcf2:</span>
+<span class="sd">            - check: {{proc.lang}} -c &quot;import cyvcf2&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.infile | stem0}}.bed&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;inbase&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;outbase&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/Vcf2Bed.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">VcfDownSample</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.VcfDownSample"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.VcfDownSample" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.VcfDownSample">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Down-sample VCF files to keep only a subset of variants in there</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input VCF file</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output VCF file with subet variants</span>
+<span class="sd">            Gzipped if `in.infile` is gzipped</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        n: Fraction/Number of variants to keep</span>
+<span class="sd">            If `n &gt; 1`, it is the number.</span>
+<span class="sd">            If `n &lt;= 1`, it is the fraction.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.infile | basename}}&quot;</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;n&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">bash</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/VcfDownSample.sh&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">VcfSplitSamples</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.VcfSplitSamples"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.VcfSplitSamples" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.VcfSplitSamples">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Split a VCF file into multiple VCF files, one for each sample</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input VCF file</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory containing the split VCF files</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        bcftools: Path to bcftools</span>
+<span class="sd">        gz: Gzip the output VCF files? Has to be True if `envs.index` is True</span>
+<span class="sd">        index: Index the output VCF files?</span>
+<span class="sd">        ncores: Number of cores, used to extract samples, but not to index</span>
+<span class="sd">        private: Keep sites where only the sample carries an non-ref allele.</span>
+<span class="sd">            That means, sites with genotypes like `0/0` will be removed.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.infile | stem}}.splitsamples&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;bcftools&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">bcftools</span><span class="p">,</span>
+        <span class="s2">&quot;gz&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;index&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;private&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/VcfSplitSamples.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">VcfIntersect</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.VcfIntersect"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.VcfIntersect" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.VcfIntersect">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Find variants in both VCF files</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile1: The first VCF file</span>
+<span class="sd">        infile2: The second VCF file</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output VCF file with subet variants in both files</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        bcftools: Path to bcftools</span>
+<span class="sd">        gz: Gzip the output VCF files? Has to be True if `envs.index` is True</span>
+<span class="sd">        index: Index the output VCF files?</span>
+<span class="sd">        keep_as: Keep the variants as presented in the first (0) or</span>
+<span class="sd">            the second (1) file?</span>
+<span class="sd">        collapse: How to match the variants in the two files? Will be passed to</span>
+<span class="sd">            `bcftools isec -c` option. See also</span>
+<span class="sd">            https://samtools.github.io/bcftools/bcftools.html#common_options</span>
+<span class="sd">            - none: only records with identical REF and ALT alleles are</span>
+<span class="sd">                compatible</span>
+<span class="sd">            - some: only records where some subset of ALT alleles match are</span>
+<span class="sd">                compatible</span>
+<span class="sd">            - all: all records are compatible, regardless of whether the ALT</span>
+<span class="sd">                alleles match or not.</span>
+<span class="sd">            - snps: any SNP records are compatible, regardless of whether the</span>
+<span class="sd">                ALT alleles match or not.</span>
+<span class="sd">            - indels: any indel records are compatible, regardless of whether</span>
+<span class="sd">                the ALT alleles match or not.</span>
+<span class="sd">            - both: abbreviates `snps` and `indels`</span>
+<span class="sd">            - id: only records with identical ID are compatible</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile1:file, infile2:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        outfile:file:{{in.infile1 | stem0}}.intersect.{{in.infile2 | stem0}}.vcf</span>
+<span class="s2">        {</span><span class="si">%- i</span><span class="s2">f envs.gz -%}.gz{</span><span class="si">%- e</span><span class="s2">ndif -%}</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;bcftools&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">bcftools</span><span class="p">,</span>
+        <span class="s2">&quot;gz&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;index&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;collapse&quot;</span><span class="p">:</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/VcfIntersect.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">VcfFix</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.VcfFix"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.VcfFix" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.VcfFix">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fix some issues with VCF files</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input VCF file</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output VCF file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        fixes: A list of fixes to apply.</span>
+<span class="sd">            Each one is a dict with keys `kind`, `id`, `regex` and `fix`</span>
+<span class="sd">            `kind`: The kind of fix. Including</span>
+<span class="sd">                `filter` the FILTERs in the header,</span>
+<span class="sd">                `info` the info INFOs in the header,</span>
+<span class="sd">                `contig` the contig lines in the header</span>
+<span class="sd">                `format` the FORMATs in the header,</span>
+<span class="sd">                `colnames` the column names in the header</span>
+<span class="sd">                `header` general header item</span>
+<span class="sd">                `variant` the variants</span>
+<span class="sd">                `None` matches everything</span>
+<span class="sd">            `id`: The ID the match. If `kind` is `filter`, `info`, `contig`</span>
+<span class="sd">                or `format`, then it matches the `ID` of the item. If `kind`</span>
+<span class="sd">                is `variant`, then it matches the `ID` of the variant.</span>
+<span class="sd">                If a list is given, then it matches any of the IDs in the list.</span>
+<span class="sd">            `regex`: The regular expression to match. When `id` is given,</span>
+<span class="sd">                this is ignored.</span>
+<span class="sd">            `append`: Whether to append a record instead of to replace an</span>
+<span class="sd">                existing one. When it is True, `kind` has to not be `None`</span>
+<span class="sd">            `fix`: The fix to apply in the format of a lambda function</span>
+<span class="sd">                (in string), with a single argument.</span>
+<span class="sd">                The function should either return a string (raw representation)</span>
+<span class="sd">                for the record, the record itself, `None`, `False`.</span>
+<span class="sd">                If `None` is returned, the original record is used. if `False`,</span>
+<span class="sd">                the record is removed.</span>
+<span class="sd">                If `append` is `True`, then the function should either return</span>
+<span class="sd">                a string or an object. And the argument is `None`</span>
+<span class="sd">                The argument is a different object based on different `kind`s.</span>
+<span class="sd">                When `kind` is `None`, the argument is the plain line of the</span>
+<span class="sd">                record with line ending.</span>
+<span class="sd">                When `kind` is `info` or `format`, the record is a dict with</span>
+<span class="sd">                keys `ID`, `Description`, `Type` and `Number`.</span>
+<span class="sd">                When `kind` is `filter`, the record is a dict with keys</span>
+<span class="sd">                `ID` and `Description`.</span>
+<span class="sd">                When `kind` is `contig`, the record is a dict with keys `ID`</span>
+<span class="sd">                and `length`.</span>
+<span class="sd">                When `kind` is `header`, the record is a dict</span>
+<span class="sd">                with `key` the name of the header and `value` the value of the</span>
+<span class="sd">                header.</span>
+<span class="sd">                When `kind` is `colnames`, the record is a list of column names.</span>
+<span class="sd">                When `kind` is `variant`, the record is a dict with</span>
+<span class="sd">                keys `CHROM`, `POS`, `REF`, `ALT`, `QUAL`, `FILTER`, `INFO`,</span>
+<span class="sd">                `FORMAT` and `SAMPLES`. `INFO` is a dict with key-value pairs</span>
+<span class="sd">                and `SAMPLES` are a list of values for each sample. Each value</span>
+<span class="sd">                is also a list of values for each FORMAT.</span>
+<span class="sd">            If a record matches multiple fixes, the first one is applied.</span>
+<span class="sd">        helpers: raw code the provide some helpers for the fixes</span>
+<span class="sd">            The code will automatically dedented if given as a string. A list</span>
+<span class="sd">            of strings is also supported and will be joined with newlines.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.infile | basename}}&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;fixes&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;helpers&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/VcfFix.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">VcfAnno</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.VcfAnno"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.VcfAnno" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.VcfAnno">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Annotate a VCF file using vcfanno</span>
+
+<span class="sd">    https://github.com/brentp/vcfanno</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input VCF file</span>
+<span class="sd">        conffile: The configuration file for vcfanno or configuration dict</span>
+<span class="sd">            itself</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output VCF file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        vcfanno: Path to vcfanno</span>
+<span class="sd">        ncores: Number of cores to use</span>
+<span class="sd">        conffile: configuration file for vcfanno or configuration dict itself</span>
+<span class="sd">            This is ignored when `conffile` is given as input</span>
+<span class="sd">        args: Additional arguments to pass to vcfanno</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        - name: vcfanno</span>
+<span class="sd">          check: |</span>
+<span class="sd">            {{proc.envs.vcfanno}} --help</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file, conffile&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.infile | stem0}}.{{envs.tool}}.vcf&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;vcfanno&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">vcfanno</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;conffile&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;permissive-overlap&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/VcfAnno.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">TruvariBench</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.TruvariBench"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.TruvariBench" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.TruvariBench">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run `truvari bench` to compare a VCF with CNV calls and</span>
+<span class="sd">    base CNV standards</span>
+
+<span class="sd">    Requires truvari v4+</span>
+
+<span class="sd">    See https://github.com/ACEnglish/truvari/wiki/bench</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        compvcf: The VCF file with CNV calls to compare</span>
+<span class="sd">        basevcf: The VCF file with standard CNVs</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        truvari: Path to truvari</span>
+<span class="sd">        `&lt;other&gt;`: Ohter `truvari bench` arguments</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        truvari:</span>
+<span class="sd">            - check: {{proc.envs.truvari}} version</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;compvcf:file, basevcf:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.compvcf | stem0 | append: &#39;.truvari_bench&#39;}}&quot;</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;truvari&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">truvari</span><span class="p">,</span>
+        <span class="s2">&quot;ref&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">reffa</span><span class="p">,</span>
+        <span class="s2">&quot;refdist&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+        <span class="s2">&quot;pctseq&quot;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span>
+        <span class="s2">&quot;pctsize&quot;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span>
+        <span class="s2">&quot;pctovl&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="s2">&quot;typeignore&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;multimatch&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">bash</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/TruvariBench.sh&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">TruvariBenchSummary</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.TruvariBenchSummary"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.TruvariBenchSummary" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.TruvariBenchSummary">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Summarise the statistics from `TruvariBench` for multiple jobs (VCFs)</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        indirs: The input directories, which should be the output directories</span>
+<span class="sd">            of `TruvariBench`</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory, including the summary table and plots</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        plots: The stats to plot with barplots.</span>
+<span class="sd">            Candidates are `TP-base`, `TP-call`, `FP`, `FN`, `precision`,</span>
+<span class="sd">            `recall`, `f1`, `base cnt`, `call cnt`, `TP-call_TP-gt`,</span>
+<span class="sd">            `TP-call_FP-gt`, `TP-base_TP-gt`, `TP-base_FP-gt`, and</span>
+<span class="sd">            `gt_concordance`</span>
+<span class="sd">            See https://github.com/ACEnglish/truvari/wiki/bench</span>
+<span class="sd">        devpars: The parameters to use for the plots.</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        r-ggprism:</span>
+<span class="sd">            - check: {{proc.lang}} -e &quot;library(ggprism)&quot;</span>
+<span class="sd">        r-rjson:</span>
+<span class="sd">            - check: {{proc.lang}} -e &quot;library(rjson)&quot;</span>
+<span class="sd">        r-dplyr:</span>
+<span class="sd">            - check: {{proc.lang}} -e &quot;library(dplyr)&quot;</span>
+<span class="sd">        r-ggplot2:</span>
+<span class="sd">            - check: {{proc.lang}} -e &quot;library(ggplot2)&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;indirs:files&quot;</span>
+    <span class="n">input_data</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">ch</span><span class="p">:</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">ch</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])]</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:truvari_bench.summary&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;plots&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;comp cnt&quot;</span><span class="p">,</span> <span class="s2">&quot;base cnt&quot;</span><span class="p">,</span> <span class="s2">&quot;precision&quot;</span><span class="p">,</span> <span class="s2">&quot;recall&quot;</span><span class="p">,</span> <span class="s2">&quot;f1&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/TruvariBenchSummary.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/vcf/TruvariBenchSummary.svelte&quot;</span><span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">TruvariConsistency</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.TruvariConsistency"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.TruvariConsistency" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.TruvariConsistency">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run `truvari consistency` to check consistency of CNV calls</span>
+
+<span class="sd">    See https://github.com/ACEnglish/truvari/wiki/consistency</span>
+
+<span class="sd">    Requires truvari v4+</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        vcfs: The vcf files with CNV calls</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output file with the report</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        truvari: Path to truvari</span>
+<span class="sd">        heatmap: Whether to generate a heatmap of the consistency</span>
+<span class="sd">            Set to False to disable</span>
+<span class="sd">            annofile: The annotation file for the heatmap, multiple columns</span>
+<span class="sd">            but the first column must be the sample name. Note that the stem of</span>
+<span class="sd">            the vcf file name from consistency file will be used. These</span>
+<span class="sd">            annotations will be added as row annotations.</span>
+<span class="sd">            Other options see also `biopipen.ns.plot.Heatmap`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;vcfs:files&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;outdir:dir:&quot;</span>
+        <span class="s2">&quot;{{in.vcfs | first | stem0 | append: &#39;.etc.truvari_consistency&#39;}}&quot;</span>
+    <span class="p">)</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;truvari&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">truvari</span><span class="p">,</span> <span class="s2">&quot;heatmap&quot;</span><span class="p">:</span> <span class="p">{}}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/TruvariConsistency.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/vcf/TruvariConsistency.svelte&quot;</span><span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">BcftoolsAnnotate</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.BcftoolsAnnotate"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.BcftoolsAnnotate" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.BcftoolsAnnotate">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add or remove annotations from VCF files</span>
+
+<span class="sd">    See also: &lt;https://samtools.github.io/bcftools/bcftools.html#annotate&gt;</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input VCF file</span>
+<span class="sd">        annfile: The annotation file.</span>
+<span class="sd">            Currently only VCF files are supported.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The VCF file with annotations added or removed.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        bcftools: Path to bcftools</span>
+<span class="sd">        tabix: Path to tabix, used to index infile and annfile</span>
+<span class="sd">        annfile: The annotation file. If `in.annfile` is provided,</span>
+<span class="sd">            this is ignored</span>
+<span class="sd">        ncores (type=int): Number of cores (`--threads`) to use</span>
+<span class="sd">        columns (auto): Comma-separated or list of columns or tags to carry over from</span>
+<span class="sd">            the annotation file. Overrides `-c, --columns`</span>
+<span class="sd">        remove (auto): Remove the specified columns from the input file</span>
+<span class="sd">        header (list): Headers to be added</span>
+<span class="sd">        gz (flag): Whether to gzip the output file</span>
+<span class="sd">        index (flag): Whether to index the output file (tbi) (`envs.gz` forced to True)</span>
+<span class="sd">        &lt;more&gt;: Other arguments for `bcftools annotate`</span>
+<span class="sd">            See also &lt;https://samtools.github.io/bcftools/bcftools.html#annotate&gt;</span>
+<span class="sd">            Note that the underscore `_` will be replaced with dash `-` in the</span>
+<span class="sd">            argument name.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file, annfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;outfile:file:{{in.infile | stem: &#39;gz&#39;}}.vcf&quot;</span>
+        <span class="s2">&quot;{{&#39;.gz&#39; if envs.index or envs.gz else &#39;&#39;}}&quot;</span>
+    <span class="p">)</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;bcftools&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">bcftools</span><span class="p">,</span>
+        <span class="s2">&quot;tabix&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">tabix</span><span class="p">,</span>
+        <span class="s2">&quot;annfile&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;columns&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;remove&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;gz&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;index&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/BcftoolsAnnotate.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">BcftoolsFilter</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.BcftoolsFilter"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.BcftoolsFilter" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.BcftoolsFilter">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Apply fixed threshold filters to VCF files</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input VCF file</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The filtered VCF file. If the `in.infile` is gzipped, this is</span>
+<span class="sd">            gzipped as well.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        bcftools: Path to bcftools</span>
+<span class="sd">        tabix: Path to tabix, used to index infile/outfile</span>
+<span class="sd">        ncores (type=int): Number of cores (`--threads`) to use</span>
+<span class="sd">        keep: Whether we should keep the filtered variants or not.</span>
+<span class="sd">            If True, the filtered variants will be kept in the output file, but</span>
+<span class="sd">            with a new FILTER.</span>
+<span class="sd">        includes: and</span>
+<span class="sd">        excludes: include/exclude only sites for which EXPRESSION is true.</span>
+<span class="sd">            See: &lt;https://samtools.github.io/bcftools/bcftools.html#expressions&gt;</span>
+<span class="sd">            If provided, `envs.include/exclude` will be ignored.</span>
+<span class="sd">            If `str`/`list` used, The filter names will be `Filter_&lt;type&gt;_&lt;index&gt;`.</span>
+<span class="sd">            A dict is used where keys are filter names and values are expressions</span>
+<span class="sd">        gz (flag): Whether to gzip the output file</span>
+<span class="sd">        index (flag): Whether to index the output file (tbi) (`envs.gz` forced to True)</span>
+<span class="sd">        &lt;more&gt;: Other arguments for `bcftools filter`</span>
+<span class="sd">            See also &lt;https://samtools.github.io/bcftools/bcftools.html#filter&gt;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;outfile:file:{{in.infile | stem: &#39;gz&#39;}}.vcf&quot;</span>
+        <span class="s2">&quot;{{&#39;.gz&#39; if envs.index or envs.gz else &#39;&#39;}}&quot;</span>
+    <span class="p">)</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;bcftools&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">bcftools</span><span class="p">,</span>
+        <span class="s2">&quot;tabix&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">tabix</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;keep&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;includes&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;excludes&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;gz&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;index&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/BcftoolsFilter.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">BcftoolsSort</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.BcftoolsSort"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.BcftoolsSort" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.BcftoolsSort">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Sort VCF files using `bcftools sort`.</span>
+
+<span class="sd">    `bcftools sort` is used to sort VCF files by chromosome and position based on the</span>
+<span class="sd">    order of contigs in the header.</span>
+
+<span class="sd">    Here we provide a chrsize file to first sort the contigs in the header and then</span>
+<span class="sd">    sort the VCF file using `bcftools sort`.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input VCF file</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The sorted VCF file.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        bcftools: Path to bcftools</span>
+<span class="sd">        tabix: Path to tabix, used to index infile/outfile</span>
+<span class="sd">        ncores (type=int): Number of cores (`--threads`) to use</span>
+<span class="sd">        gz (flag): Whether to gzip the output file</span>
+<span class="sd">        index (flag): Whether to index the output file (tbi) (`envs.gz` forced to True)</span>
+<span class="sd">        chrsize: The chromosome size file, from which the chromosome order is used</span>
+<span class="sd">            to sort the contig in the header first.</span>
+<span class="sd">            If not provided, `bcftools sort` will be used directly.</span>
+<span class="sd">        notfound (choice): What if the contig in the VCF file is not found in the</span>
+<span class="sd">            `chrsize` file.</span>
+<span class="sd">            - error: Report error</span>
+<span class="sd">            - remove: Remove the contig from the header.</span>
+<span class="sd">                Note that if there are records with the removed contig, an error will</span>
+<span class="sd">                be raised by `bcftools sort`</span>
+<span class="sd">            - start: Move the contig to the start of the contigs from `chrsize`</span>
+<span class="sd">            - end: Move the contig to the end of the contigs from `chrsize`</span>
+<span class="sd">        &lt;more&gt;: Other arguments for `bcftools sort`. For example `max_mem`.</span>
+<span class="sd">            See also &lt;https://samtools.github.io/bcftools/bcftools.html#sort&gt;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;outfile:file:{{in.infile | stem: &#39;gz&#39;}}.vcf&quot;</span>
+        <span class="s2">&quot;{{&#39;.gz&#39; if envs.index or envs.gz else &#39;&#39;}}&quot;</span>
+    <span class="p">)</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;bcftools&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">bcftools</span><span class="p">,</span>
+        <span class="s2">&quot;tabix&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">tabix</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;chrsize&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">chrsize</span><span class="p">,</span>
+        <span class="s2">&quot;notfound&quot;</span><span class="p">:</span> <span class="s2">&quot;remove&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gz&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;index&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/BcftoolsSort.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">BcftoolsMerge</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.BcftoolsMerge"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.BcftoolsMerge" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.BcftoolsMerge">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Merge multiple VCF files using `bcftools merge`.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infiles: The input VCF files</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The merged VCF file.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        bcftools: Path to bcftools</span>
+<span class="sd">        tabix: Path to tabix, used to index infile/outfile</span>
+<span class="sd">        ncores (type=int): Number of cores (`--threads`) to use</span>
+<span class="sd">        gz (flag): Whether to gzip the output file</span>
+<span class="sd">        index (flag): Whether to index the output file (tbi) (`envs.gz` forced to True)</span>
+<span class="sd">        &lt;more&gt;: Other arguments for `bcftools merge`.</span>
+<span class="sd">            See also &lt;https://samtools.github.io/bcftools/bcftools.html#merge&gt;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infiles:files&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;outfile:file:{{in.infiles | first | stem | append: &#39;_etc_merged&#39;}}.vcf&quot;</span>
+        <span class="s2">&quot;{{&#39;.gz&#39; if envs.index or envs.gz else &#39;&#39;}}&quot;</span>
+    <span class="p">)</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;bcftools&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">bcftools</span><span class="p">,</span>
+        <span class="s2">&quot;tabix&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">tabix</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;gz&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;index&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/BcftoolsMerge.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">BcftoolsView</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.vcf.BcftoolsView"></span><a class="mkapi-docs-link" title="biopipen.ns.vcf.BcftoolsView" href="../../biopipen.ns.vcf/#biopipen.ns.vcf.BcftoolsView">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;View, subset and filter VCF files by position and filtering expression.</span>
+
+<span class="sd">    Also convert between VCF and BCF.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input VCF file</span>
+<span class="sd">        regions_file: The region file used to subset the input VCF file.</span>
+<span class="sd">        samples_file: The samples file used to subset the input VCF file.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output VCF file.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        bcftools: Path to bcftools</span>
+<span class="sd">        tabix: Path to tabix, used to index infile/outfile</span>
+<span class="sd">        ncores (type=int): Number of cores (`--threads`) to use</span>
+<span class="sd">        regions_file: The region file used to subset the input VCF file.</span>
+<span class="sd">            If `in.regions_file` is provided, this is ignored.</span>
+<span class="sd">        samples_file: The samples file used to subset the input VCF file.</span>
+<span class="sd">            If `in.samples_file` is provided, this is ignored.</span>
+<span class="sd">        gz (flag): Whether to gzip the output file</span>
+<span class="sd">        index (flag): Whether to index the output file (tbi) (`envs.gz` forced to True)</span>
+<span class="sd">        &lt;more&gt;: Other arguments for `bcftools view`.</span>
+<span class="sd">            See also https://samtools.github.io/bcftools/bcftools.html#view</span>
+<span class="sd">            Note that the underscore `_` will be replaced with dash `-` in the</span>
+<span class="sd">            argument name.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file, regions_file:file, samples_file:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;outfile:file:{{in.infile | stem: &#39;gz&#39;}}.vcf&quot;</span>
+        <span class="s2">&quot;{{&#39;.gz&#39; if envs.index or envs.gz else &#39;&#39;}}&quot;</span>
+    <span class="p">)</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;bcftools&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">bcftools</span><span class="p">,</span>
+        <span class="s2">&quot;tabix&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">tabix</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;regions_file&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;samples_file&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;gz&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;index&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/vcf/BcftoolsView.py&quot;</span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/version-select.js"></script>
+      <script src="../../../js/mkapi.js"></script>
+      <script src="../../../extra.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

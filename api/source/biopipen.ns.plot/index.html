@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>biopipen.ns.plot - biopipen</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.ns.plot";
+        var mkdocs_page_input_path = "api/source/biopipen.ns.plot.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">biopipen.ns.plot</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/source/biopipen.ns.plot.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">biopipen.ns.</span><span class="mkapi-object-name">plot</span>
+<span id="biopipen.ns.plot"></span><a class="mkapi-docs-link" href="../../biopipen.ns.plot">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Plotting data&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">..core.proc</span> <span class="kn">import</span> <span class="n">Proc</span>
+<span class="kn">from</span> <span class="nn">..core.config</span> <span class="kn">import</span> <span class="n">config</span>
+
+
+<span class="k">class</span> <span class="nc">VennDiagram</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.plot.VennDiagram"></span><a class="mkapi-docs-link" title="biopipen.ns.plot.VennDiagram" href="../../biopipen.ns.plot/#biopipen.ns.plot.VennDiagram">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Plot Venn diagram</span>
+
+<span class="sd">    Needs `ggVennDiagram`</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input file for data</span>
+<span class="sd">            If `envs.intype` is raw, it should be a data frame with row names</span>
+<span class="sd">            as categories and only column as elements separated by comma (`,`)</span>
+<span class="sd">            If it is `computed`, it should be a data frame with row names</span>
+<span class="sd">            the elements and columns the categories. The data should be binary</span>
+<span class="sd">            indicator (`0, 1`) indicating whether the elements are present</span>
+<span class="sd">            in the categories.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output figure file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        inopts: The options for `read.table()` to read `in.infile`</span>
+<span class="sd">        intype: `raw` or `computed`. See `in.infile`</span>
+<span class="sd">        devpars: The parameters for `png()`</span>
+<span class="sd">        args: Additional arguments for `ggVennDiagram()`</span>
+<span class="sd">        ggs: Additional ggplot expression to adjust the plot</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.infile | stem}}.venn.png&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;inopts&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;row.names&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">},</span>
+        <span class="s2">&quot;intype&quot;</span><span class="p">:</span> <span class="s2">&quot;raw&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">600</span><span class="p">},</span>
+        <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;ggs&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/plot/VennDiagram.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Heatmap</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.plot.Heatmap"></span><a class="mkapi-docs-link" title="biopipen.ns.plot.Heatmap" href="../../biopipen.ns.plot/#biopipen.ns.plot.Heatmap">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Plot heatmaps using `ComplexHeatmap`</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; pipen run plot Heatmap \</span>
+<span class="sd">        &gt;&gt;&gt; --in.infile data.txt \</span>
+<span class="sd">        &gt;&gt;&gt; --in.annofiles anno.txt \</span>
+<span class="sd">        &gt;&gt;&gt; --envs.args.row_names_gp &#39;r:fontsize5&#39; \</span>
+<span class="sd">        &gt;&gt;&gt; --envs.args.column_names_gp &#39;r:fontsize5&#39; \</span>
+<span class="sd">        &gt;&gt;&gt; --envs.args.clustering_distance_rows pearson \</span>
+<span class="sd">        &gt;&gt;&gt; --envs.args.clustering_distance_columns pearson \</span>
+<span class="sd">        &gt;&gt;&gt; --envs.args.show_row_names false \</span>
+<span class="sd">        &gt;&gt;&gt; --envs.args.row_split 3 \</span>
+<span class="sd">        &gt;&gt;&gt; --args.devpars.width 5000 \</span>
+<span class="sd">        &gt;&gt;&gt; --args.devpars.height 5000 \</span>
+<span class="sd">        &gt;&gt;&gt; --args.draw.merge_legends \</span>
+<span class="sd">        &gt;&gt;&gt; --envs.args.heatmap_legend_param.title AUC \</span>
+<span class="sd">        &gt;&gt;&gt; --envs.args.row_dend_reorder \</span>
+<span class="sd">        &gt;&gt;&gt; --envs.args.column_dend_reorder \</span>
+<span class="sd">        &gt;&gt;&gt; --envs.args.top_annotation \</span>
+<span class="sd">        &gt;&gt;&gt;   &#39;r:HeatmapAnnotation( \</span>
+<span class="sd">        &gt;&gt;&gt;       Mutation = as.matrix(annos[,(length(groups)+1):ncol(annos)]) \</span>
+<span class="sd">        &gt;&gt;&gt;   )&#39; \</span>
+<span class="sd">        &gt;&gt;&gt; --envs.args.right_annotation \</span>
+<span class="sd">        &gt;&gt;&gt;   &#39;r:rowAnnotation( \</span>
+<span class="sd">        &gt;&gt;&gt;       AUC = anno_boxplot(as.matrix(data), outline = F) \</span>
+<span class="sd">        &gt;&gt;&gt;   )&#39; \</span>
+<span class="sd">        &gt;&gt;&gt; --args.globals \</span>
+<span class="sd">        &gt;&gt;&gt;   &#39;fontsize8 = gpar(fontsize = 12); \</span>
+<span class="sd">        &gt;&gt;&gt;    fontsize5 = gpar(fontsize = 8); \</span>
+<span class="sd">        &gt;&gt;&gt;    groups = c  (&quot;Group1&quot;, &quot;Group2&quot;, &quot;Group3&quot;)&#39; \</span>
+<span class="sd">        &gt;&gt;&gt; --args.seed 8525</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The data matrix file</span>
+<span class="sd">        annofiles: The files for annotation data</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The heatmap plot</span>
+<span class="sd">        outdir: Other data of the heatmap</span>
+<span class="sd">            Including RDS file of the heatmap, row clusters and col clusters.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        inopts: Options for `read.table()` to read `in.infile`</span>
+<span class="sd">        anopts: Options for `read.table()` to read `in.annofiles`</span>
+<span class="sd">        draw: Options for `ComplexHeatmap::draw()`</span>
+<span class="sd">        args: Arguments for `ComplexHeatmap::Heatmap()`</span>
+<span class="sd">        devpars: The parameters for device.</span>
+<span class="sd">        seed: The seed</span>
+<span class="sd">        globals: Some globals for the expression in `args` to be evaluated</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        bioconductor-complexheatmap:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(ComplexHeatmap)&quot;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file, annofiles:files&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;outfile:file:{{in.infile | stem0 | append: &quot;.heatmap&quot;}}/&#39;</span>
+        <span class="s1">&#39;{{in.infile | stem0 | append: &quot;.heatmap&quot;}}.png&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;outdir:dir:{{in.infile | stem0 | append: &quot;.heatmap&quot;}}&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;inopts&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;row.names&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">},</span>
+        <span class="s2">&quot;anopts&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;row.names&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">},</span>
+        <span class="s2">&quot;draw&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;heatmap_legend_param&quot;</span><span class="p">:</span> <span class="p">{}},</span>
+        <span class="s2">&quot;seed&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;globals&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/plot/Heatmap.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">ROC</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.plot.ROC"></span><a class="mkapi-docs-link" title="biopipen.ns.plot.ROC" href="../../biopipen.ns.plot/#biopipen.ns.plot.ROC">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Plot ROC curve using [`plotROC`](https://cran.r-project.org/web/packages/plotROC/vignettes/examples.html).</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input file for data, tab-separated.</span>
+<span class="sd">            The first column should be ids of the records (this is optional if `envs.noids` is True).</span>
+<span class="sd">            The second column should be the labels of the records (1 for positive, 0 for negative).</span>
+<span class="sd">            If they are not binary, you can specify the positive label by `envs.pos_label`.</span>
+<span class="sd">            From the third column, it should be the scores of the different models.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output figure file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        noids: Whether the input file has ids (first column) or not.</span>
+<span class="sd">        pos_label: The positive label.</span>
+<span class="sd">        ci: Whether to use `geom_rocci()` instead of `geom_roc()`.</span>
+<span class="sd">        devpars: The parameters for `png()`</span>
+<span class="sd">        args: Additional arguments for `geom_roc()` or `geom_rocci()` if `envs.ci` is True.</span>
+<span class="sd">        style_roc: Arguments for `style_roc()`</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.infile | stem}}.roc.png&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;noids&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;pos_label&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;ci&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">750</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">600</span><span class="p">},</span>
+        <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;labels&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">},</span>
+        <span class="s2">&quot;style_roc&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;show_auc&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/plot/ROC.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Manhattan</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.plot.Manhattan"></span><a class="mkapi-docs-link" title="biopipen.ns.plot.Manhattan" href="../../biopipen.ns.plot/#biopipen.ns.plot.Manhattan">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Plot Manhattan plot.</span>
+
+<span class="sd">    Using the [`ggmanh`](https://bioconductor.org/packages/devel/bioc/vignettes/ggmanh/inst/doc/ggmanh.html) package.</span>
+<span class="sd">    Requires `ggmanh` v1.9.6 or later.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input file for data</span>
+<span class="sd">            It should contain at least three columns, the chromosome, the position</span>
+<span class="sd">            and the p-value of the SNPs.</span>
+<span class="sd">            Header is required.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output figure file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        chrom_col: The column for chromosome</span>
+<span class="sd">            An integer (1-based) or a string indicating the column name.</span>
+<span class="sd">        pos_col: The column for position</span>
+<span class="sd">            An integer (1-based) or a string indicating the column name.</span>
+<span class="sd">        pval_col: The column for p-value</span>
+<span class="sd">            An integer (1-based) or a string indicating the column name.</span>
+<span class="sd">        label_col: The column for label.</span>
+<span class="sd">            Once specified, the significant SNPs will be labeled on the plot.</span>
+<span class="sd">        devpars (ns): The parameters for `png()`</span>
+<span class="sd">            - res (type=int): The resolution</span>
+<span class="sd">            - width (type=int): The width</span>
+<span class="sd">            - height (type=int): The height</span>
+<span class="sd">        title: The title of the plot</span>
+<span class="sd">        ylabel: The y-axis label</span>
+<span class="sd">        rescale (flag): Whether to rescale the p-values</span>
+<span class="sd">        rescale_ratio_threshold (type=float): Threshold of that triggers the rescale</span>
+<span class="sd">        signif (auto): A single value or a list of values to indicate the significance levels</span>
+<span class="sd">            Multiple values should be also separated by comma (`,`).</span>
+<span class="sd">            The minimum value will be used as the cutoff to determine if the SNPs are significant.</span>
+<span class="sd">        hicolors (auto): The colors for significant and non-significant SNPs</span>
+<span class="sd">            If a single color is given, the non-significant SNPs will be in grey.</span>
+<span class="sd">            Set it to None to disable the highlighting.</span>
+<span class="sd">        thin_n (type=int): Number of max points per horizontal partitions of the plot.</span>
+<span class="sd">            `0` or `None` to disable thinning.</span>
+<span class="sd">        thin_bins (type=int): Number of bins to partition the data.</span>
+<span class="sd">        zoom (auto): Chromosomes to zoom in</span>
+<span class="sd">            Each chromosome should be separated by comma (`,`) or in a list. Single chromosome is also accepted.</span>
+<span class="sd">            Ranges are also accepted, see `envs.chroms`.</span>
+<span class="sd">            Each chromosome will be saved in a separate file.</span>
+<span class="sd">        zoom_devpars (ns): The parameters for the zoomed plot</span>
+<span class="sd">            - width (type=int): The width</span>
+<span class="sd">            - height (type=int): The height, inherited from `devpars` by default</span>
+<span class="sd">            - res (type=int): The resolution, inherited from `devpars` by default</span>
+<span class="sd">        chroms (auto): The chromosomes and order to plot</span>
+<span class="sd">            A hyphen (`-`) can be used to indicate a range.</span>
+<span class="sd">            For example `chr1-22,chrX,chrY,chrM` will plot all autosomes, X, Y and M.</span>
+<span class="sd">            if `auto`, only the chromosomes in the data will be plotted in the order</span>
+<span class="sd">            they appear in the data.</span>
+<span class="sd">        args (ns): Additional arguments for `manhattan_plot()`.</span>
+<span class="sd">            See &lt;https://rdrr.io/github/leejs-abv/ggmanh/man/manhattan_plot.html&gt;.</span>
+<span class="sd">            Note that `-` will be replaced by `.` in the argument names.</span>
+<span class="sd">            - &lt;more&gt;: Additional arguments for `manhattan_plot()`</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.infile | stem0}}.manhattan.png&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;chrom_col&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;pos_col&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;pval_col&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;label_col&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">},</span>
+        <span class="s2">&quot;zoom_devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;ylabel&quot;</span><span class="p">:</span> <span class="s2">&quot;-log10(p-value)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rescale&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;rescale_ratio_threshold&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;signif&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">5e-8</span><span class="p">,</span> <span class="mf">1e-5</span><span class="p">],</span>
+        <span class="s2">&quot;hicolors&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;thin_n&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;thin_bins&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;zoom&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;chroms&quot;</span><span class="p">:</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/plot/Manhattan.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">QQPlot</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.plot.QQPlot"></span><a class="mkapi-docs-link" title="biopipen.ns.plot.QQPlot" href="../../biopipen.ns.plot/#biopipen.ns.plot.QQPlot">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate QQ-plot or PP-plot using qqplotr.</span>
+
+<span class="sd">    See &lt;https://cran.r-project.org/web/packages/qqplotr/vignettes/introduction.html&gt;.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input file for data</span>
+<span class="sd">            It should contain at least one column of p-values or the values to be</span>
+<span class="sd">            plotted. Header is required.</span>
+<span class="sd">        theorfile: The file for theoretical values (optional)</span>
+<span class="sd">            This file should contain at least one column of theoretical values.</span>
+<span class="sd">            The values will be passed to `envs.theor_qfunc` to calculate the theoretical</span>
+<span class="sd">            quantiles.</span>
+<span class="sd">            Header is required.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output figure file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        val_col: The column for values to be plotted</span>
+<span class="sd">            An integer (1-based) or a string indicating the column name.</span>
+<span class="sd">        devpars (ns): The parameters for `png()`</span>
+<span class="sd">            - res (type=int): The resolution</span>
+<span class="sd">            - width (type=int): The width</span>
+<span class="sd">            - height (type=int): The height</span>
+<span class="sd">        xlabel: The x-axis label</span>
+<span class="sd">        ylabel: The y-axis label</span>
+<span class="sd">        title: The title of the plot</span>
+<span class="sd">        trans: The transformation of the values</span>
+<span class="sd">            You can use `-log10` to transform the values to `-log10(values)`.</span>
+<span class="sd">            Otherwise you can a direct R function or a custom R function.</span>
+<span class="sd">            For example `function(x) -log10(x)`.</span>
+<span class="sd">        kind (choice): The kind of the plot, `qq` or `pp`</span>
+<span class="sd">            - qq: QQ-plot</span>
+<span class="sd">            - pp: PP-plot</span>
+<span class="sd">        theor_col: The column for theoretical values in `in.theorfile` if provided,</span>
+<span class="sd">            otherwise in `in.infile`.</span>
+<span class="sd">            An integer (1-based) or a string indicating the column name.</span>
+<span class="sd">            If `distribution` of `band`, `line`, or `point` is `custom`, this column</span>
+<span class="sd">            must be provided.</span>
+<span class="sd">        theor_trans: The transformation of the theoretical values.</span>
+<span class="sd">            The `theor_funs` have default functions to take the theoretical values.</span>
+<span class="sd">            This transformation will be applied to the theoretical values before</span>
+<span class="sd">            passing to the `theor_funs`.</span>
+<span class="sd">        theor_funs (ns): The R functions to generate density, quantile and deviates</span>
+<span class="sd">            of the theoretical distribution base on the theoretical values</span>
+<span class="sd">            if `distribution` of `band`, `line`, or `point` is `custom`.</span>
+<span class="sd">            - dcustom: The density function, used by band</span>
+<span class="sd">            - qcustom: The quantile function, used by point</span>
+<span class="sd">            - rcustom: The deviates function, used by line</span>
+<span class="sd">        args (ns): The common arguments for `envs.band`, `envs.line` and `envs.point`.</span>
+<span class="sd">            - distribution: The distribution of the theoretical quantiles</span>
+<span class="sd">                When `custom` is used, the `envs.theor_col` should be provided and</span>
+<span class="sd">                `values` will be added to `dparams` automatically.</span>
+<span class="sd">            - dparams (type=json): The parameters for the distribution</span>
+<span class="sd">            - &lt;more&gt;: Other shared arguments between `stat_*_band`, `stat_*_line`</span>
+<span class="sd">                and `stat_*_point`.</span>
+<span class="sd">        band (ns): The arguments for `stat_qq_band()` or `stat_pp_band()`.</span>
+<span class="sd">            See &lt;https://rdrr.io/cran/qqplotr/man/stat_qq_band.html&gt; and</span>
+<span class="sd">            &lt;https://rdrr.io/cran/qqplotr/man/stat_pp_band.html&gt;.</span>
+<span class="sd">            Set to `None` or `band.disabled` to True to disable the band.</span>
+<span class="sd">            - disabled (flag): Disable the band</span>
+<span class="sd">            - distribution: The distribution of the theoretical quantiles</span>
+<span class="sd">                When `custom` is used, the `envs.theor_col` should be provided and</span>
+<span class="sd">                `values` will be added to `dparams` automatically.</span>
+<span class="sd">            - dparams (type=json): The parameters for the distribution</span>
+<span class="sd">            - &lt;more&gt;: Additional arguments for `stat_qq_band()` or `stat_pp_band()`</span>
+<span class="sd">        line (ns): The arguments for `stat_qq_line()` or `stat_pp_line()`.</span>
+<span class="sd">            See &lt;https://rdrr.io/cran/qqplot/man/stat_qq_line.html&gt; and</span>
+<span class="sd">            &lt;https://rdrr.io/cran/qqplot/man/stat_pp_line.html&gt;.</span>
+<span class="sd">            Set to `None` or `line.disabled` to True to disable the line.</span>
+<span class="sd">            - disabled (flag): Disable the line</span>
+<span class="sd">            - distribution: The distribution of the theoretical quantiles</span>
+<span class="sd">                When `custom` is used, the `envs.theor_col` should be provided and</span>
+<span class="sd">                `values` will be added to `dparams` automatically.</span>
+<span class="sd">            - dparams (type=json): The parameters for the distribution</span>
+<span class="sd">            - &lt;more&gt;: Additional arguments for `stat_qq_line()` or `stat_pp_line()`</span>
+<span class="sd">        point (ns): The arguments for `geom_qq_point()` or `geom_pp_point()`.</span>
+<span class="sd">            See &lt;https://rdrr.io/cran/qqplot/man/stat_qq_point.html&gt; and</span>
+<span class="sd">            &lt;https://rdrr.io/cran/qqplot/man/stat_pp_point.html&gt;.</span>
+<span class="sd">            Set to `None` or `point.disabled` to True to disable the point.</span>
+<span class="sd">            - disabled (flag): Disable the point</span>
+<span class="sd">            - distribution: The distribution of the theoretical quantiles</span>
+<span class="sd">                When `custom` is used, the `envs.theor_col` should be provided and</span>
+<span class="sd">                `values` will be added to `dparams` automatically.</span>
+<span class="sd">            - dparams (type=json): The parameters for the distribution</span>
+<span class="sd">            - &lt;more&gt;: Additional arguments for `geom_qq_point()` or `geom_pp_point()`</span>
+<span class="sd">        ggs (list): Additional ggplot expression to adjust the plot.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file, theorfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.infile | stem}}.{{envs.kind}}.png&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;val_col&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;theor_col&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;theor_trans&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;theor_funs&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;dcustom&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">              function(x, values, ...) {</span>
+<span class="s2">                density(values, from = min(values), to = max(values), n = length(x))$y</span>
+<span class="s2">              }</span>
+<span class="s2">            &quot;&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;qcustom&quot;</span><span class="p">:</span> <span class="s2">&quot;function(p, values, ...) {quantile(values, probs = p)}&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rcustom&quot;</span><span class="p">:</span> <span class="s2">&quot;function(n, values, ...) { sample(values, n, replace = TRUE) }&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;distribution&quot;</span><span class="p">:</span> <span class="s2">&quot;norm&quot;</span><span class="p">,</span> <span class="s2">&quot;dparams&quot;</span><span class="p">:</span> <span class="p">{}},</span>
+        <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">},</span>
+        <span class="s2">&quot;xlabel&quot;</span><span class="p">:</span> <span class="s2">&quot;Theoretical Quantiles&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ylabel&quot;</span><span class="p">:</span> <span class="s2">&quot;Observed Quantiles&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;QQ-plot&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;trans&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;qq&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;band&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;disabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;distribution&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;dparams&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
+        <span class="s2">&quot;line&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;disabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;distribution&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;dparams&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
+        <span class="s2">&quot;point&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;disabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;distribution&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;dparams&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
+        <span class="s2">&quot;ggs&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/plot/QQPlot.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Scatter</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.plot.Scatter"></span><a class="mkapi-docs-link" title="biopipen.ns.plot.Scatter" href="../../biopipen.ns.plot/#biopipen.ns.plot.Scatter">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate scatter plot using ggplot2.</span>
+
+<span class="sd">    [`ggpmisc`](https://cran.r-project.org/web/packages/ggpmisc/index.html) is used</span>
+<span class="sd">    for the stats and labels.</span>
+<span class="sd">    See also https://cran.r-project.org/web/packages/ggpmisc/vignettes/model-based-annotations.html</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input file for data</span>
+<span class="sd">            It should contain at least two columns for x and y values.</span>
+<span class="sd">            Header is required.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output figure file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        x_col: The column for x values</span>
+<span class="sd">            An integer (1-based) or a string indicating the column name.</span>
+<span class="sd">        y_col: The column for y values</span>
+<span class="sd">            An integer (1-based) or a string indicating the column name.</span>
+<span class="sd">        devpars (ns): The parameters for `png()`</span>
+<span class="sd">            - res (type=int): The resolution</span>
+<span class="sd">            - width (type=int): The width</span>
+<span class="sd">            - height (type=int): The height</span>
+<span class="sd">        args (ns): Additional arguments for `geom_point()`</span>
+<span class="sd">            See &lt;https://ggplot2.tidyverse.org/reference/geom_point.html&gt;.</span>
+<span class="sd">            - &lt;more&gt;: Additional arguments for `geom_point()`</span>
+<span class="sd">        mapping: Extra mapping for all geoms, including `stats`.</span>
+<span class="sd">            Should be `aes(color = group)` but all these are valid: `color = group` or</span>
+<span class="sd">            `(color = group)`.</span>
+<span class="sd">        ggs (list): Additional ggplot expression to adjust the plot.</span>
+<span class="sd">        formula: The formula for the model</span>
+<span class="sd">        stats (type=json): The stats to add to the plot.</span>
+<span class="sd">            A dict with keys available stats in `ggpmisc` (without `stat_`).</span>
+<span class="sd">            See &lt;https://cran.r-project.org/web/packages/ggpmisc/vignettes/model-based-annotations.html#statistics&gt;.</span>
+<span class="sd">            The values should be the arguments for the stats.</span>
+<span class="sd">            If you want a stat to be added multiple times, add a suffix `#x` to the key.</span>
+<span class="sd">            For example, `poly_line#1` and `poly_line#2` will add two polynomial lines.</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.infile | stem}}.scatter.png&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;x_col&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;y_col&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">800</span><span class="p">},</span>
+        <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;mapping&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;ggs&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;formula&quot;</span><span class="p">:</span> <span class="s2">&quot;y ~ x&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stats&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/plot/Scatter.R&quot;</span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/version-select.js"></script>
+      <script src="../../../js/mkapi.js"></script>
+      <script src="../../../extra.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

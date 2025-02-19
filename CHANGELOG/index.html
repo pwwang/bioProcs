@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Change log - biopipen</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Change log";
+        var mkdocs_page_input_path = "CHANGELOG.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Change log</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#0321">0.32.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0320">0.32.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0317">0.31.7</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0316">0.31.6</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0315">0.31.5</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0314">0.31.4</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0313">0.31.3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0312">0.31.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0311">0.31.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0310">0.31.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0300">0.30.0</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#scrnatcr">scrna/tcr</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#other">other</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0292">0.29.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0291">0.29.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0290">0.29.0</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#depedencies">Depedencies</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#breaking">BREAKING</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#new-featuresprocesses">New Features/Processes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#refactorsimprovements">Refactors/Improvements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#minor">Minor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tests">Tests</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#docs">Docs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fixes">Fixes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#immunopipe-related">Immunopipe-related</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0281">0.28.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0280">0.28.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0279">0.27.9</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0278">0.27.8</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0277">0.27.7</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0276">0.27.6</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0275">0.27.5</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0274">0.27.4</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0273">0.27.3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0272">0.27.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0271">0.27.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0270">0.27.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0262">0.26.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0261">0.26.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0260">0.26.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0254">0.25.4</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0253">0.25.3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0252">0.25.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0251">0.25.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0250">0.25.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0242">0.24.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0241">0.24.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0240">0.24.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0238">0.23.8</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0237">0.23.7</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0236">0.23.6</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0235">0.23.5</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0234">0.23.4</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0233">0.23.3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0232">0.23.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0231">0.23.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0230">0.23.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0228">0.22.8</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0227">0.22.7</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0226">0.22.6</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0225">0.22.5</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0224">0.22.4</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0223">0.22.3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0222">0.22.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0221">0.22.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0220">0.22.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0212">0.21.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0211">0.21.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0210">0.21.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0207">0.20.7</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0206">0.20.6</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0205">0.20.5</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0204">0.20.4</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0203">0.20.3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0202">0.20.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0201">0.20.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0200">0.20.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0190">0.19.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0183">0.18.3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0182">0.18.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0181">0.18.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0180">0.18.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0177">0.17.7</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0176">0.17.6</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0175">0.17.5</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0174">0.17.4</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0173">0.17.3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0172">0.17.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0171">0.17.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0170">0.17.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0167">0.16.7</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0166">0.16.6</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0165">0.16.5</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0164">0.16.4</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0163">0.16.3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0162">0.16.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0161">0.16.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0160">0.16.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0152">0.15.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0151">0.15.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0150">0.15.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0143">0.14.3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0142">0.14.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0141">0.14.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0140">0.14.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0130">0.13.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0120">0.12.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0110">0.11.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0100">0.10.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#090">0.9.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#080">0.8.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#071">0.7.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#070">0.7.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#062">0.6.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#061">0.6.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#060">0.6.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#053">0.5.3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#052">0.5.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#051">0.5.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#050">0.5.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#049">0.4.9</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#048">0.4.8</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#047">0.4.7</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#046">0.4.6</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#045">0.4.5</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#044">0.4.4</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#043">0.4.3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#042">0.4.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#041">0.4.1</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#general">General</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#processes">Processes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#040">0.4.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#032">0.3.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#031">0.3.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#030">0.3.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#021">0.2.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#020">0.2.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#019">0.1.9</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#018">0.1.8</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#017">0.1.7</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#016">0.1.6</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#015">0.1.5</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#014">0.1.4</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#013">0.1.3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#012">0.1.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#011">0.1.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#010">0.1.0</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Change log</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/CHANGELOG.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="change-log">Change Log</h2>
+<h3 id="0321">0.32.1</h3>
+<ul>
+<li>fix(scrna.ScFGSEA): fix case gmtfile not working</li>
+<li>fix(TopExpressingGenes): add <code>InlineNotification</code> component to TopExpressingGenes.svelte</li>
+<li>feat(scrna.SeuratPreparing): add <code>envs.species</code> so that <code>percent.mt</code>, <code>percent.ribo</code>, <code>percent.hb</code> and <code>percent.plat</code> can be correctly calculated for mouse</li>
+<li>fix(scrna.SeuratClusterStats): fix <code>kind</code> not being added to the figure file name for plots of features</li>
+</ul>
+<h3 id="0320">0.32.0</h3>
+<ul>
+<li>deps: update pipen-runinfo dependency to version 0.8.1</li>
+<li>feat(scrna): add CellCellCommunication and CellCellCommunicationPlots</li>
+<li>fix(scrna.SeuratMap2Ref): fix report and add stats to report</li>
+<li>fix(utils.single_cell.R): fix categorical data when converting seurat to anndata format</li>
+<li>refactor(scrna.Seurat2AnnData): abstract seurat_to_anndata() for reuse</li>
+<li>enh(tcr.TCRClustering): make GIANA compatible with latest BioPython (v1.84)</li>
+<li>fix(tcr.TCRClstering): fix clusTCR error due to scipy update (v1.14)</li>
+</ul>
+<h3 id="0317">0.31.7</h3>
+<ul>
+<li>deps: bump pipen-args to 0.16</li>
+<li>chore: update pyright configuration to include <code>biopipen/**/*.py</code></li>
+<li>feat(bam): add BamSubsetByBed process for subsetting bam file by regions in a bed file</li>
+<li>feat(bed): add BedtoolsMakeWindows process for generating windows from a BED file or genome size file</li>
+</ul>
+<h3 id="0316">0.31.6</h3>
+<ul>
+<li>deps: pin the channels of conda dependencies for tests</li>
+<li>feat(vcf): adopt truvari v4+ for related processes</li>
+<li>feat(regulatory): add VariantMotifPlot to plot motif and surrounding sequences with mutations</li>
+<li>refactor(regulatory.MotifAffinityTest): optimize code base</li>
+<li>ci: add verbosal output for tests</li>
+</ul>
+<h3 id="0315">0.31.5</h3>
+<ul>
+<li>deps: update pipen to version 0.15.3 and xqute to version 0.5.2</li>
+<li>feat(bam): add BamSampling process for sampling a fraction of reads from a bam file</li>
+<li>feat(protein): add the protein module and Prodigy and ProdigySummary to calculate the binding affinity of a complex structure</li>
+<li>ci: do not print verbose logs for tests</li>
+<li>chore(bam.BamMerge): use logger instead of print for logging</li>
+</ul>
+<h3 id="0314">0.31.4</h3>
+<ul>
+<li>deps: bump pipen-report to 0.20.1 (pipen to 0.15.2)</li>
+<li>fix(plot.VennDiagram): update default devpars and fix issues with computed data</li>
+<li>fix(scrna.SeuratMap2Ref): fix identifying the normalization method of reference</li>
+</ul>
+<h3 id="0313">0.31.3</h3>
+<ul>
+<li>test: fix test not failing when tests failed</li>
+<li>test: fix gene name conversion tests due to external API change</li>
+<li>fix(tcr.CDR3AAPhyschem): fix when chain is not available</li>
+<li>fix(tcr.TCRClustering): fix when chain is not available</li>
+</ul>
+<h3 id="0312">0.31.2</h3>
+<ul>
+<li>fix(tcr.CDR3AAPhyschem): use sequence from TRB chain only</li>
+<li>fix(tcr.TCRClustering): fix for multi-chain TCRs, use TRB only if on_multi is false</li>
+</ul>
+<h3 id="0311">0.31.1</h3>
+<ul>
+<li>enh(scrna.SeuratMap2Ref): check if reference has SCTModel if SCTransform'ed (likely prepared by old Seurat)</li>
+</ul>
+<h3 id="0310">0.31.0</h3>
+<ul>
+<li>deps: bump pipen to 0.15.0</li>
+</ul>
+<h3 id="0300">0.30.0</h3>
+<h4 id="scrnatcr">scrna/tcr</h4>
+<ul>
+<li>BREAKING(scrna): move clustree plots from <code>SeuratClustering/SeuratSubClustering</code> to <code>SeuratClusterStats</code></li>
+<li>feat(scrna.CellTypeAnnotation): allow to merge/not to merge (envs.merge) the clusters with the same labels predicted</li>
+<li>feat(scrna.SeuratPreparing): add scDblFinder to detect doublets</li>
+<li>feat(scrna.SeuratMap2Ref): add <code>envs.skip_if_normalized</code> option to skip normalization if query is already normalized using the same method as the reference</li>
+<li>refactor(tcr.Immunarch): source the files for Immunarch scripts for better debugging</li>
+<li>refactor(scnra.SeuratClustering): refactor the script for better debugging</li>
+<li>refactor(scnra.SeuratPreparing): refactor the script for better debugging</li>
+<li>fix(scrna): fix resolution expansion for <code>SeuratClustering</code> and <code>SeuratSubClustering</code></li>
+<li>fix(cellranger.CellRangerCount): fix falsy <code>envs.create_bam</code> not working for cellranger v7</li>
+<li>fix(scrna): Fix generating PrepSCTFindMarkers  command when no previous commands present</li>
+<li>tests(scrna.ScFGSEA): fix unavailable urls to GMT files</li>
+<li>chore(scrna.SeuratMap2Ref): optimize memory usage</li>
+<li>chore(scrna.MetaMarkers): remove <code>plugin_opts.poplog_max</code></li>
+<li>chore(tcr.CloneResidency): improve logging when handling subjects</li>
+</ul>
+<h4 id="other">other</h4>
+<ul>
+<li>fix(stats.Mediation): fix when NAs in the data</li>
+<li>feat(plot): add Scatter for scatter plots</li>
+<li>tests: use single conda env for tests</li>
+<li>ci: fix CI due to conda env changes</li>
+<li>docs(web): update docs of <code>envs.tool</code> for Download/DownloadList</li>
+<li>feat(web): add GCloudStorageDownloadFile and GCloudStorageDownloadBucket to download files from GCP</li>
+<li>chore(regulatory.MotifAffinityTest): use template filter source_r to source R files</li>
+<li>tests(regulatory.MotifAffinityTest): rename regulation to regulatory</li>
+<li>chore: use template filter source_r to source R files</li>
+<li>fix(stats): handle case when p-value is 0 for MetaPvalue and MetaPvalue1</li>
+</ul>
+<h3 id="0292">0.29.2</h3>
+<ul>
+<li>chore(stats.Mediation): make better logging strategy for various number of cases</li>
+<li>chore(scrna.SeuratClusterStats): use ident label length to adjust default height for feature plots</li>
+<li>fix(scrna.MetaMarkers): fix seurat object not updated when expanding cases and run <code>PrepSCTFindMarkers</code> when necessary before calling meta-markers</li>
+<li>fix(scrna.MarkersFinder): fix fetching command when composing the PrepSCTFindMarkers command</li>
+<li>fix(scrna_metabolic_landscape): handle null values in for loop in MetabolicFeatures and MetabolicFeaturesIntraSubset for report generation</li>
+</ul>
+<h3 id="0291">0.29.1</h3>
+<ul>
+<li>BREAKING: rename namespace <code>regulation</code> to <code>regulatory</code></li>
+<li>choir(plot.Manhattan): default <code>envs.title</code> to <code>None</code> (don't add title to the plot by default)</li>
+<li>enh(plot.Manhattan): give warnings instead of errors about zooming chromosomes not existing</li>
+<li>fix(plot.Manhattan): fix <code>envs.ylabel</code> not working</li>
+<li>feat(stats): add <code>Mediation</code> for mediation analysis</li>
+<li>feat(plot.QQPlot): add support for custom theoratical values</li>
+<li>tests(plot.QQPlot): add tests</li>
+<li>chore(snp.MatrixEQTL): allow pvalue cutoffs to be greater than 1 (but 1 will be used anyway)</li>
+<li>fix(snp.PlinkIBD): add <code>--keep-allele-order</code> to keep the allele order</li>
+<li>fix(delim.SampleInfo): fix numbers not split up when <code>each</code> is specified.</li>
+<li>enh(delim.SampleInfo): make sizes of pie charts proportional to number of samples when <code>each</code> is specified</li>
+<li>enh(scrna.MarkersFinder): run <code>PrepSCTFindMarkers</code> when necessary before calling FindMarkers</li>
+<li>feat(scrna.SeuratPreparing): add option to cache Seurat object at different steps</li>
+<li>feat(scrna.SeuratPreparing): allow <code>doubletfinder</code> to run with a different number of cores</li>
+<li>chore(scrna.SeuratClustering): record <code>PrepSCTFindMarkers</code> command in <code>sobj@commands</code></li>
+<li>tests(scrna.SeuratClusterStats): use less stringent p-value cutoff for DEG/MarkersFinder</li>
+<li>tests(scrna.SeuratPreparing): add <code>doubletfinder</code> in tests</li>
+</ul>
+<h3 id="0290">0.29.0</h3>
+<h4 id="depedencies">Depedencies</h4>
+<ul>
+<li>deps: update <code>pipen-filters</code> to version 0.13</li>
+<li>deps: add <code>meme</code> to <code>env_bio.yml</code> for tests</li>
+<li>deps: bump pipen-board to 0.15.2</li>
+<li>ci: update GitHub Actions versions and dependencies</li>
+</ul>
+<h4 id="breaking">BREAKING</h4>
+<ul>
+<li>BREAKING: merge namespace bcftools to vcf</li>
+</ul>
+<h4 id="new-featuresprocesses">New Features/Processes</h4>
+<ul>
+<li>feat(snp): add <code>PlinkFromVcf</code> to convert VCF files to PLINK format</li>
+<li>feat(snp): add <code>Plink2GTMat</code> for converting PLINK files to genotype matrix</li>
+<li>feat(snp): add <code>PlinkIBD</code> analysis for identity by descent</li>
+<li>feat(snp): add <code>PlinkHWE</code> for Hardy-Weinberg Equilibrium test</li>
+<li>feat(snp): add <code>PlinkHet</code> for calculating sample heterozygosity</li>
+<li>feat(snp): add <code>PlinkCallRate</code> for calculating call rate of samples and variants</li>
+<li>feat(snp): add <code>PlinkFilter</code> process for filtering PLINK files</li>
+<li>feat(snp): add <code>PlinkFreq</code> process for calculating and filtering by allele frequencies</li>
+<li>feat(snp): add <code>PlinkUpdateName</code> proc to update variant names in PLINK files</li>
+<li>feat(gene): add <code>GenePromoters</code> for retrieving gene promoter regions and tests for it</li>
+<li>feat(bed): add <code>BedtoolsIntersect</code> process for finding the intersection of two BED files</li>
+<li>feat(regulation): add the namespace and <code>MotifScan</code> to use fimo for motif scanning</li>
+<li>feat(regulation): add <code>MotifAffinityTest</code> to test the affinity of motifs to the sequences and the affinity change due the mutations.</li>
+<li>feat(cnv.AneuploidyScore): allow BED and VCF files as in.segfile</li>
+<li>feat(cnv.TMADScore): allow BED and VCF files as in.segfile</li>
+<li>feat(cnvkit): allow user home directory (~) to be used in <code>envs.ref</code> in mulitple processes</li>
+<li>feat(plot): add <code>ManhattanPlot</code> to for support for plotting Manhattan plots</li>
+<li>feat(plot): add <code>QQPlot</code> proc for generating QQ-plot or PP-plot</li>
+<li>feat(vcf): add <code>BcftoolsView</code> process for viewing, subsetting, and filtering VCF files</li>
+<li>feat(vcf): add <code>run_bcftools</code> function for running bcftools with given arguments</li>
+<li>feat(vcf.BcftoolsSort): allow sorting contigs based on a chrom size file</li>
+<li>feat(vcf.BcftoolsFilter): allow indexing output file</li>
+<li>feat(vcf.BcftoolsAnnotate): allow providing annotation file as input file and allow indexing output file</li>
+<li>feat(stats): add <code>MetaPvalue1</code> to combine pvalues from the same file</li>
+<li>feat(stats.MetaPvalue): add <code>envs.keep_single</code> flag to keep the single p-values</li>
+<li>feat(utils.misc.R): add <code>run_command</code> function for R</li>
+<li>feat(utils.reference): allow <code>tabix_index</code> to index infile directly</li>
+<li>feat(snp.MatrixEQTL): add envs.match_samples flag to subset snp, expr and cov data with common samples</li>
+<li>feat(snp.MatrixEQTL): fix cov data being wrongly transposed</li>
+<li>feat(snp.MatrixEQTL): allow extra columns when snp and gene position file is BED</li>
+<li>feat(tests): add lazy loading for reference data download and --local flag for downloading more references locally</li>
+</ul>
+<h4 id="refactorsimprovements">Refactors/Improvements</h4>
+<ul>
+<li>refactor(utils.gene): redesign <code>gene_name_conversion</code> functions for both python and R</li>
+<li>refactor(gene.GeneNameConversion): use R for implementation</li>
+<li>refactor(misc.Shell): save envs.cmd to a file and run it to fix the escaping issues of the command</li>
+<li>enh(snp.MatrixEQTL): use rtracklayer to read the position files</li>
+</ul>
+<h4 id="minor">Minor</h4>
+<ul>
+<li>choir(misc.Str2File): add default for <code>in.name</code></li>
+<li>choir(gene.GeneNameConversion): allow <code>envs.notfound</code> to be <code>ignore</code> or <code>skip</code> when <code>envs.output</code> is <code>append</code> or <code>replace</code></li>
+<li>choir(utils.misc.py): flush output for command printing in <code>run_command</code> function</li>
+<li>choir(utils.misc.py): print command with a new line for <code>run_command</code> function</li>
+<li>choir(snp.PlinkFromVcf): indicate sex is to be handled</li>
+<li>choir(cellranger_pipeline): remove unused import</li>
+<li>choir(bam.CNVpytor): implement cnvnator2vcf directly instead of using cnvnator2vcf.pl</li>
+</ul>
+<h4 id="tests">Tests</h4>
+<ul>
+<li>tests(utils.gene): update tests for <code>gene_name_conversion</code></li>
+<li>tests(gene.GeneNameConversion): use right environment for tests</li>
+<li>tests(snp): add tests for plink related processes</li>
+<li>tests(snp): disable report generation for plink related tests</li>
+<li>tests(regulation): specify envs.genome for MotifAffinityTest</li>
+<li>tests: add python package mygene to conda environment <code>biopipen-r</code></li>
+<li>tests: add tests for bcftools processes</li>
+<li>tests: do not download reference data for hg38 at CI</li>
+<li>tests: update <code>bioconductor-ggmanh</code> dependency to version 1.9.6</li>
+<li>tests: add bcftools to conda environment dependencies for tests</li>
+</ul>
+<h4 id="docs">Docs</h4>
+<ul>
+<li>docs(MatrixEQTL): fix choice items of <code>envs.model</code></li>
+<li>docs(cellranger_pipeline): fix types of some items in docs, which should be 'list', instead of 'type=list'</li>
+</ul>
+<h4 id="fixes">Fixes</h4>
+<ul>
+<li>fix(utils.reference): avoid index file to be created again for the same infile for <code>tabix_index</code> function</li>
+<li>fix(utils.reference): pass <code>-f</code> to bgzip or gunzip to overwrite the output if exists</li>
+<li>fix(vcf): fix passing vcffile as a string in fix_vcffile in VcfFix_utils.py</li>
+<li>fix(cnvkit_pipeline): fix sex in process channels</li>
+<li>fix(cnv.AneuploidyScoreSummary): fix when Sample column is already in metafile</li>
+<li>fix(cnv.TMADScoreSummary): fix when Sample column is already in metafile</li>
+</ul>
+<h4 id="immunopipe-related">Immunopipe-related</h4>
+<ul>
+<li>fix(tcr.TCRClusterStats): fix <code>envs.shared_clusters.heatmap_meta</code> being broken by <code>envs.shared_clusters.sample_order</code></li>
+<li>choir(scrna.SeuratMap2Ref): present better error message when <code>envs.use</code> or values of <code>envs.MapQuery.refdata</code> not in reference</li>
+<li>fix(scrna.MarkersFinder): run PrepSCTFindMarkers when needed</li>
+<li>choir(scrna.SeuratClustering): use <code>FindClusters</code> to run for multiple resolutions</li>
+<li>choir(scrna.SeuratSubClustering): use <code>FindClusters</code> to run for multiple resolutions</li>
+<li>feat(scrna.SeuratClustering): add clustree plot</li>
+<li>feat(scrna.SeuratSubClustering): add clustree plot</li>
+<li>tests(scrna.SeuratClusterStats): add assertion for clustree plot generation</li>
+</ul>
+<h3 id="0281">0.28.1</h3>
+<ul>
+<li>fix(scrna.CellsDistribution): fix <code>devpars</code> and <code>hm_devpars</code> not working</li>
+</ul>
+<h3 id="0280">0.28.0</h3>
+<ul>
+<li>tests(scrna.CellTypeAnnotation): add tests for <code>CellTypeAnnotation</code> using <code>scCATCH</code></li>
+<li>feat(cellranger_pipeline): add docker image building for cellranger pipeline</li>
+<li>chore(cellranger.CellRangerCount): add <code>envs.create_bam</code> to control whether create bams (supporting cellranger v8)</li>
+<li>chore(cellranger): add <code>in.id</code> to <code>CellRangerCount</code> and <code>CellRangerVdj</code> to specify sample ids</li>
+<li>chore(cellranger.CellRangerSummary): set the default value of <code>report_paging</code> to 8</li>
+</ul>
+<h3 id="0279">0.27.9</h3>
+<ul>
+<li>feat(tcr.TCRClusterStats): add <code>sample_order</code> to set sample order on heatmap and <code>cluster_rows</code> to switch row clustering on/off</li>
+</ul>
+<h3 id="0278">0.27.8</h3>
+<ul>
+<li>fix(scrna.SeuratClusterStats): fix selected columns not unique for stats</li>
+<li>feat(scrna.SeuratMap2Ref): allow non-SCTransform'ed reference</li>
+<li>feat(scrna.SeuratMap2Ref): allow splitting query object for mapping (pwwang/immunopipe#61)</li>
+<li>deps: update pipen-board to version 0.15.1</li>
+</ul>
+<h3 id="0277">0.27.7</h3>
+<ul>
+<li>fix(utils.gsea): fix gsea table not being printed for <code>runFGSEA</code></li>
+<li>fix(core.filters): fix slugified pathway plot file name in report</li>
+<li>fix(scrna_metabolic_landscape): fix mutaters not working</li>
+<li>fix(scrna_metabolic_landscape.MetabolicFeatures/MetabolicFeaturesIntraSubset): skip groups with less than 5 cells in <code>do_one_group</code> and save a warning file under the case</li>
+<li>fix(utils.gsea): do not switch 1st and 2nd columns when 2nd column is numeric for <code>localizeGmtfile</code></li>
+<li>chore: fix typo in class name ExprImpution to ExprImputation</li>
+<li>choir(tests): remove KEGG_metabolism.gmt for <code>prep_reference.py</code></li>
+<li>tests(scrna_metabolic_landscape): fix tests</li>
+</ul>
+<h3 id="0276">0.27.6</h3>
+<ul>
+<li>fix(scrna_metabolic_landscape.MetabolicFeatures): fix return value of groups with less than 5 cells in <code>do_one_group</code></li>
+<li>choir(utils.gsea): avoid printing NULL for <code>runFGSEA</code></li>
+<li>tests: use the return value of <code>pipen.run()</code> to test the success</li>
+</ul>
+<h3 id="0275">0.27.5</h3>
+<ul>
+<li>fix(scrna.Subset10X/SeuratTo10X): correct the paths to the scripts</li>
+<li>feat(testing): allow to enable report for testing pipelines</li>
+<li>feat(scrna.SeuratPreparing): add <code>envs.cell_qc_per_sample</code> to filter cells before merging instead after</li>
+<li>test: add tests to scrna.SeuratTo10X and scrna.SeuratPreparing</li>
+<li>fix(scrna.SeuratClusterStats): fix color palette for ridge plots</li>
+</ul>
+<h3 id="0274">0.27.4</h3>
+<ul>
+<li>feat: add plot.ROC</li>
+<li>choir(delim.SampleInfo): add alpha to the colors of the plots using biopipen color pallete</li>
+<li>feat: add snp.MatrixEQTL</li>
+<li>docs(tcr/scrna/scrna_metabolic_landscape): update links of images in docs</li>
+</ul>
+<h3 id="0273">0.27.3</h3>
+<ul>
+<li>deps: temporary fix copier breaks with pyyaml-include v2 (copier-org/copier#1568)</li>
+<li>deps: bump pipen-poplog to 0.1.2 (quick fix for populating logs when job fails)</li>
+<li>choir(scrna.ScFGSEA): Skip cases when no cells found (pwwang/immunopipe#50)</li>
+<li>choir(scrna.MarkersFinder): Skip cases when no cells found (pwwang/immunopipe#50)</li>
+<li>choir(scrna.MetaMarkers): Skip cases when no cells found (pwwang/immunopipe#50)</li>
+<li>feat(scrna.SeuratPreparing): support <code>DoubletFinder</code></li>
+</ul>
+<h3 id="0272">0.27.2</h3>
+<ul>
+<li>fix(utils.misc.py): inherit envs when <code>env</code> passed for <code>run_command()</code></li>
+<li>fix(scrna.RadarPlots): fix mutaters not working</li>
+<li>feat(tcr.CloneResidency): support <code>envs.upset_ymax</code> to set the max value of y axis in upset bar plot.</li>
+<li>feat(tcr.TCRDock): add process</li>
+<li>choir(utils.misc.py): update level to DEBUG for python logger (leaving the filtering to pipen-poplog)</li>
+<li>choir(stats.DiffCoexpr): change log_warn to debug for some verbosal logging messages</li>
+<li>refactor(snp.PlinkSimulation): make the configuration files as input so multiple simulations could run in parallel easily.</li>
+</ul>
+<h3 id="0271">0.27.1</h3>
+<ul>
+<li>BREAKING(scrna.SeuratMap2Ref): rename <code>envs.name</code> to <code>envs.ident</code> so <code>envs.MapQuery.refdata</code> is not required anymore. It will be inferred from <code>envs.ident</code> and <code>envs.use</code>.</li>
+</ul>
+<h3 id="0270">0.27.0</h3>
+<ul>
+<li>deps: bump pipen to 0.14.5</li>
+<li>deps: bump datar to 0.15.6</li>
+<li>depr(scrna.MarkersFinder): remove <code>use_presto</code> as it's used by Seurat v5 by default</li>
+<li>enh(tcr.CloneResidency): support log scale for y axis of upset bar plots</li>
+<li>enh(scrna.SeuratClusterStats): allow to rotate labels in circos plot (pwwang/immunopipe#48)</li>
+<li>enh(scrna.SeuratClusterStats): use pal_biopipen for ident colors in circos plot</li>
+<li>fix(scrna.CellsDistribution): fix the row order of the heatmaps</li>
+<li>fix(scrna.SeuratClusterStats): fix when split-by is specified</li>
+<li>feat(scrna.CellsDistribution): support <code>prefix_each</code></li>
+<li>feat(scrna.MarkersFinder): allow set max number of genes to plot in dotplots</li>
+<li>feat(scrna.MarkersFinder): support setting detailed arguments for overlapping plots</li>
+<li>feat(scrna.MarkersFinder): support <code>prefix_group</code></li>
+<li>feat(scrna.ScFGSEA): support <code>prefix_each</code></li>
+<li>feat(scrna.RadarPlots): support <code>prefix_each</code> and <code>subset</code></li>
+<li>choir(scrna.SeuratClusterStats): use logger instead of print for log messages</li>
+<li>choir(tcr.TCRClustering): print session info for clustcr script</li>
+<li>choir(scrna.MarkersFinder): flatten toc when no <code>section</code> and no <code>ident-1</code> specified</li>
+<li>choir: extract case expansion pattern (scrna.CellsDistribution, scrna.MarkersFinder, scrna.MetaMarkers, scrna.RadarPlots, scrna.ScFGSEA, scrna.TopExpressingGenes)</li>
+<li>docs: add more detailed docs for <code>envs.section</code></li>
+<li>tests: add assertion for success of the pipelines</li>
+<li>tests: add tests for utils.misc.R</li>
+<li>tests: add r-presto to env_r.yml</li>
+<li>tests: simplify tests for r functions</li>
+<li>tests: pin scipy to 1.8.0 for clustcr in env_r.yml</li>
+<li>tests: refactor tests for core.filters using unittest</li>
+<li>tests: refactor tests for utils.common_docstrs using unittest</li>
+<li>tests: refactor tests for utils.gene using unittest</li>
+<li>tests: refactor tests for utils.mutate_helpers using unittest</li>
+<li>tests: refactor tests for utils.single_cell using unittest</li>
+</ul>
+<h3 id="0262">0.26.2</h3>
+<ul>
+<li>deps: bump datar-pandas to 0.5.5 to dismiss deprecated warnings</li>
+</ul>
+<h3 id="0261">0.26.1</h3>
+<ul>
+<li>deps: bump pipen to 0.14.3</li>
+<li>deps: pin ggplot2 to 3.4 due to breaking changes of 3.5 for test</li>
+<li>fix(utils.misc.R): replace latin and greek characters with closest ascii chars for <code>slugify()</code></li>
+<li>feat(scrna.TopExpressingGenes): support <code>subset</code></li>
+<li>fix(scrna.CellsDistribution): fix the row order of the heatmaps.</li>
+<li>enh(tcr.CloneResidency): add legend for multiplets in upset plots.</li>
+<li>feat(scrna.SeuratClusterStats): add circos plot for cell composition stats (pwwang/immunopipe#46).</li>
+</ul>
+<h3 id="0260">0.26.0</h3>
+<ul>
+<li>deps: bump pipen to 0.14.1</li>
+<li>deps: bump pipen-report to 0.18.1</li>
+<li>fix(scrna.CellsDistribution): fix multiple <code>cells_by</code> columns and speed up plotting</li>
+<li>choir(tcr.CloneResidency): mark singletons in Venn diagrams more clear</li>
+<li>fix(scrna.RadarPlots): fix the order of groups on radar plots</li>
+<li>choir(scrna.RadarPlots): transpose the count/percentage table to save to files</li>
+<li>fix(scrna.MarkersFinder): fix generating report json file when no significant genes found</li>
+<li>choir(scrna.MarkersFinder): Plot maximum 20 genes in dotplots</li>
+<li>choir(scrna.MarkersFinder): Do not convert dashs in case names to dots</li>
+<li>feat(utils.misc): add logger for python (which allows pipen-poplog to populate logs to running log)</li>
+<li>feat: add rnaseq.UnitConversion and tests</li>
+<li>feat: add rnaseq.Simulation to simulate RNAseq data</li>
+<li>feat: add snp module and snp.PlinkSimulation process</li>
+<li>feat: add stats module</li>
+<li>feat: add stats.ChowTest</li>
+<li>feat: add stats.LiquidAssoc</li>
+<li>feat: add stats.DiffCoexpr</li>
+<li>feat: add stats.MetaPvalue</li>
+</ul>
+<h3 id="0254">0.25.4</h3>
+<ul>
+<li>deps: bump datar to  0.15.4 (support pandas 2.2)</li>
+<li>fix(utils.single_cell.R): fix <code>immdata_from_expanded</code> missing other data columns</li>
+<li>fix(tcr.Immunarch): fix <code>mutaters</code> not working when no <code>subset</code> is set</li>
+<li>fix(scrna.CellsDistribution): fix <code>hm_devpars</code> not working</li>
+</ul>
+<h3 id="0253">0.25.3</h3>
+<ul>
+<li>fix(scrna.CellTypeAnnotation): keep factor meta data when input and output are RDS for celltypist</li>
+</ul>
+<h3 id="0252">0.25.2</h3>
+<ul>
+<li>fix(scrna_metabolic_landscape.MetabolicPathwayHeterogeneity): fix output directory path is not slugified</li>
+<li>chore(tcr.Immunarch): change case filling log to debug level</li>
+</ul>
+<h3 id="0251">0.25.1</h3>
+<ul>
+<li>scrna.CellTypeAnnotation: leave the meta data as is in celltypist wrapper</li>
+</ul>
+<h3 id="0250">0.25.0</h3>
+<ul>
+<li>deps: bump pipen to 0.13.2</li>
+<li>feat: add scrna.AnnData2Seurat and scrna.Seurat2AnnData</li>
+<li>scrna.MarkersFinder: allow to cache <code>FindAllMarkers</code> results</li>
+<li>scrna.CellTypeAnnotation: support celltypist (#111)</li>
+<li>scrna.SeuratSubClustering: add <code>envs_depth = 1</code> to replace whole <code>envs.cases</code> when new case assigned</li>
+<li>test: add tests for celltypist of <code>CellTypeAnnotation</code>, <code>AnnData2Seurat</code> and <code>Seurat2AnnData</code></li>
+</ul>
+<h3 id="0242">0.24.2</h3>
+<ul>
+<li>deps: bump pipen-report to 0.17.3</li>
+<li>chore: use internal <code>slugify</code> instead of <code>slugify</code> library</li>
+<li>scrna.SeuratPreparing: fix displaying filters in report</li>
+<li>scrna.SeuratPreparing: fix logging Seurat procedure arguments</li>
+<li>cellranger: add CellRangerSummary</li>
+<li>cell_ranger: use <code>Iframe</code> in report to have loading indicators</li>
+<li>cellranger_pipeline: add <code>CellRangerCountPipeline</code> and <code>CellRangerVdjPipeline</code></li>
+</ul>
+<h3 id="0241">0.24.1</h3>
+<ul>
+<li>tcr.Immunarch: update spectratyping output file extension to png</li>
+</ul>
+<h3 id="0240">0.24.0</h3>
+<ul>
+<li>deps: bump up deps by pipen 0.13</li>
+<li>deps: add pipen-poplog to populate job logs to running log</li>
+<li>deps: bump pipen-poplog to 0.0.2</li>
+<li>feat: add utils.caching.R</li>
+<li>cellranger: fix inferring sample name when fastqs from mulitple lanes</li>
+<li>scrna.SeuratClustering/SeuratSubClustering: cache Seurat procedures step by step</li>
+<li>scrna.MetaMarkers: limit log messages to be populated to 15</li>
+<li>scrna.SeuratPreparing: log procedure arguments at debug level</li>
+<li>scrna_metabolic_landscape.MetabolicFeaturesIntraSubset: use logger to log so can be poplutated to running log</li>
+<li>scrna_metabolic_landscape.MetabolicPathwayActivity: use logger to log so can be poplutated to running log</li>
+<li>tcr.ImmunarchLoading: add logs for steps</li>
+<li>tcr.TCRClustering: use logger to log so can be poplutated to running log</li>
+<li>tcr.TESSA: log command at debug level</li>
+<li>tcr.Immunarch: add plot_type for divs to support boxplots</li>
+<li>tcr.TCRClustering: fix log_info not found</li>
+<li>tcr.Immunarch: make poplog_max 999 to pop all job logs to running log</li>
+<li>scrna_metabolic_landscape.MetabolicFeaturesIntraSubset: change log level for groups from warning to info</li>
+</ul>
+<h3 id="0238">0.23.8</h3>
+<ul>
+<li>scrna.SeuratPreparing: log <code>Seurat</code> procedure arguments</li>
+<li>scrna.ScFGSEA: add <code>subset</code> to filter cells</li>
+</ul>
+<h3 id="0237">0.23.7</h3>
+<ul>
+<li>scrna.SeuratPreparing: update log message for transformation/scaling step</li>
+<li>scrna_metabolic_landscape.MetabolicPathwayHeterogeneity: add utils.gsea script source to support localizeGmtfile</li>
+</ul>
+<h3 id="0236">0.23.6</h3>
+<ul>
+<li>feat: support url for gmtfile wherever GSEA is performed (#113)</li>
+<li>utils.gsea.R: fix file path in gsea.R</li>
+<li>tcr.Immunarch: add error message for empty filtered/subset data in diversity</li>
+<li>scrna.SeuratPreparing: correct description of default assay in docstr</li>
+<li>scrna.SeuratPreparing: run also the normal normalization procedures when <code>SCTransform</code> is used (useful for visualization purposes on RNA assay)</li>
+<li>scrna.SeuratClustering: add related issue link to <code>PrepSCTFindMarkers</code></li>
+<li>scrna.ModuleScoreCalculator: document the names added by cell cycle score (pwwang/immunopipe#34)</li>
+<li>scrna.SeuratPreparing: support sample names as <code>reference</code> for <code>IntegrateLayers</code></li>
+</ul>
+<h3 id="0235">0.23.5</h3>
+<ul>
+<li>scrna.SeuratClusterStats: fix when <code>frac</code> or <code>frac_ofall</code> is true and no <code>group-by</code> nor <code>split-by</code> is specified for <code>stats</code></li>
+<li>core.filters: fix when no enriched items found for report component <code>enrichr</code></li>
+<li>scrna.MarkersFinder: fix when no enriched items found</li>
+<li>scrna.MetaMarkers: fix when no enriched items found</li>
+<li>scrna.TopExpressingGenes: fix when no enriched items found</li>
+<li>utils.gsea.R: fix when no enriched items found for <code>runEnrichr</code></li>
+<li>scrna_metabolic_landscript: fix adding report when ncores &gt; 1</li>
+</ul>
+<h3 id="0234">0.23.4</h3>
+<ul>
+<li>scrna.TopExpressingGenes: fix colnames while pulling average expression</li>
+<li>scrna.CellsDistribution: fix when cells_by has multiple column names</li>
+<li>scrna.CellTypeAnnotation: fix the order of the clusters for direct method</li>
+<li>scrna.SeuratClusterStats: add <code>position</code> options for bar plots for stats</li>
+<li>scrna.RadarPlots: add <code>colors</code> to set the colors of the loops in radar and bar plots</li>
+<li>tcr.Immunarch: add <code>split_by</code> and <code>split_order</code> to put subplots together in one single plots</li>
+</ul>
+<h3 id="0233">0.23.3</h3>
+<ul>
+<li>tcr.ImmunarchLoading: change mode from <code>single</code> to <code>paired</code> by default</li>
+</ul>
+<h3 id="0232">0.23.2</h3>
+<ul>
+<li>scrna.RadarPlots: fix test error when not enough observations</li>
+<li>scrna.RadarPlots: add <code>n</code> and <code>mean</code> to test table</li>
+</ul>
+<h3 id="0231">0.23.1</h3>
+<ul>
+<li>scrna.RadarPlots: fix error when generating report for tests when breakdown is not provided</li>
+</ul>
+<h3 id="0230">0.23.0</h3>
+<ul>
+<li>deps: bump pipen to 0.12.5</li>
+<li>deps: bump pipen-report to 0.16.3</li>
+<li>deps: Update seurat to 5.0.1 in test env file</li>
+<li>chore: Add <code>/tmp</code> to .gitignore</li>
+<li>scrna.MarkersFinder: Add <code>envs.use_presto</code> to use presto to speed up finding markers</li>
+<li>scrna.MarkersFinder: Fix a bug when subsetting cells</li>
+<li>scrna.MarkersFinder: Set <code>envs.dbs</code> to <code>KEGG_2021_Human</code> and <code>MSigDB_Hallmark_2020</code> by default</li>
+<li>scrna.MarkersFinder: Fix FindAllMarkers/FindMarkers for SCTransform'ed data</li>
+<li>scrna.SeuratPreparing: Fix handling of empty path in <code>RNAData</code></li>
+<li>scrna.SeuratPreparing: Set <code>envs.gene_qc.min_cells</code> to 0 by default (instead of 3)</li>
+<li>scrna.SeuratPreparing: Add sample integration procedures</li>
+<li>scrna.SeuratPreparing: Allow to filter genes directly</li>
+<li>scrna.SeuratClustering: Add options to limit string and numeric output length to have more exact caching signature</li>
+<li>scrna.SeuratClustering: Set default <code>random.seed</code> to <code>8525</code> for <code>FindClusters</code></li>
+<li>scrna.SeuratClustering: Allow multiple resolutions for <code>FindClusters</code></li>
+<li>scrna.SeuratClustering: Print table of idents in log for found clusters</li>
+<li>scrna.SeuratClustering: Move integration procedues to <code>SeuratPreparing</code> and do only clustering</li>
+<li>scrna.SeuratClustering: Update tests</li>
+<li>scrna.SeuratClustering: Make the cluster labels start with "c1" instead of "0"</li>
+<li>scrna.SeuratClustering: Default reduction of <code>RunUMAP</code> and <code>FindNeighbors</code> to pca</li>
+<li>scrna.SeuratClustering: Fix test</li>
+<li>scrna.SeuratClustering: Print less verbosal log</li>
+<li>scrna.SeuratClusterStats: Add <code>ngenes</code> to plot the number of genes expressed</li>
+<li>scrna.SeuratClusterStats: Add barplot for <code>features</code> and allow aggregation of features</li>
+<li>scrna.SeuratClusterStats: Fix matching kind for plots of features</li>
+<li>scrna.SeuratClusterStats: Use new umap for plotting feature and dimplots for sub-clustering</li>
+<li>scrna.SeuratClusterStats: Use default assay for plotting of number of genes expressed</li>
+<li>scrna.SeuratClusterStats: Add <code>envs.mutaters</code> to mutate meta data</li>
+<li>scrna.SeuratClusterStats: Add histograms to plot number of cells against another variable</li>
+<li>scrna.SeuratClusterStats: Fix reduction for subclustering for dimplots</li>
+<li>scrna.SeuratClusterStats: Subset seurat object for featureplots when ident is subclusters</li>
+<li>scrna.SeuratClusterStats: Fix argument layer not excluded for heatmaps in features</li>
+<li>scrna.SeuratClusterStats: Add <code>frac_ofall</code> and <code>transpose</code> for <code>stats</code> to calculate fraction within group or against all cells, and transpose ident and group, respectively</li>
+<li>scrna.ModuleScoreCalculator: Fix features not being passed to <code>AddModuleScore</code> as a list</li>
+<li>scrna.ModuleScoreCalculator: Support calculating diffusion map components</li>
+<li>scrna.SeuratMap2Ref: Rename <code>envs.alias</code> to `envs.name</li>
+<li>scrna.SeuratMap2Ref: Set default value of <code>envs.MappingScore.ndim</code> to 30</li>
+<li>scrna.SeuratMap2Ref: Add <code>envs.ncores</code> for parallelization</li>
+<li>scrna.SeuratMap2Ref: Remove preset MapQuery arguments</li>
+<li>scrna.SeuratMap2Ref: Raise an error when envs.MapQuery.refdata is not provided</li>
+<li>scrna.SeuratMap2Ref: Default <code>envs.use</code> to the key of <code>envs.MapQuery.refdata</code> with single key</li>
+<li>scrna.SeuratMap2Ref: Use layer instead of slot in docstring (Seurat v5)</li>
+<li>scrna.SeuratMap2Ref: Make sure the column of cluster labels is a factor</li>
+<li>scrna.ScFGSEA: Allow to ignore small group when fgsea fails due to all NAs for pre-ranks</li>
+<li>scrna.ScFGSEA: Use default assay and use layer instead of slot (Seurat v5)</li>
+<li>scrna.TopExpressingGenes: Use default assay of Seurat object and fix column names of average expression (Seurat v5)</li>
+<li>scrna.TopExpressingGenes: Change default enrichment gene sets to <code>KEGG_2021_Human</code> and <code>MSigDB_Hallmark_2020</code></li>
+<li>scrna.MetaMarkers: Change default enrichment gene sets to <code>KEGG_2021_Human</code> and <code>MSigDB_Hallmark_2020</code></li>
+<li>scrna.MetaMarkers: Give better message when tests for genes fail</li>
+<li>scrna.MetaMarkers: Give error message when not enough cells in case</li>
+<li>scrna.CellsDistribution: Allow to order clusters by <code>envs.cluster_orderby</code></li>
+<li>scrna.CellsDistribution: Add heatmaps</li>
+<li>scrna.SeuratSubClustering: Add process</li>
+<li>scrna_metabolic_landscape: Add <code>InlineNotification</code> component to imports for report</li>
+<li>scrna_metabolic_landscape.MetabolicFeatures: Fix when default assay is SCT</li>
+<li>scrna_metabolic_landscape.MetabolicFeaturesIntraSubset: Fix when default assay is SCT</li>
+<li>scrna_metabolic_landscape.MetabolicPathwayActivity: Fix when default assay is SCT</li>
+<li>scrna_metabolic_landscape.MetabolicPathwayActivity: Use default assay of Seurat object</li>
+<li>scrna_metabolic_landscape.MetabolicPathwayHeterogenetiy: Fix when default assay is SCT</li>
+<li>scrna.CellTypeAnnotation: Use layer instead of slot of Seurat object (Seurat v5) for sctype</li>
+<li>tcr.ImmunarchLoading: Allow empty path in TCRData column in input file</li>
+<li>tcr.ImmunarchLoading: Do not hide <code>envs.mode</code> anymore in docs</li>
+<li>tcr.CloneResidency: Fix stringifying the subject in case it is a factor</li>
+<li>tcr.CloneResidency: Make <code>section</code> works in report</li>
+<li>tcr.Immunarch: Support paired chain data for VJ conjuction plots</li>
+<li>tcr.TESSA: Change <code>envs.assay</code> to None to use default assay of Seurat object</li>
+<li>scrna_basic: remove scrna_basic pipeline, use immunopipe instead</li>
+<li>scrna.GeneExpressionInvestigation: Remove deprecated code</li>
+<li>scrna.Write10X: Use layer instead of slot (Seurat v5)</li>
+<li>scrna.ExprImputation: Use default assay of seurat object</li>
+<li>scrna.SeuratTo10X: Rename <code>Write10X</code> to <code>SeuratTo10X</code></li>
+<li>scrna.SeuratSubClustering: Fix original reduction being poluted by subclustering</li>
+<li>scrna.SeuratClusterStats: Add <code>avgheatmap</code> to plot more elegant heatmap for average gene expressions</li>
+<li>scrna.SeuratClusterStats: Fix ident not working for dimplots</li>
+<li>scrna.SeuratClusterStats: Fix for hists when x is a factor/character vector</li>
+<li>scrna.SeuratClusterStats: Add cluster_orderby to order clusters for features</li>
+<li>scrna.SeuratClusterStats: Add na_group to keep NA values in group-by</li>
+<li>scrna.SeuratClusterStats: Allow avgheatmap to plot features other than gene expressions</li>
+<li>scrna.SeuratClusterStats: Add mutate_helpers.R source file</li>
+<li>scrna.SeuratClusterStats: Fix data binding for avgheatmap in features</li>
+<li>utils.mutate_helpers: Change arguments id_col and compare_col to id and compare, respectively</li>
+<li>utils.mutate_helpers: Fix that subset can't be an expression for expanded family</li>
+<li>utils.mutate_helpers: Add top to select top entities (e.g clones)</li>
+<li>scrna.RadarPlots: Add <code>breakdown</code> and <code>test</code> to break down the cell distribution and run statistic test on the fractions</li>
+</ul>
+<h3 id="0228">0.22.8</h3>
+<ul>
+<li>scrna_metabolic_landscape.MetabolicPathwayActivity: Fix <code>useNames = NA</code> being deprecated in matrixStats v1.2 (more locations)</li>
+<li>scrna_metabolic_landscape.MetabolicPathwayActivity: Fix heatmap <code>column_split</code></li>
+<li>scrna_metabolic_landscape.MetabolicFeaturesIntraSubset: Sort groups when being processed</li>
+<li>utils.gsea: Fix <code>useNames = NA</code> in rowSds for matrixStats v1.2</li>
+<li>utils.mutate_helpers: Fix tests</li>
+</ul>
+<h3 id="0227">0.22.7</h3>
+<ul>
+<li>scrna_metabolic_landscape.MetabolicPathwayActivity: Fix <code>useNames = NA</code> being deprecated in matrixStats v1.2</li>
+</ul>
+<h3 id="0226">0.22.6</h3>
+<ul>
+<li>deps: Bump pipen-board to 0.13.10 (pipen-report to 0.16.2)</li>
+</ul>
+<h3 id="0225">0.22.5</h3>
+<ul>
+<li>docs: Bump pipen-board to 0.13.9 (pipen-report to 0.16.1)</li>
+<li>cellranger.CellRangerCount: Update iframe height in report</li>
+<li>cellranger.CellRangerVdj: Update iframe height in report</li>
+</ul>
+<h3 id="0224">0.22.4</h3>
+<ul>
+<li>utils.mutate_helpers: Update docs</li>
+</ul>
+<h3 id="0223">0.22.3</h3>
+<ul>
+<li>utils.mutate_helpers: Return ids only when subset is true and group is not NA for  <code>uniq = TRUE</code> in expanded, collapsed, emerged and vanished</li>
+</ul>
+<h3 id="0222">0.22.2</h3>
+<ul>
+<li>docs: Update logo and favicon</li>
+<li>docs: Update logo height in README.md</li>
+<li>core.filters: Add <code>exclude</code> argument to dict_to_cli_args filter</li>
+<li>cellranger: Add CellRangerCount and CellRangerVdj</li>
+<li>scrna.CellTypeAnnotation: Allow using NA to exclude clusters from output Seurat object</li>
+<li>scrna.SeuratClusterStats: Fix path of expression table file</li>
+<li>scrna.MarkersFinder: Use <code>FindAllMarkers</code> if <code>ident.1</code> is not specified</li>
+<li>scrna.CellsDistribution: Don't add rownames to the output table file</li>
+<li>utils.mutate_helpers: Add <code>debug</code> and <code>each</code> to expanded, collapsed, vanished and emerged</li>
+</ul>
+<h3 id="0221">0.22.1</h3>
+<ul>
+<li>scrna.CellsDistribution: Export table with distinct columns</li>
+<li>scrna.SeuratMetadataMutater: Warn about existing columns in seurat object</li>
+<li>tcr.ImmunarchLoading: Change <code>metacols</code> to <code>extracols</code> so essential columns get exported</li>
+<li>tcr.Attach2Seurat: Detach prefix from template in code</li>
+<li>tcr.CDR3AAPhyschem: Detach prefix from template in code</li>
+<li>tcr.Immunarch: Use <code>immdata$prefix</code> as prefix by default</li>
+<li>tcr.TCRClustering: Use <code>immdata$prefix</code> as prefix by default</li>
+<li>tcr.TESSA: Allow <code>in.immdata</code> to be either an RDS file of immunarch object or a text file of cell-level expanded data</li>
+</ul>
+<h3 id="0220">0.22.0</h3>
+<ul>
+<li>Bump pipen-board to 0.13.8 (pipen-report to 0.16)</li>
+<li>Use <code>render_job</code> filter to generate report</li>
+<li>utils: Add biopipen palette</li>
+<li>scrna.SeuratClusterStats: Add subset for dimplots to</li>
+<li>scrna.CellsDistribution: Add descr for cases in report</li>
+<li>scrna.CellsDistribution: Save the table only with  necessary columns</li>
+<li>scrna.MarkersFinder: Add dot plot</li>
+<li>scrna.MetaMarkers: Use logger to log messages</li>
+<li>scrna.SeuratClustering: Use logger to log messages</li>
+<li>scrna.SeuratClustering: Add cache option to cache the clustering results if nothing changed except ncores</li>
+<li>delim.SampleInfo: Fix handling of null <code>exclude_cols</code></li>
+</ul>
+<h3 id="0212">0.21.2</h3>
+<ul>
+<li>tcr.Immunarch: Add V-J junction circos plots</li>
+<li>tcr.Immunarch: Refactor logging statements using <code>r-logger</code></li>
+</ul>
+<h3 id="0211">0.21.1</h3>
+<ul>
+<li>deps: Update pipen-board and pygments versions</li>
+<li>docs: Adopt mkdocs-rtd 0.0.10</li>
+<li>docs: Fix internal reference in API docs</li>
+<li>delim.SampleInfo: Refactor data subset logic in SampleInfo class</li>
+</ul>
+<h3 id="0210">0.21.0</h3>
+<ul>
+<li>tcr.Immunarch: Fix empty groups in diversity plot after filtering</li>
+<li>tcr.Immunarch: Add <code>in.metafile</code> to allow other meta info (i.e. seurat clusters) for future subsetting</li>
+<li>tcr.Immunarch: Change <code>envs.mutaters</code> now on expanded (cell-level) data</li>
+<li>tcr.Immunarch: Add <code>subset</code> for cases to do analysis on a subset of data</li>
+<li>tcr.Immunarch: Add <code>separate_by</code> also works on other diversity plots</li>
+<li>tcr.Immunarch: Add <code>ymin</code> and <code>ymax</code> to align diversity plots by <code>separate_by</code></li>
+<li>tcr.Immunarch: Add <code>ncol</code> to specify # columns in the combined plots</li>
+<li>scrna.RadarPlots: Fix <code>envs.order</code> not working</li>
+<li>scrna.MarkersFinder: Add <code>overlap</code> to find overlapping markers between cases (pwwang/immunopipe#24)</li>
+<li>scrna.MarkersFinder: Add <code>subset</code> for each case to subset cells</li>
+<li>scrna.MarkersFinder: Add dot plots for cases</li>
+<li>scrna.CellsDistribution: Allow multiple columns for <code>cells_by</code></li>
+<li>scrna.CellsDistribution: Add <code>subset</code> for cases to subset cells</li>
+<li>cnv.AneuploidyScoreSummary: Ignore <code>.call</code> suffix to get sample name by default</li>
+<li>cnv.AneuploidyScoreSummary: Fix image path in report while <code>envs.group_cols</code> is a string (not an array)</li>
+<li>utils.single_cell.R: Add functions to expand, filter and restore immunarch objects</li>
+<li>utils.common_docstrs: Extract some common docstrings for procs</li>
+<li>utils.misc.R: Use r-logger for logging for R scripts</li>
+<li>utils.mutate_helpers.R: Add include_emerged for <code>expanded()</code> and include_vanished for <code>collapsed()</code></li>
+<li>utils.mutate_helpers.R: Fix tests</li>
+<li>tests: Add r-logger to test dependencies</li>
+</ul>
+<h3 id="0207">0.20.7</h3>
+<ul>
+<li>(delim.SampleInfo) Add <code>distinct</code> to case to perform stats on distinct records</li>
+<li>(scrna_basic) Fix docker image building</li>
+</ul>
+<h3 id="0206">0.20.6</h3>
+<ul>
+<li>⬆️ Bump pipen-board to 0.13.4</li>
+<li>✨ [scrna.MarkersFinder] Allow to set assay for <code>Seurat::FindMarkers()</code></li>
+<li>✨ [scrna.CellsDistribution] Add venn/upset plot for overlapping cell groups in different cases</li>
+</ul>
+<h3 id="0205">0.20.5</h3>
+<ul>
+<li>⬆️ Bump pipen-board to 0.13.3</li>
+<li>🏗️ [tcr.CloneResidency] Rename <code>envs.sample_groups</code> to <code>envs.section</code> to be consistent with other processes</li>
+<li>🏗️ [tcr.CloneResidency] Allow additional metadata from input for more flexible case definition (i.e. analysis for specific seurat clusters)</li>
+<li>📝 [scrna.ScFGSEA] Remove the link in the summary of the docstring (since they are not transformed in the report)</li>
+<li>🎨 [tcr.CDR3AAPhyschem] Give better error message when wrong group items are given</li>
+</ul>
+<h3 id="0204">0.20.4</h3>
+<ul>
+<li>🐛 [scrna.SeuratClusterStats] Fix toc not saved correct (causing report not including the right sections)</li>
+</ul>
+<h3 id="0203">0.20.3</h3>
+<ul>
+<li>🐛 [scrna.SeuratPreparing] Fix when cell_qc is None</li>
+<li>🎨 [scrna.MarkersFinder] Add margins to volcano plot</li>
+<li>🐛 [scrna.SeuratClusterStats] Fix <code>ident</code> in cases of <code>envs.dimplots</code> not working</li>
+</ul>
+<h3 id="0202">0.20.2</h3>
+<ul>
+<li>🚑 [scrna.SeuratPreparing] Fix % in docstring to crash the pipeline</li>
+</ul>
+<h3 id="0201">0.20.1</h3>
+<ul>
+<li>📝 [scrna_basic/scrna_metabolic_landscape/scrna/tcr] Update docstring</li>
+<li>🎨 [scrna.MarkersFinder] Try include more genes in volcano plot (pwwang/immunopipe#17)</li>
+<li>🎨 [scrna.CellsDistribution] Give better error message in CellsDistribution if group value not found (pwwang/immunopipe#16)</li>
+<li>🚚 [tcr.TCRClusterStats] Rename TCRClusteringStats to TCRClusterStats (pwwang/immunopipe#15)</li>
+</ul>
+<h3 id="0200">0.20.0</h3>
+<ul>
+<li>⬆️ Bump pipen to 0.12</li>
+</ul>
+<h3 id="0190">0.19.0</h3>
+<ul>
+<li>⬆️ Bump pipen-report 0.13.1 (pwwang/immunopipe#9, 2)</li>
+<li>⬆️ Bump pipen-board to 0.12.5</li>
+<li>💄 [docs] Hide unnecessary items in nav bar</li>
+<li>💄 [docs] Get docs, especially API docs, formatted better</li>
+<li>🐛 [delim.SampleInfo] Fix order in pie charts</li>
+<li>🎨 [delim.SampleInfo] Add stricter checker for input file (pwwang/immunopipe#13)</li>
+<li>🎨 [scrna.SeuratPreparing] Improve QC plots</li>
+<li>📝 [scrna.SeuratPreparing] Fix type annotation for <code>envs.features_defaults.ncol</code> in docstring</li>
+<li>🐛 [scrna.CellsDistribution] Fix the cluster order in pie charts</li>
+<li>🐛 [scrna.SeuratClusterStats] Fix the cluster order in pie charts</li>
+<li>🎨 [scrna.SeuratClusterStats] Indicate the case name in logs when pie is enable for group-by</li>
+<li>✨ [scrna.SeuratClusterStats] Allow mutiple columns in the file for <code>envs.features_defaults.features</code></li>
+<li>✨ [scrna.SeuratClustering] Add number of clusters at the end of log</li>
+<li>🩹 [scrna.ModuleScoreCalculator] Set default assay to RNA in case module scores only caculated using integrated features</li>
+<li>📝 [tcr.Immunarch] Fix docstring for <code>envs.div.args</code></li>
+<li>🎨 [tcr.CloneResidency] Allow order to be optional</li>
+<li>🎨 [tcr.Immunarch] Allow to skip overlap and gene usage analyses by setting method to <code>none</code> (pwwang/immunopipe#11, pwwang/immunopipe#12)</li>
+<li>🐛 [tcr.TCRClusteringStats] Don't cluster on heatmap when there are only 2 samples</li>
+<li>🐛 [scrna_metabolic_landscape.MetabolicFeatures] Import Seurat explictly to avoid satijalab/seurat#2853</li>
+<li>🐛 [scrna_metabolic_landscape.MetabolicPathwayActivity] Fix when NA values in data for heatmap</li>
+<li>🐛 [scrna_metabolic_landscape.MetabolicPathwayHeterogeneity] Fix error when no significant pathways selected</li>
+</ul>
+<h3 id="0183">0.18.3</h3>
+<ul>
+<li>🐛 [scrna.MarkersFinder] Fix when either ident is empty</li>
+</ul>
+<h3 id="0182">0.18.2</h3>
+<ul>
+<li>🐛 [tcr.CDR3AAphyschem.R] Fix a bug when the min length of CDR3 seqs &gt; 12</li>
+</ul>
+<h3 id="0181">0.18.1</h3>
+<ul>
+<li>⬆️ Bump datar to 0.15.3</li>
+<li>🎨 [scrna.MetaMarkers/ScFGSEA/SeuratClusterStats] Remove <code>tidyseurat::</code> prefix for <code>filter</code></li>
+<li>✨ [tcr.TESSA] Allow the results to be saved to seurat object</li>
+<li>📝 [tcr.TESSA] Fix docs about envs.assay</li>
+</ul>
+<h3 id="0180">0.18.0</h3>
+<ul>
+<li>🔧 Update .gitignore</li>
+<li>⬆️ Bump pipen to 0.11</li>
+<li>⬆️ Bump datar to 0.15.2</li>
+<li>🚨 Make line length to 88 for linting</li>
+<li>✨ [core.filters] Add <code>skip</code> argument to <code>r()</code></li>
+<li>🚑 [tcr.TESSA] Fix type annotation for envs.max_iter</li>
+<li>🐛 [delim.SampleInfo] Allow <code>unique:</code> prefix for <code>on</code> in stats cases;  fix sample order in plots</li>
+<li>♻️ [scrna.SeuratClusterStats] Redesign envs</li>
+<li>✨ [scrna.MarkersFinder] Add volcano plot</li>
+<li>✨ [tcr.TESSA] Add <code>envs.assay</code> for seurat object input</li>
+<li>🐛 [tcr.TESSA] Fix when a V-gene/J-gene is missing</li>
+<li>✅ [gsea.FGSEA] Fix tests</li>
+<li>🚸 [scrna.SeuratClustering] Add clear message when <code>k.weight</code> is too large for <code>IntegrateData</code>⏎</li>
+</ul>
+<h3 id="0177">0.17.7</h3>
+<ul>
+<li>✅ [tests] Allow pass FORCE=true to run local-only tests</li>
+<li>✅ [tests] Fix receiving VERBOSE and FORCE in test script</li>
+<li>🚑 [tcr.ImmunarchLoading] Fix when <code>Sample</code> is the only column in meta</li>
+<li>✨ [tcr.TESSA] Add process and test</li>
+</ul>
+<h3 id="0176">0.17.6</h3>
+<ul>
+<li>👷 Fix CI for publishing the package</li>
+<li>⬆️ Bump pipen-board to 0.11.5</li>
+<li>🚑 [scrna.SeuratClusterStats] Adjust default width and height for plots</li>
+<li>🚑 [scrna.CellTypeAnnotation] Keep order of clusters after hitype annotation</li>
+</ul>
+<h3 id="0175">0.17.5</h3>
+<ul>
+<li>👷 Do not run CI build for publish job</li>
+<li>🎨 [tcr.TCRClustering] Add <code>TCR_Cluster_Size1</code> in addition to <code>TCR_Cluster_Size</code> in <code>out.clusterfile</code> to represent #cells and #CDR3 seqs</li>
+<li>⬆️ Bump up dependencies</li>
+</ul>
+<h3 id="0174">0.17.4</h3>
+<ul>
+<li>✨ [tcr.TCRClustering] Add <code>TCR_Cluster_Size</code> in <code>out.clusterfile</code></li>
+<li>💥 [scrna.SeuratClusterStats] Rename <code>envs.exprs</code> to <code>envs.features</code></li>
+</ul>
+<h3 id="0173">0.17.3</h3>
+<ul>
+<li>⬆️ Bump pipen-report to 0.12.8</li>
+<li>📝 [delim.SampleInfo] Show h1 in report only when stats specified</li>
+<li>📝 [delim.SampleInfo] Fix parsing excluded_cols in report</li>
+</ul>
+<h3 id="0172">0.17.2</h3>
+<ul>
+<li>📝 [delim.SampleInfo] Add report template</li>
+</ul>
+<h3 id="0171">0.17.1</h3>
+<ul>
+<li>🎨 [scrna.CellTypeAnnotation] Change <code>seurat_clusters_old</code> to <code>seurat_clusters_id</code> to save old seurat_clusters</li>
+<li>💥 [csv] Rename to <code>delim</code></li>
+<li>🚚 [csv.BindRows] Rename to <code>delim.RowsBinder</code></li>
+<li>✨ [utils.mutate_helpers.R] Add <code>paired()</code> to identify paired records</li>
+<li>✨ [delim.SampleInfo] Add process</li>
+</ul>
+<h3 id="0170">0.17.0</h3>
+<ul>
+<li>⬆️ Bump pipen-board to 0.11.4</li>
+<li>📝 [docs] Update logo</li>
+<li>📝 [docs] Add css due to mkdocs-rtd change</li>
+<li>💥 [core.filters] Default <code>sortkeys</code> to <code>False</code> for filter <code>r</code></li>
+<li>🐛 [scrna.ModuleScoreCalculator] Fix aggregation values of programs</li>
+<li>🐛 [scrna.SeuratClusterStats] Fix typo for default stats</li>
+<li>🐛 [scrna.ModuleScoreCalculator] Fix name for cell cycle scores</li>
+<li>🐛 [scrna.CellsDistribution] Fix when <code>cells_by</code> or <code>group_by</code> is not an identifier</li>
+<li>🚑 [utils.mutate_helpers.R] Allow accessing metadata using <code>.</code></li>
+<li>✨ [scrna.ModuleScoreCalculator] Add proc</li>
+</ul>
+<h3 id="0167">0.16.7</h3>
+<ul>
+<li>🔥 [scrna.SeuratMetadataMutater] Remove unnecessary in.mutaters</li>
+<li>📝 [docs] Use kmdocs-rtd for documentation</li>
+<li>📝 [scrna_basic] Fix docs</li>
+<li>📝 [docs] Fix CI when files in docs/ changes</li>
+<li>📝 [docs] Fix CI when CI config file changes</li>
+<li>📝 [scrna_basic] Update docs for processes</li>
+<li>🔧 [scrna_basic] Update example config file</li>
+<li>📝 [docs] Add logo and favicon</li>
+<li>📝 [docs] Fix font-sizes in APIs</li>
+<li>📝 [docs] Fix logo size in README</li>
+</ul>
+<h3 id="0166">0.16.6</h3>
+<ul>
+<li>🚑 [scrna] Hotfix for docstring when parsed by argparse help</li>
+</ul>
+<h3 id="0165">0.16.5</h3>
+<ul>
+<li>💥 [scrna.SeuratMetadataMutater] Move mutaters from in to envs</li>
+<li>🔥 [scrna.CellsDistribution] Remove unnecessary in.casefile</li>
+<li>🚑 [scrna.CellTypeAnnotation] Hotfix when envs.hitype_db as a file starts with "hitypedb_"</li>
+</ul>
+<h3 id="0164">0.16.4</h3>
+<ul>
+<li>🚑 [scrna.CellTypeAnnotation] Hotfix passing <code>envs.newcol</code></li>
+<li>⬆️ Bump pipen-report to 0.12.7</li>
+</ul>
+<h3 id="0163">0.16.3</h3>
+<ul>
+<li>📝 [scrna_metabolic_landscape] Update docstring</li>
+<li>✨ [tcr.CDR3AAPhyschem] Allow envs.subset_cols to be separated by comma</li>
+<li>✨ [scrna.CellTypeAnnotation] Add <code>envs.newcol</code> to keep original idents</li>
+</ul>
+<h3 id="0162">0.16.2</h3>
+<ul>
+<li>🚨 Add .lintr for R lintr</li>
+<li>⬆️ Bump pipen-board to 0.11.1</li>
+<li>💄 [report] Separate enrichr_report</li>
+<li>💄 [scrna.CellsDistribution] Fix reports</li>
+<li>💄 [scrna.CellsDistribution] Reorganize report</li>
+<li>💄 [scrna.MarkersFinder] Reorganize report</li>
+<li>💄 [scrna.ScFGSEA] Reorganize report</li>
+<li>💄 [scrna.TopExpressingGenes] Reorganize report</li>
+<li>🚨 [scrna.TopExpressingGenes] Fix linting issues in script</li>
+<li>🔧 [scrna.MarkersFinder] Set envs.prefix_each to True by default</li>
+<li>🔧 [scrna.TopExpressingGenes] Set envs.prefix_each to True by default</li>
+<li>✨ [scrna.MetaMarkers] Add proc⏎</li>
+</ul>
+<h3 id="0161">0.16.1</h3>
+<ul>
+<li>🚨 Fix some linting issues</li>
+<li>⬆️ Bump pipen-board to 0.11</li>
+<li>🎨 [scrna.CellTypeAnnotation] Rename <code>seurat_clusters.old</code> to <code>seurat_clusters_old</code> to save the old clusters for sctype</li>
+<li>🐛 [scrna.CellTypeAnnotation] Fix saving annotated cell type to text file for sccatch</li>
+<li>🎨 [scrna.CellTypeAnnotation] Save old clustering to <code>seurat_clusters_old</code> for sccatch</li>
+<li>🎨 [scrna.CellTypeAnnotation] Save old clustering to <code>seurat_clusters_old</code> for direct method</li>
+<li>📝 [scrna.CellTypeAnnotation] Fix links in docs for sccatch</li>
+<li>✨ [scrna.SeuratClusterStats] Allow <code>envs.exprs.genes</code> to be genes directly (separated by ",")</li>
+<li>💄 [docs] Update API doc styles for dark mode</li>
+<li>✨ [tcr.TCRClustering] Save the souce code of GIANA with this package</li>
+<li>✨ [tcr.TCRClusteringStats] Allow multiple cases</li>
+<li>📝 [tcr.ImmunarchLoading] Update docstring</li>
+<li>✨ [utils] Add mutate_helpers to identify expanded, collapsed, emerged and vanished clones</li>
+<li>🐛 [utils/misc.R] Fix list_setdefault and list_update when value is NULL</li>
+<li>🐛 [scrna.TopExpressionGenes] Fix expanding cases</li>
+<li>✨ [scrna.SeuratClustering] Allow envs.FindIntegrationAnchors.reference to be a string separated by comma</li>
+<li>✨ [scrna.ScFGSEA] Allow multiple cases</li>
+<li>✨ [scrna.MarkersFinder] Allow to use mutate_helpers in envs.mutaters</li>
+<li>🎨 [scrna.CellsDistribution] Redesign envs to support multiple cases</li>
+<li>💄 [tcr.Immunarch] Fix report generation for rarefraction analysis</li>
+<li>🔧 [tcr.Immunarch] Change envs to be less error prone</li>
+<li>💄 [scrna.CellsDistribution] Fix reports</li>
+<li>💄 [scrna.ScFGSEA] Fix reports</li>
+<li>✅ [tests] Fix tests</li>
+</ul>
+<h3 id="0160">0.16.0</h3>
+<ul>
+<li>⬆️ Bump pipen-board to 0.10</li>
+<li>💄 [docs] Update docs styles</li>
+<li>🚨 [core/testing] Remove unused importings</li>
+<li>🎨 [scrna] Rename RNADir to RNAData for input data</li>
+<li>🐛 [gsea.GSEA] Replace <code>doc.string</code> with <code>doc_string</code> to avoid over parsing by pipen-args</li>
+<li>🎨 [tcr.Immunarch] Refactor and split into modules</li>
+<li>🎨 [scrna.CellTypeAnnotation] Rename CellTypeAnnotate to CellTypeAnnotation and add hitype</li>
+<li>🎨 [tcr.ImmunarchLoading] Make it compatible with immunarch 0.9</li>
+<li>🎨 [scrna.MakersFinder] Support multiple cases</li>
+<li>🎨 [scrna.TopExpressionGenes] Support multiple cases</li>
+<li>🐛 [scrna.RadarPlots] Fix section and devpars not passed to script</li>
+<li>🐛 [scrna.SeuratClustering] Fix PCA on each sample</li>
+<li>🎨 [scrna.ExprImpution] Rename from ExprImpute to ExprImputation</li>
+<li>👷 [scrna.CellTypeAnnotation] Add r-hitype to env_r.yml for testing</li>
+<li>🐛 [scrna.CellTypeAnnotation] Fix typos for hitype script</li>
+<li>🐛 [scrna.CellTypeAnnotation] Fix startsWith in hitype script</li>
+<li>🎨 [scrna_basic] Rename <code>ScrnaBasicAnnotate</code> to <code>ScrnaBasicAnnotation</code></li>
+<li>📝 [scrna_basic] Update docs</li>
+<li>🐛 [cnvkit_pipeline] Fix docker image building</li>
+<li>📝 [cnvkit_pipeline] Fix docs</li>
+</ul>
+<h3 id="0152">0.15.2</h3>
+<ul>
+<li>⬆️ Bump pipen-board to 0.9.1</li>
+<li>✨ [scrna.RadarPlots] Add process</li>
+<li>🎨 [tcr.Immunarch] Separate diversity in script into a different file</li>
+<li>✨ [scrna.TopExpressingGenes] Add process</li>
+<li>🎨 [scrna.CellsDistribution] Use a different color palette</li>
+<li>🎨 [scrna.SeuratClusterStats] Warn about heatmap without downsampling</li>
+</ul>
+<h3 id="0151">0.15.1</h3>
+<ul>
+<li>⬆️ Bump pipen-board to 0.8.0</li>
+<li>⬆️ Bump pipen-report to 0.12.5 (to fix the pydantic error)</li>
+<li>🎨 [tcr.CloneResidency] Add indicators during running</li>
+<li>🎨 [tcr.CloneResidency] Allow multiple cases add mutaters for metadata</li>
+<li>🐛 [misc.File2Proc] Check if input file exists</li>
+<li>🎨 [tcr.Immunarch] Allow cases for trackings and add mutaters for metadata</li>
+</ul>
+<h3 id="0150">0.15.0</h3>
+<ul>
+<li>⬆️ Bump pipen to 0.10.6</li>
+<li>⬆️ Bump pipen-board to 0.7.8</li>
+<li>➖ Retire cmdy at all places (#54)</li>
+<li>✅ [core.filters] Add run.env to test</li>
+<li>✅ [core.filters] Add test for <code>dashify=True</code></li>
+<li>🎨 [scrna.MarkersFinder] Make envs.sigmarkers case wise for scrna.MarkersFinder (#53)</li>
+</ul>
+<h3 id="0143">0.14.3</h3>
+<ul>
+<li>⬆️ Bump pipen to 0.10.5</li>
+<li>🔧 [scrna_metabolic_landscape] Make proc group options for process readonly</li>
+<li>🎨 [scrna_metabolic_landscape.MetabolicFeatures] Add indicators during computation</li>
+</ul>
+<h3 id="0142">0.14.2</h3>
+<ul>
+<li>⬆️ Bump pipen-board to 0.7.4</li>
+<li>⬆️ Bump pipen-report to 0.12.3</li>
+<li>⚡️ Replace <code>do.call</code> with <code>do_call</code> in R scripts to improve performance</li>
+<li>🐛 [scrna.CellTypeAnnotate] Fix when no cell types is given for direct annotation</li>
+<li>🐛 [cnv.AneuploidyScore] Fix when <code>envs.cn_tranform</code> is a list of thresholds</li>
+</ul>
+<h3 id="0141">0.14.1</h3>
+<ul>
+<li>⬆️ Bump pipen-board to 0.7.3</li>
+<li>⬆️ Bump other dependencies</li>
+<li>🎨 [scrna] Add type=int for envs.ncores in docstrings</li>
+<li>🚑 [tcr.CloneResidency] Dismiss warnings from pivot_wider</li>
+</ul>
+<h3 id="0140">0.14.0</h3>
+<ul>
+<li>⬆️ Bump pipen-board to 0.6.3</li>
+<li>🔧 Fix make-examples.sh for docker images for pipelines</li>
+<li>🚑 [scrna_basic] Fix "Issued certificate has expired" in making examples for docker</li>
+<li>✨ [tcr.CDR3AAphyschem] Add process</li>
+<li>✨ [cnv.TMADScore] Add TMADScore and TMADScoreSummary</li>
+<li>🚑 [cnv.TMADScore] Fix wrong <code>envs.seg_transform</code> received in script</li>
+<li>📝 [cnv.TMADScoreSummary] Add report template</li>
+<li>✨ [cnv.TMADScoreSummary] Support grouping by 2 groups hierarchically</li>
+<li>💥 [cnv.AneuploidyScore] Change <code>envs.include_sex</code> to <code>envs.excl_chroms</code> so exclusion of chroms is more flexible</li>
+<li>🚑 [cnv.AneuploidyScoreSummary] Adjust with of CAA plot based on number of samples</li>
+<li>✨ [cnv.AneuploidyScoreSummary] Support grouping by 2 groups hierarchically</li>
+<li>⬆️ Bump pipen-board to 0.6.3</li>
+</ul>
+<h3 id="0130">0.13.0</h3>
+<ul>
+<li>⬆️ Bump pipen-board to 0.5.8</li>
+<li>♻️ [scrna_basic] Change detault tag from dev to master for docker image</li>
+<li>📝 [scrna_basic] Change detault tag from dev to master in docs</li>
+<li>🔧 [scrna_basic] Change detault tag from dev to master in entry.sh</li>
+<li>🔧 [scrna_basic] Fix make-examples.sh when running indenpendently</li>
+<li>🔧 [scrna_basic] Add plugin_opts.report_no_collapse in board.html</li>
+<li>🚧 [cnvkit_pipeline] Init docker building</li>
+<li>⚙️ [cnvkit_pipeline] Make examples</li>
+<li>⚙️ [cnvkit_pipeline] Update example.json for pipen-board</li>
+<li>🔧 [cnvkit_pipeline] Fix example in docker image</li>
+<li>📝 [scrna_metabolic_landscape] Update docstrings to adopt pipen-board</li>
+<li>📝 [utils.misc] Add docstring for run_command</li>
+<li>🐛 [cnvkit.CNVkitGuessBaits] Use a better way to determine python of <code>cnvkit.py</code></li>
+</ul>
+<h3 id="0120">0.12.0</h3>
+<ul>
+<li>⬆️ Bump <code>pipen</code> to 0.10</li>
+<li>⬆️ Bump pipen-runinfo to 0.1.1</li>
+<li>⬆️ Bump pipen-report to 0.12 and pipen-runinfo to 0.2</li>
+<li>⬆️ Bump pipen-args to 0.10.2</li>
+<li>⬆️ Bump pipen-board to 0.5.6</li>
+<li>📝 Use <code>flag</code> instead <code>action=store_true</code> in docstring</li>
+<li>✅ [utils.gene] Fix tests</li>
+<li>🎨 [scrna.SeuratMap2Ref] Add envs.MappingScore</li>
+<li>✨ [scrna.SeuratMap2Ref] Add report template</li>
+<li>💄 [scrna.SeuratMap2Ref] Make figures in 2 columns in report</li>
+<li>✨ [scrna.CellTypeAnnotate] Add ScCATCH for cell type annotation</li>
+<li>🎨 [scrna.CellTypeAnnotate] Warn when no cell types are given</li>
+<li>🐛 [cnvkit] Fix when some arguments are <code>None</code></li>
+<li>📝 [cnvkit_pipeline] Update docstrings to adopt latest pipen-annotate and pipen-board</li>
+<li>📝 [cnv] Update docstring</li>
+<li>🚑 [cnv.AneuploidyScoreSummary] Fix when envs.group_col is None but in.metafile is given</li>
+<li>👷 [scrna_basic] Init docker image building action</li>
+<li>👷 [scrna_basic] Fix dockhub credentials</li>
+<li>📝 [scrna_basic] Update docstrings to adopt latest pipen-annotate and pipen-board</li>
+<li>📝 [scrna_basic] Add documentation</li>
+<li>🔧 [scrna_basic] Update configuration for docker image building</li>
+</ul>
+<h3 id="0110">0.11.0</h3>
+<ul>
+<li>⬆️ Bump pipen to 0.9</li>
+<li>⬆️ Drop support for python3.7</li>
+<li>➕ Add pipen-board as dependency</li>
+<li>✨ Add board.toml for pipen-board to run</li>
+<li>🐛 [cnvkit.CNVkitCoverage] Fix error when generating flat reference</li>
+<li>🎨 [bed.BedConsensus] Use bedtools genomecov to calculate the consensus regions</li>
+<li>🐛 [core.filters] Keep list of dict in python as list of list in R</li>
+<li>✨ [scrna_metabolic_landscape] Allow multiple subsettings for the data</li>
+<li>✨ [scrna_basic] Initialize the pipeline</li>
+<li>🐛 [bed.Bed2Vcf] Fix OrderedDiot not found</li>
+<li>🎨 [cnvkit_pipeline] Import cached_property directly</li>
+<li>🐛 [scrna.SeuratPerparing] Fix when input contains a single sample</li>
+<li>🎨 [tests] Use --reuse instead of --former</li>
+<li>🐛 [vcf.VcfSplitSamples] Fix missing mutations for extract samples</li>
+<li>🎨 [scrna_metabolic_landscape.MetabolicPathwayHeterogeneity] Add progress indicator</li>
+<li>🎨 [scrna.SeuratClustering] Allow sample names to be assigned for reference for FindIntegrationAnchors</li>
+<li>🎨 [scrna_metabolic_landscape.MetabolicPathwayActivity] Add merged heatmaps for subsets</li>
+<li>🐛 [scrna_metabolic_landscape.MetabolicPathwayIntraSubsets] Fix fetching subsetting_comparison and limit nproc for FGSEA to 1</li>
+<li>🎨 [scrna_metabolic_landscape.MetabolicPathwayFeatures] Ignore NAs in subsets</li>
+<li>🎨 [scrna_metabolic_landscape] Adopt pipen-args 0.9.7</li>
+<li>✨ [scrna.SeuratMap2Ref] Add process</li>
+<li>➖ [utils] Retire cmdy</li>
+<li>✨ [bed.BedtoolsMerge] Add process</li>
+<li>🎨 [core.testing] Use --cache to control of reusing previous run</li>
+<li>🎨 [csv.BindRows] Allow to add filename</li>
+<li>📌 [scrna_basic] Adopt pipen-board 0.1.2</li>
+<li>🐛 [web.Download] Fix when args is Diot</li>
+<li>🎨 [cnvkit.CNVkitCall] Detach cmdy</li>
+<li>✨ [bam.BamSplitChroms] Add process</li>
+<li>✨ [bam.Merge] Add process and test</li>
+<li>🐛 [core] Fix repr filter in templates for Diot objects</li>
+<li>🐛 [docs] Add mygene dep for building utils.gene</li>
+<li>✅ [vcf.TruvariBench] Pin truvari to v3.4.0 for tests</li>
+</ul>
+<h3 id="0100">0.10.0</h3>
+<ul>
+<li>⬆️ Adopt pipen-report 0.7 for report templates</li>
+<li>⚡️ Add todot and sortkeys arguments for filter r</li>
+<li>🐛 Set default lang for processes using bash</li>
+<li>⚡️ Update docstrings for processes for pipen-cli-config</li>
+<li>⚡️ [scrna.ExprImpute] Add progress indicators for alra</li>
+<li>🐛 [scrna.ExprImpute] Set default assay to RNA for rmagic</li>
+</ul>
+<h3 id="090">0.9.0</h3>
+<ul>
+<li>⬆️ Bump up pipen to 0.6</li>
+</ul>
+<h3 id="080">0.8.0</h3>
+<ul>
+<li>🚀 [vcf.VcfAnno] Add VcfAnno to use vcfanno to annotate VCF files</li>
+<li>✨ [tcgamaf.Maf2Vcf] Add Variant_Classification and Variant_Type to output vcf</li>
+<li>✨ [vcf.VcfFix] Allow gziped vcf as input</li>
+<li>🧹 Remove tests for core pipeline (not needed any more)</li>
+</ul>
+<h3 id="071">0.7.1</h3>
+<ul>
+<li>⬆️ Upgrade pipen-filters to 0.2</li>
+<li>👽️ Adopt pipen-filters 0.2 in reports</li>
+<li>🔧 Rename <code>scrna_metabolic</code> namespace to <code>scrna_metabolic_landscape</code> in entry points</li>
+<li>✨ [scrna.MarkersFinder] Add <code>each</code> for cases to run on each value of metadata variable <code>each</code></li>
+<li>✨ [tcgamaf.Maf2Vcf] Add proc</li>
+<li>✨ [bcftools.BcftoolsSort] Add proc</li>
+</ul>
+<h3 id="070">0.7.0</h3>
+<ul>
+<li>🧑‍💻 [tcr.Immunarch] Allow separating samples for rarefraction analysis</li>
+<li>✨ [scrna.SeuratClusterStats] Add expression matrix to output</li>
+<li>🧑‍💻 [tcr.Immunarch] Allow align_x and log scale for rarefraction analysis</li>
+<li>✨ [cnv.AneuploidyScgitoreSummary] Add heatmaps</li>
+<li>🧑‍💻 [tcr.Immunarch] Allow separating samples for rarefraction analysis</li>
+<li>✨ [scrna.SeuratClusterStats] Add expression matrix to output</li>
+<li>🧑‍💻 [tcr.Immunarch] Allow align_x and log scale for rarefraction analysis</li>
+<li>✨ [cnv.AneuploidyScoreSummary] Add heatmaps</li>
+<li>🐛 [cnv.Aneuploidy] Fix when only one arm has signals for a chromosome</li>
+<li>✨ [cnvkit.CNVkitGuessBaits] Add proc</li>
+<li>♻️ [cnvkit_pipeline] Refactor and add docs</li>
+<li>🎨 [cnvkit_pipeline] Use process decorator to define processes</li>
+<li>✨ [scrna.SeuratClusterStats] Allow groupby other metadata column than Sample in cell stats</li>
+<li>✨ [scrna.ExprImput] Add ALRA and set as default</li>
+<li>🎨 [scrna.scrna_metabolic_landscape] Move from scrna_metabolic and use Seurat object directly instead of sce</li>
+<li>🐛 [scrna.SeuratClustering] Fix when there are fewer cells</li>
+<li>✨ [scrna.CellTypeAnnotate] Add proc and tests</li>
+<li>✨ [scrna.SeuratClusterStats] Allow subsetting for cell stats</li>
+<li>✅ [vcf.Vcf2Bed] Fix test</li>
+<li>✅ [tests] Add refgenes for testing</li>
+<li>🐛 [tests] Fix reference preparing</li>
+<li>✅ [tests] Add sctype db for tests</li>
+<li>✅ [tests] Try not patch  using lastest poetry</li>
+<li>✅ [tests] Build test deps and fix tests</li>
+<li>👷 [tests] Exclude test_scrna_metabolic_landscape from CI</li>
+<li>⬆️ Upgrade pipen-cli-run to 0.4.1</li>
+<li>⬆️ Upgrade pipen to 0.3.11</li>
+</ul>
+<h3 id="062">0.6.2</h3>
+<ul>
+<li>🎨 [scripts.utils.vcf] Use format keys for samples</li>
+<li>✨ [vcf.VcfFix] Dedent envs.helpers automatically and allow it to be list of strings</li>
+<li>🧑‍💻 [tcr.CloneResidency] Add count table and allow grouping samples in the report</li>
+<li>🧑‍💻 [cnvkit.CNVkitCall] Allow not passing threshold</li>
+<li>🧑‍💻 [cnvkit.CNVkitCall] Allow setting cutoff to fetch significant genes for enrichment analysis</li>
+<li>🧑‍💻 [scrna.SeuratPreparing/SeuratClustering] Do QC in SeuratPreparing only and prepare clustering in SeuratClustering</li>
+<li>✨ [cnvkit_pipeline] Allow customization of colnames in metafile</li>
+<li>💚 Fix CI (conda-incubator/setup-miniconda#274)</li>
+</ul>
+<h3 id="061">0.6.1</h3>
+<ul>
+<li>✨ [cnvkit_pipeline] Allow purity for each sample</li>
+<li>✨ [tcr.ImmunarchSplitIdents] Add proc</li>
+<li>✨ [vcf.VcfSplitSamples] Add proc</li>
+<li>🏗️ [cnvkit.CNVkitCall] Pass purity as input instead of envs</li>
+<li>✨ [vcf.VcfIntersect] Add proc</li>
+<li>✨ [vcf.VcfSampleSplits] Add envs.private to keep only private sites for each sample</li>
+<li>🔧 Fix setup.py file type</li>
+<li>✅ Fix tests for utils.gene</li>
+<li>🚨 Ignore template strings in python scripts for pyright</li>
+</ul>
+<h3 id="060">0.6.0</h3>
+<ul>
+<li>✨ [cnv] Add AneuploidyScore and AneuploidyScoreSummary</li>
+<li>✨ [scrna.Write10X] Add Write10X</li>
+<li>✨ [cnv.AneuploidyScore] Add envs.include_sex</li>
+<li>🐛 [scrna.SeuratSubset] Fix when envs.groupby is not given</li>
+<li>✨ [cnvkit.CNVkitHeatmap] Add envs.order for sample order in the heatmap</li>
+<li>✨ [bam.CNAClinic] Add bam.CNAClinic</li>
+<li>✨ [bam.CNAClinic] Add report</li>
+<li>✨ [cnv.AneuploidyScore] Allow a list of thresholds for <code>envs.cn_transform</code></li>
+<li>✨ [scrna.SeuratSplit] Add scrna.SeuratSplit</li>
+<li>✏️ [core] Fix typo in core.proc.Pipeline</li>
+<li>👽️ Refactor pipeline modules with pipen-cli-run 0.3</li>
+<li>💚 Use mamba in CI</li>
+</ul>
+<h3 id="053">0.5.3</h3>
+<ul>
+<li>✨ [scrna.SeuratClusterStats] Allow features to be a file for expression plots</li>
+<li>✨ [tcr.CloneSizeQQPlot] Add process</li>
+<li>🩹 [tcr.Immunarch] Fix bad characters in the “Motif Analysis” section in report (#43)</li>
+</ul>
+<h3 id="052">0.5.2</h3>
+<ul>
+<li>⬆️ Pump pipen-args to 0.3</li>
+<li>🩹 [scrna.CellsDistribution] Filter NA <code>cells.by</code></li>
+</ul>
+<h3 id="051">0.5.1</h3>
+<ul>
+<li>💚 Fix CI</li>
+<li>🚨 Add and fix linting</li>
+<li>⬆️ Pump pipen-report to 0.4.5</li>
+</ul>
+<h3 id="050">0.5.0</h3>
+<ul>
+<li>✅ [vcf.VcfFix] Add chrom size fixes</li>
+<li>✨ [utils.reference] Add bam_index</li>
+<li>🐛 [bam.CNVpytor] Fix vcf-fix only adds last contig and fix header with snp data</li>
+<li>✨ [vcf.Vcf2Bed] Add process and test</li>
+<li>🐛 [bed.BedConsensus] Fix final weighting issue</li>
+<li>🩹 [All] Use <code>%&gt;%</code> instead of <code>|&gt;</code> in all R scripts for backward compatibility</li>
+<li>🐛 [scrna_metabolic] Don't turn "Ident" to "seurat_clusters" for grouping.groupby in config</li>
+<li>🏗️ [tests] Add prefix "biopipen-" to conda environment names</li>
+<li>✅ [tests] Enable pipen-report only when necessary</li>
+</ul>
+<h3 id="049">0.4.9</h3>
+<ul>
+<li>👷 [test] Reverse immunarch in env_r</li>
+<li>✨ [bam.CNVpytor] Add filters</li>
+<li>✨ [cnvkit/cnvkit_pipeline] Add processes and pipeline</li>
+<li>🐛 [bam.cnvkit] Fix filter direction</li>
+<li>🚑 [scrna_metabolic] Fix nproc for runFGSEA for MetabolicPathwayHeterogeneity</li>
+</ul>
+<h3 id="048">0.4.8</h3>
+<ul>
+<li>🩹 [core] Add default for config.exe.bedtools</li>
+<li>🩹 [scrna.ScFGSEA] Don't convert sparse matrix to avoid "problem too large" error</li>
+</ul>
+<h3 id="047">0.4.7</h3>
+<ul>
+<li>🐛 [scrna.SeuratPreparing] Fix new data preparing when errored</li>
+</ul>
+<h3 id="046">0.4.6</h3>
+<ul>
+<li>✨  [vcf.TruvariBench] Allow <code>multimatch</code> to be passed</li>
+<li>✨  [vcf.TruvariConsistency] Add report</li>
+</ul>
+<h3 id="045">0.4.5</h3>
+<ul>
+<li>✨ [bam.CNVpytor] Generate and fix VCF file as result</li>
+<li>📝 [vcf.TruvariBench] Update docs to show other arguments for <code>truvari bench</code></li>
+<li>✨ [vcf.TruvariBench] Allow <code>sizemax</code> to be passed</li>
+<li>✨ [bed.BedConsensus] Add process and tests</li>
+<li>✨ [core] Add <code>ref.genome</code> to configurations</li>
+<li>⚡️ [bed.BedConsensus] Parallelize and speed up</li>
+<li>💚 [test] Add bedtools to env <code>bio</code></li>
+<li>💚 [test] Add chromsome sizes to reference</li>
+<li>💚 [test] Add r-gsea_r to env <code>r</code></li>
+<li>💚 [scrna.ScFGSEA] Fix tests⏎</li>
+</ul>
+<h3 id="044">0.4.4</h3>
+<ul>
+<li>🐛 [scrna.SeuratPreparing] Fix after tidyseurat being used</li>
+<li>🐛 [scrna.SeuratPreparing] Fix object <code>Sample</code> not found</li>
+<li>📝 [Housekeeping] Fix API docs</li>
+<li>📝 [Housekeeping] Make apis show neater docs</li>
+</ul>
+<h3 id="043">0.4.3</h3>
+<ul>
+<li>✨ [scrna] Add <code>filter</code> for cases in CellsDistribution, MarkersFinder and ScFGSEA</li>
+<li>✨ [utils] Allow gg object for ggs in plot.R</li>
+<li>🐛 [scrna_metabolic] Fix reports</li>
+<li>🐛 [scrna_metabolic] Fix multiple cases</li>
+<li>🐛 [scrna_metabolic] Fix rmagic for normalization</li>
+<li>⚡️ [scrna.SeuratClusterStats] Add common gene list</li>
+<li>⚡️ [scrna.MarkersFinder] Add <code>filter2</code> to filter after mutaters</li>
+<li>🐛 [tcr.Immunarch] Fix missing library tibble in script</li>
+<li>⚡️ [scrna.ScFGSEA] Make ident hierarchical</li>
+</ul>
+<h3 id="042">0.4.2</h3>
+<ul>
+<li>💚 [Housekeeping] Fix CI deploy</li>
+<li>⚡️ [processes] Use faster do_call() instead of do.call()</li>
+<li>📝 [tcr] Fix some docstrings with <code>{{</code> and <code>}}</code></li>
+<li>✅ [vcf.TruvariBench] Add ref for test</li>
+<li>🩹 [tcr.TCRClustering] FIx VGeneScores.txt being generated in current dir</li>
+<li>📝 [scrna.SeuratPreparing] Update docstring and refactor script</li>
+<li>✨ [scrna.SeuratClustering] Allow dims to be expanded in arguments</li>
+<li>📝 [scrna.MarkersFinder] Adopt reduced case configuration level</li>
+</ul>
+<h3 id="041">0.4.1</h3>
+<h4 id="general">General</h4>
+<ul>
+<li>👷 [Housekeeping] Add deploy in CI</li>
+<li>🚚 [Housekeeping] Move tests/test_tcr/TCRClustering to tests/test_tcr/TCRClusteringStats</li>
+<li>🔧 [Tests] Add r-tidyseurat to env_r.toml</li>
+</ul>
+<h4 id="processes">Processes</h4>
+<ul>
+<li>🩹 [scrna.CellsDistribution] Reduce envs.cases levels</li>
+<li>🩹 [scrna.CellsDistribution] Allow acurate sizes to be used in orderby</li>
+<li>🩹 [scrna.ScFGSEA] Reduce envs.cases levels</li>
+<li>✨ [scrna.ScFGSEA] Allow <code>{ident}</code> or <code>{cluster}</code> as placeholder in cases</li>
+<li>✨ [scrna.SeuratClusterStats] Add dimplots</li>
+<li>🚑 [scrna.SeuratClusterStats] Limit 20 genes by default</li>
+<li>🐛 [tcr.ImmunarchLoading] Fix multiple "Source" columns in data</li>
+<li>🩹 [tcr.TCRClustering] Make clusterfile as a meta file that can be used by SeuratMetadataMutater</li>
+<li>✨ [tcr.TCRClusteringStats] Add shared clusters by grouping</li>
+<li>📝 [tcr.TCRClusteringStats] Don't show shared TCR clusters between groups if not configured</li>
+<li>📝 [gsea.FGSEA] Limit pagesize to 10 in report</li>
+<li>✨ [vcf.TruvariBenchSummary] Add process and test</li>
+<li>✨ [vcf.TruvariBenchSummary] Add default <code>input_data</code></li>
+<li>✏️ [bed.Bed2Vcf] Fix typos in doc</li>
+<li>✨ [bed.Bed2Vcf] Allow records to be skipped</li>
+<li>✅ [vcf.TruvariBench] Add ref for test</li>
+</ul>
+<h3 id="040">0.4.0</h3>
+<ul>
+<li>✨ [scrna.CellsDistribution] Add process and test</li>
+<li>🗑️ Remove <code>namespaces</code> (use <code>ns</code> instead)</li>
+</ul>
+<h3 id="032">0.3.2</h3>
+<ul>
+<li>✅ Allow tests to run locally only</li>
+<li>💚 Add pipen-args for tests</li>
+<li>✅ [plot.Heatmap] Fix test</li>
+<li>✅ [pipeline.scrna_metabolic] Add ARGS in run.env</li>
+<li>✅ [scrna.ScFGSEA] Add test</li>
+<li>✨ [tcr.TCRClusteringStats] Add process</li>
+<li>✅ [tcr.TCRClustering] Use env r for testing</li>
+<li>✅ [tcr.TCRClustering] Add test</li>
+<li>✅ [pipeline.scrna_metabolic] Add test</li>
+<li>✅ [gsea.GSEA] Add tests</li>
+<li>✅ [gsea.FGSEA] Add tests</li>
+<li>✅ [plot.Heatmap] Add tests</li>
+<li>✅ [gene.GeneNameConversion] Add tests</li>
+<li>✅ [utils.gene] Add tests</li>
+<li>💚 [bed.Bed2Vcf] Fix test</li>
+<li>✅ [vcf.VcfFix] Add test</li>
+<li>✅ [misc.File2Proc] Use base container for test</li>
+<li>✅ [misc.File2Proc] Fix test</li>
+<li>🩹 [scrna.ExprImpute] Use if-statement for requirements</li>
+<li>✨ [scrna.SeuratClusterStats] Add process and test</li>
+</ul>
+<h3 id="031">0.3.1</h3>
+<ul>
+<li>🗑️ Deprecate <code>biopipen.namespaces</code>, use <code>biopipen.ns</code> instead</li>
+<li>✨ [bed.Bed2Vcf] Add bed.Bed2Vcf</li>
+<li>✨ [vcf.VcfFix] Add vcf.VcfFix</li>
+<li>🐛 [vcf.vcfFix] Fix when a flag in INFO</li>
+<li>✨ [vcf.TruvariBench] Add vcf.TruvariBench</li>
+<li>✨ [vcf.TruvariConsistency] Add vcf.TruvariConsistency</li>
+<li>🐛 [utils.reference] Fix typo in tabix_index</li>
+<li>🐛 [vcf.VcfIndex] Fix vcf.VcfIndex</li>
+<li>✨ [bed.Bed2Vcf] Allow to ignore non-existing contigs and index the output file</li>
+<li>✨ [misc.Shell] Add misc.Shell to run a shell command</li>
+</ul>
+<h3 id="030">0.3.0</h3>
+<ul>
+<li>♻️ Refactor some processes for immunopipe</li>
+<li>🩹 [scrna.SeuratPreparing] Remove tmp datadir for scrna.SeuratPreparing if exsits</li>
+<li>🩹 [scrna.SeuratPreparing] Add a TODO comment in scrna.SeuratPreparing (#26)</li>
+<li>✨ [scrna.Subset10X] Add <code>scrna.Subset10X</code></li>
+<li>💥 [tcr.Immunarch] Merge <code>tcr.ImmunarchBasic</code> and <code>tcr.ImmunarchAdvanced</code> into <code>tcr.Immunarch</code></li>
+<li>🩹 [tcr.VJUsage] Fix R script being generated at current direct for <code>tcr.VJUsage</code></li>
+<li>✨ [scrna.SeuratMetadataMutater] Add <code>scrna.SeuratMetadataMutater</code></li>
+<li>🐛 [tcr.Immunarch] Fix clonotype tracking not selecting top clones by given top N</li>
+<li>♻️ [pipeline.scrna_metabolic] Refactor scrna_metabolic</li>
+<li>📝 [pipeline.scrna_metabolic] Update docs for scrna_metabolic pipeline</li>
+<li>✨ [pipeline.scrna_metabolic] Allow scrna_metabolic pipeline to handle multiple cases</li>
+<li>🚑 [scrna.ExprImpute] Fix reticulate not using right python</li>
+<li>🚑 [scrna.SeuratMetadataMutater] Fix error when input mutaters in None</li>
+<li>🚑 [scrna_metabolic.MetabolicInputs] Fix diot not imported in script</li>
+</ul>
+<h3 id="021">0.2.1</h3>
+<ul>
+<li>User rtoml over toml</li>
+</ul>
+<h3 id="020">0.2.0</h3>
+<ul>
+<li>📌 Pin deps for docs</li>
+<li>Don't link non-existing files for misc.Glob2Dir</li>
+<li>Upgrade datar to 0.8</li>
+<li>⬆️ Upgrade pipen to v0.3</li>
+<li>⚡️ Load 10X TCR and RNA-seq data files more robustly for scrna.SeuratPreparing and tcr.ImmunarchLoading</li>
+</ul>
+<h3 id="019">0.1.9</h3>
+<ul>
+<li>🐛 Load <code>all_config_annotations.csv</code> if <code>filtered_contig_annotations.csv</code> doesn't exist for <code>tcr.ImmunarchLoad</code></li>
+<li>🐛 Calculate diversity for all clones only if filtering by clone sizes failed for <code>tcr.ImmunarchAdvanced</code></li>
+<li>🚑 Fix seurat object creating when expressions are named "Gene Expression" for scrna.SeuratPreparing</li>
+<li>✨ Add <code>tcr.TCRClustering</code></li>
+<li>✨ Add <code>raw</code> to immdata for <code>tcr.immunarchLoading</code></li>
+<li>✨ Add <code>on_raw</code> env to <code>tcr.TCRClustering</code></li>
+<li>✨ Add <code>bam.ControlFREEC</code></li>
+</ul>
+<h3 id="018">0.1.8</h3>
+<ul>
+<li>✨ Add tcr.Attach2Seurat</li>
+</ul>
+<h3 id="017">0.1.7</h3>
+<ul>
+<li>➕ Add datar dep for scrna_metabolic pipeline</li>
+<li>🚑 Fix scrna_metabolic.MetabolicPathwayActivity</li>
+<li>✨ Add bcftools.BcftoolsFilter</li>
+<li>👽️ Don't wrap job report in <code>report_jobs</code> report macro (to adopt pipen-report 0.2)</li>
+<li>✨ Add more options for scrna.DimPlots</li>
+</ul>
+<h3 id="016">0.1.6</h3>
+<ul>
+<li>✨ Convert CNVpytor results to gff and bed</li>
+<li>🚑 Make scrna_metabolic pipeline work standalone</li>
+<li>➕ Add datar dep for scrna_metabolic pipeline</li>
+<li>🚑 Fix scrna_metabolic.MetabolicPathwayActivity</li>
+<li>✨ Add bcftools.BcftoolsFilter</li>
+</ul>
+<h3 id="015">0.1.5</h3>
+<ul>
+<li>✨ Add features and fix issues for immunopipe 0.0.4</li>
+<li>✨ Add some vcf processes</li>
+</ul>
+<h3 id="014">0.1.4</h3>
+<ul>
+<li>🐛 Fix bam.CNVpytor when snpfile is not provided</li>
+<li>✨ Add metabolic pathway analysis for single-cell RNA-seq data</li>
+</ul>
+<h3 id="013">0.1.3</h3>
+<ul>
+<li>Add gsea.GSEA and scrna.SCImpute</li>
+<li>Add gene name conversions</li>
+<li>Add gsea.FGSEA</li>
+<li>Add venn plots and refactor ImmunarchFilter</li>
+<li>Add plot.Heatmap</li>
+<li>Reuse plot.Heatmap for scrna.GeneExpressionInvestigation</li>
+<li>Attach metadata to seurat object in scrna.SeuratPreparing</li>
+<li>Add envs.group_subset for scrna.GeneExpressionInvestigation</li>
+<li>Fix typo for scrna.GeneExpressionInvestigation</li>
+<li>Add docs</li>
+</ul>
+<h3 id="012">0.1.2</h3>
+<ul>
+<li>✨ Add envs.qc for scrna.SeuratPreparing</li>
+</ul>
+<h3 id="011">0.1.1</h3>
+<ul>
+<li>Finish processes for immunopipe</li>
+</ul>
+<h3 id="010">0.1.0</h3>
+<ul>
+<li>Adopt pipen 0.2+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../api/biopipen.ns.regulatory/" class="btn btn-neutral float-left" title="biopipen.ns.regulatory"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../api/biopipen.ns.regulatory/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/version-select.js"></script>
+      <script src="../js/mkapi.js"></script>
+      <script src="../extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>biopipen.utils.common_docstrs - biopipen</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.utils.common_docstrs";
+        var mkdocs_page_input_path = "api/source/biopipen.utils.common_docstrs.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">biopipen.utils.common_docstrs</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/source/biopipen.utils.common_docstrs.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">biopipen.utils.</span><span class="mkapi-object-name">common_docstrs</span>
+<span id="biopipen.utils.common_docstrs"></span><a class="mkapi-docs-link" href="../../biopipen.utils.common_docstrs">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Common docstrings for biopipen procs.&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">textwrap</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span>
+
+
+<span class="k">def</span> <span class="nf">indent_docstr</span><span class="p">(</span><span class="n">docstr</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">indent</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="biopipen.utils.common_docstrs.indent_docstr"></span><a class="mkapi-docs-link" title="biopipen.utils.common_docstrs.indent_docstr" href="../../biopipen.utils.common_docstrs/#biopipen.utils.common_docstrs.indent_docstr">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Indent the docstring.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        docstr: The docstring.</span>
+<span class="sd">        indent: The indent.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The indented docstring.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">textwrap</span><span class="o">.</span><span class="n">indent</span><span class="p">(</span><span class="n">docstr</span><span class="p">,</span> <span class="n">indent</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">format_placeholder</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">type</span><span class="p">],</span> <span class="nb">type</span><span class="p">]:</span><span id="biopipen.utils.common_docstrs.format_placeholder"></span><a class="mkapi-docs-link" title="biopipen.utils.common_docstrs.format_placeholder" href="../../biopipen.utils.common_docstrs/#biopipen.utils.common_docstrs.format_placeholder">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A decorator to format a docstring placeholder.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        **kwargs: The docstring placeholder.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The decorated function.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">klass</span><span class="p">:</span> <span class="nb">type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">type</span><span class="p">:</span>
+        <span class="n">klass</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">klass</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">%</span> <span class="n">kwargs</span>
+        <span class="k">return</span> <span class="n">klass</span>
+
+    <span class="k">return</span> <span class="n">decorator</span>
+
+
+<span class="n">MUTATE_HELPERS_CLONESIZE</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">There are also also 4 helper functions, `expanded`, `collapsed`, `emerged` and `vanished`,</span>
+<span class="s2">which can be used to identify the expanded/collpased/emerged/vanished groups (i.e. TCR clones).</span>
+<span class="s2">See also &lt;https://pwwang.github.io/immunopipe/configurations/#mutater-helpers&gt;.</span>
+<span class="s2">For example, you can use</span>
+<span class="s2">`{&quot;Patient1_Tumor_Collapsed_Clones&quot;: &quot;expanded(., Source, &#39;Tumor&#39;, subset = Patent == &#39;Patient1&#39;, uniq = FALSE)&quot;}`</span>
+<span class="s2">to create a new column in metadata named `Patient1_Tumor_Collapsed_Clones`</span>
+<span class="s2">with the collapsed clones in the tumor sample (compared to the normal sample) of patient 1.</span>
+<span class="s2">The values in this columns for other clones will be `NA`.</span>
+<span class="s2">Those functions take following arguments:</span>
+<span class="s2">* `df`: The metadata data frame. You can use the `.` to refer to it.</span>
+<span class="s2">* `group.by`: The column name in metadata to group the cells.</span>
+<span class="s2">* `idents`: The first group or both groups of cells to compare (value in `group.by` column). If only the first group is given, the rest of the cells (with non-NA in `group.by` column) will be used as the second group.</span>
+<span class="s2">* `subset`: An expression to subset the cells, will be passed to `dplyr::filter()`. Default is `TRUE` (no filtering).</span>
+<span class="s2">* `each`: A column name (without quotes) in metadata to split the cells.</span>
+<span class="s2">    Each comparison will be done for each value in this column (typically each patient or subject).</span>
+<span class="s2">* `id`: The column name in metadata for the group ids (i.e. `CDR3.aa`).</span>
+<span class="s2">* `compare`: Either a (numeric) column name (i.e. `Clones`) in metadata to compare between groups, or `.n` to compare the number of cells in each group.</span>
+<span class="s2">    If numeric column is given, the values should be the same for all cells in the same group.</span>
+<span class="s2">    This will not be checked (only the first value is used).</span>
+<span class="s2">    It is helpful to use `Clones` to use the raw clone size from TCR data, in case the cells are not completely mapped to RNA data.</span>
+<span class="s2">    Also if you have `subset` set or `NA`s in `group.by` column, you should use `.n` to compare the number of cells in each group.</span>
+<span class="s2">* `uniq`: Whether to return unique ids or not. Default is `TRUE`. If `FALSE`, you can mutate the meta data frame with the returned ids. For example, `df |&gt; mutate(expanded = expanded(...))`.</span>
+<span class="s2">* `debug`: Return the data frame with intermediate columns instead of the ids. Default is `FALSE`.</span>
+<span class="s2">* `order`: The expression passed to `dplyr::arrange()` to order intermediate dataframe and get the ids in order accordingly.</span>
+<span class="s2">    The intermediate dataframe includes the following columns:</span>
+<span class="s2">    * `&lt;id&gt;`: The ids of clones (i.e. `CDR3.aa`).</span>
+<span class="s2">    * `&lt;each&gt;`: The values in `each` column.</span>
+<span class="s2">    * `ident_1`: The size of clones in the first group.</span>
+<span class="s2">    * `ident_2`: The size of clones in the second group.</span>
+<span class="s2">    * `.diff`: The difference between the sizes of clones in the first and second groups.</span>
+<span class="s2">    * `.sum`: The sum of the sizes of clones in the first and second groups.</span>
+<span class="s2">    * `.predicate`: Showing whether the clone is expanded/collapsed/emerged/vanished.</span>
+<span class="s2">* `include_emerged`: Whether to include the emerged group for `expanded` (only works for `expanded`). Default is `FALSE`.</span>
+<span class="s2">* `include_vanished`: Whether to include the vanished group for `collapsed` (only works for `collapsed`). Default is `FALSE`.</span>
+
+<span class="s2">You can also use `top()` to get the top clones (i.e. the clones with the largest size) in each group.</span>
+<span class="s2">For example, you can use</span>
+<span class="s2">`{&quot;Patient1_Top10_Clones&quot;: &quot;top(subset = Patent == &#39;Patient1&#39;, uniq = FALSE)&quot;}`</span>
+<span class="s2">to create a new column in metadata named `Patient1_Top10_Clones`.</span>
+<span class="s2">The values in this columns for other clones will be `NA`.</span>
+<span class="s2">This function takes following arguments:</span>
+<span class="s2">* `df`: The metadata data frame. You can use the `.` to refer to it.</span>
+<span class="s2">* `id`: The column name in metadata for the group ids (i.e. `CDR3.aa`).</span>
+<span class="s2">* `n`: The number of top clones to return. Default is `10`.</span>
+<span class="s2">    If n &lt; 1, it will be treated as the percentage of the size of the group.</span>
+<span class="s2">    Specify `0` to get all clones.</span>
+<span class="s2">* `compare`: Either a (numeric) column name (i.e. `Clones`) in metadata to compare between groups, or `.n` to compare the number of cells in each group.</span>
+<span class="s2">    If numeric column is given, the values should be the same for all cells in the same group.</span>
+<span class="s2">    This will not be checked (only the first value is used).</span>
+<span class="s2">    It is helpful to use `Clones` to use the raw clone size from TCR data, in case the cells are not completely mapped to RNA data.</span>
+<span class="s2">    Also if you have `subset` set or `NA`s in `group.by` column, you should use `.n` to compare the number of cells in each group.</span>
+<span class="s2">* `subset`: An expression to subset the cells, will be passed to `dplyr::filter()`. Default is `TRUE` (no filtering).</span>
+<span class="s2">* `each`: A column name (without quotes) in metadata to split the cells.</span>
+<span class="s2">    Each comparison will be done for each value in this column (typically each patient or subject).</span>
+<span class="s2">* `uniq`: Whether to return unique ids or not. Default is `TRUE`. If `FALSE`, you can mutate the meta data frame with the returned ids. For example, `df |&gt; mutate(expanded = expanded(...))`.</span>
+<span class="s2">* `debug`: Return the data frame with intermediate columns instead of the ids. Default is `FALSE`.</span>
+<span class="s2">* `with_ties`: Whether to include ties (i.e. clones with the same size as the last clone) or not. Default is `FALSE`.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">ENVS_SECTION_EACH</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">The `section` is used to collect cases and put the results under the same directory and the same section in report.</span>
+<span class="s2">When `each` for a case is specified, the `section` will be ignored and case name will be used as `section`.</span>
+<span class="s2">The cases will be the expanded values in `each` column. When `prefix_each` is True, the column name specified by `each` will be prefixed to each value as directory name and expanded case name.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/version-select.js"></script>
+      <script src="../../../js/mkapi.js"></script>
+      <script src="../../../extra.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>biopipen.utils - biopipen</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.utils";
+        var mkdocs_page_input_path = "api/biopipen.utils.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">biopipen.utils</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">biopipen.utils</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#biopipenutilsgene">gene</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipenutilsreference">reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipenutilscommon_docstrs">common_docstrs</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">API</li>
+          <li class="breadcrumb-item">biopipen.utils</li>
+      <li class="breadcrumb-item active">biopipen.utils</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/biopipen.utils.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node" id="biopipen.utils">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object package plain top">
+    <div class="mkapi-object-kind package top">package</div>
+    <h2 id="biopipenutils" class="mkapi-object-body package top"><span class="mkapi-object-prefix">biopipen.</span><span class="mkapi-object-name">utils</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.utils/#biopipen.utils" title="Source for biopipen.utils">&lt;/&gt;</a>
+  </div>
+</div>
+
+
+</div>
+
+<div class="mkapi-node" id="biopipen.utils.gene">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipenutilsgene" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.utils">biopipen.utils</a>.</span><span class="mkapi-object-name"><a href="../biopipen.utils.gene/#biopipen.utils.gene">gene</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.utils.gene/#biopipen.utils.gene" title="Source for biopipen.utils.gene">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Do gene name conversion</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.utils.gene#biopipen.utils.gene.QueryGenesNotFound">QueryGenesNotFound</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">When genes cannot be found<a class="mkapi-src-link" href="../source/biopipen.utils.gene/#biopipen.utils.gene.QueryGenesNotFound" title="Source for biopipen.utils.gene.QueryGenesNotFound">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section functions">
+      <div class="mkapi-section-name functions">
+          <span class="mkapi-section-name-body functions">Functions</span> 
+        </div>
+      <div class="mkapi-section-body functions"><ul class="mkapi-items">
+<li class="function"><code class="mkapi-item-name"><a href="../biopipen.utils.gene#biopipen.utils.gene.gene_name_conversion">gene_name_conversion</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">genes</code>, <code class="mkapi-object-signature">infmt</code>, <code class="mkapi-object-signature">outfmt</code>, <code class="mkapi-object-signature">dup</code>, <code class="mkapi-object-signature">species</code>, <code class="mkapi-object-signature">notfound</code>, <code class="mkapi-object-signature">suppress_messages</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert gene names using MyGeneInfo<a class="mkapi-src-link" href="../source/biopipen.utils.gene/#biopipen.utils.gene.gene_name_conversion" title="Source for biopipen.utils.gene.gene_name_conversion">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.utils.reference">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipenutilsreference" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.utils">biopipen.utils</a>.</span><span class="mkapi-object-name"><a href="../biopipen.utils.reference/#biopipen.utils.reference">reference</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.utils.reference/#biopipen.utils.reference" title="Source for biopipen.utils.reference">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Utilities for indexing reference files</p></div>
+    </div>
+  <div class="mkapi-section functions">
+      <div class="mkapi-section-name functions">
+          <span class="mkapi-section-name-body functions">Functions</span> 
+        </div>
+      <div class="mkapi-section-body functions"><ul class="mkapi-items">
+<li class="function"><code class="mkapi-item-name"><a href="../biopipen.utils.reference#biopipen.utils.reference.bam_index">bam_index</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">bam</code>, <code class="mkapi-object-signature">bamdir</code>, <code class="mkapi-object-signature">tool</code>, <code class="mkapi-object-signature">samtools</code>, <code class="mkapi-object-signature">sambamba</code>, <code class="mkapi-object-signature">ncores</code>, <code class="mkapi-object-signature">ext</code>, <code class="mkapi-object-signature">force</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Index a bam file<a class="mkapi-src-link" href="../source/biopipen.utils.reference/#biopipen.utils.reference.bam_index" title="Source for biopipen.utils.reference.bam_index">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="../biopipen.utils.reference#biopipen.utils.reference.tabix_index">tabix_index</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">infile</code>, <code class="mkapi-object-signature">preset</code>, <code class="mkapi-object-signature">tmpdir</code>, <code class="mkapi-object-signature">tabix</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(str | os.pathlike)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Index input file using tabix<a class="mkapi-src-link" href="../source/biopipen.utils.reference/#biopipen.utils.reference.tabix_index" title="Source for biopipen.utils.reference.tabix_index">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.utils.common_docstrs">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipenutilscommon_docstrs" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.utils">biopipen.utils</a>.</span><span class="mkapi-object-name"><a href="../biopipen.utils.common_docstrs/#biopipen.utils.common_docstrs">common_docstrs</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.utils.common_docstrs/#biopipen.utils.common_docstrs" title="Source for biopipen.utils.common_docstrs">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Common docstrings for biopipen procs.</p></div>
+    </div>
+  <div class="mkapi-section functions">
+      <div class="mkapi-section-name functions">
+          <span class="mkapi-section-name-body functions">Functions</span> 
+        </div>
+      <div class="mkapi-section-body functions"><ul class="mkapi-items">
+<li class="function"><code class="mkapi-item-name"><a href="../biopipen.utils.common_docstrs#biopipen.utils.common_docstrs.format_placeholder">format_placeholder</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">**kwargs</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Callable)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">A decorator to format a docstring placeholder.<a class="mkapi-src-link" href="../source/biopipen.utils.common_docstrs/#biopipen.utils.common_docstrs.format_placeholder" title="Source for biopipen.utils.common_docstrs.format_placeholder">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="../biopipen.utils.common_docstrs#biopipen.utils.common_docstrs.indent_docstr">indent_docstr</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">docstr</code>, <code class="mkapi-object-signature">indent</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Indent the docstring.<a class="mkapi-src-link" href="../source/biopipen.utils.common_docstrs/#biopipen.utils.common_docstrs.indent_docstr" title="Source for biopipen.utils.common_docstrs.indent_docstr">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../biopipen.core.proc/" class="btn btn-neutral float-left" title="biopipen.core.proc"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../biopipen.utils.gene/" class="btn btn-neutral float-right" title="biopipen.utils.gene">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../biopipen.core.proc/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../biopipen.utils.gene/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/version-select.js"></script>
+      <script src="../../js/mkapi.js"></script>
+      <script src="../../extra.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

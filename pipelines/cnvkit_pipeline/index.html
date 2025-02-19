@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>CNVkit Pipeline - biopipen</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "CNVkit Pipeline";
+        var mkdocs_page_input_path = "pipelines/cnvkit_pipeline.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">CNVkit Pipeline</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pipeline-overview">Pipeline overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#input-files">Input files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configurations">Configurations</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#special-configurations">Special configurations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#global-configurations">Global configurations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#process-specific-configurations">Process-specific configurations</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-metafile">The metafile</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Pipelines</li>
+      <li class="breadcrumb-item active">CNVkit Pipeline</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/pipelines/cnvkit_pipeline.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="cnvkit-pipeline">CNVkit pipeline</h2>
+<p>The pipeline decouples <code>cnvkit.py batch</code> so that we get detailed control over each step.</p>
+<h3 id="pipeline-overview">Pipeline overview</h3>
+<p>The pipeline consists of the following steps:</p>
+<ol>
+<li><code>cnvkit.py access</code> to generate a BED file of accessible regions if not given</li>
+<li>Guess baits from bam files if baitfile is not given</li>
+<li><code>cnvkit.py autobin</code> to generate target and antitarget files</li>
+<li><code>cnvkit.py coverage</code> to generate coverage files for target region</li>
+<li><code>cnvkit.py coverage</code> to generate coverage files for antitarget region</li>
+<li><code>cnvkit.py reference</code> to generate a reference.cnn file using normal samples (or a "flat" reference file if no normal samples are given)</li>
+<li><code>cnvkit.py fix</code> to combine the uncorrected target and antitarget coverage tables (.cnn) and correct for biases in regional coverage and GC content, according to the given reference.</li>
+<li><code>cnvkit.py segment</code> to infer discrete copy number segments from the given coverage table:</li>
+<li><code>cnvkit.py call</code> to call copy number alterations from the given segments file</li>
+<li><code>cnvkit.py scatter</code> to generate scatter plots of log2 ratios</li>
+<li><code>cnvkit.py diagram</code> to generate a diagram of copy number alterations on all chromosomes</li>
+<li><code>cnvkit.py heatmap</code> to generate a heatmap of segment-level log2 ratios</li>
+<li><code>cnvkit.py heatmap</code> to generate a heatmap of bin-level log2 ratios</li>
+</ol>
+<p>See also the flowchart below:</p>
+<p><img alt="CNVkit pipeline" src="../CNVkit-pipeline.png" /></p>
+<h3 id="input-files">Input files</h3>
+<ul>
+<li><code>metafile</code>: a tab-separated file (see the next section) containing sample information</li>
+<li><code>baitfile</code>: Potentially targeted genomic regions.
+    E.g. all possible exons for the reference genome.
+    This is optional when <code>method</code> is <code>wgs</code>.</li>
+<li><code>accfile</code>: The accessible genomic regions.
+    If not given, use <code>cnvkit.py access</code> to generate one. You can control the details by configuration items <code>[CNVkitAccess.envs]</code></li>
+</ul>
+<h3 id="configurations">Configurations</h3>
+<h4 id="special-configurations">Special configurations</h4>
+<ul>
+<li><code>access_excludes</code>: File(s) with regions to be excluded for
+    <code>cnvkit.py access</code>.</li>
+<li><code>guessbaits_guided</code>: Whether to use guided mode for guessing baits.</li>
+<li><code>metacols</code>: The column names for each type of information in metafile</li>
+<li><code>group</code>: The column name in the metafile that indicates the sample group
+      Default: <code>Group</code></li>
+<li><code>purity</code>: The column name in the metafile that indicates the sample
+      purity. Default: <code>Purity</code></li>
+<li><code>snpvcf</code>: The column name in the metafile that indicates the path to
+      the SNP VCF file. Default: <code>SnpVcf</code></li>
+<li><code>bam</code>: The column name in the metafile that indicates the path to the
+      BAM file. Default: <code>Bam</code></li>
+<li><code>vcf_sample_id</code>: The column name in the metafile that indicates the
+      sample ID in the VCF file. Default: <code>VcfSampleId</code></li>
+<li><code>vcf_normal_id</code>: The column name in the metafile that indicates the
+      normal sample ID in the VCF file. Default: <code>VcfNormalId</code></li>
+<li><code>sex</code>: The column name in the metafile that indicates the sample
+      sex. Default: <code>Sex</code></li>
+<li><code>guess_baits</code>: The column name in the metafile that indicates whether
+      to guess the bait file from the bam files. Default: <code>GuessBaits</code></li>
+<li><code>guessbaits</code>: Guess the bait file from the bam files, either guided or
+    unguided.
+    If <code>False</code>, <code>baitfile</code> is used. Otherwise, if <code>baitfile</code> is given, use it
+    (guided), otherwise use <code>accfile</code> (unguided).
+    The bam files with <code>metacols.guess_baits</code> column set to <code>True</code>, <code>TRUE</code>,
+    <code>true</code>, <code>1</code>, <code>Yes</code>, <code>YES</code>, or <code>yes</code> will be used to guess the bait file.</li>
+<li><code>case</code>: The group name of samples in <code>metacols.group</code> to call CNVs for.
+    If not specified, use all samples. In such a case, <code>control</code> must not be
+    specified, as we are using a flat reference.</li>
+<li><code>control</code>: The group name of samples in <code>metacols.group</code> to use as reference
+    if not specified, use a flat reference.</li>
+</ul>
+<h4 id="global-configurations">Global configurations</h4>
+<p>The options that are used by multiple processes (can be overriden individually by <code>[&lt;proc&gt;.envs.xxx]</code>):</p>
+<ul>
+<li><code>cnvkit</code>: the path to the <code>cnvkit.py</code> executable, defaults to
+    <code>config.exe.cnvkit</code> from <code>./.biopipen.toml</code> or <code>~/.biopipen.toml</code>.</li>
+<li><code>rscript</code>: Path to the Rscript excecutable to use for running R code.
+    Requires <code>DNAcopy</code> to be installed in R, defaults to
+    <code>config.lang.rscript</code></li>
+<li><code>samtools</code>: Path to samtools, used for guessing bait file.</li>
+<li><code>convert</code>: Linux <code>convert</code> command to convert pdf to png
+    So that they can be embedded in the HTML report.</li>
+<li><code>ncores</code>: number of cores to use, defaults to <code>config.misc.ncores</code></li>
+<li><code>reffa</code>: the reference genome (e.g. hg19.fa), defaults to <code>config.ref.reffa</code>
+    Used by <code>CNVkitAccess</code>, <code>CNVkitAutobin</code> and <code>CNVkitReference</code></li>
+<li><code>annotate</code>: Use gene models from this file to assign names to the
+    target regions. Format: UCSC refFlat.txt or ensFlat.txt file
+    (preferred), or BED, interval list, GFF, or similar. Defaults to <code>config.ref.refflat</code></li>
+<li><code>short_names</code>: Reduce multi-accession bait labels to be short and consistent</li>
+<li><code>method</code>: Sequencing protocol: hybridization capture ('hybrid'),
+    targeted amplicon sequencing ('amplicon'),
+    or whole genome sequencing ('wgs'). Determines
+    whether and how to use antitarget bins.</li>
+<li><code>male_reference</code>: Use or assume a male reference (i.e. female samples
+    will have +1 log-CNR of chrX; otherwise male samples would have
+    -1 chrX).
+    Used by <code>CNVkitReference</code>, <code>CNVkitCall</code>, <code>CNVkitHeatmapCns</code> and
+    <code>CNVkitHeatmapCnr</code>.</li>
+<li><code>drop_low_coverage</code>: Drop very-low-coverage bins before segmentation to
+    avoid false-positive deletions in poor-quality tumor samples.
+    Used by <code>CNVkitSegment</code> and <code>CNVkitCall</code></li>
+<li><code>no_gc</code>: Skip GC correction for <code>cnvkit.py reference/fix</code>.</li>
+<li><code>no_edge</code>: Skip edge-effect correction for <code>cnvkit.py reference/fix</code>.</li>
+<li><code>no_rmask</code>: Skip RepeatMasker correction for <code>cnvkit.py reference/fix</code>.
+    no_* options are used by <code>CNVkitReference</code> and <code>CNVkitFix</code></li>
+<li><code>min_variant_depth</code>: Minimum read depth for a SNV to be displayed
+    in the b-allele frequency plot.
+    Used by <code>CNVkitSegment</code> and <code>CNVkitCall</code></li>
+<li><code>zygosity_freq</code>: Ignore VCF's genotypes (GT field) and instead infer
+    zygosity from allele frequencies.
+    Used by <code>CNVkitSegment</code> and <code>CNVkitCall</code></li>
+</ul>
+<h4 id="process-specific-configurations">Process-specific configurations</h4>
+<p>The options that are used by a single process. See the process-specific documentation for details. You can configure them by <code>[&lt;proc&gt;.envs.xxx]</code> in the config file.</p>
+<ul>
+<li><a href="https://pwwang.github.io/biopipen/api/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitAccess"><code>CNVkitAccess</code></a></li>
+<li><a href="https://pwwang.github.io/biopipen/api/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitGuessBaits"><code>CNVkitGuessBaits</code></a></li>
+<li><a href="https://pwwang.github.io/biopipen/api/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitAutobin"><code>CNVkitAutobin</code></a></li>
+<li><a href="https://pwwang.github.io/biopipen/api/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitCoverage"><code>CNVkitCoverageTarget</code></a></li>
+<li><a href="https://pwwang.github.io/biopipen/api/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitCoverage"><code>CNVkitCoverageAntitarget</code></a></li>
+<li><a href="https://pwwang.github.io/biopipen/api/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitReference"><code>CNVkitReference</code></a></li>
+<li><a href="https://pwwang.github.io/biopipen/api/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitFix"><code>CNVkitFix</code></a></li>
+<li><a href="https://pwwang.github.io/biopipen/api/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitSegment"><code>CNVkitSegment</code></a></li>
+<li><a href="https://pwwang.github.io/biopipen/api/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitScatter"><code>CNVkitScatter</code></a></li>
+<li><a href="https://pwwang.github.io/biopipen/api/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitDiagram"><code>CNVkitDiagram</code></a></li>
+<li><a href="https://pwwang.github.io/biopipen/api/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitHeatmap"><code>CNVkitHeatmapCns</code></a></li>
+<li><a href="https://pwwang.github.io/biopipen/api/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitHeatmap"><code>CNVkitHeatmapCnr</code></a></li>
+<li><a href="https://pwwang.github.io/biopipen/api/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitCall"><code>CNVkitHeatmapCall</code></a></li>
+</ul>
+<h3 id="the-metafile">The metafile</h3>
+<p>A metafile should be with the following columns:</p>
+<ul>
+<li>Sample: The sample_id used for target/antitarget files. If not provided,
+    the sample_id will be the first part of basename of the bam file.
+    For exapmle: <code>D123.tumor.bam -&gt; D123</code></li>
+<li><code>&lt;bam&gt;</code>: The path to the bam file, better using absolute path.</li>
+<li><code>&lt;group&gt;</code>: The type of the sample, defining the tumor/normal samples.</li>
+<li><code>&lt;sex&gt;</code>: Guess each sample from coverage of X and Y chromosomes if
+    not given.</li>
+<li><code>&lt;purity&gt;</code>: Estimated tumor cell fraction, a.k.a. purity or cellularity.</li>
+<li><code>&lt;snpvcf&gt;</code>: file name containing variants for segmentation by allele
+    frequencies.</li>
+<li><code>&lt;vcf_sample_id&gt;</code>: Sample ID in the VCF file.</li>
+<li><code>&lt;vcf_normal_id&gt;</code>: Normal sample ID in the VCF file.</li>
+<li><code>&lt;guess_baits&gt;</code>: Guess the bait file from the bam file</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../cellranger_pipeline/" class="btn btn-neutral float-right" title="CellRanger Pipeline">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../cellranger_pipeline/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/version-select.js"></script>
+      <script src="../../js/mkapi.js"></script>
+      <script src="../../extra.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>biopipen.ns.cnvkit - biopipen</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.ns.cnvkit";
+        var mkdocs_page_input_path = "api/source/biopipen.ns.cnvkit.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">biopipen.ns.cnvkit</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/source/biopipen.ns.cnvkit.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">biopipen.ns.</span><span class="mkapi-object-name">cnvkit</span>
+<span id="biopipen.ns.cnvkit"></span><a class="mkapi-docs-link" href="../../biopipen.ns.cnvkit">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;CNVkit commnads&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">..core.proc</span> <span class="kn">import</span> <span class="n">Proc</span>
+<span class="kn">from</span> <span class="nn">..core.config</span> <span class="kn">import</span> <span class="n">config</span>
+
+
+<span class="k">class</span> <span class="nc">CNVkitAccess</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cnvkit.CNVkitAccess"></span><a class="mkapi-docs-link" title="biopipen.ns.cnvkit.CNVkitAccess" href="../../biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitAccess">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the sequence-accessible coordinates in chromosomes from the</span>
+<span class="sd">    given reference genome using `cnvkit.py access`</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        excfiles: Additional regions to exclude, in BED format</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        cnvkit: Path to `cnvkit.py`</span>
+<span class="sd">        min_gap_size (type=int): Minimum gap size between accessible sequence</span>
+<span class="sd">            regions</span>
+<span class="sd">        ref: The reference genome fasta file</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        cnvkit:</span>
+<span class="sd">            - check: {{proc.envs.cnvkit}} version</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;excfiles:files&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;outfile:file:{{envs.ref | stem0}}.access.{{envs.min_gap_size}}.bed&quot;</span>
+    <span class="p">)</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+        <span class="s2">&quot;min_gap_size&quot;</span><span class="p">:</span> <span class="mi">5000</span><span class="p">,</span>
+        <span class="s2">&quot;ref&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">reffa</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cnvkit/CNVkitAccess.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">CNVkitAutobin</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cnvkit.CNVkitAutobin"></span><a class="mkapi-docs-link" title="biopipen.ns.cnvkit.CNVkitAutobin" href="../../biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitAutobin">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Quickly estimate read counts or depths in a BAM file to estimate</span>
+<span class="sd">    reasonable on- and (if relevant) off-target bin sizes.</span>
+
+<span class="sd">    Using `cnvkit.py autobin`.</span>
+
+<span class="sd">    If multiple BAMs are given, use the BAM with median file size.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        bamfiles: The bamfiles</span>
+<span class="sd">        accfile: The access file</span>
+<span class="sd">        baitfile: Potentially targeted genomic regions.</span>
+<span class="sd">            E.g. all possible exons for the reference genome.</span>
+<span class="sd">            Format - BED, interval list, etc.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        target_file: The target BED output</span>
+<span class="sd">        antitarget_file: The antitarget BED output</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        cnvkit: Path to `cnvkit.py`</span>
+<span class="sd">        method (choice): Sequencing protocol. Determines whether and how to use</span>
+<span class="sd">            antitarget bins.</span>
+<span class="sd">            - hybrid: Hybridization capture</span>
+<span class="sd">            - amplicon: Targeted amplicon sequencing</span>
+<span class="sd">            - wgs: Whole genome sequencing</span>
+<span class="sd">        bp_per_bin (type=int): Desired average number of sequencing read bases</span>
+<span class="sd">            mapped to each bin.</span>
+<span class="sd">        target_max_size (type=int): Maximum size of target bins.</span>
+<span class="sd">        target_min_size (type=int): Minimum size of target bins.</span>
+<span class="sd">        antitarget_max_size (type=int): Maximum size of antitarget bins.</span>
+<span class="sd">        antitarget_min_size (type=int): Minimum size of antitarget bins.</span>
+<span class="sd">        annotate: Use gene models from this file to assign names to the target</span>
+<span class="sd">            regions. Format: UCSC refFlat.txt or ensFlat.txt file (preferred),</span>
+<span class="sd">            or BED, interval list, GFF, or similar.</span>
+<span class="sd">        short_names (flag): Reduce multi-accession bait labels to</span>
+<span class="sd">            be short and consistent.</span>
+<span class="sd">        ref: The reference genome fasta file</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        cnvkit:</span>
+<span class="sd">            - check: {{proc.envs.cnvkit}} version</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;bamfiles:files, accfile:file, baitfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;target_file:file:{{in.bamfiles | first | stem0}}-etc.target.bed&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;antitarget_file:file:{{in.bamfiles | first | stem0}}&quot;</span>
+        <span class="s2">&quot;-etc.antitarget.bed&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;hybrid&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bp_per_bin&quot;</span><span class="p">:</span> <span class="mi">100000</span><span class="p">,</span>
+        <span class="s2">&quot;target_max_size&quot;</span><span class="p">:</span> <span class="mi">20000</span><span class="p">,</span>
+        <span class="s2">&quot;target_min_size&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="s2">&quot;antitarget_max_size&quot;</span><span class="p">:</span> <span class="mi">500000</span><span class="p">,</span>
+        <span class="s2">&quot;antitarget_min_size&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+        <span class="s2">&quot;annotate&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;short_names&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;ref&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">reffa</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cnvkit/CNVkitAutobin.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">CNVkitCoverage</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cnvkit.CNVkitCoverage"></span><a class="mkapi-docs-link" title="biopipen.ns.cnvkit.CNVkitCoverage" href="../../biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitCoverage">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run cnvkit coverage</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        bamfile: The bamfile</span>
+<span class="sd">        target_file: The target file or anti-target file</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output coverage file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        cnvkit: Path to cnvkit.py</span>
+<span class="sd">        count (flag): Get read depths by counting read midpoints</span>
+<span class="sd">            within each bin. (An alternative algorithm).</span>
+<span class="sd">        min_mapq (type=int): Minimum mapping quality to include a read.</span>
+<span class="sd">        ncores (type=int): Number of subprocesses to calculate coverage</span>
+<span class="sd">            in parallel</span>
+<span class="sd">        ref: The reference genome fasta file</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        cnvkit:</span>
+<span class="sd">            - check: {{proc.envs.cnvkit}} version</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;bamfile:file, target_file:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;outfile:file:</span>
+<span class="s2">        {</span><span class="si">%- i</span><span class="s2">f &quot;antitarget&quot; in basename(in.target_file) -%}</span>
+<span class="s2">            {{in.bamfile | stem0}}.antitargetcoverage.cnn</span>
+<span class="s2">        {</span><span class="si">%- e</span><span class="s2">lse -%}</span>
+<span class="s2">            {{in.bamfile | stem0}}.targetcoverage.cnn</span>
+<span class="s2">        {</span><span class="si">%- e</span><span class="s2">ndif -%}</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;min_mapq&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;ref&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">reffa</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cnvkit/CNVkitCoverage.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">CNVkitReference</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cnvkit.CNVkitReference"></span><a class="mkapi-docs-link" title="biopipen.ns.cnvkit.CNVkitReference" href="../../biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitReference">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run cnvkit reference</span>
+
+<span class="sd">    To genearte a reference file from normal samples, provide the cnn coverage</span>
+<span class="sd">    files from the normal samples. To generate a flat reference file, provide</span>
+<span class="sd">    the target/antitarget file.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        covfiles: The coverage files from normal samples</span>
+<span class="sd">        target_file: Target intervals (.bed or .list)</span>
+<span class="sd">        antitarget_file: Antitarget intervals (.bed or .list)</span>
+<span class="sd">        sample_sex: Specify the chromosomal sex of all given samples as male or</span>
+<span class="sd">            female. Guess each sample from coverage of X and Y chromosomes if</span>
+<span class="sd">            not given.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The reference cnn file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        cnvkit: Path to cnvkit.py</span>
+<span class="sd">        cluster (flag): Calculate and store summary stats for</span>
+<span class="sd">            clustered subsets of the normal samples with similar coverage</span>
+<span class="sd">            profiles.</span>
+<span class="sd">        min_cluster_size (type=int): Minimum cluster size to keep in reference</span>
+<span class="sd">            profiles.</span>
+<span class="sd">        male_reference (flag): Create a male reference: shift</span>
+<span class="sd">            female samples chrX log-coverage by -1, so the reference chrX</span>
+<span class="sd">            average is -1. Otherwise, shift male samples chrX by +1, so the</span>
+<span class="sd">            reference chrX average is 0.</span>
+<span class="sd">        no_gc (flag): Skip GC correction.</span>
+<span class="sd">        no_edge (flag): Skip edge-effect correction.</span>
+<span class="sd">        no_rmask (flag): Skip RepeatMasker correction.</span>
+<span class="sd">        ref: The reference genome fasta file</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        cnvkit:</span>
+<span class="sd">            - check: {{proc.envs.cnvkit}} version</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;covfiles:files&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;target_file:file&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;antitarget_file:file&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sample_sex:var&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;outfile:file:</span>
+<span class="s2">        {</span><span class="si">%- i</span><span class="s2">f not in.covfiles -%}</span>
+<span class="s2">            flat.reference.cnn</span>
+<span class="s2">        {</span><span class="si">%- e</span><span class="s2">lse -%}</span>
+<span class="s2">            {{in.covfiles | first | stem0 }}-etc.reference.cnn</span>
+<span class="s2">        {</span><span class="si">%- e</span><span class="s2">ndif -%}</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+        <span class="s2">&quot;cluster&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;min_cluster_size&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">&quot;male_reference&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;no_gc&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;no_edge&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;no_rmask&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;ref&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">reffa</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cnvkit/CNVkitReference.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">CNVkitFix</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cnvkit.CNVkitFix"></span><a class="mkapi-docs-link" title="biopipen.ns.cnvkit.CNVkitFix" href="../../biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitFix">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run cnvkit.py fix</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        target_file: The target file</span>
+<span class="sd">        antitarget_file: The antitarget file</span>
+<span class="sd">        reference: The refence cnn file</span>
+<span class="sd">        sample_id: Sample ID for target/antitarget files.</span>
+<span class="sd">            Otherwise inferred from file names.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The fixed coverage files (.cnr)</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        cnvkit: Path to cnvkit.py</span>
+<span class="sd">        cluster (flag): Compare and use cluster-specific values</span>
+<span class="sd">            present in the reference profile.</span>
+<span class="sd">            (requires `envs.cluster=True` for `CNVkitReference`).</span>
+<span class="sd">        no_gc (flag): Skip GC correction.</span>
+<span class="sd">        no_edge (flag): Skip edge-effect correction.</span>
+<span class="sd">        no_rmask (flag): Skip RepeatMasker correction.</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        cnvkit:</span>
+<span class="sd">            - check: {{proc.envs.cnvkit}} version</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;target_file:file, antitarget_file:file, reference:file, sample_id:var&quot;</span>
+    <span class="p">)</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;outfile:file:{{in.sample_id | default: stem0(in.target_file)}}.cnr&quot;</span>
+    <span class="p">)</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+        <span class="s2">&quot;cluster&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;no_gc&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;no_edge&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;no_rmask&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cnvkit/CNVkitFix.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">CNVkitSegment</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cnvkit.CNVkitSegment"></span><a class="mkapi-docs-link" title="biopipen.ns.cnvkit.CNVkitSegment" href="../../biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitSegment">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run cnvkit.py segment</span>
+
+<span class="sd">    For segmentation methods, see</span>
+<span class="sd">    https://cnvkit.readthedocs.io/en/stable/pipeline.html#segmentation-methods</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        cnrfile: The fixed coverage files (.cnr)</span>
+<span class="sd">        vcf: VCF file name containing variants for segmentation</span>
+<span class="sd">            by allele frequencies (optional).</span>
+<span class="sd">        sample_id: Specify the name of the sample in the VCF to use for b-allele</span>
+<span class="sd">            frequency extraction and as the default plot title.</span>
+<span class="sd">        normal_id: Corresponding normal sample ID in the input VCF.</span>
+<span class="sd">            This sample is used to select only germline SNVs to plot</span>
+<span class="sd">            b-allele frequencies.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The segmentation file (.cns)</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        cnvkit: Path to cnvkit.py</span>
+<span class="sd">        method: Method to use for segmentation.</span>
+<span class="sd">            Candidates - cbs, flasso, haar, none, hmm, hmm-tumor, hmm-germline</span>
+<span class="sd">        threshold: Significance threshold (p-value or FDR, depending on method)</span>
+<span class="sd">            to accept breakpoints during segmentation. For HMM methods,</span>
+<span class="sd">            this is the smoothing window size.</span>
+<span class="sd">        drop_low_coverage (flag): Drop very-low-coverage bins</span>
+<span class="sd">            before segmentation to avoid false-positive deletions in</span>
+<span class="sd">            poor-quality tumor samples.</span>
+<span class="sd">        drop_outliers (type=int): Drop outlier bins more than this many</span>
+<span class="sd">            multiples of the 95th quantile away from the average within a</span>
+<span class="sd">            rolling window. Set to 0 for no outlier filtering.</span>
+<span class="sd">        rscript: Path to Rscript</span>
+<span class="sd">        ncores (type=int): Number of subprocesses to segment in parallel.</span>
+<span class="sd">            0 or negative for all available cores</span>
+<span class="sd">        smooth_cbs (flag): Perform an additional smoothing before</span>
+<span class="sd">            CBS segmentation, which in some cases may increase the sensitivity.</span>
+<span class="sd">            Used only for CBS method.</span>
+<span class="sd">        min_variant_depth (type=int): Minimum read depth for a SNV to be</span>
+<span class="sd">            displayed in the b-allele frequency plot.</span>
+<span class="sd">        zygosity_freq (type=float): Ignore VCF&#39;s genotypes (GT field) and</span>
+<span class="sd">            instead infer zygosity from allele frequencies.</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        cnvkit:</span>
+<span class="sd">            - check: {{proc.envs.cnvkit}} version</span>
+<span class="sd">        r-DNAcopy:</span>
+<span class="sd">            - check: {{proc.envs.rscript}} &lt;(echo &quot;library(DNAcopy)&quot;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;cnrfile:file, vcf:file, sample_id:var, normal_id:var&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.cnrfile | stem0}}.cns&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;cbs&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;drop_low_coverage&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;drop_outliers&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;rscript&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;smooth_cbs&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;min_variant_depth&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="s2">&quot;zygosity_freq&quot;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cnvkit/CNVkitSegment.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">CNVkitScatter</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cnvkit.CNVkitScatter"></span><a class="mkapi-docs-link" title="biopipen.ns.cnvkit.CNVkitScatter" href="../../biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitScatter">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run cnvkit.py scatter</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        cnrfile: The fixed cnr file (.cnr)</span>
+<span class="sd">        cnsfile: The segmentation file (.cns)</span>
+<span class="sd">        vcf: VCF file name containing variants for segmentation</span>
+<span class="sd">            by allele frequencies (optional).</span>
+<span class="sd">        sample_id: Specify the name of the sample in the VCF to use for b-allele</span>
+<span class="sd">            frequency extraction and as the default plot title.</span>
+<span class="sd">        normal_id: Corresponding normal sample ID in the input VCF.</span>
+<span class="sd">            This sample is used to select only germline SNVs to plot</span>
+<span class="sd">            b-allele frequencies.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: Output directory with plots for multiple cases</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        cnvkit: Path to cnvkit.py</span>
+<span class="sd">        convert: Path to `convert` to convert pdf to png file</span>
+<span class="sd">        convert_args (ns): The arguments for `convert`</span>
+<span class="sd">            - density (type=int): Horizontal and vertical density of the image</span>
+<span class="sd">            - quality (type=int): JPEG/MIFF/PNG compression level</span>
+<span class="sd">            - background: Background color</span>
+<span class="sd">            - alpha: Activate, deactivate, reset, or set the alpha channel</span>
+<span class="sd">            - &lt;more&gt;: See `convert -help` and also:</span>
+<span class="sd">                https://linux.die.net/man/1/convert</span>
+<span class="sd">        chromosome: Chromosome or chromosomal range,</span>
+<span class="sd">            e.g. &#39;chr1&#39; or &#39;chr1:2333000-2444000&#39;, to display.</span>
+<span class="sd">            If a range is given, all targeted genes in this range will be</span>
+<span class="sd">            shown, unless -g/--gene is also given.</span>
+<span class="sd">        gene: Name of gene or genes (comma-separated) to display.</span>
+<span class="sd">        width (type=int): Width of margin to show around the selected gene(s)</span>
+<span class="sd">            (-g/--gene) or small chromosomal region (-c/--chromosome).</span>
+<span class="sd">        antitarget_marker (flag): Plot antitargets using this</span>
+<span class="sd">            symbol when plotting in a selected chromosomal region</span>
+<span class="sd">            (-g/--gene or -c/--chromosome).</span>
+<span class="sd">        by_bin (flag): Plot data x-coordinates by bin indices</span>
+<span class="sd">            instead of genomic coordinates. All bins will be shown with equal</span>
+<span class="sd">            width, no blank regions will be shown, and x-axis values indicate</span>
+<span class="sd">            bin number (within chromosome) instead of genomic position.</span>
+<span class="sd">        segment_color: Plot segment lines in this color. Value can be</span>
+<span class="sd">            any string accepted by matplotlib, e.g. &#39;red&#39; or &#39;#CC0000&#39;.</span>
+<span class="sd">        trend (flag): Draw a smoothed local trendline on the</span>
+<span class="sd">            scatter plot.</span>
+<span class="sd">        y_max (type=int): y-axis upper limit.</span>
+<span class="sd">        y_min (tyoe=int): y-axis lower limit.</span>
+<span class="sd">        min_variant_depth (type=int): Minimum read depth for a SNV to be</span>
+<span class="sd">            displayed in the b-allele frequency plot.</span>
+<span class="sd">        zygosity_freq (typ=float): Ignore VCF&#39;s genotypes (GT field) and</span>
+<span class="sd">            instead infer zygosity from allele frequencies.</span>
+<span class="sd">        title: Plot title. Sample ID if not provided.</span>
+<span class="sd">        cases (type=json): The cases for different plots with keys as case names</span>
+<span class="sd">            and values to overwrite the default args given by `envs.&lt;args&gt;`,</span>
+<span class="sd">            including  `convert_args`, `by_bin`, `chromosome`, `gene`, `width`</span>
+<span class="sd">            `antitarget_marker`, `segment_color`, `trend`, `y_max`, `y_min`,</span>
+<span class="sd">            `min_variant_depth`, `zygosity_freq` and `title.</span>
+<span class="sd">            By default, an `all` case will be created with default arguments</span>
+<span class="sd">            if no case specified</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        cnvkit:</span>
+<span class="sd">            - check: {{proc.envs.cnvkit}} version</span>
+<span class="sd">        convert:</span>
+<span class="sd">            - check: {{proc.envs.convert}} -version</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;cnrfile:file, cnsfile:file, config:var, &quot;</span>
+        <span class="s2">&quot;vcf:file, sample_id:var, normal_id:var&quot;</span>
+    <span class="p">)</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.cnrfile | stem0}}.scatter&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+        <span class="s2">&quot;convert&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">convert</span><span class="p">,</span>
+        <span class="s2">&quot;convert_args&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;density&quot;</span><span class="p">:</span> <span class="mi">150</span><span class="p">,</span>
+            <span class="s2">&quot;quality&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+            <span class="s2">&quot;background&quot;</span><span class="p">:</span> <span class="s2">&quot;white&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;alpha&quot;</span><span class="p">:</span> <span class="s2">&quot;remove&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;chromosome&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;gene&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000000</span><span class="p">,</span>
+        <span class="s2">&quot;antitarget_marker&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;by_bin&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;segment_color&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;trend&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;y_max&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;y_min&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;min_variant_depth&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="s2">&quot;zygosity_freq&quot;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cnvkit/CNVkitScatter.py&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/cnvkit/CNVkitScatter.svelte&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;report_paging&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">CNVkitDiagram</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cnvkit.CNVkitDiagram"></span><a class="mkapi-docs-link" title="biopipen.ns.cnvkit.CNVkitDiagram" href="../../biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitDiagram">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run cnvkit.py diagram</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        cnrfile: The fixed cnr file (.cnr)</span>
+<span class="sd">        cnsfile: The segmentation file (.cns)</span>
+<span class="sd">        sample_sex: Specify the sample&#39;s chromosomal sex as male or female.</span>
+<span class="sd">            (Otherwise guessed from X and Y coverage).</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: Output directory with the scatter plots</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        cnvkit: Path to cnvkit.py</span>
+<span class="sd">        convert: Path to `convert` to convert pdf to png file</span>
+<span class="sd">        convert_args (ns): The arguments for `convert`</span>
+<span class="sd">            - density (type=int): Horizontal and vertical density of the image</span>
+<span class="sd">            - quality (type=int): JPEG/MIFF/PNG compression level</span>
+<span class="sd">            - background: Background color</span>
+<span class="sd">            - alpha: Activate, deactivate, reset, or set the alpha channel</span>
+<span class="sd">            - &lt;more&gt;: See `convert -help` and also:</span>
+<span class="sd">                https://linux.die.net/man/1/convert</span>
+<span class="sd">        threshold (type=float): Copy number change threshold to label genes.</span>
+<span class="sd">        min_probes (type=int): Minimum number of covered probes to label a gene.</span>
+<span class="sd">        male_reference (flag): Assume inputs were normalized to a</span>
+<span class="sd">            male reference (i.e. female samples will have +1 log-CNR of chrX;</span>
+<span class="sd">            otherwise male samples would have -1 chrX).</span>
+<span class="sd">        no_shift_xy (flag): Don&#39;t adjust the X and Y chromosomes</span>
+<span class="sd">            according to sample sex.</span>
+<span class="sd">        title: Plot title. Sample ID if not provided.</span>
+<span class="sd">        cases (type=json): The cases with keys as names and values as different</span>
+<span class="sd">            configs, including `threshold`, `min_probes`, `male_reference`,</span>
+<span class="sd">            `no_shift_xy` and `title`</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        cnvkit:</span>
+<span class="sd">            - check: {{proc.envs.cnvkit}} version</span>
+<span class="sd">        convert:</span>
+<span class="sd">            - check: {{proc.envs.convert}} -version</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;cnrfile:file, cnsfile:file, sample_sex:var&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.cnrfile | stem0}}.diagram&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+        <span class="s2">&quot;convert&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">convert</span><span class="p">,</span>
+        <span class="s2">&quot;convert_args&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;density&quot;</span><span class="p">:</span> <span class="mi">150</span><span class="p">,</span>
+            <span class="s2">&quot;quality&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+            <span class="s2">&quot;background&quot;</span><span class="p">:</span> <span class="s2">&quot;white&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;alpha&quot;</span><span class="p">:</span> <span class="s2">&quot;remove&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="s2">&quot;min_probes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;male_reference&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;no_shift_xy&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cnvkit/CNVkitDiagram.py&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/cnvkit/CNVkitScatter.svelte&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;report_paging&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">CNVkitHeatmap</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cnvkit.CNVkitHeatmap"></span><a class="mkapi-docs-link" title="biopipen.ns.cnvkit.CNVkitHeatmap" href="../../biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitHeatmap">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run cnvkit.py heatmap for multiple cases</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        segfiles: Sample coverages as raw probes (.cnr) or segments (.cns).</span>
+<span class="sd">        sample_sex: Specify the chromosomal sex of all given samples as male</span>
+<span class="sd">            or female. Separated by comma. (Default: guess each sample from</span>
+<span class="sd">            coverage of X and Y chromosomes).</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: Output directory with heatmaps of multiple cases</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        cnvkit: Path to cnvkit.py</span>
+<span class="sd">        convert: Path to `convert` to convert pdf to png file</span>
+<span class="sd">        convert_args (ns): The arguments for `convert`</span>
+<span class="sd">            - density (type=int): Horizontal and vertical density of the image</span>
+<span class="sd">            - quality (type=int): JPEG/MIFF/PNG compression level</span>
+<span class="sd">            - background: Background color</span>
+<span class="sd">            - alpha: Activate, deactivate, reset, or set the alpha channel</span>
+<span class="sd">            - &lt;more&gt;: See `convert -help` and also:</span>
+<span class="sd">                https://linux.die.net/man/1/convert</span>
+<span class="sd">        by_bin (flag): Plot data x-coordinates by bin indices</span>
+<span class="sd">            instead of genomic coordinates. All bins will be shown with equal</span>
+<span class="sd">            width, no blank regions will be shown, and x-axis values indicate</span>
+<span class="sd">            bin number (within chromosome) instead of genomic position.</span>
+<span class="sd">        chromosome: Chromosome (e.g. &#39;chr1&#39;) or chromosomal range</span>
+<span class="sd">            (e.g. &#39;chr1:2333000-2444000&#39;) to display.</span>
+<span class="sd">        desaturate (flag): Tweak color saturation to focus on</span>
+<span class="sd">            significant changes.</span>
+<span class="sd">        male_reference (flag): Assume inputs were normalized to</span>
+<span class="sd">            a male reference. (i.e. female samples will have +1 log-CNR of chrX;</span>
+<span class="sd">            otherwise male samples would have -1 chrX).</span>
+<span class="sd">        no_shift_xy (flag): Don&#39;t adjust the X and Y chromosomes</span>
+<span class="sd">            according to sample sex.</span>
+<span class="sd">        order: A file with sample names in the desired order.</span>
+<span class="sd">        cases (type=json): The cases for different plots with keys as case names</span>
+<span class="sd">            and values to overwrite the default args given by `envs.&lt;args&gt;`,</span>
+<span class="sd">            including `convert_args`, `by_bin`, `chromosome`, `desaturate`,</span>
+<span class="sd">            `male_reference`, and, `no_shift_xy`.</span>
+<span class="sd">            By default, an `all` case will be created with default arguments</span>
+<span class="sd">            if no case specified</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        cnvkit:</span>
+<span class="sd">            - check: {{proc.envs.cnvkit}} version</span>
+<span class="sd">        convert:</span>
+<span class="sd">            - check: {{proc.envs.convert}} -version</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;segfiles:files, sample_sex: var&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.segfiles | first | stem0}}-etc.heatmap&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+        <span class="s2">&quot;convert&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">config</span><span class="p">,</span>
+        <span class="s2">&quot;convert_args&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;density&quot;</span><span class="p">:</span> <span class="mi">150</span><span class="p">,</span>
+            <span class="s2">&quot;quality&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+            <span class="s2">&quot;background&quot;</span><span class="p">:</span> <span class="s2">&quot;white&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;alpha&quot;</span><span class="p">:</span> <span class="s2">&quot;remove&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;by_bin&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;chromosome&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;desaturate&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;male_reference&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;no_shift_xy&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cnvkit/CNVkitHeatmap.py&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/cnvkit/CNVkitHeatmap.svelte&quot;</span><span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">CNVkitCall</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cnvkit.CNVkitCall"></span><a class="mkapi-docs-link" title="biopipen.ns.cnvkit.CNVkitCall" href="../../biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitCall">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run cnvkit.py call</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        cnrfile: The fixed cnr file (.cnr), used to generate VCF file</span>
+<span class="sd">        cnsfile: The segmentation file (.cns)</span>
+<span class="sd">        vcf: VCF file name containing variants for segmentation</span>
+<span class="sd">            by allele frequencies (optional).</span>
+<span class="sd">        sample_id: Specify the name of the sample in the VCF to use for b-allele</span>
+<span class="sd">            frequency extraction and as the default plot title.</span>
+<span class="sd">        normal_id: Corresponding normal sample ID in the input VCF.</span>
+<span class="sd">            This sample is used to select only germline SNVs to plot</span>
+<span class="sd">            b-allele frequencies.</span>
+<span class="sd">        sample_sex: Specify the sample&#39;s chromosomal sex as male or female.</span>
+<span class="sd">            (Otherwise guessed from X and Y coverage).</span>
+<span class="sd">        purity: Estimated tumor cell fraction, a.k.a. purity or cellularity.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory including the call file (.call.cns)</span>
+<span class="sd">            bed file, and the vcf file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        cnvkit: Path to cnvkit.py</span>
+<span class="sd">        center: Re-center the log2 ratio values using this estimator of</span>
+<span class="sd">            the center or average value.</span>
+<span class="sd">        center_at (type=float): Subtract a constant number from all log2 ratios.</span>
+<span class="sd">            For &quot;manual&quot; re-centering, in case the --center option gives</span>
+<span class="sd">            unsatisfactory results.)</span>
+<span class="sd">        filter: Merge segments flagged by the specified</span>
+<span class="sd">            filter(s) with the adjacent segment(s).</span>
+<span class="sd">        method (choice): Calling method (threshold, clonal or none).</span>
+<span class="sd">            - threshold: Using hard thresholds for calling each integer copy</span>
+<span class="sd">                number.</span>
+<span class="sd">                Use `thresholds` to set a list of threshold log2 values for</span>
+<span class="sd">                each copy number state</span>
+<span class="sd">            - clonal: Rescaling and rounding.</span>
+<span class="sd">                For a given known tumor cell fraction and normal ploidy,</span>
+<span class="sd">                then simple rounding to the nearest integer copy number</span>
+<span class="sd">            - none: Do not add a “cn” column or allele copy numbers.</span>
+<span class="sd">                But still performs rescaling, re-centering, and extracting</span>
+<span class="sd">                b-allele frequencies from a VCF (if requested).</span>
+<span class="sd">        thresholds: Hard thresholds for calling each integer copy number,</span>
+<span class="sd">            separated by commas.</span>
+<span class="sd">        ploidy (type=float): Ploidy of the sample cells.</span>
+<span class="sd">        drop_low_coverage (flag): Drop very-low-coverage bins</span>
+<span class="sd">            before segmentation to avoid false-positive deletions in</span>
+<span class="sd">            poor-quality tumor samples.</span>
+<span class="sd">        male_reference (flag): Assume inputs were normalized to a</span>
+<span class="sd">            male reference.</span>
+<span class="sd">            (i.e. female samples will have +1 log-CNR of chrX; otherwise</span>
+<span class="sd">            male samples would have -1 chrX).</span>
+<span class="sd">        min_variant_depth (type=int): Minimum read depth for a SNV to be</span>
+<span class="sd">            displayed in the b-allele frequency plot.</span>
+<span class="sd">        zygosity_freq (type=float): Ignore VCF&#39;s genotypes (GT field) and</span>
+<span class="sd">            instead infer zygosity from allele frequencies.</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        cnvkit:</span>
+<span class="sd">            - check: {{proc.envs.cnvkit}} version</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;cnrfile:file&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cnsfile:file&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;vcf:file&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sample_id:var&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;normal_id:var&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sample_sex:var&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;purity:var&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.cnsfile | stem0}}.cnvkit&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+        <span class="s2">&quot;center&quot;</span><span class="p">:</span> <span class="s2">&quot;median&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;center_at&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;threshold&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;thresholds&quot;</span><span class="p">:</span> <span class="s2">&quot;-1.1,-0.25,0.2,0.7&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ploidy&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;drop_low_coverage&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;male_reference&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;min_variant_depth&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="s2">&quot;zygosity_freq&quot;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cnvkit/CNVkitCall.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">CNVkitBatch</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cnvkit.CNVkitBatch"></span><a class="mkapi-docs-link" title="biopipen.ns.cnvkit.CNVkitBatch" href="../../biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitBatch">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run cnvkit batch</span>
+
+<span class="sd">    If you need in-depth control of the parameters, for example, multiple</span>
+<span class="sd">    scatter plots in different regions, or you need to specify sample-sex for</span>
+<span class="sd">    different samples, take a look at `biopipen.ns.cnvkit_pipeline`</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        metafile: The meta data file containing the sample information</span>
+<span class="sd">            Two columns BamFile and `envs.type_col` are required.</span>
+<span class="sd">            The tumor samples should be labeled as `envs.type_tumor` and the</span>
+<span class="sd">            normal samples should be labeled as `envs.type_normal` in the</span>
+<span class="sd">            `envs.type_col` column. If normal samples are not found, a</span>
+<span class="sd">            flat reference will be used.</span>
+<span class="sd">            The could be other columns in the meta file, but they could be</span>
+<span class="sd">            used in `biopipen.ns.cnvkit_pipeline`.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        cnvkit: Path to cnvkit.py</span>
+<span class="sd">        method: Sequencing assay type: hybridization capture (&#39;hybrid&#39;),</span>
+<span class="sd">            targeted amplicon sequencing (&#39;amplicon&#39;), or whole genome</span>
+<span class="sd">            sequencing (&#39;wgs&#39;). Determines whether and how to use antitarget</span>
+<span class="sd">            bins.</span>
+<span class="sd">        segment_method: cbs,flasso,haar,none,hmm,hmm-tumor,hmm-germline</span>
+<span class="sd">            Method used in the &#39;segment&#39; step.</span>
+<span class="sd">        male_reference: Use or assume a male reference (i.e. female samples</span>
+<span class="sd">            will have +1 log-CNR of chrX; otherwise male samples would have</span>
+<span class="sd">            -1 chrX).</span>
+<span class="sd">        count_reads: Get read depths by counting read midpoints within each bin.</span>
+<span class="sd">            (An alternative algorithm).</span>
+<span class="sd">        drop_low_coverage: Drop very-low-coverage bins before segmentation to</span>
+<span class="sd">            avoid false-positive deletions in poor-quality tumor samples.</span>
+<span class="sd">        ncores: Number of subprocesses used to running each of the BAM files</span>
+<span class="sd">            in parallel</span>
+<span class="sd">        rscript: Path to the Rscript excecutable to use for running R code.</span>
+<span class="sd">            Use this option to specify a non-default R installation.</span>
+<span class="sd">        ref: Path to a FASTA file containing the reference genome.</span>
+<span class="sd">        targets: Target intervals (.bed or .list) (optional for wgs)</span>
+<span class="sd">        antitargets: Anti-target intervals (.bed or .list) (optional for wgs)</span>
+<span class="sd">        annotate: Use gene models from this file to assign names to the</span>
+<span class="sd">            target regions. Format: UCSC refFlat.txt or ensFlat.txt file</span>
+<span class="sd">            (preferred), or BED, interval list, GFF, or similar.</span>
+<span class="sd">        short_names: Reduce multi-accession bait labels to be short</span>
+<span class="sd">            and consistent.</span>
+<span class="sd">        target_avg_size: Average size of split target bins</span>
+<span class="sd">            (results are approximate).</span>
+<span class="sd">        access: Regions of accessible sequence on chromosomes (.bed),</span>
+<span class="sd">            as output by the &#39;access&#39; command.</span>
+<span class="sd">        access_min_gap_size: Minimum gap size between accessible</span>
+<span class="sd">            sequence regions if `envs.access` is not specified.</span>
+<span class="sd">        access_excludes: Exclude these regions from the accessible genome</span>
+<span class="sd">            Used when `envs.access` is not specified.</span>
+<span class="sd">        antitarget_avg_size: Average size of antitarget bins</span>
+<span class="sd">            (results are approximate).</span>
+<span class="sd">        antitarget_min_size: Minimum size of antitarget bins</span>
+<span class="sd">            (smaller regions are dropped).</span>
+<span class="sd">        cluster: Calculate and use cluster-specific summary stats in the</span>
+<span class="sd">            reference pool to normalize samples.</span>
+<span class="sd">        reference: Copy number reference file (.cnn) to reuse</span>
+<span class="sd">        scatter: Create a whole-genome copy ratio profile as a PDF scatter plot.</span>
+<span class="sd">        diagram: Create an ideogram of copy ratios on chromosomes as a PDF.</span>
+<span class="sd">        type_col: type_col: The column name in the metafile that</span>
+<span class="sd">            indicates the sample type.</span>
+<span class="sd">        type_tumor: The type of tumor samples in `envs.type_col` column of</span>
+<span class="sd">            `in.metafile`</span>
+<span class="sd">        type_normal: The type of normal samples in `envs.type_col` column of</span>
+<span class="sd">            `in.metafile`</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        cnvkit:</span>
+<span class="sd">            - check: {{proc.envs.cnvkit}} version</span>
+<span class="sd">        r-DNAcopy:</span>
+<span class="sd">            - check: {{proc.envs.rscript}} &lt;(echo &quot;library(DNAcopy)&quot;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;metafile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.metafile | stem0}}.cnvkit&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;hybrid&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;segment_method&quot;</span><span class="p">:</span> <span class="s2">&quot;cbs&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;male_reference&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;count_reads&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;drop_low_coverage&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;rscript&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span><span class="p">,</span>
+        <span class="s2">&quot;ref&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">reffa</span><span class="p">,</span>
+        <span class="s2">&quot;targets&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;antitargets&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;annotate&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;short_names&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;target_avg_size&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;access&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;access_min_gap_size&quot;</span><span class="p">:</span> <span class="mi">5000</span><span class="p">,</span>
+        <span class="s2">&quot;access_excludes&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;antitarget_avg_size&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;antitarget_min_size&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;cluster&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;reference&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;scatter&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;diagram&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;type_tumor&quot;</span><span class="p">:</span> <span class="s2">&quot;Tumor&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type_normal&quot;</span><span class="p">:</span> <span class="s2">&quot;Normal&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type_col&quot;</span><span class="p">:</span> <span class="s2">&quot;SampleType&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cnvkit/CNVkitBatch.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">CNVkitGuessBaits</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cnvkit.CNVkitGuessBaits"></span><a class="mkapi-docs-link" title="biopipen.ns.cnvkit.CNVkitGuessBaits" href="../../biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitGuessBaits">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Guess the bait intervals from the bam files</span>
+
+<span class="sd">    It runs scripts/guess_baits.py from the cnvkit repo.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        bamfiles: The bam files</span>
+<span class="sd">        atfile: The potential target file or access file</span>
+<span class="sd">            e.g. all known exons in the reference genome or</span>
+<span class="sd">            from `cnvkit.py access`</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        targetfile: The target file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        cnvkit: Path to cnvkit.py</span>
+<span class="sd">        guided (flag): `in.atfile` is a potential target file when</span>
+<span class="sd">            `True`, otherwise it is an access file.</span>
+<span class="sd">        samtools: Path to samtools executable</span>
+<span class="sd">        ncores (type=int): Number of subprocesses to segment in parallel</span>
+<span class="sd">            `0` to use the maximum number of available CPUs.</span>
+<span class="sd">        ref: Path to a FASTA file containing the reference genome.</span>
+<span class="sd">        min_depth (type=int): Minimum sequencing read depth to accept as</span>
+<span class="sd">            captured. For guided only.</span>
+<span class="sd">        min_gap (type=int): Merge regions separated by gaps smaller than this.</span>
+<span class="sd">        min_length (type=int): Minimum region length to accept as captured.</span>
+<span class="sd">            `min_gap` and `min_length` are for unguided only.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;bamfiles:files, atfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;targetfile:file:{{in.bamfiles | first | stem}}_etc.baits.bed&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+        <span class="s2">&quot;samtools&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">samtools</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;ref&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">reffa</span><span class="p">,</span>
+        <span class="s2">&quot;guided&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;min_depth&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;min_gap&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+        <span class="s2">&quot;min_length&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cnvkit/CNVkitGuessBaits.py&quot;</span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/version-select.js"></script>
+      <script src="../../../js/mkapi.js"></script>
+      <script src="../../../extra.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

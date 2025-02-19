@@ -1,0 +1,184 @@
+:root {
+    --mkapi-node-border: #559bc9;
+    --mkapi-node-background: #f0f6fa;
+    --mkapi-object-container-background: #b4d4e9;
+    --mkapi-item-name: #555;
+    --mkapi-section-name: #333;
+    --mkapi-package: #111;
+    --mkapi-module: #222;
+    --mkapi-code-bg: #f0f6fa;
+    --mkapi-example-bg: #eee;
+    --mkapi-object-sig: #2980B9;
+    --mkapi-type: #8888EE;
+}
+
+body[data-md-color-scheme="slate"] {
+    --mkapi-node-border: #5768c3;
+    --mkapi-node-background: #555f66;
+    --mkapi-object-container-background: #445288;
+    --mkapi-item-name: #d9e1e9;
+    --mkapi-section-name: #e4e4e4;
+    --mkapi-package: #fff;
+    --mkapi-module: #eee;
+    --mkapi-code-bg: #445288;
+    --mkapi-example-bg: #3a3a3a;
+    --mkapi-object-sig: #a3c3f3;
+    --mkapi-type: #c5c5ee;
+}
+
+.mkapi-node .function code,
+.mkapi-node .method code,
+.mkapi-node .class code,
+.mkapi-node .classmethod code,
+.mkapi-node .staticmethod code,
+.mkapi-node .property code,
+.mkapi-node .attribute code,
+.mkapi-node .generator code {
+    color: var(--mkapi-item-name);
+}
+
+div.mkapi-section-body.example, div.mkapi-section-body.examples {
+    background-color: var(--mkapi-example-bg);
+}
+
+.mkapi-item-type {
+    color: var(--mkapi-type);
+}
+.mkapi-item-type.sub {
+    font-size: 84%;
+}
+
+.mkapi-node .mkapi-object-body.top code {
+    font-size: 100%;
+}
+.mkapi-node .mkapi-object-body.top code.mkapi-object-parenthesis, .mkapi-node .mkapi-object-body.top code.mkapi-object-signature {
+    color: var(--mkapi-object-sig);
+}
+
+.mkapi-docstring{
+    line-height: 1;
+}
+.mkapi-node {
+    background-color: var(--mkapi-node-background);
+    border-top: 3px solid var(--mkapi-node-border);
+}
+.mkapi-node .mkapi-object-container {
+    background-color: var(--mkapi-object-container-background);
+    padding: .12rem .4rem;
+}
+.mkapi-node .mkapi-object-container .mkapi-object.code {
+    background: none;
+    border: none;
+}
+.mkapi-node pre {
+    line-height: 1.5;
+}
+.mkapi-section-name {
+    color: var(--mkapi-section-name);
+}
+.mkapi-section-name.bases {
+    margin-top: .2em;
+}
+.mkapi-section-body.bases {
+    padding-bottom: .7em;
+    line-height: 1.3;
+}
+.mkapi-section.bases {
+    margin-bottom: .8em;
+}
+.mkapi-node a.mkapi-src-link {
+    word-break: keep-all;
+}
+.mkapi-docstring {
+    padding: .4em .15em !important;
+}
+.mkapi-docstring * {
+    font-size: 98%;
+}
+.mkapi-node h2 {
+    font-size: 100%;
+}
+.mkapi-node h3 {
+    font-size: 90%;
+}
+.mkapi-node ul.mkapi-items li {
+    line-height: 1.4 !important;
+}
+.mkapi-node code.mkapi-object-signature {
+    padding-right: 2px;
+}
+.mkapi-node h1.mkapi-object.mkapi-object-code {
+    margin: .2em .3em;
+}
+.mkapi-node h1.mkapi-object.mkapi-object-code .mkapi-object-kind.mkapi-object-kind-code {
+    font-style: normal;
+    margin-right: 16px;
+}
+.mkapi-node code.mkapi-item-name {
+    color: var(--mkapi-item-name);
+    padding-right: 4px;
+}
+.mkapi-object-kind.package.top {
+    color: var(--mkapi-package);
+}
+.mkapi-object-kind.module.top {
+    color: var(--mkapi-module);
+}
+
+/* process attributes */
+p:not(.proc-attr) + p.proc-attr {
+    padding-top: .6rem;
+}
+
+p.proc-attr .mkapi-section-body {
+    padding-left: 2rem;
+    line-height: 110%;
+}
+
+p.proc-attr .mkapi-section-body code.mkapi-item-name {
+    margin-left: -1rem;
+}
+
+div.mkapi-section.pipen-requires .mkapi-section-body {
+    padding-left: 2.8rem;
+}
+
+div.mkapi-section.pipen-requires .mkapi-section-body code.mkapi-item-first {
+    display: list-item;
+    float: left;
+    list-style-type: circle;
+}
+
+div.mkapi-section.pipen-requires .mkapi-section-body code.pipen-requires-check-code {
+    display: block;
+}
+
+a.reference.internal[href^="#biopipenns"] + ul {
+    display: none !important;
+}
+
+div.mkapi-section.envs span.mkapi-item-description li,
+div.mkapi-section.input span.mkapi-item-description li,
+div.mkapi-section.output span.mkapi-item-description li,
+div.mkapi-section.requires span.mkapi-item-description li {
+    padding-left: 8px;
+    text-indent: -12px;
+}
+div.mkapi-section.envs span.mkapi-item-description li::before,
+div.mkapi-section.input span.mkapi-item-description li::before,
+div.mkapi-section.output span.mkapi-item-description li::before,
+div.mkapi-section.requires span.mkapi-item-description li::before {
+    display: none !important;
+}
+
+.rst-content code, .rst-content tt, code {
+    font-size: 80%;
+}
+
+.mkapi-node ul.mkapi-items li::before {
+    line-height: 2.2;
+}
+
+.mkapi-node ul.mkapi-items {
+    margin-left: 36px;
+}

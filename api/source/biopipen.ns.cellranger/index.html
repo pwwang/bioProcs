@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>biopipen.ns.cellranger - biopipen</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.ns.cellranger";
+        var mkdocs_page_input_path = "api/source/biopipen.ns.cellranger.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">biopipen.ns.cellranger</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/source/biopipen.ns.cellranger.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">biopipen.ns.</span><span class="mkapi-object-name">cellranger</span>
+<span id="biopipen.ns.cellranger"></span><a class="mkapi-docs-link" href="../../biopipen.ns.cellranger">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Cellranger pipeline module for BioPipen&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">..core.proc</span> <span class="kn">import</span> <span class="n">Proc</span>
+<span class="kn">from</span> <span class="nn">..core.config</span> <span class="kn">import</span> <span class="n">config</span>
+
+
+<span class="k">class</span> <span class="nc">CellRangerCount</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cellranger.CellRangerCount"></span><a class="mkapi-docs-link" title="biopipen.ns.cellranger.CellRangerCount" href="../../biopipen.ns.cellranger/#biopipen.ns.cellranger.CellRangerCount">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run cellranger count</span>
+
+<span class="sd">    to count gene expression and/or feature barcode reads</span>
+<span class="sd">    requires cellranger v7+.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        fastqs: The input fastq files</span>
+<span class="sd">            Either a list of fastq files or a directory containing fastq files</span>
+<span class="sd">            If a directory is provided, it should be passed as a list with one</span>
+<span class="sd">            element.</span>
+<span class="sd">        id: The id defining output directory. If not provided, it is inferred</span>
+<span class="sd">            from the fastq files.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        ncores: Number of cores to use</span>
+<span class="sd">        cellranger: Path to cellranger</span>
+<span class="sd">        ref: Path of folder containing 10x-compatible transcriptome reference</span>
+<span class="sd">        tmpdir: Path to temporary directory, used to save the soft-lined fastq files</span>
+<span class="sd">            to pass to cellranger</span>
+<span class="sd">        include_introns (flag): Set to false to exclude intronic reads in count.</span>
+<span class="sd">        create_bam (flag): Enable or disable BAM file generation.</span>
+<span class="sd">            This is required by cellrange v8+. When using cellrange v8-, it will be</span>
+<span class="sd">            transformed to `--no-bam`.</span>
+<span class="sd">        &lt;more&gt;: Other environment variables required by `cellranger count`</span>
+<span class="sd">            See `cellranger count --help` for more details or</span>
+<span class="sd">            https://www.10xgenomics.com/support/software/cell-ranger/advanced/cr-command-line-arguments#count</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;fastqs:files, id&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;outdir:dir:</span>
+<span class="s2">        {</span><span class="si">%- s</span><span class="s2">et fastqs = in.fastqs -%}</span>
+<span class="s2">        {</span><span class="si">%- i</span><span class="s2">f len(fastqs) == 1 and isdir(fastqs[0]) -%}</span>
+<span class="s2">            {</span><span class="si">%- s</span><span class="s2">et fastqs = fastqs[0] | glob: &quot;*.fastq.gz&quot; -%}</span>
+<span class="s2">        {</span><span class="si">%- e</span><span class="s2">ndif -%}</span>
+<span class="s2">        {</span><span class="si">%- i</span><span class="s2">f in.id -%}</span>
+<span class="s2">            {{in.id}}</span>
+<span class="s2">        {</span><span class="si">%- e</span><span class="s2">lse -%}</span>
+<span class="s2">            {</span><span class="si">%- s</span><span class="s2">et id = commonprefix(*fastqs) |</span>
+<span class="s2">                regex_replace: &quot;_L</span><span class="se">\\</span><span class="s2">d+(:?_.*)?$&quot;, &quot;&quot; |</span>
+<span class="s2">                regex_replace: &quot;_S</span><span class="se">\\</span><span class="s2">d+$&quot;, &quot;&quot; -%}</span>
+<span class="s2">            {{- id -}}</span>
+<span class="s2">        {</span><span class="si">%- e</span><span class="s2">ndif -%}</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;cellranger&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">cellranger</span><span class="p">,</span>
+        <span class="s2">&quot;ref&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">ref_cellranger_gex</span><span class="p">,</span>
+        <span class="s2">&quot;tmpdir&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">tmpdir</span><span class="p">,</span>
+        <span class="s2">&quot;include_introns&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;create_bam&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cellranger/CellRangerCount.py&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/cellranger/CellRangerCount.svelte&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;report_paging&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">CellRangerVdj</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cellranger.CellRangerVdj"></span><a class="mkapi-docs-link" title="biopipen.ns.cellranger.CellRangerVdj" href="../../biopipen.ns.cellranger/#biopipen.ns.cellranger.CellRangerVdj">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run cellranger vdj</span>
+
+<span class="sd">    to perform sequence assembly and paired clonotype calling.</span>
+<span class="sd">    requires cellranger v7+.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        fastqs: The input fastq files</span>
+<span class="sd">            Either a list of fastq files or a directory containing fastq files</span>
+<span class="sd">            If a directory is provided, it should be passed as a list with one</span>
+<span class="sd">            element.</span>
+<span class="sd">        id: The id determining the output directory. If not provided, it is inferred</span>
+<span class="sd">            from the fastq files.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        ncores: Number of cores to use</span>
+<span class="sd">        cellranger: Path to cellranger</span>
+<span class="sd">        ref: Path of folder containing 10x-compatible transcriptome reference</span>
+<span class="sd">        tmpdir: Path to temporary directory, used to save the soft-lined fastq files</span>
+<span class="sd">            to pass to cellranger</span>
+<span class="sd">        &lt;more&gt;: Other environment variables required by `cellranger vdj`</span>
+<span class="sd">            See `cellranger vdj --help` for more details or</span>
+<span class="sd">            https://www.10xgenomics.com/support/software/cell-ranger/advanced/cr-command-line-arguments#vdj</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;fastqs:files, id&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;outdir:dir:</span>
+<span class="s2">        {</span><span class="si">%- s</span><span class="s2">et fastqs = in.fastqs -%}</span>
+<span class="s2">        {</span><span class="si">%- i</span><span class="s2">f len(fastqs) == 1 and isdir(fastqs[0]) -%}</span>
+<span class="s2">            {</span><span class="si">%- s</span><span class="s2">et fastqs = fastqs[0] | glob: &quot;*.fastq.gz&quot; -%}</span>
+<span class="s2">        {</span><span class="si">%- e</span><span class="s2">ndif -%}</span>
+<span class="s2">        {</span><span class="si">%- i</span><span class="s2">f in.id -%}</span>
+<span class="s2">            {{in.id}}</span>
+<span class="s2">        {</span><span class="si">%- e</span><span class="s2">lse -%}</span>
+<span class="s2">            {</span><span class="si">%- s</span><span class="s2">et id = commonprefix(*fastqs) |</span>
+<span class="s2">                regex_replace: &quot;_L</span><span class="se">\\</span><span class="s2">d+(:?_.*)?$&quot;, &quot;&quot; |</span>
+<span class="s2">                regex_replace: &quot;_S</span><span class="se">\\</span><span class="s2">d+$&quot;, &quot;&quot; -%}</span>
+<span class="s2">            {{- id -}}</span>
+<span class="s2">        {</span><span class="si">%- e</span><span class="s2">ndif -%}</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;cellranger&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">cellranger</span><span class="p">,</span>
+        <span class="s2">&quot;ref&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">ref_cellranger_vdj</span><span class="p">,</span>
+        <span class="s2">&quot;tmpdir&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">tmpdir</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cellranger/CellRangerVdj.py&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/cellranger/CellRangerVdj.svelte&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;report_paging&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">CellRangerSummary</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cellranger.CellRangerSummary"></span><a class="mkapi-docs-link" title="biopipen.ns.cellranger.CellRangerSummary" href="../../biopipen.ns.cellranger/#biopipen.ns.cellranger.CellRangerSummary">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Summarize cellranger metrics</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        indirs: The directories containing cellranger results</span>
+<span class="sd">            from `CellRangerCount`/`CellRangerVdj`.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        group (type=auto): The group of the samples for boxplots.</span>
+<span class="sd">            If `None`, don&#39;t do boxplots.</span>
+<span class="sd">            It can be a dict of group names and sample names, e.g.</span>
+<span class="sd">            `{&quot;group1&quot;: [&quot;sample1&quot;, &quot;sample2&quot;], &quot;group2&quot;: [&quot;sample3&quot;]}`</span>
+<span class="sd">            or a file containing the group information, with the first column</span>
+<span class="sd">            being the sample names and the second column being the group names.</span>
+<span class="sd">            The file should be tab-delimited with no header.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;indirs:dirs&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.indirs | first | stem | append: &#39;-etc.summary&#39;}}&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cellranger/CellRangerSummary.R&quot;</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;group&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/cellranger/CellRangerSummary.svelte&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;report_paging&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/version-select.js"></script>
+      <script src="../../../js/mkapi.js"></script>
+      <script src="../../../extra.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

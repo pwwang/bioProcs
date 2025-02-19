@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>biopipen.ns.cnv - biopipen</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.ns.cnv";
+        var mkdocs_page_input_path = "api/source/biopipen.ns.cnv.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">biopipen.ns.cnv</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/source/biopipen.ns.cnv.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">biopipen.ns.</span><span class="mkapi-object-name">cnv</span>
+<span id="biopipen.ns.cnv"></span><a class="mkapi-docs-link" href="../../biopipen.ns.cnv">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;CNV/CNA-related processes, mostly tertiary analysis&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">..core.proc</span> <span class="kn">import</span> <span class="n">Proc</span>
+<span class="kn">from</span> <span class="nn">..core.config</span> <span class="kn">import</span> <span class="n">config</span>
+
+
+<span class="k">class</span> <span class="nc">AneuploidyScore</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cnv.AneuploidyScore"></span><a class="mkapi-docs-link" title="biopipen.ns.cnv.AneuploidyScore" href="../../biopipen.ns.cnv/#biopipen.ns.cnv.AneuploidyScore">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Chromosomal arm SCNA/aneuploidy</span>
+
+<span class="sd">    The CAAs in this process are calculated using Cohen-Sharir method</span>
+<span class="sd">    See https://github.com/quevedor2/aneuploidy_score</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        segfile: The seg file, generally including chrom, start, end and</span>
+<span class="sd">            seg.mean (the log2 ratio).</span>
+<span class="sd">            It is typically a tab-delimited file or a BED file.</span>
+<span class="sd">            If so, envs.chrom_col, envs.start_col, envs.end_col and envs.seg_col</span>
+<span class="sd">            are the 1st, 2nd, 3rd and 5th columns, respectively.</span>
+<span class="sd">            It can also be a VCF file. If so, envs.chrom_col and envs.start_col</span>
+<span class="sd">            are not required.</span>
+<span class="sd">            `end_col` and `envs.seg_col` will be a field in the INFO column.</span>
+<span class="sd">            [`VariantAnnotation`](https://rdrr.io/bioc/VariantAnnotation/)</span>
+<span class="sd">            is required to extract the INFO field.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory containing the CAAs, AS and a histogram</span>
+<span class="sd">            plot to show the CAAs for each chromosome arm</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        chrom_col: The column name for chromosome</span>
+<span class="sd">        start_col: The column name for start position</span>
+<span class="sd">        end_col: The column name for end position</span>
+<span class="sd">        seg_col: The column name for seg.mean</span>
+<span class="sd">        cn_col: The column name for copy number</span>
+<span class="sd">        segmean_transform (text): A R function to transform `seg.mean`</span>
+<span class="sd">            The transformed value will be used to calculate the CAAs</span>
+<span class="sd">        cn_transform (type=auto): A R function to transform `seg.mean` into</span>
+<span class="sd">            copy number, or a list of cutoffs to determine the copy number.</span>
+<span class="sd">            See https://cnvkit.readthedocs.io/en/stable/pipeline.html#calling-methods.</span>
+<span class="sd">            If this is give, `cn_col` will be ignored.</span>
+<span class="sd">        genome: The genome version, hg19 or hg38</span>
+<span class="sd">        threshold (type=float): The threshold to determine whether a chromosome</span>
+<span class="sd">            arm is gained or lost.</span>
+<span class="sd">        wgd_gf (type=float): The fraction of the genome that is affected by WGD</span>
+<span class="sd">        excl_chroms (list): The chromosomes to be excluded</span>
+<span class="sd">            Works with/without `chr` prefix.</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        AneuploidyScore:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(AneuploidyScore)&quot;)</span>
+<span class="sd">        ucsc.hg19.cytoband:</span>
+<span class="sd">            - if: {{ proc.envs.genome == &#39;hg19&#39; }}</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(ucsc.hg19.cytoband)&quot;)</span>
+<span class="sd">        ucsc.hg38.cytoband:</span>
+<span class="sd">            - if: {{ proc.envs.genome == &#39;hg38&#39; }}</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(ucsc.hg38.cytoband)&quot;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;segfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.segfile | stem}}.aneuploidy_score&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;chrom_col&quot;</span><span class="p">:</span> <span class="s2">&quot;chrom&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;start_col&quot;</span><span class="p">:</span> <span class="s2">&quot;loc.start&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end_col&quot;</span><span class="p">:</span> <span class="s2">&quot;loc.end&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;seg_col&quot;</span><span class="p">:</span> <span class="s2">&quot;seg.mean&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cn_col&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;segmean_transform&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;cn_transform&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;genome&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">genome</span><span class="p">,</span>
+        <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="s2">&quot;wgd_gf&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="s2">&quot;excl_chroms&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;chrX&#39;</span><span class="p">,</span> <span class="s1">&#39;chrY&#39;</span><span class="p">],</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cnv/AneuploidyScore.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/cnv/AneuploidyScore.svelte&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;report_paging&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">AneuploidyScoreSummary</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cnv.AneuploidyScoreSummary"></span><a class="mkapi-docs-link" title="biopipen.ns.cnv.AneuploidyScoreSummary" href="../../biopipen.ns.cnv/#biopipen.ns.cnv.AneuploidyScoreSummary">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Summary table and plots from AneuploidyScore</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        asdirs: The output directories from AneuploidyScore</span>
+<span class="sd">        metafile: The metafile containing the sample information</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory containing the summary table and plots</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        group_cols (type=auto): The column name in the metafile to group the</span>
+<span class="sd">            samples.</span>
+<span class="sd">            We also support multiple columns, e.g. `[&quot;group1&quot;, &quot;group2&quot;]`</span>
+<span class="sd">            You can also use `group1,group2` to add a secondary grouping</span>
+<span class="sd">            based on `group2` within each `group1` (only works for 2 groups)</span>
+<span class="sd">        heatmap_cases (type=json): The cases to be included in the heatmap</span>
+<span class="sd">            By default, all arms are included. If specified, keys are the names</span>
+<span class="sd">            of the cases and values are the arms, which will be included in</span>
+<span class="sd">            the heatmap. The list of arms should be a subset of `chr&lt;N&gt;_p` and</span>
+<span class="sd">            `chr&lt;N&gt;_q`, where `&lt;N&gt;` is the chromosome number from 1 to 22, X, Y.</span>
+<span class="sd">            You can also use `ALL` to include all arms.</span>
+<span class="sd">        sample_name (text): An R function to extract the sample name from</span>
+<span class="sd">            the file stem (not including `.aneuploidy_score` part)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;asdirs:dirs, metafile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;outdir:dir:{{in.asdirs | first | stem}}_etc.aneuploidy_score_summary&quot;</span>
+    <span class="p">)</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cnv/AneuploidyScoreSummary.R&quot;</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;group_cols&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;heatmap_cases&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;All-Arms&quot;</span><span class="p">:</span> <span class="s2">&quot;ALL&quot;</span><span class="p">},</span>
+        <span class="s2">&quot;sample_name&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/cnv/AneuploidyScoreSummary.svelte&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">TMADScore</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cnv.TMADScore"></span><a class="mkapi-docs-link" title="biopipen.ns.cnv.TMADScore" href="../../biopipen.ns.cnv/#biopipen.ns.cnv.TMADScore">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Trimmed Median Absolute Deviation (TMAD) score for CNV</span>
+
+<span class="sd">    Reference:</span>
+<span class="sd">        Mouliere, Chandrananda, Piskorz and Moore et al. Enhanced detection of</span>
+<span class="sd">        circulating tumor DNA by fragment size analysis Science Translational</span>
+<span class="sd">        Medicine (2018).</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        segfile: The seg file, two columns are required:</span>
+<span class="sd">            * chrom: The chromosome name, used for filtering</span>
+<span class="sd">            * seg.mean: The log2 ratio.</span>
+<span class="sd">            It is typically a tab-delimited file or a BED file.</span>
+<span class="sd">            If so, envs.chrom_col and envs.seg_col</span>
+<span class="sd">            are the 1st and 5th columns, respectively.</span>
+<span class="sd">            It can also be a VCF file. If so, envs.chrom_col and envs.start_col</span>
+<span class="sd">            are not required.</span>
+<span class="sd">            `end_col` and `envs.seg_col` will be a field in the INFO column.</span>
+<span class="sd">            [`VariantAnnotation`](https://rdrr.io/bioc/VariantAnnotation/)</span>
+<span class="sd">            is required to extract the INFO field.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output file containing the TMAD score</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        chrom_col: The column name for chromosome</span>
+<span class="sd">        seg_col: The column name for seg.mean</span>
+<span class="sd">        segmean_transform: The transformation function for seg.mean</span>
+<span class="sd">        excl_chroms (list): The chromosomes to be excluded</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;segfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.segfile | stem0}}.tmad.txt&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;chrom_col&quot;</span><span class="p">:</span> <span class="s2">&quot;chrom&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;seg_col&quot;</span><span class="p">:</span> <span class="s2">&quot;seg.mean&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;segmean_transform&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;excl_chroms&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;chrX&quot;</span><span class="p">,</span> <span class="s2">&quot;chrY&quot;</span><span class="p">],</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cnv/TMADScore.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">TMADScoreSummary</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.cnv.TMADScoreSummary"></span><a class="mkapi-docs-link" title="biopipen.ns.cnv.TMADScoreSummary" href="../../biopipen.ns.cnv/#biopipen.ns.cnv.TMADScoreSummary">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Summary table and plots for TMADScore</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        tmadfiles: The output files from TMADScore</span>
+<span class="sd">        metafile: The metafile containing the sample information</span>
+<span class="sd">            The first column must be the sample ID</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory containing the summary table and plots</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        group_cols (type=auto): The column name in the metafile to group the</span>
+<span class="sd">            samples Could also be a list of column names</span>
+<span class="sd">            If not specified, samples will be plotted individually as a barplot</span>
+<span class="sd">            We also support multiple columns, e.g. `[&quot;group1&quot;, &quot;group2&quot;]`</span>
+<span class="sd">            You can also use `group1,group2` to add a secondary grouping</span>
+<span class="sd">            based on `group2` within each `group1` (only works for 2 groups)</span>
+<span class="sd">        sample_name (text): An R function to extract the sample name from</span>
+<span class="sd">            the file stem (not including `.tmad.txt` part)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;tmadfiles:files, metafile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.tmadfiles | first | stem0}}_etc.tmad_summary&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/cnv/TMADScoreSummary.R&quot;</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;group_cols&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;sample_name&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/cnv/TMADScoreSummary.svelte&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/version-select.js"></script>
+      <script src="../../../js/mkapi.js"></script>
+      <script src="../../../extra.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

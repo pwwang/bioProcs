@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>biopipen.ns.scrna_metabolic_landscape - biopipen</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.ns.scrna_metabolic_landscape";
+        var mkdocs_page_input_path = "api/source/biopipen.ns.scrna_metabolic_landscape.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">biopipen.ns.scrna_metabolic_landscape</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/source/biopipen.ns.scrna_metabolic_landscape.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">biopipen.ns.</span><span class="mkapi-object-name">scrna_metabolic_landscape</span>
+<span id="biopipen.ns.scrna_metabolic_landscape"></span><a class="mkapi-docs-link" href="../../biopipen.ns.scrna_metabolic_landscape">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Metabolic landscape analysis for scRNA-seq data&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Type</span>
+
+<span class="kn">from</span> <span class="nn">diot</span> <span class="kn">import</span> <span class="n">Diot</span>
+<span class="kn">from</span> <span class="nn">datar.tibble</span> <span class="kn">import</span> <span class="n">tibble</span>
+<span class="kn">from</span> <span class="nn">pipen.utils</span> <span class="kn">import</span> <span class="n">mark</span>
+<span class="kn">from</span> <span class="nn">pipen_args</span> <span class="kn">import</span> <span class="n">ProcGroup</span>
+<span class="kn">from</span> <span class="nn">pipen_annotate</span> <span class="kn">import</span> <span class="n">annotate</span>
+
+<span class="kn">from</span> <span class="nn">..core.config</span> <span class="kn">import</span> <span class="n">config</span>
+<span class="kn">from</span> <span class="nn">..core.proc</span> <span class="kn">import</span> <span class="n">Proc</span>
+
+
+<span class="k">class</span> <span class="nc">MetabolicPathwayActivity</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.scrna_metabolic_landscape.MetabolicPathwayActivity"></span><a class="mkapi-docs-link" title="biopipen.ns.scrna_metabolic_landscape.MetabolicPathwayActivity" href="../../biopipen.ns.scrna_metabolic_landscape/#biopipen.ns.scrna_metabolic_landscape.MetabolicPathwayActivity">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This process calculates the pathway activities in different groups and subsets.</span>
+
+<span class="sd">    The cells are first grouped by subsets and then the metabolic activities are</span>
+<span class="sd">    examined for each groups in different subsets.</span>
+
+<span class="sd">    For each subset, a heatmap and a violin plot will be generated.</span>
+<span class="sd">    The heatmap shows the pathway activities for each group and each metabolic pathway</span>
+
+<span class="sd">    ![MetabolicPathwayActivity_heatmap](https://pwwang.github.io/immunopipe/latest/processes/images/MetabolicPathwayActivity_heatmap.png){: width=&quot;80%&quot;}</span>
+
+<span class="sd">    The violin plot shows the distribution of the pathway activities for each group</span>
+
+<span class="sd">    ![MetabolicPathwayActivity_violin](https://pwwang.github.io/immunopipe/latest/processes/images/MetabolicPathwayActivity_violin.png){: width=&quot;45%&quot;}</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        ntimes (type=int): Number of times to do the permutation</span>
+<span class="sd">        ncores (type=int;pgarg): Number of cores to use for parallelization</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.ncores`</span>
+<span class="sd">        heatmap_devpars (ns): Device parameters for the heatmap</span>
+<span class="sd">            - width (type=int): Width of the heatmap</span>
+<span class="sd">            - height (type=int): Height of the heatmap</span>
+<span class="sd">            - res (type=int): Resolution of the heatmap</span>
+<span class="sd">        violin_devpars (ns): Device parameters for the violin plot</span>
+<span class="sd">            - width (type=int): Width of the violin plot</span>
+<span class="sd">            - height (type=int): Height of the violin plot</span>
+<span class="sd">            - res (type=int): Resolution of the violin plot</span>
+<span class="sd">        gmtfile (pgarg): The GMT file with the metabolic pathways.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.gmtfile`</span>
+<span class="sd">        grouping (type=auto;pgarg;readonly): Defines the basic groups to</span>
+<span class="sd">            investigate the metabolic activity, typically the clusters.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.grouping`</span>
+<span class="sd">        grouping_prefix (type=auto;pgarg;readonly): Working as a prefix to group</span>
+<span class="sd">            names. For example, if we have `grouping_prefix = &quot;cluster&quot;` and</span>
+<span class="sd">            we have `1` and `2` in the `grouping` column, the groups</span>
+<span class="sd">            will be named as `cluster_1` and `cluster_2`.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.grouping_prefix`</span>
+<span class="sd">        subsetting (type=auto;pgarg;readonly): How do we subset the data. Other</span>
+<span class="sd">            columns in the metadata to do comparisons. For example,</span>
+<span class="sd">            `&quot;TimePoint&quot;` or `[&quot;TimePoint&quot;, &quot;Response&quot;]`.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.subsetting`</span>
+<span class="sd">        subsetting_prefix (type=auto;pgarg;readonly): Working as a prefix to</span>
+<span class="sd">            subset names.</span>
+<span class="sd">            For example, if we have `subsetting_prefix = &quot;timepoint&quot;` and</span>
+<span class="sd">            we have `pre` and `post` in the `subsetting` column, the subsets</span>
+<span class="sd">            will be named as `timepoint_pre` and `timepoint_post`.</span>
+<span class="sd">            If `subsetting` is a list, then this should also be a</span>
+<span class="sd">            same-length list. If a single string is given, it will be</span>
+<span class="sd">            repeated to a list with the same length as `subsetting`.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.subsetting_prefix`</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        r-scater:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(scater)&quot;)</span>
+<span class="sd">        r-reshape2:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(reshape2)&quot;)</span>
+<span class="sd">        r-rcolorbrewer:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(RColorBrewer)&quot;)</span>
+<span class="sd">        r-ggplot2:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(ggplot2)&quot;)</span>
+<span class="sd">        r-ggprism:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(ggprism)&quot;)</span>
+<span class="sd">        r-complexheatmap:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(ComplexHeatmap)&quot;)</span>
+<span class="sd">        r-parallel:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(parallel)&quot;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;sobjfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.sobjfile | stem}}.pathwayactivity&quot;</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;ntimes&quot;</span><span class="p">:</span> <span class="mi">5000</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;heatmap_devpars&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;violin_devpars&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;gmtfile&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;grouping&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;grouping_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subsetting&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;subsetting_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;file://../scripts/&quot;</span>
+        <span class="s2">&quot;scrna_metabolic_landscape/MetabolicPathwayActivity.R&quot;</span>
+    <span class="p">)</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="p">(</span>
+            <span class="s2">&quot;file://../reports/&quot;</span>
+            <span class="s2">&quot;scrna_metabolic_landscape/MetabolicPathwayActivity.svelte&quot;</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">MetabolicFeatures</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.scrna_metabolic_landscape.MetabolicFeatures"></span><a class="mkapi-docs-link" title="biopipen.ns.scrna_metabolic_landscape.MetabolicFeatures" href="../../biopipen.ns.scrna_metabolic_landscape/#biopipen.ns.scrna_metabolic_landscape.MetabolicFeatures">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This process performs enrichment analysis for the metabolic pathways</span>
+<span class="sd">    for each group in each subset.</span>
+
+<span class="sd">    The enrichment analysis is done with [`fgsea`](https://bioconductor.org/packages/release/bioc/html/fgsea.html)</span>
+<span class="sd">    package or the [`GSEA_R`](https://github.com/GSEA-MSigDB/GSEA_R) package.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        ncores (type=int;pgarg): Number of cores to use for parallelization.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.ncores`</span>
+<span class="sd">        fgsea (flag): Whether to do fast gsea analysis using `fgsea` package.</span>
+<span class="sd">            If `False`, the `GSEA_R` package will be used.</span>
+<span class="sd">        prerank_method (choice): Method to use for gene preranking.</span>
+<span class="sd">            Signal to noise: the larger the differences of the means</span>
+<span class="sd">            (scaled by the standard deviations); that is, the more distinct</span>
+<span class="sd">            the gene expression is in each phenotype and the more the gene</span>
+<span class="sd">            acts as a “class marker.”.</span>
+<span class="sd">            Absolute signal to noise: the absolute value of the signal to</span>
+<span class="sd">            noise.</span>
+<span class="sd">            T test: Uses the difference of means scaled by the standard</span>
+<span class="sd">            deviation and number of samples.</span>
+<span class="sd">            Ratio of classes: Uses the ratio of class means to calculate</span>
+<span class="sd">            fold change for natural scale data.</span>
+<span class="sd">            Diff of classes: Uses the difference of class means to calculate</span>
+<span class="sd">            fold change for nature scale data</span>
+<span class="sd">            Log2 ratio of classes: Uses the log2 ratio of class means to</span>
+<span class="sd">            calculate fold change for natural scale data. This is the</span>
+<span class="sd">            recommended statistic for calculating fold change for log scale</span>
+<span class="sd">            data.</span>
+<span class="sd">            - signal_to_noise: Signal to noise</span>
+<span class="sd">            - s2n: Alias of signal_to_noise</span>
+<span class="sd">            - abs_signal_to_noise: absolute signal to noise</span>
+<span class="sd">            - abs_s2n: Alias of abs_signal_to_noise</span>
+<span class="sd">            - t_test: T test</span>
+<span class="sd">            - ratio_of_classes: Also referred to as fold change</span>
+<span class="sd">            - diff_of_classes: Difference of class means</span>
+<span class="sd">            - log2_ratio_of_classes: Log2 ratio of class means</span>
+<span class="sd">        top (type=int): N top of enriched pathways to show</span>
+<span class="sd">        gmtfile (pgarg): The GMT file with the metabolic pathways.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.gmtfile`</span>
+<span class="sd">        grouping (type=auto;pgarg;readonly): Defines the basic groups to</span>
+<span class="sd">            investigate the metabolic activity.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.grouping`</span>
+<span class="sd">        grouping_prefix (type=auto;pgarg;readonly): Working as a prefix to</span>
+<span class="sd">            group names.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.grouping_prefix`</span>
+<span class="sd">        subsetting (type=auto;pgarg;readonly): How do we subset the data.</span>
+<span class="sd">            Another column(s) in the metadata.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.subsetting`</span>
+<span class="sd">        subsetting_prefix (type=auto;pgarg;readonly): Working as a prefix to</span>
+<span class="sd">            subset names.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.subsetting_prefix`</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        r-parallel:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(parallel)&quot;)</span>
+<span class="sd">        r-fgsea:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(fgsea)&quot;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;sobjfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.sobjfile | stem}}.pathwayfeatures&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;fgsea&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;prerank_method&quot;</span><span class="p">:</span> <span class="s2">&quot;signal_to_noise&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;top&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;gmtfile&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;grouping&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;grouping_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subsetting&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;subsetting_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;file://../scripts/scrna_metabolic_landscape/MetabolicFeatures.R&quot;</span>
+    <span class="p">)</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="p">(</span>
+            <span class="s2">&quot;file://../reports/&quot;</span>
+            <span class="s2">&quot;scrna_metabolic_landscape/MetabolicFeatures.svelte&quot;</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">MetabolicFeaturesIntraSubset</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.scrna_metabolic_landscape.MetabolicFeaturesIntraSubset"></span><a class="mkapi-docs-link" title="biopipen.ns.scrna_metabolic_landscape.MetabolicFeaturesIntraSubset" href="../../biopipen.ns.scrna_metabolic_landscape/#biopipen.ns.scrna_metabolic_landscape.MetabolicFeaturesIntraSubset">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Intra-subset metabolic features - Enrichment analysis in details</span>
+
+<span class="sd">    Similar to the [`MetabolicFeatures`](!!#biopipennsscrna_metabolic_landscapemetabolicfeatures)</span>
+<span class="sd">    process, this process performs enrichment analysis for the metabolic pathways for</span>
+<span class="sd">    each subset in each group, instead of each group in each subset.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        ncores (type=int; pgarg): Number of cores to use for parallelization</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.ncores`</span>
+<span class="sd">        fgsea (flag): Whether to do fast gsea analysis</span>
+<span class="sd">        prerank_method (choice): Method to use for gene preranking</span>
+<span class="sd">            Signal to noise: the larger the differences of the means</span>
+<span class="sd">            (scaled by the standard deviations); that is, the more distinct</span>
+<span class="sd">            the gene expression is in each phenotype and the more the gene</span>
+<span class="sd">            acts as a “class marker.”.</span>
+<span class="sd">            Absolute signal to noise: the absolute value of the signal to</span>
+<span class="sd">            noise.</span>
+<span class="sd">            T test: Uses the difference of means scaled by the standard</span>
+<span class="sd">            deviation and number of samples.</span>
+<span class="sd">            Ratio of classes: Uses the ratio of class means to calculate</span>
+<span class="sd">            fold change for natural scale data.</span>
+<span class="sd">            Diff of classes: Uses the difference of class means to calculate</span>
+<span class="sd">            fold change for nature scale data</span>
+<span class="sd">            Log2 ratio of classes: Uses the log2 ratio of class means to</span>
+<span class="sd">            calculate fold change for natural scale data. This is the</span>
+<span class="sd">            recommended statistic for calculating fold change for log scale</span>
+<span class="sd">            data.</span>
+<span class="sd">            - signal_to_noise: Signal to noise</span>
+<span class="sd">            - s2n: Alias of signal_to_noise</span>
+<span class="sd">            - abs_signal_to_noise: absolute signal to noise</span>
+<span class="sd">            - abs_s2n: Alias of abs_signal_to_noise</span>
+<span class="sd">            - t_test: T test</span>
+<span class="sd">            - ratio_of_classes: Also referred to as fold change</span>
+<span class="sd">            - diff_of_classes: Difference of class means</span>
+<span class="sd">            - log2_ratio_of_classes: Log2 ratio of class means</span>
+<span class="sd">        top (type=int): N top of enriched pathways to show</span>
+<span class="sd">        gmtfile (pgarg): The GMT file with the metabolic pathways.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.gmtfile`</span>
+<span class="sd">        grouping (type=auto;pgarg;readonly): Defines the basic groups to</span>
+<span class="sd">            investigate the metabolic activity.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.grouping`</span>
+<span class="sd">        grouping_prefix (type=auto;pgarg;readonly): Working as a prefix to group</span>
+<span class="sd">            names.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.grouping_prefix`</span>
+<span class="sd">        subsetting (type=auto;pgarg;readonly): How do we subset the data.</span>
+<span class="sd">            Another column(s) in the metadata.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.subsetting`</span>
+<span class="sd">        subsetting_prefix (type=auto;pgarg;readonly): Working as a prefix to</span>
+<span class="sd">            subset names.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.subsetting_prefix`</span>
+<span class="sd">        subsetting_comparison (type=json;pgarg;readonly): How do we compare the</span>
+<span class="sd">            subsets.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.subsetting_comparison`</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        r-parallel:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(parallel)&quot;)</span>
+<span class="sd">        r-scater:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(scater)&quot;)</span>
+<span class="sd">        r-fgsea:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(fgsea)&quot;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;sobjfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;outdir:dir:{{in.sobjfile | stem}}.intra-subset-pathwayfeatures&quot;</span>
+    <span class="p">)</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;gmtfile&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;fgsea&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;prerank_method&quot;</span><span class="p">:</span> <span class="s2">&quot;signal_to_noise&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;top&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;grouping&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;grouping_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subsetting&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;subsetting_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subsetting_comparison&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;file://../scripts/scrna_metabolic_landscape/&quot;</span>
+        <span class="s2">&quot;MetabolicFeaturesIntraSubset.R&quot;</span>
+    <span class="p">)</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="p">(</span>
+            <span class="s2">&quot;file://../reports/scrna_metabolic_landscape/&quot;</span>
+            <span class="s2">&quot;MetabolicFeaturesIntraSubset.svelte&quot;</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">MetabolicPathwayHeterogeneity</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.scrna_metabolic_landscape.MetabolicPathwayHeterogeneity"></span><a class="mkapi-docs-link" title="biopipen.ns.scrna_metabolic_landscape.MetabolicPathwayHeterogeneity" href="../../biopipen.ns.scrna_metabolic_landscape/#biopipen.ns.scrna_metabolic_landscape.MetabolicPathwayHeterogeneity">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate Metabolic Pathway heterogeneity.</span>
+
+<span class="sd">    For each subset, the normalized enrichment score (NES) of each metabolic pathway</span>
+<span class="sd">    is calculated for each group.</span>
+<span class="sd">    The NES is calculated by comparing the enrichment score of the subset to the</span>
+<span class="sd">    enrichment scores of the same subset in the permutations.</span>
+<span class="sd">    The p-value is calculated by comparing the NES to the NESs of the same subset</span>
+<span class="sd">    in the permutations.</span>
+<span class="sd">    The heterogeneity can be reflected by the NES values and the p-values in</span>
+<span class="sd">    different groups for the metabolic pathways.</span>
+
+<span class="sd">    ![MetabolicPathwayHeterogeneity](https://pwwang.github.io/immunopipe/latest/processes/images/MetabolicPathwayHeterogeneity.png)</span>
+
+
+<span class="sd">    Envs:</span>
+<span class="sd">        gmtfile (pgarg): The GMT file with the metabolic pathways.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.gmtfile`</span>
+<span class="sd">        select_pcs (type=float): Select the PCs to use for the analysis.</span>
+<span class="sd">        pathway_pval_cutoff (type=float): The p-value cutoff to select</span>
+<span class="sd">            the enriched pathways</span>
+<span class="sd">        ncores (type=int;pgarg): Number of cores to use for parallelization</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.ncores`</span>
+<span class="sd">        bubble_devpars (ns): The devpars for the bubble plot</span>
+<span class="sd">            - width (type=int): The width of the plot</span>
+<span class="sd">            - height (type=int): The height of the plot</span>
+<span class="sd">            - res (type=int): The resolution of the plot</span>
+<span class="sd">        grouping (type=auto;pgarg;readonly): Defines the basic groups to</span>
+<span class="sd">            investigate the metabolic activity.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.grouping`</span>
+<span class="sd">        grouping_prefix (type=auto;pgarg;readonly): Working as a prefix to group</span>
+<span class="sd">            names.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.grouping_prefix`</span>
+<span class="sd">        subsetting (type=auto;pgarg;readonly): How do we subset the data.</span>
+<span class="sd">            Another column(s) in the metadata.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.subsetting`</span>
+<span class="sd">        subsetting_prefix (type=auto;pgarg;readonly): Working as a prefix to</span>
+<span class="sd">            subset names.</span>
+<span class="sd">            Defaults to `ScrnaMetabolicLandscape.subsetting_prefix`</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        r-gtools:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(gtools)&quot;)</span>
+<span class="sd">        r-ggplot2:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(ggplot2)&quot;)</span>
+<span class="sd">        r-ggprism:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(ggprism)&quot;)</span>
+<span class="sd">        r-parallel:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(parallel)&quot;)</span>
+<span class="sd">        r-dplyr:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(dplyr)&quot;)</span>
+<span class="sd">        r-tibble:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(tibble)&quot;)</span>
+<span class="sd">        r-enrichr:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(enrichR)&quot;)</span>
+<span class="sd">        r-data.table:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(data.table)&quot;)</span>
+<span class="sd">        r-fgsea:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(fgsea)&quot;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;sobjfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.sobjfile | stem}}.pathwayhetero&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;gmtfile&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;select_pcs&quot;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>
+        <span class="s2">&quot;pathway_pval_cutoff&quot;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;bubble_devpars&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;grouping&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;grouping_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subsetting&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;subsetting_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;file://../scripts/scrna_metabolic_landscape/&quot;</span>
+        <span class="s2">&quot;MetabolicPathwayHeterogeneity.R&quot;</span>
+    <span class="p">)</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="p">(</span>
+            <span class="s2">&quot;file://../reports/scrna_metabolic_landscape/&quot;</span>
+            <span class="s2">&quot;MetabolicPathwayHeterogeneity.svelte&quot;</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">ScrnaMetabolicLandscape</span><span class="p">(</span><span class="n">ProcGroup</span><span class="p">):</span><span id="biopipen.ns.scrna_metabolic_landscape.ScrnaMetabolicLandscape"></span><a class="mkapi-docs-link" title="biopipen.ns.scrna_metabolic_landscape.ScrnaMetabolicLandscape" href="../../biopipen.ns.scrna_metabolic_landscape/#biopipen.ns.scrna_metabolic_landscape.ScrnaMetabolicLandscape">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Metabolic landscape analysis for scRNA-seq data</span>
+
+<span class="sd">    An abstract from</span>
+<span class="sd">    &lt;https://github.com/LocasaleLab/Single-Cell-Metabolic-Landscape&gt;</span>
+
+<span class="sd">    See docs here for more details</span>
+<span class="sd">    &lt;https://pwwang.github.io/biopipen/pipelines/scrna_metabolic_landscape&gt;</span>
+
+
+<span class="sd">    Reference:</span>
+<span class="sd">        Xiao, Zhengtao, Ziwei Dai, and Jason W. Locasale.</span>
+<span class="sd">        &quot;Metabolic landscape of the tumor microenvironment at</span>
+<span class="sd">        single cell resolution.&quot; Nature communications 10.1 (2019): 1-12.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        metafile: Either a metafile or an rds file of a Seurat object.</span>
+<span class="sd">            If it is a metafile, it should have two columns: `Sample` and</span>
+<span class="sd">            `RNAData`. `Sample` should be the first column with unique</span>
+<span class="sd">            identifiers for the samples and `RNAData` indicates where the</span>
+<span class="sd">            barcodes, genes, expression matrices are. The data will be loaded</span>
+<span class="sd">            and an unsupervised clustering will be done.</span>
+<span class="sd">            Currently only 10X data is supported.</span>
+<span class="sd">            If it is an rds file, the seurat object will be used directly</span>
+<span class="sd">        is_seurat (flag): Whether the input `metafile` is a seurat object.</span>
+<span class="sd">            If `metafile` is specified directly, this option will be ignored</span>
+<span class="sd">            and will be inferred from the file extension. If `metafile` is</span>
+<span class="sd">            not specified, meaning `&lt;pipeline&gt;.procs.MetabolicInput` is</span>
+<span class="sd">            dependent on other processes, this option will be used to determine</span>
+<span class="sd">            whether the input is a seurat object or not.</span>
+<span class="sd">        noimpute (flag): Whether to do imputation for the dropouts.</span>
+<span class="sd">            If False, the values will be left as is.</span>
+<span class="sd">        gmtfile: The GMT file with the metabolic pathways. The gene names should</span>
+<span class="sd">            match the gene names in the gene list in RNAData or</span>
+<span class="sd">            the Seurat object.</span>
+<span class="sd">            You can also provide a URL to the GMT file.</span>
+<span class="sd">            For example, from</span>
+<span class="sd">            &lt;https://download.baderlab.org/EM_Genesets/current_release/Human/symbol/&gt;.</span>
+<span class="sd">        grouping: defines the basic groups to investigate the metabolic activity</span>
+<span class="sd">            Typically the clusters.</span>
+<span class="sd">        grouping_prefix: Working as a prefix to group names</span>
+<span class="sd">            For example, if we have `grouping_prefix = &quot;cluster&quot;` and</span>
+<span class="sd">            we have `1` and `2` in the `grouping` column, the groups</span>
+<span class="sd">            will be named as `cluster_1` and `cluster_2`</span>
+<span class="sd">        subsetting (type=auto): How do we subset the data. Other columns in the</span>
+<span class="sd">            metadata to do comparisons. For example, `&quot;TimePoint&quot;` or</span>
+<span class="sd">            `[&quot;TimePoint&quot;, &quot;Response&quot;]`</span>
+<span class="sd">        subsetting_prefix (type=auto): Working as a prefix to subset names</span>
+<span class="sd">            For example, if we have `subsetting_prefix = &quot;timepoint&quot;` and</span>
+<span class="sd">            we have `pre` and `post` in the `subsetting` column, the subsets</span>
+<span class="sd">            will be named as `timepoint_pre` and `timepoint_post`</span>
+<span class="sd">            If `subsetting` is a list, then this should also be a same-length</span>
+<span class="sd">            list. If a single string is given, it will be repeated to a list</span>
+<span class="sd">            with the same length as `subsetting`</span>
+<span class="sd">        subsetting_comparison (type=json): What kind of comparisons are we</span>
+<span class="sd">            doing to compare cells from different subsets.</span>
+<span class="sd">            It should be dict with keys as the names of the comparisons and</span>
+<span class="sd">            values as the 2 comparison groups from the `subsetting` column.</span>
+<span class="sd">            For example, if we have `pre` and `post` in the `subsetting` column,</span>
+<span class="sd">            we could have</span>
+<span class="sd">            `subsetting_comparison = {&quot;pre_vs_post&quot;: [&quot;post&quot;, &quot;pre&quot;]}`</span>
+<span class="sd">            The second group will be the control group in the comparison.</span>
+<span class="sd">            If we also have `1`, `2` and `3` in the `grouping` column,</span>
+<span class="sd">            by default, the comparisons are done within each subset for</span>
+<span class="sd">            each group. For example, for group `1`, groups `2` and `3`</span>
+<span class="sd">            will be used as control, and for group `2`, groups `1` and `3`</span>
+<span class="sd">            will be used as control, and for group `3`, groups `1` and `2`</span>
+<span class="sd">            will be used as control. It is similar to `Seurat::FindMarkers`</span>
+<span class="sd">            procedure. With this option, the comparisons are also done to</span>
+<span class="sd">            compare cells from different subsets within each group. With the</span>
+<span class="sd">            example above, we will have `pre_vs_post` comparisons within</span>
+<span class="sd">            each group.</span>
+<span class="sd">            If `subsetting` is a list, this must be a list of dicts with the</span>
+<span class="sd">            same length.</span>
+<span class="sd">        mutaters (type=json): Add new columns to the metadata for</span>
+<span class="sd">            grouping/subsetting.</span>
+<span class="sd">            They are passed to `sobj@meta.data |&gt; mutate(...)`. For example,</span>
+<span class="sd">            `{&quot;timepoint&quot;: &quot;if_else(treatment == &#39;control&#39;, &#39;pre&#39;, &#39;post&#39;)&quot;}`</span>
+<span class="sd">            will add a new column `timepoint` to the metadata with values of</span>
+<span class="sd">            `pre` and `post` based on the `treatment` column.</span>
+<span class="sd">        ncores (type=int): Number of cores to use for parallelization for</span>
+<span class="sd">            each process</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">DEFAULTS</span> <span class="o">=</span> <span class="n">Diot</span><span class="p">(</span>
+        <span class="n">metafile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">is_seurat</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">gmtfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">grouping</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">grouping_prefix</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="n">subsetting</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">subsetting_prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">subsetting_comparison</span><span class="o">=</span><span class="p">{},</span>
+        <span class="n">mutaters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">noimpute</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">ncores</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">post_init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span id="biopipen.ns.scrna_metabolic_landscape.ScrnaMetabolicLandscape.post_init"></span><a class="mkapi-docs-link" title="biopipen.ns.scrna_metabolic_landscape.ScrnaMetabolicLandscape.post_init" href="../../biopipen.ns.scrna_metabolic_landscape/#biopipen.ns.scrna_metabolic_landscape.ScrnaMetabolicLandscape.post_init">DOCS</a>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load runtime processes&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">metafile</span><span class="p">:</span>
+            <span class="n">suffix</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">metafile</span><span class="p">)</span><span class="o">.</span><span class="n">suffix</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">is_seurat</span> <span class="o">=</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;.rds&quot;</span><span class="p">,</span> <span class="s2">&quot;.RDS&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Make sure the grouping is a list</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting</span><span class="p">]</span>
+
+        <span class="c1"># Make sure the grouping is a list with the same length as subsetting</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting</span>
+            <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting_prefix</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
+        <span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting_prefix</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting_prefix</span>
+            <span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting</span><span class="p">)</span>
+
+        <span class="c1"># Make sure the lengths of subsetting and subsetting_comparison the same</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting_comparison</span><span class="p">,</span> <span class="nb">dict</span>
+            <span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting_comparison</span> <span class="o">=</span> <span class="p">[</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting_comparison</span>
+                <span class="p">]</span>
+
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting_comparison</span><span class="p">,</span> <span class="nb">list</span>
+            <span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;The length of `subsetting` is larger than 1, &quot;</span>
+                    <span class="s2">&quot;but `subsetting_comparison` is not a list of dicts.&quot;</span>
+                <span class="p">)</span>
+
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting_comparison</span>
+            <span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;The length of `subsetting` and `subsetting_comparison` &quot;</span>
+                    <span class="s2">&quot;are not the same&quot;</span>
+                <span class="p">)</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_input</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">Proc</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build MetabolicInputs process&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.misc</span> <span class="kn">import</span> <span class="n">File2Proc</span>
+
+        <span class="nd">@mark</span><span class="p">(</span><span class="n">board_config_hidden</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">class</span> <span class="nc">MetabolicInput</span><span class="p">(</span><span class="n">File2Proc</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;This process takes Seurat object as input and pass it to the next</span>
+<span class="sd">            processes in the `ScrnaMetabolicLandscape` group.</span>
+
+<span class="sd">            There is no configuration for this process.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">metafile</span><span class="p">:</span>
+                <span class="n">input_data</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">metafile</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">MetabolicInput</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_preparing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">Proc</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build SeuratPreparing process&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">is_seurat</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="kn">from</span> <span class="nn">.scrna</span> <span class="kn">import</span> <span class="n">SeuratPreparing</span>
+
+        <span class="k">class</span> <span class="nc">MetabolicSeuratPreparing</span><span class="p">(</span><span class="n">SeuratPreparing</span><span class="p">):</span>
+            <span class="n">requires</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_input</span>
+
+        <span class="k">return</span> <span class="n">MetabolicSeuratPreparing</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_clustering</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">Proc</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build SeuratClustering process&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">is_seurat</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_input</span>
+
+        <span class="kn">from</span> <span class="nn">.scrna</span> <span class="kn">import</span> <span class="n">SeuratClustering</span>
+
+        <span class="k">class</span> <span class="nc">MetabolicSeuratClustering</span><span class="p">(</span><span class="n">SeuratClustering</span><span class="p">):</span>
+            <span class="n">requires</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_preparing</span>
+
+        <span class="k">return</span> <span class="n">MetabolicSeuratClustering</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_mutater</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">Proc</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build SeuratMetadataMutater process&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">mutaters</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_clustering</span>
+
+        <span class="kn">from</span> <span class="nn">.scrna</span> <span class="kn">import</span> <span class="n">SeuratMetadataMutater</span>
+
+        <span class="k">class</span> <span class="nc">MetabolicSeuratMetadataMutater</span><span class="p">(</span><span class="n">SeuratMetadataMutater</span><span class="p">):</span>
+            <span class="n">requires</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_clustering</span>
+            <span class="n">input_data</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">ch</span><span class="p">:</span> <span class="n">tibble</span><span class="p">(</span>
+                <span class="n">srtobj</span><span class="o">=</span><span class="n">ch</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span>
+                <span class="n">metafile</span><span class="o">=</span><span class="p">[</span><span class="kc">None</span><span class="p">],</span>
+            <span class="p">)</span>
+            <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;mutaters&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">mutaters</span><span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">MetabolicSeuratMetadataMutater</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_expr_impute</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">Proc</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build  process&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">noimpute</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_mutater</span>
+
+        <span class="kn">from</span> <span class="nn">.scrna</span> <span class="kn">import</span> <span class="n">ExprImputation</span>
+
+        <span class="nd">@annotate</span><span class="o">.</span><span class="n">format_doc</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="k">class</span> <span class="nc">MetabolicExprImputation</span><span class="p">(</span><span class="n">ExprImputation</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;{{Summary}}</span>
+
+<span class="sd">            You can turn off the imputation by setting the `noimpute` option</span>
+<span class="sd">            of the process group to `True`.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">requires</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_mutater</span>
+
+        <span class="k">return</span> <span class="n">MetabolicExprImputation</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_pathway_activity</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">Proc</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build MetabolicPathwayActivity process&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Proc</span><span class="o">.</span><span class="n">from_proc</span><span class="p">(</span>
+            <span class="n">MetabolicPathwayActivity</span><span class="p">,</span>
+            <span class="s2">&quot;MetabolicPathwayActivity&quot;</span><span class="p">,</span>
+            <span class="n">requires</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">p_expr_impute</span><span class="p">,</span>
+            <span class="n">order</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">envs</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+                <span class="s2">&quot;gmtfile&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">gmtfile</span><span class="p">,</span>
+                <span class="s2">&quot;grouping&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">grouping</span><span class="p">,</span>
+                <span class="s2">&quot;grouping_prefix&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">grouping_prefix</span><span class="p">,</span>
+                <span class="s2">&quot;subsetting&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting</span><span class="p">,</span>
+                <span class="s2">&quot;subsetting_prefix&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting_prefix</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">)</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_pathway_heterogeneity</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">Proc</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build MetabolicPathwayHeterogeneity process&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Proc</span><span class="o">.</span><span class="n">from_proc</span><span class="p">(</span>
+            <span class="n">MetabolicPathwayHeterogeneity</span><span class="p">,</span>
+            <span class="s2">&quot;MetabolicPathwayHeterogeneity&quot;</span><span class="p">,</span>
+            <span class="n">requires</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">p_expr_impute</span><span class="p">,</span>
+            <span class="n">envs</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+                <span class="s2">&quot;gmtfile&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">gmtfile</span><span class="p">,</span>
+                <span class="s2">&quot;grouping&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">grouping</span><span class="p">,</span>
+                <span class="s2">&quot;grouping_prefix&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">grouping_prefix</span><span class="p">,</span>
+                <span class="s2">&quot;subsetting&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting</span><span class="p">,</span>
+                <span class="s2">&quot;subsetting_prefix&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting_prefix</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">)</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_features</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">Proc</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build MetabolicFeatures process&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Proc</span><span class="o">.</span><span class="n">from_proc</span><span class="p">(</span>
+            <span class="n">MetabolicFeatures</span><span class="p">,</span>
+            <span class="s2">&quot;MetabolicFeatures&quot;</span><span class="p">,</span>
+            <span class="n">requires</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">p_expr_impute</span><span class="p">,</span>
+            <span class="n">envs</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+                <span class="s2">&quot;gmtfile&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">gmtfile</span><span class="p">,</span>
+                <span class="s2">&quot;grouping&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">grouping</span><span class="p">,</span>
+                <span class="s2">&quot;grouping_prefix&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">grouping_prefix</span><span class="p">,</span>
+                <span class="s2">&quot;subsetting&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting</span><span class="p">,</span>
+                <span class="s2">&quot;subsetting_prefix&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting_prefix</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">)</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_features_intra_subset</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">Proc</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build MetabolicFeaturesIntraSubset process&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting_comparison</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Cannot use `subsetting_comparison` without `subsetting`.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">Proc</span><span class="o">.</span><span class="n">from_proc</span><span class="p">(</span>
+            <span class="n">MetabolicFeaturesIntraSubset</span><span class="p">,</span>
+            <span class="s2">&quot;MetabolicFeaturesIntraSubset&quot;</span><span class="p">,</span>
+            <span class="n">requires</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">p_expr_impute</span><span class="p">,</span>
+            <span class="n">envs</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+                <span class="s2">&quot;gmtfile&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">gmtfile</span><span class="p">,</span>
+                <span class="s2">&quot;grouping&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">grouping</span><span class="p">,</span>
+                <span class="s2">&quot;grouping_prefix&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">grouping_prefix</span><span class="p">,</span>
+                <span class="s2">&quot;subsetting&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting</span><span class="p">,</span>
+                <span class="s2">&quot;subsetting_prefix&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting_prefix</span><span class="p">,</span>
+                <span class="s2">&quot;subsetting_comparison&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">subsetting_comparison</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">ScrnaMetabolicLandscape</span><span class="p">()</span><span class="o">.</span><span class="n">as_pipen</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/version-select.js"></script>
+      <script src="../../../js/mkapi.js"></script>
+      <script src="../../../extra.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

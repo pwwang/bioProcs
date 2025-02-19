@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>biopipen.ns.cellranger_pipeline - biopipen</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.ns.cellranger_pipeline";
+        var mkdocs_page_input_path = "api/source/biopipen.ns.cellranger_pipeline.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">biopipen.ns.cellranger_pipeline</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/source/biopipen.ns.cellranger_pipeline.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">biopipen.ns.</span><span class="mkapi-object-name">cellranger_pipeline</span>
+<span id="biopipen.ns.cellranger_pipeline"></span><a class="mkapi-docs-link" href="../../biopipen.ns.cellranger_pipeline">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;The cellranger pipelines</span>
+
+<span class="sd">Primarily cellranger process plus summary for summarizing the metrics for</span>
+<span class="sd">multiple samples.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TYPE_CHECKING</span>
+
+<span class="kn">from</span> <span class="nn">diot</span> <span class="kn">import</span> <span class="n">Diot</span>
+<span class="kn">from</span> <span class="nn">pipen.utils</span> <span class="kn">import</span> <span class="n">is_loading_pipeline</span>
+<span class="kn">from</span> <span class="nn">pipen_args.procgroup</span> <span class="kn">import</span> <span class="n">ProcGroup</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">pipen</span> <span class="kn">import</span> <span class="n">Proc</span>
+
+
+<span class="k">class</span> <span class="nc">CellRangerCountPipeline</span><span class="p">(</span><span class="n">ProcGroup</span><span class="p">):</span><span id="biopipen.ns.cellranger_pipeline.CellRangerCountPipeline"></span><a class="mkapi-docs-link" title="biopipen.ns.cellranger_pipeline.CellRangerCountPipeline" href="../../biopipen.ns.cellranger_pipeline/#biopipen.ns.cellranger_pipeline.CellRangerCountPipeline">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The cellranger count pipeline</span>
+
+<span class="sd">    Run cellranger count for multiple samples and summarize the metrics.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        input (list): The list of lists of fastq files.</span>
+<span class="sd">            or the list of comma-separated string of fastq files.</span>
+<span class="sd">        ids (list): The list of ids for the samples.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">DEFAULTS</span> <span class="o">=</span> <span class="n">Diot</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">post_init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span id="biopipen.ns.cellranger_pipeline.CellRangerCountPipeline.post_init"></span><a class="mkapi-docs-link" title="biopipen.ns.cellranger_pipeline.CellRangerCountPipeline.post_init" href="../../biopipen.ns.cellranger_pipeline/#biopipen.ns.cellranger_pipeline.CellRangerCountPipeline.post_init">DOCS</a>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if the input is a list of fastq files&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">is_loading_pipeline</span><span class="p">(</span><span class="s2">&quot;-h&quot;</span><span class="p">,</span> <span class="s2">&quot;-h+&quot;</span><span class="p">,</span> <span class="s2">&quot;--help&quot;</span><span class="p">,</span> <span class="s2">&quot;--help+&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span>
+            <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">input</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">))</span>
+            <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">input</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                <span class="s2">&quot;The input of `CellRangerCountPipeline` should be a list of lists of &quot;</span>
+                <span class="s2">&quot;fastq files.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">input</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">input</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)]</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+                <span class="k">else</span> <span class="n">x</span>
+                <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">input</span>
+            <span class="p">]</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cellranger_count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Proc</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CellRangerCount process&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.cellranger</span> <span class="kn">import</span> <span class="n">CellRangerCount</span> <span class="k">as</span> <span class="n">_CellRangerCount</span>
+
+        <span class="k">class</span> <span class="nc">CellRangerCount</span><span class="p">(</span><span class="n">_CellRangerCount</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">ids</span><span class="p">:</span>
+                <span class="n">input_data</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">ids</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">input_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">input</span>
+
+        <span class="k">return</span> <span class="n">CellRangerCount</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cellranger_count_summary</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Proc</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CellRangerCountSummary process&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.cellranger</span> <span class="kn">import</span> <span class="n">CellRangerSummary</span>
+
+        <span class="k">class</span> <span class="nc">CellRangerCountSummary</span><span class="p">(</span><span class="n">CellRangerSummary</span><span class="p">):</span>
+            <span class="n">requires</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_cellranger_count</span>
+            <span class="n">input_data</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">ch</span><span class="p">:</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">ch</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])]</span>
+
+        <span class="k">return</span> <span class="n">CellRangerCountSummary</span>
+
+
+<span class="k">class</span> <span class="nc">CellRangerVdjPipeline</span><span class="p">(</span><span class="n">ProcGroup</span><span class="p">):</span><span id="biopipen.ns.cellranger_pipeline.CellRangerVdjPipeline"></span><a class="mkapi-docs-link" title="biopipen.ns.cellranger_pipeline.CellRangerVdjPipeline" href="../../biopipen.ns.cellranger_pipeline/#biopipen.ns.cellranger_pipeline.CellRangerVdjPipeline">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The cellranger vdj pipeline</span>
+
+<span class="sd">    Run cellranger vdj for multiple samples and summarize the metrics.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        input (list): The list of lists of fastq files.</span>
+<span class="sd">            or the list of comma-separated string of fastq files.</span>
+<span class="sd">        ids (list): The list of ids for the samples.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">DEFAULTS</span> <span class="o">=</span> <span class="n">Diot</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">post_init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span id="biopipen.ns.cellranger_pipeline.CellRangerVdjPipeline.post_init"></span><a class="mkapi-docs-link" title="biopipen.ns.cellranger_pipeline.CellRangerVdjPipeline.post_init" href="../../biopipen.ns.cellranger_pipeline/#biopipen.ns.cellranger_pipeline.CellRangerVdjPipeline.post_init">DOCS</a>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if the input is a list of fastq files&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">is_loading_pipeline</span><span class="p">(</span><span class="s2">&quot;-h&quot;</span><span class="p">,</span> <span class="s2">&quot;-h+&quot;</span><span class="p">,</span> <span class="s2">&quot;--help&quot;</span><span class="p">,</span> <span class="s2">&quot;--help+&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span>
+            <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">input</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">))</span>
+            <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">input</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                <span class="s2">&quot;The input of `CellRangerVdjPipeline` should be a list of lists of &quot;</span>
+                <span class="s2">&quot;fastq files.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">input</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">input</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)]</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+                <span class="k">else</span> <span class="n">x</span>
+                <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">input</span>
+            <span class="p">]</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cellranger_vdj</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Proc</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CellRangerVdj process&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.cellranger</span> <span class="kn">import</span> <span class="n">CellRangerVdj</span> <span class="k">as</span> <span class="n">_CellRangerVdj</span>
+
+        <span class="k">class</span> <span class="nc">CellRangerVdj</span><span class="p">(</span><span class="n">_CellRangerVdj</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">ids</span><span class="p">:</span>
+                <span class="n">input_data</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">ids</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">input_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">input</span>
+
+        <span class="k">return</span> <span class="n">CellRangerVdj</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cellranger_vdj_summary</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Proc</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CellRangerVdjSummary process&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.cellranger</span> <span class="kn">import</span> <span class="n">CellRangerSummary</span>
+
+        <span class="k">class</span> <span class="nc">CellRangerVdjSummary</span><span class="p">(</span><span class="n">CellRangerSummary</span><span class="p">):</span>
+            <span class="n">requires</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_cellranger_vdj</span>
+            <span class="n">input_data</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">ch</span><span class="p">:</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">ch</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])]</span>
+
+        <span class="k">return</span> <span class="n">CellRangerVdjSummary</span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/version-select.js"></script>
+      <script src="../../../js/mkapi.js"></script>
+      <script src="../../../extra.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

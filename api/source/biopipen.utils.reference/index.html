@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>biopipen.utils.reference - biopipen</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.utils.reference";
+        var mkdocs_page_input_path = "api/source/biopipen.utils.reference.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">biopipen.utils.reference</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/source/biopipen.utils.reference.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">biopipen.utils.</span><span class="mkapi-object-name">reference</span>
+<span id="biopipen.utils.reference"></span><a class="mkapi-docs-link" href="../../biopipen.utils.reference">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Utilities for indexing reference files&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span> <span class="nn">tempfile</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">PathLike</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Literal</span>
+
+<span class="kn">from</span> <span class="nn">..core.config</span> <span class="kn">import</span> <span class="n">config</span>
+<span class="kn">from</span> <span class="nn">biopipen.utils.misc</span> <span class="kn">import</span> <span class="n">run_command</span>
+
+
+<span class="k">def</span> <span class="nf">gztype</span><span class="p">(</span><span class="n">gzfile</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">binascii</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">gzfile</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">flag</span> <span class="o">=</span> <span class="n">binascii</span><span class="o">.</span><span class="n">hexlify</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">flag</span> <span class="o">==</span> <span class="sa">b</span><span class="s2">&quot;1f8b0804&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;bgzip&quot;</span>
+    <span class="k">if</span> <span class="n">flag</span> <span class="o">==</span> <span class="sa">b</span><span class="s2">&quot;1f8b0808&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;gzip&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;flat&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">tabix_index</span><span class="p">(</span><span id="biopipen.utils.reference.tabix_index"></span><a class="mkapi-docs-link" title="biopipen.utils.reference.tabix_index" href="../../biopipen.utils.reference/#biopipen.utils.reference.tabix_index">DOCS</a>
+    <span class="n">infile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">PathLike</span><span class="p">,</span>
+    <span class="n">preset</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;gff&quot;</span><span class="p">,</span> <span class="s2">&quot;bed&quot;</span><span class="p">,</span> <span class="s2">&quot;sam&quot;</span><span class="p">,</span> <span class="s2">&quot;vcf&quot;</span><span class="p">,</span> <span class="s2">&quot;gaf&quot;</span><span class="p">],</span>
+    <span class="n">tmpdir</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">PathLike</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">tabix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">tabix</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">PathLike</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Index input file using tabix</span>
+
+<span class="sd">    1. Try to check if there is an index file in the same directory where infile</span>
+<span class="sd">       is.</span>
+<span class="sd">    2. If so, return the infile</span>
+<span class="sd">    3. Otherwise, check if infile is bgzipped, if not bgzip it and save</span>
+<span class="sd">       it in tmpdir</span>
+<span class="sd">    4. Index the bgzipped file and return the bgzipped file</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        infile: The input file to be indexed</span>
+<span class="sd">        preset: The preset used to index the file</span>
+<span class="sd">        tmpdir: The directory to link the infile there and index it</span>
+<span class="sd">            If False, try to index the infile directly. The directory where</span>
+<span class="sd">            the infile is should be writable.</span>
+<span class="sd">        tabix: The path to tabix</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The infile itself or re-bgzipped infile. This file comes with the</span>
+<span class="sd">        index file in the same directory</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">infile</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">infile</span><span class="p">)</span>
+    <span class="n">gt</span> <span class="o">=</span> <span class="n">gztype</span><span class="p">(</span><span class="n">infile</span><span class="p">)</span>
+    <span class="n">index_file</span> <span class="o">=</span> <span class="n">infile</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="n">infile</span><span class="o">.</span><span class="n">suffix</span> <span class="o">+</span> <span class="s2">&quot;.tbi&quot;</span><span class="p">)</span>
+    <span class="c1"># if index file exists, and it&#39;s newer than the infile, return infile</span>
+    <span class="k">if</span> <span class="p">(</span>
+        <span class="n">gt</span> <span class="o">==</span> <span class="s2">&quot;bgzip&quot;</span>
+        <span class="ow">and</span> <span class="n">index_file</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span>
+        <span class="ow">and</span> <span class="n">index_file</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_mtime</span> <span class="o">&gt;</span> <span class="n">infile</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_mtime</span>
+    <span class="p">):</span>
+        <span class="c1"># only bgzipped file is possible to have index file</span>
+        <span class="k">return</span> <span class="n">infile</span>
+
+    <span class="k">if</span> <span class="n">tmpdir</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="c1"># index the infile directly</span>
+        <span class="n">run_command</span><span class="p">([</span><span class="n">tabix</span><span class="p">,</span> <span class="s2">&quot;-p&quot;</span><span class="p">,</span> <span class="n">preset</span><span class="p">,</span> <span class="n">infile</span><span class="p">],</span> <span class="n">fg</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">infile</span>
+
+    <span class="k">if</span> <span class="n">tmpdir</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">hashlib</span> <span class="kn">import</span> <span class="n">md5</span>
+        <span class="c1"># use a hash of infile to create the tempdir</span>
+        <span class="n">tmpdir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">tempfile</span><span class="o">.</span><span class="n">gettempdir</span><span class="p">())</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;biopipen_tabix_index_</span><span class="si">{</span><span class="n">md5</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">infile</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">tmpdir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">)</span>
+
+    <span class="n">tmpdir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># /path/to/some.vcf -&gt; some.vcf</span>
+    <span class="c1"># /path/to/some.vcf.gz -&gt; some.vcf</span>
+    <span class="n">basename</span> <span class="o">=</span> <span class="n">infile</span><span class="o">.</span><span class="n">stem</span> <span class="k">if</span> <span class="n">infile</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.gz&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">infile</span><span class="o">.</span><span class="n">name</span>
+
+    <span class="c1"># try bgzip infile</span>
+    <span class="n">new_infile</span> <span class="o">=</span> <span class="n">tmpdir</span> <span class="o">/</span> <span class="p">(</span><span class="n">basename</span> <span class="o">+</span> <span class="s2">&quot;.gz&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">gt</span> <span class="o">==</span> <span class="s2">&quot;gzip&quot;</span><span class="p">:</span>
+        <span class="c1"># re-bgzip</span>
+        <span class="n">run_command</span><span class="p">(</span>
+            <span class="p">[</span><span class="s2">&quot;gunzip&quot;</span><span class="p">,</span> <span class="s2">&quot;-f&quot;</span><span class="p">,</span> <span class="s2">&quot;-c&quot;</span><span class="p">,</span> <span class="n">infile</span><span class="p">],</span> <span class="n">stdout</span><span class="o">=</span><span class="n">new_infile</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="n">run_command</span><span class="p">([</span><span class="s2">&quot;bgzip&quot;</span><span class="p">,</span> <span class="s2">&quot;-f&quot;</span><span class="p">,</span> <span class="n">new_infile</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)],</span> <span class="n">fg</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">gt</span> <span class="o">==</span> <span class="s2">&quot;flat&quot;</span><span class="p">:</span>
+        <span class="n">run_command</span><span class="p">([</span><span class="s2">&quot;bgzip&quot;</span><span class="p">,</span> <span class="s2">&quot;-f&quot;</span><span class="p">,</span> <span class="s2">&quot;-c&quot;</span><span class="p">,</span> <span class="n">infile</span><span class="p">],</span> <span class="n">stdout</span><span class="o">=</span><span class="n">new_infile</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">new_infile</span><span class="o">.</span><span class="n">is_symlink</span><span class="p">():</span>
+            <span class="n">new_infile</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+        <span class="c1"># directory of infile may not have write permission</span>
+        <span class="n">new_infile</span><span class="o">.</span><span class="n">symlink_to</span><span class="p">(</span><span class="n">infile</span><span class="p">)</span>
+
+    <span class="n">new_index_file</span> <span class="o">=</span> <span class="n">new_infile</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="n">new_infile</span><span class="o">.</span><span class="n">suffix</span> <span class="o">+</span> <span class="s2">&quot;.tbi&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span>
+        <span class="n">new_index_file</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span>
+        <span class="ow">and</span> <span class="n">new_index_file</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_mtime</span> <span class="o">&gt;</span> <span class="n">infile</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_mtime</span>
+    <span class="p">):</span>
+        <span class="k">return</span> <span class="n">new_infile</span>
+
+    <span class="n">run_command</span><span class="p">([</span><span class="n">tabix</span><span class="p">,</span> <span class="s2">&quot;-p&quot;</span><span class="p">,</span> <span class="n">preset</span><span class="p">,</span> <span class="n">new_infile</span><span class="p">],</span> <span class="n">fg</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">new_infile</span>
+
+
+<span class="k">def</span> <span class="nf">_run_bam_index</span><span class="p">(</span>
+    <span class="n">bam</span><span class="p">,</span>
+    <span class="n">idxfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">tool</span><span class="o">=</span><span class="s2">&quot;samtools&quot;</span><span class="p">,</span>
+    <span class="n">samtools</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">samtools</span><span class="p">,</span>
+    <span class="n">sambamba</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">sambamba</span><span class="p">,</span>
+    <span class="n">ncores</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="k">if</span> <span class="n">tool</span> <span class="o">==</span> <span class="s2">&quot;samtools&quot;</span><span class="p">:</span>
+        <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="n">samtools</span><span class="p">,</span> <span class="s2">&quot;index&quot;</span><span class="p">,</span> <span class="s2">&quot;-@&quot;</span><span class="p">,</span> <span class="n">ncores</span><span class="p">,</span> <span class="n">bam</span><span class="p">,</span> <span class="n">idxfile</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="n">sambamba</span><span class="p">,</span> <span class="s2">&quot;index&quot;</span><span class="p">,</span> <span class="s2">&quot;-t&quot;</span><span class="p">,</span> <span class="n">ncores</span><span class="p">,</span> <span class="n">bam</span><span class="p">,</span> <span class="n">idxfile</span><span class="p">]</span>
+    <span class="n">run_command</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">fg</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">bam_index</span><span class="p">(</span><span id="biopipen.utils.reference.bam_index"></span><a class="mkapi-docs-link" title="biopipen.utils.reference.bam_index" href="../../biopipen.utils.reference/#biopipen.utils.reference.bam_index">DOCS</a>
+    <span class="n">bam</span><span class="p">,</span>
+    <span class="n">bamdir</span><span class="o">=</span><span class="n">tempfile</span><span class="o">.</span><span class="n">gettempdir</span><span class="p">(),</span>
+    <span class="n">tool</span><span class="o">=</span><span class="s2">&quot;samtools&quot;</span><span class="p">,</span>
+    <span class="n">samtools</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">samtools</span><span class="p">,</span>
+    <span class="n">sambamba</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">sambamba</span><span class="p">,</span>
+    <span class="n">ncores</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">ext</span><span class="o">=</span><span class="s2">&quot;.bam.bai&quot;</span><span class="p">,</span>
+    <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Index a bam file</span>
+
+<span class="sd">    First look for the index file in the same directory as the bam file,</span>
+<span class="sd">    if found, return the bam file. Otherwise, generate a symbolic link of the</span>
+<span class="sd">    bam file in bamdir, and generate a index there, return the path to the</span>
+<span class="sd">    symbolic link</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        bam: The path to the bam file</span>
+<span class="sd">        bamdir: If index file can&#39;t be found in the directory as the bam file,</span>
+<span class="sd">            create a symbolic link to the bam file, and generate the index</span>
+<span class="sd">            here</span>
+<span class="sd">        tool: The tool used to generate the index file, either `samtools` or</span>
+<span class="sd">            `sambamba`</span>
+<span class="sd">        samtools: The path to samtools</span>
+<span class="sd">        sambamba: The path to sambamba</span>
+<span class="sd">        ncores: Number of cores (threads) used to generate the index file</span>
+<span class="sd">        ext: The ext of the index file, default `.bam.bai`, in case, `.bai` is</span>
+<span class="sd">            also treated as index file</span>
+<span class="sd">        force: Force to generate the index file, with given bamfile.</span>
+<span class="sd">            Don&#39;t check if the index file exists.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The bam file if index exists in the directory as the bam file.</span>
+<span class="sd">        Otherwise symbolic link to the bam file in bamdir.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bam</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">bam</span><span class="p">)</span>
+    <span class="n">indexfile</span> <span class="o">=</span> <span class="n">bam</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="n">ext</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">force</span><span class="p">:</span>
+        <span class="n">_run_bam_index</span><span class="p">(</span>
+            <span class="n">bam</span><span class="p">,</span>
+            <span class="n">indexfile</span><span class="p">,</span>
+            <span class="n">tool</span><span class="p">,</span>
+            <span class="n">samtools</span><span class="p">,</span>
+            <span class="n">sambamba</span><span class="p">,</span>
+            <span class="n">ncores</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">bam</span>
+
+    <span class="k">if</span> <span class="n">indexfile</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">bam</span><span class="p">)</span>
+
+    <span class="n">linkfile</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">bamdir</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="n">bam</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">indexfile</span> <span class="o">=</span> <span class="n">linkfile</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="n">ext</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">linkfile</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">linkfile</span><span class="o">.</span><span class="n">samefile</span><span class="p">(</span><span class="n">bam</span><span class="p">):</span>
+        <span class="n">linkfile</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">indexfile</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">indexfile</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">linkfile</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+        <span class="n">linkfile</span><span class="o">.</span><span class="n">symlink_to</span><span class="p">(</span><span class="n">bam</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">indexfile</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">linkfile</span>
+
+    <span class="n">_run_bam_index</span><span class="p">(</span>
+        <span class="n">linkfile</span><span class="p">,</span>
+        <span class="n">indexfile</span><span class="p">,</span>
+        <span class="n">tool</span><span class="p">,</span>
+        <span class="n">samtools</span><span class="p">,</span>
+        <span class="n">sambamba</span><span class="p">,</span>
+        <span class="n">ncores</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">linkfile</span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/version-select.js"></script>
+      <script src="../../../js/mkapi.js"></script>
+      <script src="../../../extra.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

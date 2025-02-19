@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>biopipen.ns - biopipen</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.ns";
+        var mkdocs_page_input_path = "api/biopipen.ns.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">biopipen.ns</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">biopipen.ns</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennscnvkit_pipeline">cnvkit_pipeline</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennstcr">tcr</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennsgene">gene</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennssnp">snp</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennsgsea">gsea</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennsrnaseq">rnaseq</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennsbam">bam</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennsscrna">scrna</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennsprotein">protein</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennsscrna_metabolic_landscape">scrna_metabolic_landscape</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennsvcf">vcf</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennscnvkit">cnvkit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennsplot">plot</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennsweb">web</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennsmisc">misc</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennsbed">bed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennscellranger">cellranger</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennscnv">cnv</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennscellranger_pipeline">cellranger_pipeline</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennsdelim">delim</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennsstats">stats</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennstcgamaf">tcgamaf</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipennsregulatory">regulatory</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">API</li>
+          <li class="breadcrumb-item">biopipen.ns</li>
+      <li class="breadcrumb-item active">biopipen.ns</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/biopipen.ns.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node" id="biopipen.ns">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object package plain top">
+    <div class="mkapi-object-kind package top">package</div>
+    <h2 id="biopipenns" class="mkapi-object-body package top"><span class="mkapi-object-prefix">biopipen.</span><span class="mkapi-object-name">ns</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns/#biopipen.ns" title="Source for biopipen.ns">&lt;/&gt;</a>
+  </div>
+</div>
+
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.cnvkit_pipeline">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennscnvkit_pipeline" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.cnv/#biopipen.ns.cnvkit_pipeline">cnvkit_pipeline</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.cnvkit_pipeline/#biopipen.ns.cnvkit_pipeline" title="Source for biopipen.ns.cnvkit_pipeline">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>The CNVkit pipeline.</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnvkit_pipeline#biopipen.ns.cnvkit_pipeline.CNVkitPipeline">CNVkitPipeline</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The CNVkit pipeline<a class="mkapi-src-link" href="../source/biopipen.ns.cnvkit_pipeline/#biopipen.ns.cnvkit_pipeline.CNVkitPipeline" title="Source for biopipen.ns.cnvkit_pipeline.CNVkitPipeline">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.tcr">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennstcr" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.tcr/#biopipen.ns.tcr">tcr</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr" title="Source for biopipen.ns.tcr">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tools to analyze single-cell TCR sequencing data</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.ImmunarchLoading">ImmunarchLoading</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Immuarch - Loading data<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.ImmunarchLoading" title="Source for biopipen.ns.tcr.ImmunarchLoading">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.ImmunarchFilter">ImmunarchFilter</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Immunarch - Filter data<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.ImmunarchFilter" title="Source for biopipen.ns.tcr.ImmunarchFilter">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.Immunarch">Immunarch</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Exploration of Single-cell and Bulk T-cell/Antibody Immune Repertoires<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.Immunarch" title="Source for biopipen.ns.tcr.Immunarch">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.SampleDiversity">SampleDiversity</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Sample diversity and rarefaction analysis<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.SampleDiversity" title="Source for biopipen.ns.tcr.SampleDiversity">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.CloneResidency">CloneResidency</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Identification of clone residency<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.CloneResidency" title="Source for biopipen.ns.tcr.CloneResidency">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.Immunarch2VDJtools">Immunarch2VDJtools</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert immuarch format into VDJtools input formats.<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.Immunarch2VDJtools" title="Source for biopipen.ns.tcr.Immunarch2VDJtools">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.ImmunarchSplitIdents">ImmunarchSplitIdents</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Split the data into multiple immunarch datasets by Idents from Seurat<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.ImmunarchSplitIdents" title="Source for biopipen.ns.tcr.ImmunarchSplitIdents">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.VJUsage">VJUsage</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Circos-style V-J usage plot displaying the frequency ofvarious V-J junctions using vdjtools.
+<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.VJUsage" title="Source for biopipen.ns.tcr.VJUsage">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.Attach2Seurat">Attach2Seurat</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Attach the clonal information to a Seurat object as metadata<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.Attach2Seurat" title="Source for biopipen.ns.tcr.Attach2Seurat">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.TCRClustering">TCRClustering</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Cluster the TCR clones by their CDR3 sequences<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.TCRClustering" title="Source for biopipen.ns.tcr.TCRClustering">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.TCRClusterStats">TCRClusterStats</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Statistics of TCR clusters, generated by <code>TCRClustering</code>.<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.TCRClusterStats" title="Source for biopipen.ns.tcr.TCRClusterStats">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.CloneSizeQQPlot">CloneSizeQQPlot</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">QQ plot of the clone sizes<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.CloneSizeQQPlot" title="Source for biopipen.ns.tcr.CloneSizeQQPlot">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.CDR3AAPhyschem">CDR3AAPhyschem</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">CDR3 AA physicochemical feature analysis<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.CDR3AAPhyschem" title="Source for biopipen.ns.tcr.CDR3AAPhyschem">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.TESSA">TESSA</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Tessa is a Bayesian model to integrate T cell receptor (TCR) sequenceprofiling with transcriptomes of T cells.
+<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.TESSA" title="Source for biopipen.ns.tcr.TESSA">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.TCRDock">TCRDock</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Using TCRDock to predict the structure of MHC-peptide-TCR complexes<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.TCRDock" title="Source for biopipen.ns.tcr.TCRDock">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.ScRepLoading">ScRepLoading</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Load the single cell TCR/BCR data into a <code>scRepertoire</code> compatible object<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.ScRepLoading" title="Source for biopipen.ns.tcr.ScRepLoading">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcr#biopipen.ns.tcr.ClonalStats">ClonalStats</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Visualize the clonal information.<a class="mkapi-src-link" href="../source/biopipen.ns.tcr/#biopipen.ns.tcr.ClonalStats" title="Source for biopipen.ns.tcr.ClonalStats">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.gene">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennsgene" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.gene/#biopipen.ns.gene">gene</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.gene/#biopipen.ns.gene" title="Source for biopipen.ns.gene">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Gene related processes</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.gene#biopipen.ns.gene.GeneNameConversion">GeneNameConversion</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert gene names back and forth using MyGeneInfo<a class="mkapi-src-link" href="../source/biopipen.ns.gene/#biopipen.ns.gene.GeneNameConversion" title="Source for biopipen.ns.gene.GeneNameConversion">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.gene#biopipen.ns.gene.GenePromoters">GenePromoters</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Get gene promoter regions by specifying the flanking regions of TSS<a class="mkapi-src-link" href="../source/biopipen.ns.gene/#biopipen.ns.gene.GenePromoters" title="Source for biopipen.ns.gene.GenePromoters">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.snp">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennssnp" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.snp/#biopipen.ns.snp">snp</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.snp/#biopipen.ns.snp" title="Source for biopipen.ns.snp">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Plink processes</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.snp#biopipen.ns.snp.PlinkSimulation">PlinkSimulation</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Simulate SNPs using PLINK v2<a class="mkapi-src-link" href="../source/biopipen.ns.snp/#biopipen.ns.snp.PlinkSimulation" title="Source for biopipen.ns.snp.PlinkSimulation">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.snp#biopipen.ns.snp.MatrixEQTL">MatrixEQTL</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Run Matrix eQTL<a class="mkapi-src-link" href="../source/biopipen.ns.snp/#biopipen.ns.snp.MatrixEQTL" title="Source for biopipen.ns.snp.MatrixEQTL">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.snp#biopipen.ns.snp.PlinkFromVcf">PlinkFromVcf</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert VCF to PLINK format.<a class="mkapi-src-link" href="../source/biopipen.ns.snp/#biopipen.ns.snp.PlinkFromVcf" title="Source for biopipen.ns.snp.PlinkFromVcf">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.snp#biopipen.ns.snp.Plink2GTMat">Plink2GTMat</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert PLINK files to genotype matrix.<a class="mkapi-src-link" href="../source/biopipen.ns.snp/#biopipen.ns.snp.Plink2GTMat" title="Source for biopipen.ns.snp.Plink2GTMat">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.snp#biopipen.ns.snp.PlinkIBD">PlinkIBD</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Run PLINK IBD analysis (identity by descent)<a class="mkapi-src-link" href="../source/biopipen.ns.snp/#biopipen.ns.snp.PlinkIBD" title="Source for biopipen.ns.snp.PlinkIBD">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.snp#biopipen.ns.snp.PlinkHWE">PlinkHWE</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Hardy-Weinberg Equilibrium report and filtering<a class="mkapi-src-link" href="../source/biopipen.ns.snp/#biopipen.ns.snp.PlinkHWE" title="Source for biopipen.ns.snp.PlinkHWE">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.snp#biopipen.ns.snp.PlinkHet">PlinkHet</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Calculation of sample heterozygosity.<a class="mkapi-src-link" href="../source/biopipen.ns.snp/#biopipen.ns.snp.PlinkHet" title="Source for biopipen.ns.snp.PlinkHet">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.snp#biopipen.ns.snp.PlinkCallRate">PlinkCallRate</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Calculation of call rate for the samples and variants.<a class="mkapi-src-link" href="../source/biopipen.ns.snp/#biopipen.ns.snp.PlinkCallRate" title="Source for biopipen.ns.snp.PlinkCallRate">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.snp#biopipen.ns.snp.PlinkFilter">PlinkFilter</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Filter samples and variants for PLINK files.<a class="mkapi-src-link" href="../source/biopipen.ns.snp/#biopipen.ns.snp.PlinkFilter" title="Source for biopipen.ns.snp.PlinkFilter">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.snp#biopipen.ns.snp.PlinkFreq">PlinkFreq</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Calculate allele frequencies for the variants.<a class="mkapi-src-link" href="../source/biopipen.ns.snp/#biopipen.ns.snp.PlinkFreq" title="Source for biopipen.ns.snp.PlinkFreq">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.snp#biopipen.ns.snp.PlinkUpdateName">PlinkUpdateName</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Update variant names in PLINK files.<a class="mkapi-src-link" href="../source/biopipen.ns.snp/#biopipen.ns.snp.PlinkUpdateName" title="Source for biopipen.ns.snp.PlinkUpdateName">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.gsea">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennsgsea" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.gsea/#biopipen.ns.gsea">gsea</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.gsea/#biopipen.ns.gsea" title="Source for biopipen.ns.gsea">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Gene set enrichment analysis</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.gsea#biopipen.ns.gsea.GSEA">GSEA</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Gene set enrichment analysis<a class="mkapi-src-link" href="../source/biopipen.ns.gsea/#biopipen.ns.gsea.GSEA" title="Source for biopipen.ns.gsea.GSEA">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.gsea#biopipen.ns.gsea.PreRank">PreRank</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">PreRank the genes for GSEA analysis<a class="mkapi-src-link" href="../source/biopipen.ns.gsea/#biopipen.ns.gsea.PreRank" title="Source for biopipen.ns.gsea.PreRank">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.gsea#biopipen.ns.gsea.FGSEA">FGSEA</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Gene set enrichment analysis using <code>fgsea</code><a class="mkapi-src-link" href="../source/biopipen.ns.gsea/#biopipen.ns.gsea.FGSEA" title="Source for biopipen.ns.gsea.FGSEA">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.gsea#biopipen.ns.gsea.Enrichr">Enrichr</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Gene set enrichment analysis using Enrichr<a class="mkapi-src-link" href="../source/biopipen.ns.gsea/#biopipen.ns.gsea.Enrichr" title="Source for biopipen.ns.gsea.Enrichr">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.rnaseq">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennsrnaseq" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.rnaseq/#biopipen.ns.rnaseq">rnaseq</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.rnaseq/#biopipen.ns.rnaseq" title="Source for biopipen.ns.rnaseq">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>RNA-seq data analysis</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.rnaseq#biopipen.ns.rnaseq.UnitConversion">UnitConversion</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert expression value units back and forth<a class="mkapi-src-link" href="../source/biopipen.ns.rnaseq/#biopipen.ns.rnaseq.UnitConversion" title="Source for biopipen.ns.rnaseq.UnitConversion">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.rnaseq#biopipen.ns.rnaseq.Simulation">Simulation</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Simulate RNA-seq data using ESCO/RUVcorr package<a class="mkapi-src-link" href="../source/biopipen.ns.rnaseq/#biopipen.ns.rnaseq.Simulation" title="Source for biopipen.ns.rnaseq.Simulation">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.bam">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennsbam" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.bam/#biopipen.ns.bam">bam</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.bam/#biopipen.ns.bam" title="Source for biopipen.ns.bam">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tools to process sam/bam/cram files</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.bam#biopipen.ns.bam.CNVpytor">CNVpytor</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Detect CNV using CNVpytor<a class="mkapi-src-link" href="../source/biopipen.ns.bam/#biopipen.ns.bam.CNVpytor" title="Source for biopipen.ns.bam.CNVpytor">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.bam#biopipen.ns.bam.ControlFREEC">ControlFREEC</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Detect CNVs using Control-FREEC<a class="mkapi-src-link" href="../source/biopipen.ns.bam/#biopipen.ns.bam.ControlFREEC" title="Source for biopipen.ns.bam.ControlFREEC">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.bam#biopipen.ns.bam.CNAClinic">CNAClinic</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Detect CNVs using CNAClinic<a class="mkapi-src-link" href="../source/biopipen.ns.bam/#biopipen.ns.bam.CNAClinic" title="Source for biopipen.ns.bam.CNAClinic">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.bam#biopipen.ns.bam.BamSplitChroms">BamSplitChroms</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Split bam file by chromosomes<a class="mkapi-src-link" href="../source/biopipen.ns.bam/#biopipen.ns.bam.BamSplitChroms" title="Source for biopipen.ns.bam.BamSplitChroms">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.bam#biopipen.ns.bam.BamMerge">BamMerge</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Merge bam files<a class="mkapi-src-link" href="../source/biopipen.ns.bam/#biopipen.ns.bam.BamMerge" title="Source for biopipen.ns.bam.BamMerge">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.bam#biopipen.ns.bam.BamSampling">BamSampling</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Keeping only a fraction of read pairs from a bam file<a class="mkapi-src-link" href="../source/biopipen.ns.bam/#biopipen.ns.bam.BamSampling" title="Source for biopipen.ns.bam.BamSampling">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.bam#biopipen.ns.bam.BamSubsetByBed">BamSubsetByBed</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Subset bam file by the regions in a bed file<a class="mkapi-src-link" href="../source/biopipen.ns.bam/#biopipen.ns.bam.BamSubsetByBed" title="Source for biopipen.ns.bam.BamSubsetByBed">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.bam#biopipen.ns.bam.BamSort">BamSort</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Sort bam file<a class="mkapi-src-link" href="../source/biopipen.ns.bam/#biopipen.ns.bam.BamSort" title="Source for biopipen.ns.bam.BamSort">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.scrna">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennsscrna" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.scrna/#biopipen.ns.scrna">scrna</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna" title="Source for biopipen.ns.scrna">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tools to analyze single-cell RNA</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.SeuratLoading">SeuratLoading</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Seurat - Loading data<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.SeuratLoading" title="Source for biopipen.ns.scrna.SeuratLoading">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.SeuratPreparing">SeuratPreparing</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Load, prepare and apply QC to data, using <code>Seurat</code><a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.SeuratPreparing" title="Source for biopipen.ns.scrna.SeuratPreparing">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.SeuratClustering">SeuratClustering</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Determine the clusters of cells without reference using Seurat FindClustersprocedure.
+<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.SeuratClustering" title="Source for biopipen.ns.scrna.SeuratClustering">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.SeuratSubClustering">SeuratSubClustering</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Find clusters of a subset of cells.<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.SeuratSubClustering" title="Source for biopipen.ns.scrna.SeuratSubClustering">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.SeuratClusterStats">SeuratClusterStats</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Statistics of the clustering.<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.SeuratClusterStats" title="Source for biopipen.ns.scrna.SeuratClusterStats">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.ModuleScoreCalculator">ModuleScoreCalculator</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Calculate the module scores for each cell<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.ModuleScoreCalculator" title="Source for biopipen.ns.scrna.ModuleScoreCalculator">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.CellsDistribution">CellsDistribution</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Distribution of cells (i.e. in a TCR clone) from different groupsfor each cluster
+<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.CellsDistribution" title="Source for biopipen.ns.scrna.CellsDistribution">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.SeuratMetadataMutater">SeuratMetadataMutater</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Mutate the metadata of the seurat object<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.SeuratMetadataMutater" title="Source for biopipen.ns.scrna.SeuratMetadataMutater">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.DimPlots">DimPlots</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Seurat - Dimensional reduction plots<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.DimPlots" title="Source for biopipen.ns.scrna.DimPlots">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.MarkersFinder">MarkersFinder</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Find markers between different groups of cells<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.MarkersFinder" title="Source for biopipen.ns.scrna.MarkersFinder">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.TopExpressingGenes">TopExpressingGenes</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Find the top expressing genes in each cluster<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.TopExpressingGenes" title="Source for biopipen.ns.scrna.TopExpressingGenes">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.ExprImputation">ExprImputation</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">This process imputes the dropout values in scRNA-seq data.<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.ExprImputation" title="Source for biopipen.ns.scrna.ExprImputation">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.SCImpute">SCImpute</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Impute the dropout values in scRNA-seq data.<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.SCImpute" title="Source for biopipen.ns.scrna.SCImpute">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.SeuratFilter">SeuratFilter</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Filtering cells from a seurat object<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.SeuratFilter" title="Source for biopipen.ns.scrna.SeuratFilter">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.SeuratSubset">SeuratSubset</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Subset a seurat object into multiple seruat objects<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.SeuratSubset" title="Source for biopipen.ns.scrna.SeuratSubset">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.SeuratSplit">SeuratSplit</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Split a seurat object into multiple seruat objects<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.SeuratSplit" title="Source for biopipen.ns.scrna.SeuratSplit">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.Subset10X">Subset10X</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Subset 10X data, mostly used for testing<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.Subset10X" title="Source for biopipen.ns.scrna.Subset10X">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.SeuratTo10X">SeuratTo10X</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Write a Seurat object to 10X format<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.SeuratTo10X" title="Source for biopipen.ns.scrna.SeuratTo10X">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.ScFGSEA">ScFGSEA</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Gene set enrichment analysis for cells in different groups using <code>fgsea</code><a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.ScFGSEA" title="Source for biopipen.ns.scrna.ScFGSEA">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.CellTypeAnnotation">CellTypeAnnotation</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Annotate the cell clusters. Currently, four ways are supported:<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.CellTypeAnnotation" title="Source for biopipen.ns.scrna.CellTypeAnnotation">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.SeuratMap2Ref">SeuratMap2Ref</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Map the seurat object to reference<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.SeuratMap2Ref" title="Source for biopipen.ns.scrna.SeuratMap2Ref">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.RadarPlots">RadarPlots</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Radar plots for cell proportion in different clusters.<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.RadarPlots" title="Source for biopipen.ns.scrna.RadarPlots">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.MetaMarkers">MetaMarkers</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Find markers between three or more groups of cells, using one-way ANOVAor Kruskal-Wallis test.
+<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.MetaMarkers" title="Source for biopipen.ns.scrna.MetaMarkers">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.Seurat2AnnData">Seurat2AnnData</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert seurat object to AnnData<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.Seurat2AnnData" title="Source for biopipen.ns.scrna.Seurat2AnnData">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.AnnData2Seurat">AnnData2Seurat</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert AnnData to seurat object<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.AnnData2Seurat" title="Source for biopipen.ns.scrna.AnnData2Seurat">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.ScSimulation">ScSimulation</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Simulate single-cell data using splatter.<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.ScSimulation" title="Source for biopipen.ns.scrna.ScSimulation">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.CellCellCommunication">CellCellCommunication</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Cell-cell communication inference<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.CellCellCommunication" title="Source for biopipen.ns.scrna.CellCellCommunication">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.CellCellCommunicationPlots">CellCellCommunicationPlots</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Visualization for cell-cell communication inference.<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.CellCellCommunicationPlots" title="Source for biopipen.ns.scrna.CellCellCommunicationPlots">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.ScVelo">ScVelo</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Velocity analysis for single-cell RNA-seq data<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.ScVelo" title="Source for biopipen.ns.scrna.ScVelo">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna#biopipen.ns.scrna.SlingShot">SlingShot</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Trajectory inference using SlingShot<a class="mkapi-src-link" href="../source/biopipen.ns.scrna/#biopipen.ns.scrna.SlingShot" title="Source for biopipen.ns.scrna.SlingShot">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.protein">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennsprotein" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.protein/#biopipen.ns.protein">protein</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.protein/#biopipen.ns.protein" title="Source for biopipen.ns.protein">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Protein-related processes.</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.protein#biopipen.ns.protein.Prodigy">Prodigy</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Prediction of binding affinity of protein-protein complexes based onintermolecular contacts using Prodigy.
+<a class="mkapi-src-link" href="../source/biopipen.ns.protein/#biopipen.ns.protein.Prodigy" title="Source for biopipen.ns.protein.Prodigy">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.protein#biopipen.ns.protein.ProdigySummary">ProdigySummary</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Summary of the output from <code>Prodigy</code>.<a class="mkapi-src-link" href="../source/biopipen.ns.protein/#biopipen.ns.protein.ProdigySummary" title="Source for biopipen.ns.protein.ProdigySummary">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.protein#biopipen.ns.protein.MMCIF2PDB">MMCIF2PDB</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert mmCIF or PDBx file to PDB file.<a class="mkapi-src-link" href="../source/biopipen.ns.protein/#biopipen.ns.protein.MMCIF2PDB" title="Source for biopipen.ns.protein.MMCIF2PDB">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.protein#biopipen.ns.protein.RMSD">RMSD</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Calculate the RMSD between two structures.<a class="mkapi-src-link" href="../source/biopipen.ns.protein/#biopipen.ns.protein.RMSD" title="Source for biopipen.ns.protein.RMSD">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.protein#biopipen.ns.protein.PDB2Fasta">PDB2Fasta</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert PDB file to FASTA file.<a class="mkapi-src-link" href="../source/biopipen.ns.protein/#biopipen.ns.protein.PDB2Fasta" title="Source for biopipen.ns.protein.PDB2Fasta">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.scrna_metabolic_landscape">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennsscrna_metabolic_landscape" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.scrna_metabolic_landscape/#biopipen.ns.scrna_metabolic_landscape">scrna_metabolic_landscape</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.scrna_metabolic_landscape/#biopipen.ns.scrna_metabolic_landscape" title="Source for biopipen.ns.scrna_metabolic_landscape">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Metabolic landscape analysis for scRNA-seq data</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna_metabolic_landscape#biopipen.ns.scrna_metabolic_landscape.MetabolicPathwayActivity">MetabolicPathwayActivity</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">This process calculates the pathway activities in different groups and subsets.<a class="mkapi-src-link" href="../source/biopipen.ns.scrna_metabolic_landscape/#biopipen.ns.scrna_metabolic_landscape.MetabolicPathwayActivity" title="Source for biopipen.ns.scrna_metabolic_landscape.MetabolicPathwayActivity">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna_metabolic_landscape#biopipen.ns.scrna_metabolic_landscape.MetabolicFeatures">MetabolicFeatures</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">This process performs enrichment analysis for the metabolic pathwaysfor each group in each subset.
+<a class="mkapi-src-link" href="../source/biopipen.ns.scrna_metabolic_landscape/#biopipen.ns.scrna_metabolic_landscape.MetabolicFeatures" title="Source for biopipen.ns.scrna_metabolic_landscape.MetabolicFeatures">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna_metabolic_landscape#biopipen.ns.scrna_metabolic_landscape.MetabolicFeaturesIntraSubset">MetabolicFeaturesIntraSubset</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Intra-subset metabolic features - Enrichment analysis in details<a class="mkapi-src-link" href="../source/biopipen.ns.scrna_metabolic_landscape/#biopipen.ns.scrna_metabolic_landscape.MetabolicFeaturesIntraSubset" title="Source for biopipen.ns.scrna_metabolic_landscape.MetabolicFeaturesIntraSubset">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna_metabolic_landscape#biopipen.ns.scrna_metabolic_landscape.MetabolicPathwayHeterogeneity">MetabolicPathwayHeterogeneity</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Calculate Metabolic Pathway heterogeneity.<a class="mkapi-src-link" href="../source/biopipen.ns.scrna_metabolic_landscape/#biopipen.ns.scrna_metabolic_landscape.MetabolicPathwayHeterogeneity" title="Source for biopipen.ns.scrna_metabolic_landscape.MetabolicPathwayHeterogeneity">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.scrna_metabolic_landscape#biopipen.ns.scrna_metabolic_landscape.ScrnaMetabolicLandscape">ScrnaMetabolicLandscape</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Metabolic landscape analysis for scRNA-seq data<a class="mkapi-src-link" href="../source/biopipen.ns.scrna_metabolic_landscape/#biopipen.ns.scrna_metabolic_landscape.ScrnaMetabolicLandscape" title="Source for biopipen.ns.scrna_metabolic_landscape.ScrnaMetabolicLandscape">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.vcf">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennsvcf" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.vcf/#biopipen.ns.vcf">vcf</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf" title="Source for biopipen.ns.vcf">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tools to handle VCF files</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.VcfLiftOver">VcfLiftOver</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Liftover a VCF file using GATK<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.VcfLiftOver" title="Source for biopipen.ns.vcf.VcfLiftOver">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.VcfFilter">VcfFilter</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Filter records in vcf file<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.VcfFilter" title="Source for biopipen.ns.vcf.VcfFilter">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.VcfIndex">VcfIndex</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Index VCF files. If they are already index, use the index files<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.VcfIndex" title="Source for biopipen.ns.vcf.VcfIndex">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.Vcf2Bed">Vcf2Bed</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert Vcf file to Bed file<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.Vcf2Bed" title="Source for biopipen.ns.vcf.Vcf2Bed">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.VcfDownSample">VcfDownSample</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Down-sample VCF files to keep only a subset of variants in there<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.VcfDownSample" title="Source for biopipen.ns.vcf.VcfDownSample">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.VcfSplitSamples">VcfSplitSamples</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Split a VCF file into multiple VCF files, one for each sample<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.VcfSplitSamples" title="Source for biopipen.ns.vcf.VcfSplitSamples">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.VcfIntersect">VcfIntersect</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Find variants in both VCF files<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.VcfIntersect" title="Source for biopipen.ns.vcf.VcfIntersect">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.VcfFix">VcfFix</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Fix some issues with VCF files<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.VcfFix" title="Source for biopipen.ns.vcf.VcfFix">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.VcfAnno">VcfAnno</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Annotate a VCF file using vcfanno<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.VcfAnno" title="Source for biopipen.ns.vcf.VcfAnno">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.TruvariBench">TruvariBench</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Run <code>truvari bench</code> to compare a VCF with CNV calls andbase CNV standards
+<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.TruvariBench" title="Source for biopipen.ns.vcf.TruvariBench">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.TruvariBenchSummary">TruvariBenchSummary</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Summarise the statistics from <code>TruvariBench</code> for multiple jobs (VCFs)<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.TruvariBenchSummary" title="Source for biopipen.ns.vcf.TruvariBenchSummary">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.TruvariConsistency">TruvariConsistency</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Run <code>truvari consistency</code> to check consistency of CNV calls<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.TruvariConsistency" title="Source for biopipen.ns.vcf.TruvariConsistency">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.BcftoolsAnnotate">BcftoolsAnnotate</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Add or remove annotations from VCF files<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.BcftoolsAnnotate" title="Source for biopipen.ns.vcf.BcftoolsAnnotate">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.BcftoolsFilter">BcftoolsFilter</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Apply fixed threshold filters to VCF files<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.BcftoolsFilter" title="Source for biopipen.ns.vcf.BcftoolsFilter">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.BcftoolsSort">BcftoolsSort</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Sort VCF files using <code>bcftools sort</code>.<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.BcftoolsSort" title="Source for biopipen.ns.vcf.BcftoolsSort">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.BcftoolsMerge">BcftoolsMerge</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Merge multiple VCF files using <code>bcftools merge</code>.<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.BcftoolsMerge" title="Source for biopipen.ns.vcf.BcftoolsMerge">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.vcf#biopipen.ns.vcf.BcftoolsView">BcftoolsView</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">View, subset and filter VCF files by position and filtering expression.<a class="mkapi-src-link" href="../source/biopipen.ns.vcf/#biopipen.ns.vcf.BcftoolsView" title="Source for biopipen.ns.vcf.BcftoolsView">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.cnvkit">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennscnvkit" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.cnv/#biopipen.ns.cnvkit">cnvkit</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.cnvkit/#biopipen.ns.cnvkit" title="Source for biopipen.ns.cnvkit">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>CNVkit commnads</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnvkit#biopipen.ns.cnvkit.CNVkitAccess">CNVkitAccess</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Calculate the sequence-accessible coordinates in chromosomes from thegiven reference genome using <code>cnvkit.py access</code>
+<a class="mkapi-src-link" href="../source/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitAccess" title="Source for biopipen.ns.cnvkit.CNVkitAccess">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnvkit#biopipen.ns.cnvkit.CNVkitAutobin">CNVkitAutobin</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Quickly estimate read counts or depths in a BAM file to estimatereasonable on- and (if relevant) off-target bin sizes.
+<a class="mkapi-src-link" href="../source/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitAutobin" title="Source for biopipen.ns.cnvkit.CNVkitAutobin">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnvkit#biopipen.ns.cnvkit.CNVkitCoverage">CNVkitCoverage</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Run cnvkit coverage<a class="mkapi-src-link" href="../source/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitCoverage" title="Source for biopipen.ns.cnvkit.CNVkitCoverage">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnvkit#biopipen.ns.cnvkit.CNVkitReference">CNVkitReference</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Run cnvkit reference<a class="mkapi-src-link" href="../source/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitReference" title="Source for biopipen.ns.cnvkit.CNVkitReference">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnvkit#biopipen.ns.cnvkit.CNVkitFix">CNVkitFix</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Run cnvkit.py fix<a class="mkapi-src-link" href="../source/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitFix" title="Source for biopipen.ns.cnvkit.CNVkitFix">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnvkit#biopipen.ns.cnvkit.CNVkitSegment">CNVkitSegment</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Run cnvkit.py segment<a class="mkapi-src-link" href="../source/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitSegment" title="Source for biopipen.ns.cnvkit.CNVkitSegment">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnvkit#biopipen.ns.cnvkit.CNVkitScatter">CNVkitScatter</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Run cnvkit.py scatter<a class="mkapi-src-link" href="../source/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitScatter" title="Source for biopipen.ns.cnvkit.CNVkitScatter">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnvkit#biopipen.ns.cnvkit.CNVkitDiagram">CNVkitDiagram</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Run cnvkit.py diagram<a class="mkapi-src-link" href="../source/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitDiagram" title="Source for biopipen.ns.cnvkit.CNVkitDiagram">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnvkit#biopipen.ns.cnvkit.CNVkitHeatmap">CNVkitHeatmap</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Run cnvkit.py heatmap for multiple cases<a class="mkapi-src-link" href="../source/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitHeatmap" title="Source for biopipen.ns.cnvkit.CNVkitHeatmap">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnvkit#biopipen.ns.cnvkit.CNVkitCall">CNVkitCall</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Run cnvkit.py call<a class="mkapi-src-link" href="../source/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitCall" title="Source for biopipen.ns.cnvkit.CNVkitCall">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnvkit#biopipen.ns.cnvkit.CNVkitBatch">CNVkitBatch</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Run cnvkit batch<a class="mkapi-src-link" href="../source/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitBatch" title="Source for biopipen.ns.cnvkit.CNVkitBatch">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnvkit#biopipen.ns.cnvkit.CNVkitGuessBaits">CNVkitGuessBaits</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Guess the bait intervals from the bam files<a class="mkapi-src-link" href="../source/biopipen.ns.cnvkit/#biopipen.ns.cnvkit.CNVkitGuessBaits" title="Source for biopipen.ns.cnvkit.CNVkitGuessBaits">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.plot">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennsplot" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.plot/#biopipen.ns.plot">plot</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.plot/#biopipen.ns.plot" title="Source for biopipen.ns.plot">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Plotting data</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.plot#biopipen.ns.plot.VennDiagram">VennDiagram</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Plot Venn diagram<a class="mkapi-src-link" href="../source/biopipen.ns.plot/#biopipen.ns.plot.VennDiagram" title="Source for biopipen.ns.plot.VennDiagram">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.plot#biopipen.ns.plot.Heatmap">Heatmap</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Plot heatmaps using <code>ComplexHeatmap</code><a class="mkapi-src-link" href="../source/biopipen.ns.plot/#biopipen.ns.plot.Heatmap" title="Source for biopipen.ns.plot.Heatmap">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.plot#biopipen.ns.plot.ROC">ROC</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Plot ROC curve using <a href="https://cran.r-project.org/web/packages/plotROC/vignettes/examples.html"><code>plotROC</code></a>.<a class="mkapi-src-link" href="../source/biopipen.ns.plot/#biopipen.ns.plot.ROC" title="Source for biopipen.ns.plot.ROC">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.plot#biopipen.ns.plot.Manhattan">Manhattan</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Plot Manhattan plot.<a class="mkapi-src-link" href="../source/biopipen.ns.plot/#biopipen.ns.plot.Manhattan" title="Source for biopipen.ns.plot.Manhattan">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.plot#biopipen.ns.plot.QQPlot">QQPlot</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Generate QQ-plot or PP-plot using qqplotr.<a class="mkapi-src-link" href="../source/biopipen.ns.plot/#biopipen.ns.plot.QQPlot" title="Source for biopipen.ns.plot.QQPlot">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.plot#biopipen.ns.plot.Scatter">Scatter</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Generate scatter plot using ggplot2.<a class="mkapi-src-link" href="../source/biopipen.ns.plot/#biopipen.ns.plot.Scatter" title="Source for biopipen.ns.plot.Scatter">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.web">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennsweb" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.web/#biopipen.ns.web">web</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.web/#biopipen.ns.web" title="Source for biopipen.ns.web">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get data from the web</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.web#biopipen.ns.web.Download">Download</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Download data from URLs<a class="mkapi-src-link" href="../source/biopipen.ns.web/#biopipen.ns.web.Download" title="Source for biopipen.ns.web.Download">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.web#biopipen.ns.web.DownloadList">DownloadList</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Download data from URLs in a file.<a class="mkapi-src-link" href="../source/biopipen.ns.web/#biopipen.ns.web.DownloadList" title="Source for biopipen.ns.web.DownloadList">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.web#biopipen.ns.web.GCloudStorageDownloadFile">GCloudStorageDownloadFile</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Download file from Google Cloud Storage<a class="mkapi-src-link" href="../source/biopipen.ns.web/#biopipen.ns.web.GCloudStorageDownloadFile" title="Source for biopipen.ns.web.GCloudStorageDownloadFile">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.web#biopipen.ns.web.GCloudStorageDownloadBucket">GCloudStorageDownloadBucket</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Download all files from a Google Cloud Storage bucket<a class="mkapi-src-link" href="../source/biopipen.ns.web/#biopipen.ns.web.GCloudStorageDownloadBucket" title="Source for biopipen.ns.web.GCloudStorageDownloadBucket">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.misc">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennsmisc" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.misc/#biopipen.ns.misc">misc</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.misc/#biopipen.ns.misc" title="Source for biopipen.ns.misc">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Misc processes</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.misc#biopipen.ns.misc.File2Proc">File2Proc</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Accept a file and pass it down with a symbolic link<a class="mkapi-src-link" href="../source/biopipen.ns.misc/#biopipen.ns.misc.File2Proc" title="Source for biopipen.ns.misc.File2Proc">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.misc#biopipen.ns.misc.Glob2Dir">Glob2Dir</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Create symbolic links in output directory for the files givenby the glob pattern
+<a class="mkapi-src-link" href="../source/biopipen.ns.misc/#biopipen.ns.misc.Glob2Dir" title="Source for biopipen.ns.misc.Glob2Dir">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.misc#biopipen.ns.misc.Config2File">Config2File</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Write a configurationn in string to a configuration file<a class="mkapi-src-link" href="../source/biopipen.ns.misc/#biopipen.ns.misc.Config2File" title="Source for biopipen.ns.misc.Config2File">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.misc#biopipen.ns.misc.Str2File">Str2File</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Write the given string to a file<a class="mkapi-src-link" href="../source/biopipen.ns.misc/#biopipen.ns.misc.Str2File" title="Source for biopipen.ns.misc.Str2File">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.misc#biopipen.ns.misc.Shell">Shell</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Run a shell command<a class="mkapi-src-link" href="../source/biopipen.ns.misc/#biopipen.ns.misc.Shell" title="Source for biopipen.ns.misc.Shell">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.bed">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennsbed" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.bed/#biopipen.ns.bed">bed</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.bed/#biopipen.ns.bed" title="Source for biopipen.ns.bed">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tools to handle BED files</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.bed#biopipen.ns.bed.BedLiftOver">BedLiftOver</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Liftover a BED file using liftOver<a class="mkapi-src-link" href="../source/biopipen.ns.bed/#biopipen.ns.bed.BedLiftOver" title="Source for biopipen.ns.bed.BedLiftOver">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.bed#biopipen.ns.bed.Bed2Vcf">Bed2Vcf</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert a BED file to a valid VCF file with minimal information<a class="mkapi-src-link" href="../source/biopipen.ns.bed/#biopipen.ns.bed.Bed2Vcf" title="Source for biopipen.ns.bed.Bed2Vcf">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.bed#biopipen.ns.bed.BedConsensus">BedConsensus</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Find consensus regions from multiple BED files.<a class="mkapi-src-link" href="../source/biopipen.ns.bed/#biopipen.ns.bed.BedConsensus" title="Source for biopipen.ns.bed.BedConsensus">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.bed#biopipen.ns.bed.BedtoolsMerge">BedtoolsMerge</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Merge overlapping intervals in a BED file, using <code>bedtools merge</code><a class="mkapi-src-link" href="../source/biopipen.ns.bed/#biopipen.ns.bed.BedtoolsMerge" title="Source for biopipen.ns.bed.BedtoolsMerge">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.bed#biopipen.ns.bed.BedtoolsIntersect">BedtoolsIntersect</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Find the intersection of two BED files, using <code>bedtools intersect</code><a class="mkapi-src-link" href="../source/biopipen.ns.bed/#biopipen.ns.bed.BedtoolsIntersect" title="Source for biopipen.ns.bed.BedtoolsIntersect">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.bed#biopipen.ns.bed.BedtoolsMakeWindows">BedtoolsMakeWindows</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Make windows from a BED file or genome size file, using <code>bedtools makewindows</code>.<a class="mkapi-src-link" href="../source/biopipen.ns.bed/#biopipen.ns.bed.BedtoolsMakeWindows" title="Source for biopipen.ns.bed.BedtoolsMakeWindows">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.cellranger">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennscellranger" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.cellranger/#biopipen.ns.cellranger">cellranger</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.cellranger/#biopipen.ns.cellranger" title="Source for biopipen.ns.cellranger">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Cellranger pipeline module for BioPipen</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cellranger#biopipen.ns.cellranger.CellRangerCount">CellRangerCount</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Run cellranger count<a class="mkapi-src-link" href="../source/biopipen.ns.cellranger/#biopipen.ns.cellranger.CellRangerCount" title="Source for biopipen.ns.cellranger.CellRangerCount">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cellranger#biopipen.ns.cellranger.CellRangerVdj">CellRangerVdj</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Run cellranger vdj<a class="mkapi-src-link" href="../source/biopipen.ns.cellranger/#biopipen.ns.cellranger.CellRangerVdj" title="Source for biopipen.ns.cellranger.CellRangerVdj">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cellranger#biopipen.ns.cellranger.CellRangerSummary">CellRangerSummary</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Summarize cellranger metrics<a class="mkapi-src-link" href="../source/biopipen.ns.cellranger/#biopipen.ns.cellranger.CellRangerSummary" title="Source for biopipen.ns.cellranger.CellRangerSummary">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.cnv">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennscnv" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.cnv/#biopipen.ns.cnv">cnv</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.cnv/#biopipen.ns.cnv" title="Source for biopipen.ns.cnv">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>CNV/CNA-related processes, mostly tertiary analysis</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnv#biopipen.ns.cnv.AneuploidyScore">AneuploidyScore</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Chromosomal arm SCNA/aneuploidy<a class="mkapi-src-link" href="../source/biopipen.ns.cnv/#biopipen.ns.cnv.AneuploidyScore" title="Source for biopipen.ns.cnv.AneuploidyScore">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnv#biopipen.ns.cnv.AneuploidyScoreSummary">AneuploidyScoreSummary</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Summary table and plots from AneuploidyScore<a class="mkapi-src-link" href="../source/biopipen.ns.cnv/#biopipen.ns.cnv.AneuploidyScoreSummary" title="Source for biopipen.ns.cnv.AneuploidyScoreSummary">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnv#biopipen.ns.cnv.TMADScore">TMADScore</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Trimmed Median Absolute Deviation (TMAD) score for CNV<a class="mkapi-src-link" href="../source/biopipen.ns.cnv/#biopipen.ns.cnv.TMADScore" title="Source for biopipen.ns.cnv.TMADScore">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cnv#biopipen.ns.cnv.TMADScoreSummary">TMADScoreSummary</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Summary table and plots for TMADScore<a class="mkapi-src-link" href="../source/biopipen.ns.cnv/#biopipen.ns.cnv.TMADScoreSummary" title="Source for biopipen.ns.cnv.TMADScoreSummary">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.cellranger_pipeline">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennscellranger_pipeline" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.cellranger_pipeline/#biopipen.ns.cellranger_pipeline">cellranger_pipeline</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.cellranger_pipeline/#biopipen.ns.cellranger_pipeline" title="Source for biopipen.ns.cellranger_pipeline">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>The cellranger pipelines</p><p>Primarily cellranger process plus summary for summarizing the metrics for
+multiple samples.</p>
+</div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cellranger_pipeline#biopipen.ns.cellranger_pipeline.CellRangerCountPipeline">CellRangerCountPipeline</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The cellranger count pipeline<a class="mkapi-src-link" href="../source/biopipen.ns.cellranger_pipeline/#biopipen.ns.cellranger_pipeline.CellRangerCountPipeline" title="Source for biopipen.ns.cellranger_pipeline.CellRangerCountPipeline">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.cellranger_pipeline#biopipen.ns.cellranger_pipeline.CellRangerVdjPipeline">CellRangerVdjPipeline</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The cellranger vdj pipeline<a class="mkapi-src-link" href="../source/biopipen.ns.cellranger_pipeline/#biopipen.ns.cellranger_pipeline.CellRangerVdjPipeline" title="Source for biopipen.ns.cellranger_pipeline.CellRangerVdjPipeline">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.delim">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennsdelim" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.delim/#biopipen.ns.delim">delim</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.delim/#biopipen.ns.delim" title="Source for biopipen.ns.delim">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tools to deal with csv/tsv files</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.delim#biopipen.ns.delim.RowsBinder">RowsBinder</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Bind rows of input files<a class="mkapi-src-link" href="../source/biopipen.ns.delim/#biopipen.ns.delim.RowsBinder" title="Source for biopipen.ns.delim.RowsBinder">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.delim#biopipen.ns.delim.SampleInfo">SampleInfo</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">List sample information and perform statistics<a class="mkapi-src-link" href="../source/biopipen.ns.delim/#biopipen.ns.delim.SampleInfo" title="Source for biopipen.ns.delim.SampleInfo">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.stats">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennsstats" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.stats/#biopipen.ns.stats">stats</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.stats/#biopipen.ns.stats" title="Source for biopipen.ns.stats">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Provides processes for statistics.</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.stats#biopipen.ns.stats.ChowTest">ChowTest</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Massive Chow tests.<a class="mkapi-src-link" href="../source/biopipen.ns.stats/#biopipen.ns.stats.ChowTest" title="Source for biopipen.ns.stats.ChowTest">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.stats#biopipen.ns.stats.Mediation">Mediation</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Mediation analysis.<a class="mkapi-src-link" href="../source/biopipen.ns.stats/#biopipen.ns.stats.Mediation" title="Source for biopipen.ns.stats.Mediation">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.stats#biopipen.ns.stats.LiquidAssoc">LiquidAssoc</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Liquid association tests.<a class="mkapi-src-link" href="../source/biopipen.ns.stats/#biopipen.ns.stats.LiquidAssoc" title="Source for biopipen.ns.stats.LiquidAssoc">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.stats#biopipen.ns.stats.DiffCoexpr">DiffCoexpr</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Differential co-expression analysis.<a class="mkapi-src-link" href="../source/biopipen.ns.stats/#biopipen.ns.stats.DiffCoexpr" title="Source for biopipen.ns.stats.DiffCoexpr">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.stats#biopipen.ns.stats.MetaPvalue">MetaPvalue</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Calulation of meta p-values.<a class="mkapi-src-link" href="../source/biopipen.ns.stats/#biopipen.ns.stats.MetaPvalue" title="Source for biopipen.ns.stats.MetaPvalue">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.stats#biopipen.ns.stats.MetaPvalue1">MetaPvalue1</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Calulation of meta p-values.<a class="mkapi-src-link" href="../source/biopipen.ns.stats/#biopipen.ns.stats.MetaPvalue1" title="Source for biopipen.ns.stats.MetaPvalue1">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.tcgamaf">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennstcgamaf" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.tcgamaf/#biopipen.ns.tcgamaf">tcgamaf</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.tcgamaf/#biopipen.ns.tcgamaf" title="Source for biopipen.ns.tcgamaf">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Processes for TCGA MAF files.</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcgamaf#biopipen.ns.tcgamaf.Maf2Vcf">Maf2Vcf</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Converts a MAF file to a VCF file.<a class="mkapi-src-link" href="../source/biopipen.ns.tcgamaf/#biopipen.ns.tcgamaf.Maf2Vcf" title="Source for biopipen.ns.tcgamaf.Maf2Vcf">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.tcgamaf#biopipen.ns.tcgamaf.MafAddChr">MafAddChr</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Adds the <code>chr</code> prefix to chromosome names in a MAF file if not present.<a class="mkapi-src-link" href="../source/biopipen.ns.tcgamaf/#biopipen.ns.tcgamaf.MafAddChr" title="Source for biopipen.ns.tcgamaf.MafAddChr">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.ns.regulatory">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="biopipennsregulatory" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#biopipen.ns">biopipen.ns</a>.</span><span class="mkapi-object-name"><a href="../biopipen.ns.regulatory/#biopipen.ns.regulatory">regulatory</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.ns.regulatory/#biopipen.ns.regulatory" title="Source for biopipen.ns.regulatory">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Provides processes for the regulatory related</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.regulatory#biopipen.ns.regulatory.MotifScan">MotifScan</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Scan the input sequences for binding sites using motifs.<a class="mkapi-src-link" href="../source/biopipen.ns.regulatory/#biopipen.ns.regulatory.MotifScan" title="Source for biopipen.ns.regulatory.MotifScan">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.regulatory#biopipen.ns.regulatory.MotifAffinityTest">MotifAffinityTest</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Test the affinity of motifs to the sequences and the affinity changedue the mutations.
+<a class="mkapi-src-link" href="../source/biopipen.ns.regulatory/#biopipen.ns.regulatory.MotifAffinityTest" title="Source for biopipen.ns.regulatory.MotifAffinityTest">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../biopipen.ns.regulatory#biopipen.ns.regulatory.VariantMotifPlot">VariantMotifPlot</a></code>
+<span class="mkapi-item-type">(<a href="../biopipen.core.proc/#biopipen.core.proc.Proc">Proc</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">A plot with a genomic region surrounding a genomic variant, andpotentially disrupted motifs.
+<a class="mkapi-src-link" href="../source/biopipen.ns.regulatory/#biopipen.ns.regulatory.VariantMotifPlot" title="Source for biopipen.ns.regulatory.VariantMotifPlot">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../biopipen.utils.common_docstrs/" class="btn btn-neutral float-left" title="biopipen.utils.common_docstrs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../biopipen.ns.cnvkit_pipeline/" class="btn btn-neutral float-right" title="biopipen.ns.cnvkit_pipeline">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../biopipen.utils.common_docstrs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../biopipen.ns.cnvkit_pipeline/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/version-select.js"></script>
+      <script src="../../js/mkapi.js"></script>
+      <script src="../../extra.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

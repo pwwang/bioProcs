@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>biopipen.ns.gsea - biopipen</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.ns.gsea";
+        var mkdocs_page_input_path = "api/source/biopipen.ns.gsea.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">biopipen.ns.gsea</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/source/biopipen.ns.gsea.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">biopipen.ns.</span><span class="mkapi-object-name">gsea</span>
+<span id="biopipen.ns.gsea"></span><a class="mkapi-docs-link" href="../../biopipen.ns.gsea">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Gene set enrichment analysis&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">..core.proc</span> <span class="kn">import</span> <span class="n">Proc</span>
+<span class="kn">from</span> <span class="nn">..core.config</span> <span class="kn">import</span> <span class="n">config</span>
+
+
+<span class="k">class</span> <span class="nc">GSEA</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.gsea.GSEA"></span><a class="mkapi-docs-link" title="biopipen.ns.gsea.GSEA" href="../../biopipen.ns.gsea/#biopipen.ns.gsea.GSEA">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Gene set enrichment analysis</span>
+
+<span class="sd">    Need `devtools::install_github(&quot;GSEA-MSigDB/GSEA_R&quot;)`</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The expression file.</span>
+<span class="sd">            Either a tab-delimited matrix or an RDS file (on envs.infmt)</span>
+<span class="sd">        metafile: The meta data file, determining the class of the samples</span>
+<span class="sd">            Two columns are required</span>
+<span class="sd">            Sample: The unique sample id for each sample</span>
+<span class="sd">            `[Group]`: The groups/classes of the samples</span>
+<span class="sd">        gmtfile: The GMT file of reference gene sets</span>
+<span class="sd">        configfile: The configuration file in TOML format to specify some envs.</span>
+<span class="sd">            `clscol`: If not provided, will use `envs.clscol`</span>
+<span class="sd">            `doc.string`: Documentation string used as a prefix</span>
+<span class="sd">            to name result files. If not provided, will use</span>
+<span class="sd">            `envs[&#39;doc.string&#39;]`</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        inopts: The options for `read.table()` to read the input file</span>
+<span class="sd">            If `rds` will use `readRDS()`</span>
+<span class="sd">        metaopts: The options for `read.table()` to read the meta file</span>
+<span class="sd">        clscol: The column of the metafile determining the classes</span>
+<span class="sd">        doc_string: Documentation string used as a prefix to name result files</span>
+<span class="sd">            Other configs passed to `GSEA()` directly</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        GSEA-MSigDB/GSEA_R:</span>
+<span class="sd">            - check: {{proc.lang}} &lt;(echo &quot;library(GSEA)&quot;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file, metafile:file, gmtfile:file, configfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.infile | stem}}.gsea&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;inopts&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;row.names&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">},</span>
+        <span class="s2">&quot;metaopts&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;row.names&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">},</span>
+        <span class="s2">&quot;clscol&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;doc_string&quot;</span><span class="p">:</span> <span class="s2">&quot;gsea_result&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/gsea/GSEA.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/gsea/GSEA.svelte&quot;</span><span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">PreRank</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.gsea.PreRank"></span><a class="mkapi-docs-link" title="biopipen.ns.gsea.PreRank" href="../../biopipen.ns.gsea/#biopipen.ns.gsea.PreRank">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;PreRank the genes for GSEA analysis</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The expression file.</span>
+<span class="sd">            Either a tab-delimited matrix or an RDS file (on envs.inopts)</span>
+<span class="sd">        metafile: The meta data file, determining the class of the samples</span>
+<span class="sd">            Two columns are required</span>
+<span class="sd">            Sample: The unique sample id for each sample</span>
+<span class="sd">            `[Group]`: The groups/classes of the samples</span>
+<span class="sd">        configfile: The configuration file in TOML format to specify some envs.</span>
+<span class="sd">            `clscol`: If not provided, will use `envs.clscol`</span>
+<span class="sd">            `classes`: Defines pos and neg labels. If not provided, use will</span>
+<span class="sd">            `envs.classes`.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The rank file with 1st column the genes, and the rest the</span>
+<span class="sd">            ranks for different class pairs provided by `envs.classes` or</span>
+<span class="sd">            `in.configfile`</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        inopts: Options for `read.table()` to read `in.infile`</span>
+<span class="sd">        metaopts: Options for `read.table()` to read `in.metafile`</span>
+<span class="sd">        method: The method to do the preranking.</span>
+<span class="sd">            Supported: `s2n(signal_to_noise)`, `abs_s2n(abs_signal_to_noise)`,</span>
+<span class="sd">            `t_test`, `ratio_of_classes`, `diff_of_classes` and</span>
+<span class="sd">            `log2_ratio_of_classes`.</span>
+<span class="sd">        clscol: The column of metafile specifying the classes of the samples</span>
+<span class="sd">        classes: The classes to specify the pos and neg labels.</span>
+<span class="sd">            It could be a pair of labels (e.g. `[&quot;CASE&quot;, &quot;CNTRL&quot;]`), where</span>
+<span class="sd">            the first one is pos and second is neg. Or you can have multiple</span>
+<span class="sd">            pairs of labels (e.g. `[[&quot;CASE1&quot;, &quot;CNTRL&quot;], [&quot;CASE2&quot;, &quot;CNTRL&quot;]]`)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file, metafile:file, configfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.infile | stem}}.rank&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;inopts&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;row.names&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">},</span>
+        <span class="s2">&quot;metaopts&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;row.names&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">},</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;s2n&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;clscol&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;classes&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/gsea/PreRank.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">FGSEA</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.gsea.FGSEA"></span><a class="mkapi-docs-link" title="biopipen.ns.gsea.FGSEA" href="../../biopipen.ns.gsea/#biopipen.ns.gsea.FGSEA">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Gene set enrichment analysis using `fgsea`</span>
+
+<span class="sd">    Need `devtools::install_github(&quot;ctlab/fgsea&quot;)`</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The expression file.</span>
+<span class="sd">            Either a tab-delimited matrix or an RDS file (on envs.inopts)</span>
+<span class="sd">        metafile: The meta data file, determining the class of the samples</span>
+<span class="sd">            Two columns are required</span>
+<span class="sd">            Sample: The unique sample id for each sample</span>
+<span class="sd">            `[Group]`: The groups/classes of the samples</span>
+<span class="sd">        gmtfile: The GMT file of reference gene sets</span>
+<span class="sd">        configfile: The configuration file in TOML format to specify some envs.</span>
+<span class="sd">            `clscol`: If not provided, will use `envs.clscol`</span>
+<span class="sd">            `classes`: Defines pos and neg labels. If not provided, use will</span>
+<span class="sd">            `envs.classes`.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        inopts: The options for `read.table()` to read the input file</span>
+<span class="sd">            If `rds` will use `readRDS()`</span>
+<span class="sd">        metaopts: The options for `read.table()` to read the meta file</span>
+<span class="sd">        method: The method to do the preranking.</span>
+<span class="sd">            Supported: `s2n(signal_to_noise)`, `abs_s2n(abs_signal_to_noise)`,</span>
+<span class="sd">            `t_test`, `ratio_of_classes`, `diff_of_classes` and</span>
+<span class="sd">            `log2_ratio_of_classes`.</span>
+<span class="sd">        clscol: The column of metafile specifying the classes of the samples</span>
+<span class="sd">        classes: The classes to specify the pos and neg labels.</span>
+<span class="sd">            It could be a pair of labels (e.g. `[&quot;CASE&quot;, &quot;CNTRL&quot;]`), where</span>
+<span class="sd">            the first one is pos and second is neg. Or you can have multiple</span>
+<span class="sd">            pairs of labels (e.g. `[[&quot;CASE1&quot;, &quot;CNTRL&quot;], [&quot;CASE2&quot;, &quot;CNTRL&quot;]]`)</span>
+<span class="sd">        top: Do gsea table and enrich plot for top N pathways. If it is &lt; 1,</span>
+<span class="sd">            will apply it to `padj`</span>
+<span class="sd">        `&lt;rest&gt;`: Rest arguments for `fgsea()`</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        bioconductor-fgsea:</span>
+<span class="sd">            - check: {{proc.lang}} -e &quot;library(fgsea)&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file, metafile:file, gmtfile:file, configfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.infile | stem}}.fgsea&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;inopts&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;row.names&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">},</span>
+        <span class="s2">&quot;metaopts&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;row.names&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">},</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;s2n&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;clscol&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;classes&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;top&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;minSize&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;maxSize&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s2">&quot;eps&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/gsea/FGSEA.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/gsea/FGSEA.svelte&quot;</span><span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">Enrichr</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.gsea.Enrichr"></span><a class="mkapi-docs-link" title="biopipen.ns.gsea.Enrichr" href="../../biopipen.ns.gsea/#biopipen.ns.gsea.Enrichr">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Gene set enrichment analysis using Enrichr</span>
+
+<span class="sd">    Need `devtools::install_github(&quot;wjawaid/enrichR&quot;)`</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The gene list file.</span>
+<span class="sd">            You can specify whether this file has header and the index (0-based)</span>
+<span class="sd">            of the columns where the genes are present</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        inopts: Options for `read.table()` to read `in.infile`</span>
+<span class="sd">        genecol: Which column has the genes (0-based index or column name)</span>
+<span class="sd">        dbs: The databases to enrich against.</span>
+<span class="sd">            See https://maayanlab.cloud/Enrichr/#libraries for all available</span>
+<span class="sd">            databases/libaries</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.infile | stem}}.enrichr&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;inopts&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;genecol&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;genename&quot;</span><span class="p">:</span> <span class="s2">&quot;symbol&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dbs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;KEGG_2021_Human&quot;</span><span class="p">],</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/gsea/Enrichr.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/gsea/Enrichr.svelte&quot;</span><span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/version-select.js"></script>
+      <script src="../../../js/mkapi.js"></script>
+      <script src="../../../extra.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

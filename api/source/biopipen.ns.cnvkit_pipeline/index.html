@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>biopipen.ns.cnvkit_pipeline - biopipen</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.ns.cnvkit_pipeline";
+        var mkdocs_page_input_path = "api/source/biopipen.ns.cnvkit_pipeline.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">biopipen.ns.cnvkit_pipeline</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/source/biopipen.ns.cnvkit_pipeline.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">biopipen.ns.</span><span class="mkapi-object-name">cnvkit_pipeline</span>
+<span id="biopipen.ns.cnvkit_pipeline"></span><a class="mkapi-docs-link" href="../../biopipen.ns.cnvkit_pipeline">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;The CNVkit pipeline.&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Any</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span>
+<span class="kn">from</span> <span class="nn">diot</span> <span class="kn">import</span> <span class="n">Diot</span>
+<span class="kn">from</span> <span class="nn">datar.tibble</span> <span class="kn">import</span> <span class="n">tibble</span>
+<span class="kn">from</span> <span class="nn">pipen.utils</span> <span class="kn">import</span> <span class="n">mark</span><span class="p">,</span> <span class="n">is_loading_pipeline</span>
+<span class="kn">from</span> <span class="nn">biopipen.core.proc</span> <span class="kn">import</span> <span class="n">Proc</span>
+<span class="kn">from</span> <span class="nn">pipen_annotate</span> <span class="kn">import</span> <span class="n">annotate</span>
+<span class="kn">from</span> <span class="nn">pipen_args.procgroup</span> <span class="kn">import</span> <span class="n">ProcGroup</span>
+
+<span class="kn">from</span> <span class="nn">..core.config</span> <span class="kn">import</span> <span class="n">config</span>
+
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">cached_property</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
+
+
+<span class="nd">@lru_cache</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">_metadf</span><span class="p">(</span><span class="n">metafile</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">metafile</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_1st</span><span class="p">(</span><span class="n">df</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+
+<span class="k">class</span> <span class="nc">_MetaCol</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the column name from the metafile&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">default_cols</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cols</span> <span class="o">=</span> <span class="n">cols</span> <span class="ow">or</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_cols</span> <span class="o">=</span> <span class="n">default_cols</span>
+
+    <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cols</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_cols</span><span class="p">[</span><span class="n">name</span><span class="p">])</span>
+
+
+<span class="k">class</span> <span class="nc">CNVkitPipeline</span><span class="p">(</span><span class="n">ProcGroup</span><span class="p">):</span><span id="biopipen.ns.cnvkit_pipeline.CNVkitPipeline"></span><a class="mkapi-docs-link" title="biopipen.ns.cnvkit_pipeline.CNVkitPipeline" href="../../biopipen.ns.cnvkit_pipeline/#biopipen.ns.cnvkit_pipeline.CNVkitPipeline">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The CNVkit pipeline</span>
+
+<span class="sd">    Unlike `cnvkit.py batch`, this decouples the steps of the `batch` command so</span>
+<span class="sd">    that we can control the details of each step.</span>
+
+<span class="sd">    Options for different processes can be specified by `[CNVkitXXX.envs.xxx]`</span>
+<span class="sd">    See `biopipen.ns.cnvkit.CNVkitXXX` for more details.</span>
+
+<span class="sd">    To run this pipeline from command line, with the `pipen-run` plugin:</span>
+<span class="sd">    &gt;&gt;&gt; # In this case, `pipeline.cnvkit_pipeline.metafile` must be provided</span>
+<span class="sd">    &gt;&gt;&gt; pipen run cnvkit_pipeline CNVkitPipeline &lt;other pipeline args&gt;</span>
+
+<span class="sd">    To use this as a dependency for other pipelines -</span>
+<span class="sd">    &gt;&gt;&gt; from biopipen.ns.cnvkit_pipeline import CNVkitPipeline</span>
+<span class="sd">    &gt;&gt;&gt; pipeline = CNVkitPipeline(&lt;options&gt;)</span>
+<span class="sd">    &gt;&gt;&gt; # pipeline.starts: Start processes of the pipeline</span>
+<span class="sd">    &gt;&gt;&gt; # pipeline.ends: End processes of the pipeline</span>
+<span class="sd">    &gt;&gt;&gt; # pipeline.procs.&lt;proc&gt;: The process with name &lt;proc&gt;</span>
+
+<span class="sd">    See also the docs for details</span>
+<span class="sd">    &lt;https://pwwang.github.io/biopipen/pipelines/cnvkit_pipeline/&gt;</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        metafile (order=-99): A tab-separated file.</span>
+<span class="sd">            * Sample: Unique IDs of the samples. Required.</span>
+<span class="sd">            * `&lt;bam&gt;`: The path to the bam file, better using absolute path.</span>
+<span class="sd">            * `&lt;group&gt;`: The type of the sample, defining the tumor/normal</span>
+<span class="sd">                samples.</span>
+<span class="sd">            * `&lt;sex&gt;`: Guess each sample from coverage of X and Y chromosomes</span>
+<span class="sd">                if not given.</span>
+<span class="sd">            * `&lt;purity&gt;`: Estimated tumor cell fraction, a.k.a. purity or</span>
+<span class="sd">                cellularity.</span>
+<span class="sd">            * `&lt;snpvcf&gt;`: file name containing variants for segmentation by</span>
+<span class="sd">                allele frequencies.</span>
+<span class="sd">            * `&lt;vcf_sample_id&gt;`: Sample ID in the VCF file.</span>
+<span class="sd">            * `&lt;vcf_normal_id&gt;`: Normal sample ID in the VCF file.</span>
+<span class="sd">            * `&lt;guess_baits&gt;`: Whether use this bam file to guess the baits</span>
+<span class="sd">        metacols (ns;order=-98): The column names for each type of information</span>
+<span class="sd">            in metafile.</span>
+<span class="sd">            - group (default=Group): The column name in the metafile that</span>
+<span class="sd">                indicates the sample group</span>
+<span class="sd">            - purity: The column name in the metafile that indicates the sample</span>
+<span class="sd">                purity</span>
+<span class="sd">            - snpvcf: The column name in the metafile that indicates the path to</span>
+<span class="sd">                the SNP VCFflag</span>
+<span class="sd">            - bam: The column name in the metafile that indicates the path to</span>
+<span class="sd">                the BAM file</span>
+<span class="sd">            - vcf_sample_id: column name in the metafile that indicates the</span>
+<span class="sd">                sample ID in the VCF file</span>
+<span class="sd">            - vcf_normal_id: olumn name in the metafile that indicates the</span>
+<span class="sd">                normal sample ID in the VCF file</span>
+<span class="sd">            - sex:flagin the metafile that indicates the sample sex</span>
+<span class="sd">            - guess_baits: The column name in the metafile that indicates</span>
+<span class="sd">                whether to guess the bait file from the bam files</span>
+<span class="sd">        baitfile: Potentially targeted genomic regions.</span>
+<span class="sd">            E.g. all possible exons for the reference genome.</span>
+<span class="sd">            This is optional when `method` is `wgs`.</span>
+<span class="sd">        accfile: The accessible genomic regions.</span>
+<span class="sd">            If not given, use `cnvkit.py access` to generate one.</span>
+<span class="sd">        access_excludes (list): File(s) with regions to be excluded for</span>
+<span class="sd">            `cnvkit.py access`.</span>
+<span class="sd">        guessbaits_guided (flag): Whether to use guided mode for</span>
+<span class="sd">            guessing baits using `baitfile`, otherwise unguided, using the</span>
+<span class="sd">            `accfile`.</span>
+<span class="sd">        guessbaits (flag): Guess the bait file from the bam files,</span>
+<span class="sd">            either guided or unguided.</span>
+<span class="sd">            If False, `baitfile` is used. Otherwise, if `baitfile` is given,</span>
+<span class="sd">            use it (guided), otherwise use `accfile` (unguided).</span>
+<span class="sd">            The bam files with `metacols.guess_baits` column set to</span>
+<span class="sd">            `True`, `TRUE`, `true`, `1`, `Yes`, `YES`, or `yes`</span>
+<span class="sd">            will be used to guess the bait file.</span>
+<span class="sd">        heatmap_cnr (flag): Whether to generate a heatmap of the</span>
+<span class="sd">            `.cnr` files (bin-level signals). This is allowed to set to `False`,</span>
+<span class="sd">            it will take longer to run.</span>
+<span class="sd">        case: The group name of samples in `metacols.group` to call CNVs for.</span>
+<span class="sd">            If not specified, use all samples. In such a case, `control` must</span>
+<span class="sd">            not be specified, as we are using a flat reference.</span>
+<span class="sd">        control: The group name of samples in `metacols.group` to use as</span>
+<span class="sd">            reference if not specified, use a flat reference.</span>
+<span class="sd">        cnvkit: the path to the cnvkit.py executable, defaults to</span>
+<span class="sd">            `config.exe.cnvkit` from `./.biopipen.toml` or `~/.biopipen.toml`.</span>
+<span class="sd">        rscript: Path to the Rscript excecutable to use for running R code.</span>
+<span class="sd">            Requires `DNAcopy` to be installed in R, defaults to</span>
+<span class="sd">            `config.lang.rscript`</span>
+<span class="sd">        samtools: Path to samtools, used for guessing bait file.</span>
+<span class="sd">        convert: Linux `convert` command to convert pdf to png</span>
+<span class="sd">            So that they can be embedded in the HTML report.</span>
+<span class="sd">        ncores: Default number of cores to use for all processes with</span>
+<span class="sd">            `envs.ncores`, defaults to `config.misc.ncores`</span>
+<span class="sd">        reffa: the reference genome (e.g. hg19.fa).</span>
+<span class="sd">            Used by `CNVkitAccess`, `CNVkitAutobin` and `CNVkitReference`</span>
+<span class="sd">        annotate: Use gene models from this file to assign names to the</span>
+<span class="sd">            target regions. Format: UCSC `refFlat.txt` or `ensFlat.txt` file</span>
+<span class="sd">            (preferred), or BED, interval list, GFF, or similar.</span>
+<span class="sd">        short_names (flag): Reduce multi-accession bait labels to</span>
+<span class="sd">            be short and consistent.</span>
+<span class="sd">        method (choice): Sequencing protocol, determines whether and how to</span>
+<span class="sd">            use antitarget bins.</span>
+<span class="sd">            - hybrid: hybridization capture</span>
+<span class="sd">            - amplicon: targeted amplicon sequencing</span>
+<span class="sd">            - wgs: whole genome sequencing</span>
+<span class="sd">        male_reference (flag): Use or assume a male reference</span>
+<span class="sd">            (i.e. female samples will have +1 log-CNR of chrX; otherwise</span>
+<span class="sd">            male samples would have -1 chrX).</span>
+<span class="sd">            Used by `CNVkitReference`, `CNVkitCall`, `CNVkitHeatmapCns` and</span>
+<span class="sd">            `CNVkitHeatmapCnr`.</span>
+<span class="sd">        drop_low_coverage (flag): Drop very-low-coverage bins</span>
+<span class="sd">            before segmentation to avoid false-positive deletions in</span>
+<span class="sd">            poor-quality tumor samples. Used by `CNVkitSegment` and `CNVkitCall`</span>
+<span class="sd">        no_gc (flag): Skip GC correction for</span>
+<span class="sd">            `cnvkit.py reference/fix`.</span>
+<span class="sd">        no_edge (flag): Skip edge-effect correction for</span>
+<span class="sd">            `cnvkit.py reference/fix`.</span>
+<span class="sd">        no_rmask (flag): Skip RepeatMasker correction for</span>
+<span class="sd">            `cnvkit.py reference/fix`.</span>
+<span class="sd">            no_* options are used by `CNVkitReference` and `CNVkitFix`</span>
+<span class="sd">        min_variant_depth (type=int): Minimum read depth for a SNV to be</span>
+<span class="sd">            displayed in the b-allele frequency plot.</span>
+<span class="sd">            Used by `CNVkitSegment` and `CNVkitCall`</span>
+<span class="sd">        zygosity_freq (type=float): Ignore VCF&#39;s genotypes (GT field) and</span>
+<span class="sd">            instead infer zygosity from allele frequencies.</span>
+<span class="sd">            Used by `CNVkitSegment` and `CNVkitCall`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">DEFAULTS</span> <span class="o">=</span> <span class="n">Diot</span><span class="p">(</span>
+        <span class="n">metafile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">baitfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">accfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">cnvkit</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+        <span class="n">convert</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">convert</span><span class="p">,</span>
+        <span class="n">rscript</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span><span class="p">,</span>
+        <span class="n">samtools</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">samtools</span><span class="p">,</span>
+        <span class="n">ncores</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="n">reffa</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">reffa</span><span class="p">,</span>
+        <span class="n">annotate</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">refflat</span><span class="p">,</span>
+        <span class="n">short_names</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">method</span><span class="o">=</span><span class="s2">&quot;hybrid&quot;</span><span class="p">,</span>
+        <span class="n">guessbaits</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">heatmap_cnr</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">case</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">control</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">access_excludes</span><span class="o">=</span><span class="p">[],</span>
+        <span class="n">guessbaits_guided</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">male_reference</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">drop_low_coverage</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">min_variant_depth</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+        <span class="n">no_gc</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">no_edge</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">no_rmask</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">zygosity_freq</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span>
+        <span class="n">metacols</span><span class="o">=</span><span class="n">Diot</span><span class="p">(</span>
+            <span class="n">group</span><span class="o">=</span><span class="s2">&quot;Group&quot;</span><span class="p">,</span>
+            <span class="n">purity</span><span class="o">=</span><span class="s2">&quot;Purity&quot;</span><span class="p">,</span>
+            <span class="n">snpvcf</span><span class="o">=</span><span class="s2">&quot;SnpVcf&quot;</span><span class="p">,</span>
+            <span class="n">bam</span><span class="o">=</span><span class="s2">&quot;Bam&quot;</span><span class="p">,</span>
+            <span class="n">vcf_sample_id</span><span class="o">=</span><span class="s2">&quot;VcfSampleId&quot;</span><span class="p">,</span>
+            <span class="n">vcf_normal_id</span><span class="o">=</span><span class="s2">&quot;VcfNormalId&quot;</span><span class="p">,</span>
+            <span class="n">sex</span><span class="o">=</span><span class="s2">&quot;Sex&quot;</span><span class="p">,</span>
+            <span class="n">guess_baits</span><span class="o">=</span><span class="s2">&quot;GuessBaits&quot;</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="nd">@cached_property</span>
+    <span class="k">def</span> <span class="nf">col</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the column names by self.col.&lt;colname&gt;&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">_MetaCol</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;metacols&quot;</span><span class="p">),</span>
+            <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">DEFAULTS</span><span class="o">.</span><span class="n">metacols</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_metafile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build MetaFile process&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.misc</span> <span class="kn">import</span> <span class="n">File2Proc</span>
+
+        <span class="nd">@mark</span><span class="p">(</span><span class="n">board_config_hidden</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">class</span> <span class="nc">MetaFile</span><span class="p">(</span><span class="n">File2Proc</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;Pass by the metafile to the next process.</span>
+
+<span class="sd">            When the group argument `metafile` is provided, it will be used</span>
+<span class="sd">            as the input data, otherwise, this process group should be a</span>
+<span class="sd">            part of a pipeline, and the metafile will be passed by its</span>
+<span class="sd">            required processes.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="c1"># Do not require metafile, as we could use the pipeline as part of</span>
+            <span class="c1"># another pipeline, which can generate a metafile</span>
+            <span class="c1"># Remember to set the dependency in the pipeline:</span>
+            <span class="c1"># &gt;&gt;&gt; pipeline.procs.MetaFile.requires = [other_pipeline.procs]</span>
+            <span class="c1"># where other_pipeline.procs generate the metafile</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">metafile</span><span class="p">:</span>
+                <span class="n">input_data</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">metafile</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">MetaFile</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cnvkit_access</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CNVkitAccess process&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;accfile&quot;</span><span class="p">):</span>
+            <span class="kn">from</span> <span class="nn">.misc</span> <span class="kn">import</span> <span class="n">File2Proc</span>
+
+            <span class="nd">@mark</span><span class="p">(</span><span class="n">board_config_hidden</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">class</span> <span class="nc">CNVkitAccess</span><span class="p">(</span><span class="n">File2Proc</span><span class="p">):</span>
+<span class="w">                </span><span class="sd">&quot;&quot;&quot;Pass by the access file to the next process.&quot;&quot;&quot;</span>
+                <span class="n">input_data</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">accfile</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="kn">from</span> <span class="nn">.cnvkit</span> <span class="kn">import</span> <span class="n">CNVkitAccess</span>
+
+            <span class="n">excludes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;excludes&quot;</span><span class="p">,</span> <span class="p">[])</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">excludes</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
+                <span class="n">excludes</span> <span class="o">=</span> <span class="p">[</span><span class="n">excludes</span><span class="p">]</span>
+
+            <span class="nd">@annotate</span><span class="o">.</span><span class="n">format_doc</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+            <span class="k">class</span> <span class="nc">CNVkitAccess</span><span class="p">(</span><span class="n">CNVkitAccess</span><span class="p">):</span>
+<span class="w">                </span><span class="sd">&quot;&quot;&quot;{{Summary}}</span>
+
+<span class="sd">                **When group argument `accfile` is provided, the arguments won&#39;t</span>
+<span class="sd">                work. The `accfile` will just be passed by to the next</span>
+<span class="sd">                process.**</span>
+
+<span class="sd">                Envs:</span>
+<span class="sd">                    cnvkit (pgarg): {{Envs.cnvkit.help | indent: 24}}.</span>
+<span class="sd">                        Defaults to group argument `cnvkit`.</span>
+<span class="sd">                    ref (pgarg=reffa): {{Envs.ref.help | indent: 24}}.</span>
+<span class="sd">                        Defaults group argument `reffa`.</span>
+<span class="sd">                &quot;&quot;&quot;</span>
+                <span class="n">input_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">excludes</span><span class="p">]</span>
+                <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+                    <span class="s2">&quot;ref&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">reffa</span><span class="p">,</span>
+                <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">CNVkitAccess</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cnvkit_guessbaits</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CNVkitGuessBaits process&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.cnvkit</span> <span class="kn">import</span> <span class="n">CNVkitGuessBaits</span>
+
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">guessbaits</span> <span class="ow">and</span>
+            <span class="ow">not</span> <span class="n">is_loading_pipeline</span><span class="p">(</span><span class="s2">&quot;-h&quot;</span><span class="p">,</span> <span class="s2">&quot;-h+&quot;</span><span class="p">,</span> <span class="s2">&quot;--help&quot;</span><span class="p">,</span> <span class="s2">&quot;--help+&quot;</span><span class="p">)</span>
+        <span class="p">):</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="k">def</span> <span class="nf">_guess_baits_bams</span><span class="p">(</span><span class="n">ch</span><span class="p">):</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">_metadf</span><span class="p">(</span><span class="n">_1st</span><span class="p">(</span><span class="n">ch</span><span class="p">))</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">guess_baits</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df</span><span class="p">:</span>
+                <span class="c1"># Use all bams</span>
+                <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">bam</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+            <span class="c1"># Use only specified</span>
+            <span class="n">guess_baits</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">guess_baits</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+                <span class="p">(</span><span class="n">guess_baits</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1"># noqa</span>
+                <span class="o">|</span> <span class="p">(</span><span class="n">guess_baits</span> <span class="o">==</span> <span class="s2">&quot;True&quot;</span><span class="p">)</span>
+                <span class="o">|</span> <span class="p">(</span><span class="n">guess_baits</span> <span class="o">==</span> <span class="s2">&quot;TRUE&quot;</span><span class="p">)</span>
+                <span class="o">|</span> <span class="p">(</span><span class="n">guess_baits</span> <span class="o">==</span> <span class="s2">&quot;true&quot;</span><span class="p">)</span>
+                <span class="o">|</span> <span class="p">(</span><span class="n">guess_baits</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span><span class="p">)</span>
+                <span class="o">|</span> <span class="p">(</span><span class="n">guess_baits</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="o">|</span> <span class="p">(</span><span class="n">guess_baits</span> <span class="o">==</span> <span class="s2">&quot;yes&quot;</span><span class="p">)</span>
+                <span class="o">|</span> <span class="p">(</span><span class="n">guess_baits</span> <span class="o">==</span> <span class="s2">&quot;YES&quot;</span><span class="p">)</span>
+                <span class="o">|</span> <span class="p">(</span><span class="n">guess_baits</span> <span class="o">==</span> <span class="s2">&quot;Yes&quot;</span><span class="p">),</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">bam</span><span class="p">,</span>
+            <span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">guessbaits_guided</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">baitfile</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;`baitfile` must be specified for guided mode &quot;</span>
+                    <span class="s2">&quot;to guess baits. See: &quot;</span>
+                    <span class="s2">&quot;https://cnvkit.readthedocs.io/en/stable/scripts.html&quot;</span>
+                <span class="p">)</span>
+
+            <span class="nd">@annotate</span><span class="o">.</span><span class="n">format_doc</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+            <span class="k">class</span> <span class="nc">CNVkitGuessBaits</span><span class="p">(</span><span class="n">CNVkitGuessBaits</span><span class="p">):</span>
+<span class="w">                </span><span class="sd">&quot;&quot;&quot;{{Summary}}</span>
+
+<span class="sd">                Envs:</span>
+<span class="sd">                    cnvkit (pgarg): {{Envs.cnvkit.help | indent: 24}}.</span>
+<span class="sd">                        Defaults to group argument `cnvkit`.</span>
+<span class="sd">                    samtools (pgarg): {{Envs.samtools.help | indent: 24}}.</span>
+<span class="sd">                        Defaults to group argument `samtools`.</span>
+<span class="sd">                    ncores (pgarg): {{Envs.ncores.help | indent: 24}}.</span>
+<span class="sd">                        Defaults to group argument `ncores`.</span>
+<span class="sd">                    ref (pgarg=reffa): {{Envs.ref.help | indent: 24}}.</span>
+<span class="sd">                        Defaults to group argument `reffa`.</span>
+<span class="sd">                    guided (pgarg): {{Envs.guided.help | indent: 24}}.</span>
+<span class="sd">                        Defaults to group argument `guessbaits_guided`.</span>
+<span class="sd">                &quot;&quot;&quot;</span>
+                <span class="n">requires</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_metafile</span>
+                <span class="n">input_data</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">metafile_ch</span><span class="p">:</span> <span class="n">tibble</span><span class="p">(</span>
+                    <span class="n">bamfiles</span><span class="o">=</span><span class="p">[</span><span class="n">_guess_baits_bams</span><span class="p">(</span><span class="n">metafile_ch</span><span class="p">)],</span>
+                    <span class="n">atfile</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">baitfile</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+                    <span class="s2">&quot;samtools&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">samtools</span><span class="p">,</span>
+                    <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+                    <span class="s2">&quot;ref&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">reffa</span><span class="p">,</span>
+                    <span class="s2">&quot;guided&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="p">}</span>
+        <span class="k">else</span><span class="p">:</span>  <span class="c1"># unguided</span>
+            <span class="nd">@annotate</span><span class="o">.</span><span class="n">format_doc</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+            <span class="k">class</span> <span class="nc">CNVkitGuessBaits</span><span class="p">(</span><span class="n">CNVkitGuessBaits</span><span class="p">):</span>
+<span class="w">                </span><span class="sd">&quot;&quot;&quot;{{Summary}}</span>
+
+<span class="sd">                Envs:</span>
+<span class="sd">                    cnvkit (pgarg): {{Envs.cnvkit.help | indent: 24}}.</span>
+<span class="sd">                        Defaults to group argument `cnvkit`.</span>
+<span class="sd">                    samtools (pgarg): {{Envs.samtools.help | indent: 24}}.</span>
+<span class="sd">                        Defaults to group argument `samtools`.</span>
+<span class="sd">                    ncores (pgarg): {{Envs.ncores.help | indent: 24}}.</span>
+<span class="sd">                        Defaults to group argument `ncores`.</span>
+<span class="sd">                    ref (pgarg=reffa): {{Envs.ref.help | indent: 24}}.</span>
+<span class="sd">                        Defaults to group argument `reffa`.</span>
+<span class="sd">                    guided (pgarg): {{Envs.guided.help | indent: 24}}.</span>
+<span class="sd">                        Defaults to group argument `guessbaits_guided`.</span>
+<span class="sd">                &quot;&quot;&quot;</span>
+                <span class="n">requires</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_metafile</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_access</span>
+                <span class="n">input_data</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">metafile_ch</span><span class="p">,</span> <span class="n">access_ch</span><span class="p">:</span> <span class="n">tibble</span><span class="p">(</span>
+                    <span class="n">bamfiles</span><span class="o">=</span><span class="p">[</span><span class="n">_guess_baits_bams</span><span class="p">(</span><span class="n">metafile_ch</span><span class="p">)],</span>
+                    <span class="n">accessfile</span><span class="o">=</span><span class="n">_1st</span><span class="p">(</span><span class="n">access_ch</span><span class="p">),</span>
+                <span class="p">)</span>
+                <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+                    <span class="s2">&quot;samtools&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">samtools</span><span class="p">,</span>
+                    <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+                    <span class="s2">&quot;ref&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">reffa</span><span class="p">,</span>
+                    <span class="s2">&quot;guided&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">CNVkitGuessBaits</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cnvkit_autobin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CNVkitAutobin process&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.cnvkit</span> <span class="kn">import</span> <span class="n">CNVkitAutobin</span>
+
+        <span class="nd">@annotate</span><span class="o">.</span><span class="n">format_doc</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="k">class</span> <span class="nc">CNVkitAutobin</span><span class="p">(</span><span class="n">CNVkitAutobin</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;{{Summary}}</span>
+
+<span class="sd">            Envs:</span>
+<span class="sd">                method (pgarg): {{Envs.method.help | indent: 20}}.</span>
+<span class="sd">                cnvkit (pgarg): {{Envs.cnvkit.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `cnvkit`.</span>
+<span class="sd">                ref (pgarg=reffa): {{Envs.ref.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `reffa`.</span>
+<span class="sd">                annotate (pgarg): {{Envs.annotate.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `annotate`.</span>
+<span class="sd">                short_names (pgarg): {{Envs.short_names.help | indent:20}}.</span>
+<span class="sd">                    Defaults to group argument `short_names`.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_guessbaits</span><span class="p">:</span>
+                <span class="n">requires</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">p_metafile</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_access</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_guessbaits</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="n">input_data</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">ch1</span><span class="p">,</span> <span class="n">ch2</span><span class="p">,</span> <span class="n">ch3</span><span class="p">:</span> <span class="n">tibble</span><span class="p">(</span>
+                    <span class="n">bamfiles</span><span class="o">=</span><span class="p">[</span><span class="n">_metadf</span><span class="p">(</span><span class="n">_1st</span><span class="p">(</span><span class="n">ch1</span><span class="p">))[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">bam</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()],</span>
+                    <span class="n">accfile</span><span class="o">=</span><span class="n">_1st</span><span class="p">(</span><span class="n">ch2</span><span class="p">),</span>
+                    <span class="n">baitfile</span><span class="o">=</span><span class="p">(</span>
+                        <span class="n">_1st</span><span class="p">(</span><span class="n">ch3</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">guessbaits</span>
+                        <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">baitfile</span>
+                    <span class="p">),</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">requires</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_metafile</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_access</span>
+                <span class="n">input_data</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">ch1</span><span class="p">,</span> <span class="n">ch2</span><span class="p">:</span> <span class="n">tibble</span><span class="p">(</span>
+                    <span class="n">bamfiles</span><span class="o">=</span><span class="p">[</span><span class="n">_metadf</span><span class="p">(</span><span class="n">_1st</span><span class="p">(</span><span class="n">ch1</span><span class="p">))[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">bam</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()],</span>
+                    <span class="n">accfile</span><span class="o">=</span><span class="n">_1st</span><span class="p">(</span><span class="n">ch2</span><span class="p">),</span>
+                    <span class="n">baitfile</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">baitfile</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+                <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
+                <span class="s2">&quot;annotate&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">annotate</span><span class="p">,</span>
+                <span class="s2">&quot;short_names&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">short_names</span><span class="p">,</span>
+                <span class="s2">&quot;ref&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">reffa</span><span class="p">,</span>
+            <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">CNVkitAutobin</span>
+
+    <span class="k">def</span> <span class="nf">_p_cnvkit_coverage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">anti</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CNVkitTargetCoverage and CNVkitAntiTargetCoverage processes&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.cnvkit</span> <span class="kn">import</span> <span class="n">CNVkitCoverage</span>
+
+        <span class="n">p</span> <span class="o">=</span> <span class="n">Proc</span><span class="o">.</span><span class="n">from_proc</span><span class="p">(</span>
+            <span class="n">CNVkitCoverage</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;CNVkitCoverageAnittarget&quot;</span> <span class="k">if</span> <span class="n">anti</span> <span class="k">else</span> <span class="s2">&quot;CNVkitCoverageTarget&quot;</span><span class="p">,</span>
+            <span class="n">requires</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">p_metafile</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_autobin</span><span class="p">],</span>
+            <span class="n">input_data</span><span class="o">=</span><span class="k">lambda</span> <span class="n">ch1</span><span class="p">,</span> <span class="n">ch2</span><span class="p">:</span> <span class="n">tibble</span><span class="p">(</span>
+                <span class="n">_metadf</span><span class="p">(</span><span class="n">_1st</span><span class="p">(</span><span class="n">ch1</span><span class="p">))[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">bam</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+                <span class="n">target_file</span><span class="o">=</span><span class="n">ch2</span><span class="p">[</span>
+                    <span class="s2">&quot;antitarget_file&quot;</span> <span class="k">if</span> <span class="n">anti</span> <span class="k">else</span> <span class="s2">&quot;target_file&quot;</span>
+                <span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="p">),</span>
+            <span class="n">envs</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+                <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+                <span class="s2">&quot;ref&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">reffa</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">anti</span><span class="p">:</span>
+            <span class="n">p</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Build the coverage for the anti-target regions&quot;&quot;&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">p</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Build the coverage for the target regions&quot;&quot;&quot;</span>
+
+        <span class="n">p</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">        {{* Summary.long }}</span>
+
+<span class="s2">        Envs:</span>
+<span class="s2">            cnvkit (pgarg): {{Envs.cnvkit.help | indent: 16}}.</span>
+<span class="s2">                Defaults to group argument `cnvkit`.</span>
+<span class="s2">            ncores (pgarg): {{Envs.ncores.help | indent: 16}}.</span>
+<span class="s2">                Defaults to group argument `ncores`.</span>
+<span class="s2">            ref (pgarg=reffa): {{Envs.ref.help | indent: 16}}.</span>
+<span class="s2">                Defaults to group argument `reffa`.</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">annotate</span><span class="o">.</span><span class="n">format_doc</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)(</span><span class="n">p</span><span class="p">)</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cnvkit_coverage_target</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CNVkitCoverageTarget process&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_p_cnvkit_coverage</span><span class="p">(</span><span class="n">anti</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cnvkit_coverage_antitarget</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CNVkitCoverageAntiTarget process&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_p_cnvkit_coverage</span><span class="p">(</span><span class="n">anti</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cnvkit_reference</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CNVkitReference process&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.cnvkit</span> <span class="kn">import</span> <span class="n">CNVkitReference</span>
+
+        <span class="k">def</span> <span class="nf">_input_data</span><span class="p">(</span><span class="n">ch1</span><span class="p">,</span> <span class="n">ch2</span><span class="p">,</span> <span class="n">ch3</span><span class="p">,</span> <span class="n">ch4</span><span class="p">):</span>
+            <span class="n">metadf</span> <span class="o">=</span> <span class="n">_metadf</span><span class="p">(</span><span class="n">_1st</span><span class="p">(</span><span class="n">ch1</span><span class="p">))</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">control</span><span class="p">:</span>
+                <span class="c1"># Use control samples to build reference</span>
+                <span class="n">control_masks</span> <span class="o">=</span> <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">group</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">control</span>
+                <span class="n">covfiles</span> <span class="o">=</span> <span class="p">[</span>
+                    <span class="n">ch2</span><span class="o">.</span><span class="n">outfile</span><span class="p">[</span><span class="n">control_masks</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+                    <span class="o">+</span> <span class="n">ch3</span><span class="o">.</span><span class="n">outfile</span><span class="p">[</span><span class="n">control_masks</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+                <span class="p">]</span>
+                <span class="n">target_file</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="n">antitarget_file</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">sex</span> <span class="ow">in</span> <span class="n">metadf</span><span class="p">:</span>
+                    <span class="n">all_sex</span> <span class="o">=</span> <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">sex</span><span class="p">][</span><span class="n">control_masks</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+                    <span class="n">sample_sex</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_sex</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">all_sex</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">sample_sex</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Build a flat reference</span>
+                <span class="n">covfiles</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+                <span class="n">target_file</span> <span class="o">=</span> <span class="n">ch4</span><span class="o">.</span><span class="n">target_file</span>
+                <span class="n">antitarget_file</span> <span class="o">=</span> <span class="n">ch4</span><span class="o">.</span><span class="n">antitarget_file</span>
+                <span class="n">sample_sex</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+
+            <span class="k">return</span> <span class="n">tibble</span><span class="p">(</span>
+                <span class="n">covfiles</span><span class="o">=</span><span class="n">covfiles</span><span class="p">,</span>
+                <span class="n">target_file</span><span class="o">=</span><span class="n">target_file</span><span class="p">,</span>
+                <span class="n">antitarget_file</span><span class="o">=</span><span class="n">antitarget_file</span><span class="p">,</span>
+                <span class="n">sample_sex</span><span class="o">=</span><span class="n">sample_sex</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="nd">@annotate</span><span class="o">.</span><span class="n">format_doc</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="k">class</span> <span class="nc">CNVkitReference</span><span class="p">(</span><span class="n">CNVkitReference</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;{{Summary}}</span>
+
+<span class="sd">            Envs:</span>
+<span class="sd">                cnvkit (pgarg): {{Envs.cnvkit.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `cnvkit`.</span>
+<span class="sd">                no_gc (pgarg): {{Envs.no_gc.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `no_gc`.</span>
+<span class="sd">                no_edge (pgarg): {{Envs.no_edge.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `no_edge`.</span>
+<span class="sd">                no_rmask (pgarg): {{Envs.no_rmask.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `no_rmask`.</span>
+<span class="sd">                ref (pgarg=reffa): {{Envs.ref.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `reffa`.</span>
+<span class="sd">                male_reference (pgarg): {{</span>
+<span class="sd">                    Envs.male_reference.help | indent: 20 }}.</span>
+<span class="sd">                    Defaults to group argument `male_reference`.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">requires</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">p_metafile</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_coverage_target</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_coverage_antitarget</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_autobin</span><span class="p">,</span>
+            <span class="p">]</span>
+            <span class="n">input_data</span> <span class="o">=</span> <span class="n">_input_data</span>
+            <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+                <span class="s2">&quot;no_gc&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">no_gc</span><span class="p">,</span>
+                <span class="s2">&quot;no_edge&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">no_edge</span><span class="p">,</span>
+                <span class="s2">&quot;no_rmask&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">no_rmask</span><span class="p">,</span>
+                <span class="s2">&quot;ref&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">reffa</span><span class="p">,</span>
+                <span class="s2">&quot;male_reference&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">male_reference</span><span class="p">,</span>
+            <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">CNVkitReference</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cnvkit_fix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CNVkitFix process&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.cnvkit</span> <span class="kn">import</span> <span class="n">CNVkitFix</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">case</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">control</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;`case` is not specified, meaning using all samples as cases, &quot;</span>
+                <span class="s2">&quot;but `control` is specified (we can only use a flat reference &quot;</span>
+                <span class="s2">&quot;in this case).&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">_input_data</span><span class="p">(</span><span class="n">ch1</span><span class="p">,</span> <span class="n">ch2</span><span class="p">,</span> <span class="n">ch3</span><span class="p">,</span> <span class="n">ch4</span><span class="p">):</span>
+            <span class="n">metadf</span> <span class="o">=</span> <span class="n">_metadf</span><span class="p">(</span><span class="n">_1st</span><span class="p">(</span><span class="n">ch1</span><span class="p">))</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">case</span><span class="p">:</span>
+                <span class="n">tumor_masks</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">metadf</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">tumor_masks</span> <span class="o">=</span> <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">group</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">case</span>
+
+            <span class="k">return</span> <span class="n">tibble</span><span class="p">(</span>
+                <span class="n">target_file</span><span class="o">=</span><span class="n">ch2</span><span class="o">.</span><span class="n">outfile</span><span class="p">[</span><span class="n">tumor_masks</span><span class="p">],</span>
+                <span class="n">antitarget_file</span><span class="o">=</span><span class="n">ch3</span><span class="o">.</span><span class="n">outfile</span><span class="p">[</span><span class="n">tumor_masks</span><span class="p">],</span>
+                <span class="n">reference</span><span class="o">=</span><span class="n">ch4</span><span class="o">.</span><span class="n">outfile</span><span class="p">,</span>
+                <span class="n">sample_id</span><span class="o">=</span><span class="n">metadf</span><span class="p">[</span><span class="s2">&quot;Sample&quot;</span><span class="p">][</span><span class="n">tumor_masks</span><span class="p">],</span>
+            <span class="p">)</span>
+
+        <span class="nd">@annotate</span><span class="o">.</span><span class="n">format_doc</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="k">class</span> <span class="nc">CNVkitFix</span><span class="p">(</span><span class="n">CNVkitFix</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;{{Summary}}</span>
+
+<span class="sd">            Envs:</span>
+<span class="sd">                cnvkit (pgarg): {{Envs.cnvkit.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `cnvkit`.</span>
+<span class="sd">                no_gc (pgarg): {{Envs.no_gc.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `no_gc`.</span>
+<span class="sd">                no_edge (pgarg): {{Envs.no_edge.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `no_edge`.</span>
+<span class="sd">                no_rmask (pgarg): {{Envs.no_rmask.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `no_rmask`.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">requires</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">p_metafile</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_coverage_target</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_coverage_antitarget</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_reference</span><span class="p">,</span>
+            <span class="p">]</span>
+            <span class="n">input_data</span> <span class="o">=</span> <span class="n">_input_data</span>
+            <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+                <span class="s2">&quot;no_gc&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">no_gc</span><span class="p">,</span>
+                <span class="s2">&quot;no_edge&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">no_edge</span><span class="p">,</span>
+                <span class="s2">&quot;no_rmask&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">no_rmask</span><span class="p">,</span>
+            <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">CNVkitFix</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cnvkit_segment</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CNVkitSegment process&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.cnvkit</span> <span class="kn">import</span> <span class="n">CNVkitSegment</span>
+
+        <span class="k">def</span> <span class="nf">_input_data</span><span class="p">(</span><span class="n">ch1</span><span class="p">,</span> <span class="n">ch2</span><span class="p">):</span>
+            <span class="n">metadf</span> <span class="o">=</span> <span class="n">_metadf</span><span class="p">(</span><span class="n">_1st</span><span class="p">(</span><span class="n">ch1</span><span class="p">))</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">case</span><span class="p">:</span>
+                <span class="n">tumor_masks</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">metadf</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">tumor_masks</span> <span class="o">=</span> <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">group</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">case</span>
+
+            <span class="k">return</span> <span class="n">tibble</span><span class="p">(</span>
+                <span class="n">chrfile</span><span class="o">=</span><span class="n">ch2</span><span class="o">.</span><span class="n">outfile</span><span class="p">,</span>
+                <span class="n">vcf</span><span class="o">=</span><span class="p">(</span>
+                    <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">snpvcf</span><span class="p">][</span><span class="n">tumor_masks</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">snpvcf</span> <span class="ow">in</span> <span class="n">metadf</span>
+                    <span class="k">else</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+                <span class="p">),</span>
+                <span class="n">sample_id</span><span class="o">=</span><span class="p">(</span>
+                    <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">vcf_sample_id</span><span class="p">][</span><span class="n">tumor_masks</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">vcf_sample_id</span> <span class="ow">in</span> <span class="n">metadf</span>
+                    <span class="k">else</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+                <span class="p">),</span>
+                <span class="n">normal_id</span><span class="o">=</span><span class="p">(</span>
+                    <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">vcf_normal_id</span><span class="p">][</span><span class="n">tumor_masks</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">vcf_normal_id</span> <span class="ow">in</span> <span class="n">metadf</span><span class="o">.</span><span class="n">columns</span>
+                    <span class="k">else</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+                <span class="p">),</span>
+            <span class="p">)</span>
+
+        <span class="nd">@annotate</span><span class="o">.</span><span class="n">format_doc</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="k">class</span> <span class="nc">CNVkitSegment</span><span class="p">(</span><span class="n">CNVkitSegment</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;{{Summary}}</span>
+
+<span class="sd">            Envs:</span>
+<span class="sd">                cnvkit (pgarg): {{Envs.cnvkit.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `cnvkit`.</span>
+<span class="sd">                rscript (pgarg): {{Envs.rscript.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `rscript`.</span>
+<span class="sd">                ncores (pgarg): {{Envs.ncores.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `ncores`.</span>
+<span class="sd">                drop_low_coverage (pgarg): {{</span>
+<span class="sd">                    Envs.drop_low_coverage.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `drop_low_coverage`.</span>
+<span class="sd">                min_variant_depth (pgarg): {{</span>
+<span class="sd">                    Envs.min_variant_depth.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `min_variant_depth`.</span>
+<span class="sd">                zygosity_freq (pgarg): {{</span>
+<span class="sd">                    Envs.zygosity_freq.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `zygosity_freq`.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">requires</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_metafile</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_fix</span>
+            <span class="n">input_data</span> <span class="o">=</span> <span class="n">_input_data</span>
+            <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+                <span class="s2">&quot;rscript&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">rscript</span><span class="p">,</span>
+                <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+                <span class="s2">&quot;drop_low_coverage&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">drop_low_coverage</span><span class="p">,</span>
+                <span class="s2">&quot;min_variant_depth&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">min_variant_depth</span><span class="p">,</span>
+                <span class="s2">&quot;zygosity_freq&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">zygosity_freq</span><span class="p">,</span>
+            <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">CNVkitSegment</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cnvkit_scatter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CNVkitScatter process&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.cnvkit</span> <span class="kn">import</span> <span class="n">CNVkitScatter</span>
+
+        <span class="k">def</span> <span class="nf">_input_data</span><span class="p">(</span><span class="n">ch1</span><span class="p">,</span> <span class="n">ch2</span><span class="p">,</span> <span class="n">ch3</span><span class="p">):</span>
+            <span class="n">metadf</span> <span class="o">=</span> <span class="n">_metadf</span><span class="p">(</span><span class="n">_1st</span><span class="p">(</span><span class="n">ch1</span><span class="p">))</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">case</span><span class="p">:</span>
+                <span class="n">tumor_masks</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">metadf</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">tumor_masks</span> <span class="o">=</span> <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">group</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">case</span>
+
+            <span class="k">return</span> <span class="n">tibble</span><span class="p">(</span>
+                <span class="n">chrfile</span><span class="o">=</span><span class="n">ch2</span><span class="o">.</span><span class="n">outfile</span><span class="p">,</span>
+                <span class="n">cnsfile</span><span class="o">=</span><span class="n">ch3</span><span class="o">.</span><span class="n">outfile</span><span class="p">,</span>
+                <span class="n">vcf</span><span class="o">=</span><span class="p">(</span>
+                    <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">snpvcf</span><span class="p">][</span><span class="n">tumor_masks</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">snpvcf</span> <span class="ow">in</span> <span class="n">metadf</span>
+                    <span class="k">else</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+                <span class="p">),</span>
+                <span class="n">sample_id</span><span class="o">=</span><span class="p">(</span>
+                    <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">vcf_sample_id</span><span class="p">][</span><span class="n">tumor_masks</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">vcf_sample_id</span> <span class="ow">in</span> <span class="n">metadf</span>
+                    <span class="k">else</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+                <span class="p">),</span>
+                <span class="n">normal_id</span><span class="o">=</span><span class="p">(</span>
+                    <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">vcf_normal_id</span><span class="p">][</span><span class="n">tumor_masks</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">vcf_normal_id</span> <span class="ow">in</span> <span class="n">metadf</span>
+                    <span class="k">else</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+                <span class="p">),</span>
+            <span class="p">)</span>
+
+        <span class="nd">@annotate</span><span class="o">.</span><span class="n">format_doc</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="k">class</span> <span class="nc">CNVkitScatter</span><span class="p">(</span><span class="n">CNVkitScatter</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;{{Summary}}</span>
+
+<span class="sd">            Envs:</span>
+<span class="sd">                cnvkit (pgarg): {{Envs.cnvkit.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `cnvkit`.</span>
+<span class="sd">                convert (pgarg): {{Envs.convert.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `convert`.</span>
+<span class="sd">                min_variant_depth (pgarg): {{</span>
+<span class="sd">                    Envs.min_variant_depth.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `min_variant_depth`.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">requires</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_metafile</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_fix</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_segment</span>
+            <span class="n">input_data</span> <span class="o">=</span> <span class="n">_input_data</span>
+            <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+                <span class="s2">&quot;convert&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">convert</span><span class="p">,</span>
+                <span class="s2">&quot;min_variant_depth&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">min_variant_depth</span><span class="p">,</span>
+            <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">CNVkitScatter</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cnvkit_diagram</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CNVkitDiagram process&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.cnvkit</span> <span class="kn">import</span> <span class="n">CNVkitDiagram</span>
+
+        <span class="k">def</span> <span class="nf">_input_data</span><span class="p">(</span><span class="n">ch1</span><span class="p">,</span> <span class="n">ch2</span><span class="p">,</span> <span class="n">ch3</span><span class="p">):</span>
+            <span class="n">metadf</span> <span class="o">=</span> <span class="n">_metadf</span><span class="p">(</span><span class="n">_1st</span><span class="p">(</span><span class="n">ch1</span><span class="p">))</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">case</span><span class="p">:</span>
+                <span class="n">tumor_masks</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">metadf</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">tumor_masks</span> <span class="o">=</span> <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">group</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">case</span>
+
+            <span class="k">return</span> <span class="n">tibble</span><span class="p">(</span>
+                <span class="n">chrfile</span><span class="o">=</span><span class="n">ch2</span><span class="o">.</span><span class="n">outfile</span><span class="p">,</span>
+                <span class="n">cnsfile</span><span class="o">=</span><span class="n">ch3</span><span class="o">.</span><span class="n">outfile</span><span class="p">,</span>
+                <span class="n">sample_sex</span><span class="o">=</span><span class="p">(</span>
+                    <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">sex</span><span class="p">][</span><span class="n">tumor_masks</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">sex</span> <span class="ow">in</span> <span class="n">metadf</span>
+                    <span class="k">else</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+                <span class="p">),</span>
+            <span class="p">)</span>
+
+        <span class="nd">@annotate</span><span class="o">.</span><span class="n">format_doc</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="k">class</span> <span class="nc">CNVkitDiagram</span><span class="p">(</span><span class="n">CNVkitDiagram</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;{{Summary}}</span>
+
+<span class="sd">            Envs:</span>
+<span class="sd">                cnvkit (pgarg): {{Envs.cnvkit.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `cnvkit`.</span>
+<span class="sd">                convert (pgarg): {{Envs.convert.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `convert`.</span>
+<span class="sd">                male_reference (pgarg): {{</span>
+<span class="sd">                    Envs.male_reference.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `male_reference`.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">requires</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_metafile</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_fix</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_segment</span>
+            <span class="n">input_data</span> <span class="o">=</span> <span class="n">_input_data</span>
+            <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+                <span class="s2">&quot;convert&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">convert</span><span class="p">,</span>
+                <span class="s2">&quot;male_reference&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">male_reference</span><span class="p">,</span>
+            <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">CNVkitDiagram</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cnvkit_heatmap_cns</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CNVkitHeatmapCns process&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.cnvkit</span> <span class="kn">import</span> <span class="n">CNVkitHeatmap</span>
+
+        <span class="k">def</span> <span class="nf">_input_data</span><span class="p">(</span><span class="n">ch1</span><span class="p">,</span> <span class="n">ch2</span><span class="p">):</span>
+            <span class="n">metadf</span> <span class="o">=</span> <span class="n">_metadf</span><span class="p">(</span><span class="n">_1st</span><span class="p">(</span><span class="n">ch1</span><span class="p">))</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">case</span><span class="p">:</span>
+                <span class="n">tumor_masks</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">metadf</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">tumor_masks</span> <span class="o">=</span> <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">group</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">case</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">sex</span> <span class="ow">in</span> <span class="n">metadf</span><span class="p">:</span>
+                <span class="n">all_sex</span> <span class="o">=</span> <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">sex</span><span class="p">][</span><span class="n">tumor_masks</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+                <span class="n">sample_sex</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_sex</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">all_sex</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">sample_sex</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+
+            <span class="k">return</span> <span class="n">tibble</span><span class="p">(</span>
+                <span class="n">segfiles</span><span class="o">=</span><span class="p">[</span><span class="n">ch2</span><span class="o">.</span><span class="n">outfile</span><span class="o">.</span><span class="n">tolist</span><span class="p">()],</span>
+                <span class="n">sample_sex</span><span class="o">=</span><span class="n">sample_sex</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="nd">@annotate</span><span class="o">.</span><span class="n">format_doc</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="k">class</span> <span class="nc">CNVkitHeatmapCns</span><span class="p">(</span><span class="n">CNVkitHeatmap</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;Generate heatmaps of segment-level signals of multiple samples</span>
+
+<span class="sd">            {{* Summary.long }}</span>
+
+<span class="sd">            Envs:</span>
+<span class="sd">                cnvkit (pgarg): {{Envs.cnvkit.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `cnvkit`.</span>
+<span class="sd">                convert (pgarg): {{Envs.convert.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `convert`.</span>
+<span class="sd">                male_reference (pgarg): {{</span>
+<span class="sd">                    Envs.male_reference.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `male_reference`.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">requires</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_metafile</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_segment</span>
+            <span class="n">input_data</span> <span class="o">=</span> <span class="n">_input_data</span>
+            <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+                <span class="s2">&quot;convert&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">convert</span><span class="p">,</span>
+                <span class="s2">&quot;male_reference&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">male_reference</span><span class="p">,</span>
+            <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">CNVkitHeatmapCns</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cnvkit_heatmap_cnr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CNVkitHeatmapCnr process&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.cnvkit</span> <span class="kn">import</span> <span class="n">CNVkitHeatmap</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">heatmap_cnr</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="k">def</span> <span class="nf">_input_data</span><span class="p">(</span><span class="n">ch1</span><span class="p">,</span> <span class="n">ch2</span><span class="p">):</span>
+            <span class="n">metadf</span> <span class="o">=</span> <span class="n">_metadf</span><span class="p">(</span><span class="n">_1st</span><span class="p">(</span><span class="n">ch1</span><span class="p">))</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">case</span><span class="p">:</span>
+                <span class="n">tumor_masks</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">metadf</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">tumor_masks</span> <span class="o">=</span> <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">group</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">case</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">sex</span> <span class="ow">in</span> <span class="n">metadf</span><span class="p">:</span>
+                <span class="n">all_sex</span> <span class="o">=</span> <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">sex</span><span class="p">][</span><span class="n">tumor_masks</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+                <span class="n">sample_sex</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_sex</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">all_sex</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">sample_sex</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+
+            <span class="k">return</span> <span class="n">tibble</span><span class="p">(</span>
+                <span class="n">segfiles</span><span class="o">=</span><span class="p">[</span><span class="n">ch2</span><span class="o">.</span><span class="n">outfile</span><span class="o">.</span><span class="n">tolist</span><span class="p">()],</span>
+                <span class="n">sample_sex</span><span class="o">=</span><span class="n">sample_sex</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="nd">@annotate</span><span class="o">.</span><span class="n">format_doc</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="k">class</span> <span class="nc">CNVkitHeatmapCnr</span><span class="p">(</span><span class="n">CNVkitHeatmap</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;Heatmap of bin-level signals of multiple samples</span>
+
+<span class="sd">            Envs:</span>
+<span class="sd">                cnvkit (pgarg): {{Envs.cnvkit.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `cnvkit`.</span>
+<span class="sd">                convert (pgarg): {{Envs.convert.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `convert`.</span>
+<span class="sd">                male_reference (pgarg): {{</span>
+<span class="sd">                    Envs.male_reference.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `male_reference`.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">requires</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_metafile</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_fix</span>
+            <span class="n">input_data</span> <span class="o">=</span> <span class="n">_input_data</span>
+            <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+                <span class="s2">&quot;convert&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">convert</span><span class="p">,</span>
+                <span class="s2">&quot;male_reference&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">male_reference</span><span class="p">,</span>
+            <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">CNVkitHeatmapCnr</span>
+
+    <span class="nd">@ProcGroup</span><span class="o">.</span><span class="n">add_proc</span>
+    <span class="k">def</span> <span class="nf">p_cnvkit_call</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Build CNVkitCall process&quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">.cnvkit</span> <span class="kn">import</span> <span class="n">CNVkitCall</span>
+
+        <span class="k">def</span> <span class="nf">_input_data</span><span class="p">(</span><span class="n">ch1</span><span class="p">,</span> <span class="n">ch2</span><span class="p">,</span> <span class="n">ch3</span><span class="p">):</span>
+            <span class="n">metadf</span> <span class="o">=</span> <span class="n">_metadf</span><span class="p">(</span><span class="n">_1st</span><span class="p">(</span><span class="n">ch1</span><span class="p">))</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">case</span><span class="p">:</span>
+                <span class="n">tumor_masks</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">metadf</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">tumor_masks</span> <span class="o">=</span> <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">group</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">case</span>
+
+            <span class="k">return</span> <span class="n">tibble</span><span class="p">(</span>
+                <span class="n">cnrfile</span><span class="o">=</span><span class="n">ch2</span><span class="o">.</span><span class="n">outfile</span><span class="p">,</span>
+                <span class="n">cnsfile</span><span class="o">=</span><span class="n">ch3</span><span class="o">.</span><span class="n">outfile</span><span class="p">,</span>
+                <span class="n">vcf</span><span class="o">=</span><span class="p">(</span>
+                    <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">snpvcf</span><span class="p">][</span><span class="n">tumor_masks</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">snpvcf</span> <span class="ow">in</span> <span class="n">metadf</span>
+                    <span class="k">else</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+                <span class="p">),</span>
+                <span class="n">sample_id</span><span class="o">=</span><span class="p">(</span>
+                    <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">vcf_sample_id</span><span class="p">][</span><span class="n">tumor_masks</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">vcf_sample_id</span> <span class="ow">in</span> <span class="n">metadf</span>
+                    <span class="k">else</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+                <span class="p">),</span>
+                <span class="n">normal_id</span><span class="o">=</span><span class="p">(</span>
+                    <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">vcf_normal_id</span><span class="p">][</span><span class="n">tumor_masks</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">vcf_normal_id</span> <span class="ow">in</span> <span class="n">metadf</span>
+                    <span class="k">else</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+                <span class="p">),</span>
+                <span class="n">sample_sex</span><span class="o">=</span><span class="p">(</span>
+                    <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">sex</span><span class="p">][</span><span class="n">tumor_masks</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">sex</span> <span class="ow">in</span> <span class="n">metadf</span>
+                    <span class="k">else</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+                <span class="p">),</span>
+                <span class="n">purity</span><span class="o">=</span><span class="p">(</span>
+                    <span class="n">metadf</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">purity</span><span class="p">][</span><span class="n">tumor_masks</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">purity</span> <span class="ow">in</span> <span class="n">metadf</span>
+                    <span class="k">else</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+                <span class="p">),</span>
+            <span class="p">)</span>
+
+        <span class="nd">@annotate</span><span class="o">.</span><span class="n">format_doc</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="k">class</span> <span class="nc">CNVkitCall</span><span class="p">(</span><span class="n">CNVkitCall</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;{{Summary}}</span>
+
+<span class="sd">            Envs:</span>
+<span class="sd">                cnvkit (pgarg): {{Envs.cnvkit.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `cnvkit`.</span>
+<span class="sd">                drop_low_coverage (pgarg): {{</span>
+<span class="sd">                    Envs.drop_low_coverage.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `drop_low_coverage`.</span>
+<span class="sd">                male_reference (pgarg): {{</span>
+<span class="sd">                    Envs.male_reference.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `male_reference`.</span>
+<span class="sd">                min_variant_depth (pgarg): {{</span>
+<span class="sd">                    Envs.min_variant_depth.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `min_variant_depth`.</span>
+<span class="sd">                zygosity_freq (pgarg): {{</span>
+<span class="sd">                    Envs.zygosity_freq.help | indent: 20}}.</span>
+<span class="sd">                    Defaults to group argument `zygosity_freq`.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">requires</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_metafile</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_fix</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">p_cnvkit_segment</span>
+            <span class="n">input_data</span> <span class="o">=</span> <span class="n">_input_data</span>
+            <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;cnvkit&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">cnvkit</span><span class="p">,</span>
+                <span class="s2">&quot;drop_low_coverage&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">drop_low_coverage</span><span class="p">,</span>
+                <span class="s2">&quot;male_reference&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">male_reference</span><span class="p">,</span>
+                <span class="s2">&quot;min_variant_depth&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">min_variant_depth</span><span class="p">,</span>
+                <span class="s2">&quot;zygosity_freq&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="o">.</span><span class="n">zygosity_freq</span><span class="p">,</span>
+            <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">CNVkitCall</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">CNVkitPipeline</span><span class="p">()</span><span class="o">.</span><span class="n">as_pipen</span><span class="p">(</span>
+        <span class="c1"># If we run this procgroup as a whole, we don&#39;t want to collapse</span>
+        <span class="c1"># the processes in the index page of report.</span>
+        <span class="n">plugin_opts</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;report_no_collapse_pgs&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/version-select.js"></script>
+      <script src="../../../js/mkapi.js"></script>
+      <script src="../../../extra.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

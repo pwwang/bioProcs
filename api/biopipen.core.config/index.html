@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>biopipen.core.config - biopipen</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.core.config";
+        var mkdocs_page_input_path = "api/biopipen.core.config.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">biopipen.core</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">biopipen.core.config</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#biopipencoreconfigconfigitems">ConfigItems</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotfrom_namespace">from_namespace</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotsetitem">setitem</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotpop">pop</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotpopitem">popitem</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotupdate">update</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotupdate_recursively">update_recursively</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotior">ior</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotdelitem">delitem</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotfreeze">freeze</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotunfreeze">unfreeze</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotthaw">thaw</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotsetdefault">setdefault</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotaccessible_keys">accessible_keys</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotget">get</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotcontains">contains</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotclear">clear</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotcopy">copy</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotto_dict">to_dict</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotto_json">to_json</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotto_yaml">to_yaml</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diotdiotdiotto_toml">to_toml</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#biopipencoreconfigconfigitemsgetitem">getitem</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">API</li>
+          <li class="breadcrumb-item">biopipen.core</li>
+      <li class="breadcrumb-item active">biopipen.core.config</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/biopipen.core.config.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node" id="biopipen.core.config">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h2 id="biopipencoreconfig" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="../biopipen.core/#biopipen.core">biopipen.core</a>.</span><span class="mkapi-object-name">config</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.core.config/#biopipen.core.config" title="Source for biopipen.core.config">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Provides the envs from configuration files</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="#biopipen.core.config.ConfigItems">ConfigItems</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Provides the envs from configuration files and defaults thenon-existing values to None.
+<a class="mkapi-src-link" href="../source/biopipen.core.config/#biopipen.core.config.ConfigItems" title="Source for biopipen.core.config.ConfigItems">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.core.config.ConfigItems">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h3 id="biopipencoreconfigconfigitems" class="mkapi-object-body class top"><code class="mkapi-object-prefix"><a href="#biopipen.core.config">biopipen.core.config</a>.</code><code class="mkapi-object-name">ConfigItems</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">*args</code>, <code class="mkapi-object-signature">**kwargs</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.core.config/#biopipen.core.config.ConfigItems" title="Source for biopipen.core.config.ConfigItems">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base">diot.diot.Diot</span>
+
+<span class="mkapi-base">dict</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Provides the envs from configuration files and defaults thenon-existing values to None.</p>
+</div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">*args</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Anything that can be sent to dict construct</span></li>
+
+<li><code class="mkapi-item-name">**kwargs</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">keyword argument that can be sent to dict constructSome diot configurations can also be passed, including:
+diot_nest: Types to nestly convert values
+diot_transform: The transforms for keys
+diot_frozen: Whether to generate a frozen diot.
+    True: freeze the object recursively if there are Diot objects
+    in descendants
+    False: Don'f freeze
+    'shallow': Only freeze at depth = 1
+</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section methods">
+      <div class="mkapi-section-name methods">
+          <span class="mkapi-section-name-body methods">Methods</span> 
+        </div>
+      <div class="mkapi-section-body methods"><ul class="mkapi-items">
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.__contains__">__contains__</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(bool)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">True if the dictionary has the specified key, else False.<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.__contains__" title="Source for diot.diot.Diot.__contains__">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.__delitem__">__delitem__</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Delete self[key].<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.__delitem__" title="Source for diot.diot.Diot.__delitem__">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#biopipen.core.config.ConfigItems.__getitem__">__getitem__</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">x.<strong>getitem</strong>(y) &lt;==&gt; x[y]<a class="mkapi-src-link" href="../source/biopipen.core.config/#biopipen.core.config.ConfigItems.__getitem__" title="Source for biopipen.core.config.ConfigItems.__getitem__">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.__ior__">__ior__</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">other</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Diot)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Return self|=value.<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.__ior__" title="Source for diot.diot.Diot.__ior__">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.__setitem__">__setitem__</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code>, <code class="mkapi-object-signature">value</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Set self[key] to value.<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.__setitem__" title="Source for diot.diot.Diot.__setitem__">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.accessible_keys">accessible_keys</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Iterable)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Get the converted keys<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.accessible_keys" title="Source for diot.diot.Diot.accessible_keys">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.clear">clear</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Clear the object<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.clear" title="Source for diot.diot.Diot.clear">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.copy">copy</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Diot)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Shallow copy the object<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.copy" title="Source for diot.diot.Diot.copy">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.freeze">freeze</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">frozen</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Freeze the diot object<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.freeze" title="Source for diot.diot.Diot.freeze">&lt;/&gt;</a></span></li>
+
+<li class="classmethod"><code class="mkapi-item-name"><a href="#diot.diot.Diot.from_namespace">from_namespace</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">namespace</code>, <code class="mkapi-object-signature">recursive</code>, <code class="mkapi-object-signature">diot_nest</code>, <code class="mkapi-object-signature">diot_transform</code>, <code class="mkapi-object-signature">diot_frozen</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Diot)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Get a Diot object from an argparse namespace<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.from_namespace" title="Source for diot.diot.Diot.from_namespace">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.get">get</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code>, <code class="mkapi-object-signature">value</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Get the value of a key name<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.get" title="Source for diot.diot.Diot.get">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.pop">pop</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code>, <code class="mkapi-object-signature">*value</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Pop a key from the object and return the value. If key does notexist, return the given default value
+<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.pop" title="Source for diot.diot.Diot.pop">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.popitem">popitem</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Tuple)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Pop last item from the object<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.popitem" title="Source for diot.diot.Diot.popitem">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.setdefault">setdefault</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code>, <code class="mkapi-object-signature">value</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Set a default value to a key<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.setdefault" title="Source for diot.diot.Diot.setdefault">&lt;/&gt;</a></span></li>
+
+<li class="generator"><code class="mkapi-item-name"><a href="#diot.diot.Diot.thaw">thaw</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">recursive</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">A context manager for temporarily change the diot<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.thaw" title="Source for diot.diot.Diot.thaw">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.to_dict">to_dict</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Dict)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Turn the Box and sub Boxes back into a nativepython dictionary.
+<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.to_dict" title="Source for diot.diot.Diot.to_dict">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.to_json">to_json</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">filename</code>, <code class="mkapi-object-signature">encoding</code>, <code class="mkapi-object-signature">errors</code>, <code class="mkapi-object-signature">**json_kwargs</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert to a json string or save it to json file<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.to_json" title="Source for diot.diot.Diot.to_json">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.to_toml">to_toml</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">filename</code>, <code class="mkapi-object-signature">encoding</code>, <code class="mkapi-object-signature">errors</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert to a toml string or save it to toml file<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.to_toml" title="Source for diot.diot.Diot.to_toml">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.to_yaml">to_yaml</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">filename</code>, <code class="mkapi-object-signature">default_flow_style</code>, <code class="mkapi-object-signature">encoding</code>, <code class="mkapi-object-signature">errors</code>, <code class="mkapi-object-signature">**yaml_kwargs</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert to a yaml string or save it to yaml file<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.to_yaml" title="Source for diot.diot.Diot.to_yaml">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.unfreeze">unfreeze</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">recursive</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Unfreeze the diot object<a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.unfreeze" title="Source for diot.diot.Diot.unfreeze">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.update">update</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">*value</code>, <code class="mkapi-object-signature">**kwargs</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Update the object. Shortcut: <code>|=</code><a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.update" title="Source for diot.diot.Diot.update">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#diot.diot.Diot.update_recursively">update_recursively</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">*value</code>, <code class="mkapi-object-signature">**kwargs</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Update the object. Shortcut: <code>|=</code><a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.update_recursively" title="Source for diot.diot.Diot.update_recursively">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+  <div class="mkapi-members">
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.from_namespace">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object classmethod code">
+    <div class="mkapi-object-kind classmethod">classmethod</div>
+    <h4 id="diotdiotdiotfrom_namespace" class="mkapi-object-body classmethod"><code class="mkapi-object-name">from_namespace</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">namespace</code>, <code class="mkapi-object-signature">recursive=True</code>, <code class="mkapi-object-signature">diot_nest=True</code>, <code class="mkapi-object-signature">diot_transform=&#39;safe&#39;</code>, <code class="mkapi-object-signature">diot_frozen=False</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.from_namespace" title="Source for diot.diot.Diot.from_namespace">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get a Diot object from an argparse namespace</p></div>
+    </div>
+  <div class="mkapi-section example">
+      <div class="mkapi-section-name example">
+          <span class="mkapi-section-name-body example">Example</span> 
+        </div>
+      <div class="mkapi-section-body example"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">argparse</span> <span class="kn">import</span> <span class="n">Namespace</span><span class="o">&gt;&gt;&gt;</span> <span class="n">Diot</span><span class="o">.</span><span class="n">from_namespace</span><span class="p">(</span><span class="n">Namespace</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+</code></pre></div>
+</div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">namespace</code>
+<span class="mkapi-item-type">(Namespace)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The namespace object</span></li>
+
+<li><code class="mkapi-item-name">recursive</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Do it recursively?</span></li>
+
+<li><code class="mkapi-item-name">diot_nest</code>
+<span class="mkapi-item-type">(Union, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Types to nestly convert values</span></li>
+
+<li><code class="mkapi-item-name">diot_transform</code>
+<span class="mkapi-item-type">(Union, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The transforms for keys</span></li>
+
+<li><code class="mkapi-item-name">diot_frozen</code>
+<span class="mkapi-item-type">(Union, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Whether to generate a frozen diot.<ul><li>- True: freeze the object recursively if there are Diot objects</li></ul>in descendants<ul><li>- False: Don'f freeze</li><li>- <code>shallow</code>: Only freeze at depth = 1</li></ul></span></li>
+
+<li><code class="mkapi-item-name">diot_missing</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">How to deal with missing keys when accessing them<ul><li>- An exception class or object to raise</li><li>- <code>None</code> to return <code>None</code></li><li>- A custom function with first argument the key and second<br />&nbsp;    the diot object.</li></ul></span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Diot)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The converted diot object.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.__setitem__">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotsetitem" class="mkapi-object-body method"><code class="mkapi-object-name">__setitem__</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code>, <code class="mkapi-object-signature">value</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.__setitem__" title="Source for diot.diot.Diot.__setitem__">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Set self[key] to value.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.pop">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotpop" class="mkapi-object-body method"><code class="mkapi-object-name">pop</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code>, <code class="mkapi-object-signature">*value</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.pop" title="Source for diot.diot.Diot.pop">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Pop a key from the object and return the value. If key does notexist, return the given default value</p>
+</div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">name</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The key</span></li>
+
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Any)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The value corresponding to the name or the default value</p></div>
+    </div>
+  <div class="mkapi-section raises">
+      <div class="mkapi-section-name raises">
+          <span class="mkapi-section-name-body raises">Raises</span> 
+        </div>
+      <div class="mkapi-section-body raises"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">DiotFrozenError</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">when try to pop from a frozen diot</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.popitem">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotpopitem" class="mkapi-object-body method"><code class="mkapi-object-name">popitem</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.popitem" title="Source for diot.diot.Diot.popitem">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Pop last item from the object</p></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Tuple)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>A tuple of key and value</p></div>
+    </div>
+  <div class="mkapi-section raises">
+      <div class="mkapi-section-name raises">
+          <span class="mkapi-section-name-body raises">Raises</span> 
+        </div>
+      <div class="mkapi-section-body raises"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">DiotFrozenError</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">when try to pop from a frozen diot</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.update">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotupdate" class="mkapi-object-body method"><code class="mkapi-object-name">update</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">*value</code>, <code class="mkapi-object-signature">**kwargs</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.update" title="Source for diot.diot.Diot.update">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Update the object. Shortcut: <code>|=</code></p></div>
+    </div>
+  <div class="mkapi-section raises">
+      <div class="mkapi-section-name raises">
+          <span class="mkapi-section-name-body raises">Raises</span> 
+        </div>
+      <div class="mkapi-section-body raises"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">DiotFrozenError</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">when try to update a frozen diot</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.update_recursively">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotupdate_recursively" class="mkapi-object-body method"><code class="mkapi-object-name">update_recursively</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">*value</code>, <code class="mkapi-object-signature">**kwargs</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.update_recursively" title="Source for diot.diot.Diot.update_recursively">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Update the object. Shortcut: <code>|=</code></p></div>
+    </div>
+  <div class="mkapi-section raises">
+      <div class="mkapi-section-name raises">
+          <span class="mkapi-section-name-body raises">Raises</span> 
+        </div>
+      <div class="mkapi-section-body raises"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">DiotFrozenError</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">when try to update a frozen diot</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.__ior__">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotior" class="mkapi-object-body method"><code class="mkapi-object-name">__ior__</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">other</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; Diot</span></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.__ior__" title="Source for diot.diot.Diot.__ior__">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Return self|=value.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.__delitem__">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotdelitem" class="mkapi-object-body method"><code class="mkapi-object-name">__delitem__</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.__delitem__" title="Source for diot.diot.Diot.__delitem__">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Delete self[key].</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.freeze">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotfreeze" class="mkapi-object-body method"><code class="mkapi-object-name">freeze</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">frozen=&#39;shallow&#39;</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.freeze" title="Source for diot.diot.Diot.freeze">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Freeze the diot object</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">frozen</code>
+<span class="mkapi-item-type">(Union, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The frozen argument indicating how to freeze:shallow: only freeze at depth=1
+True: freeze recursively if there are diot objects in children
+False: Disable freezing
+</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.unfreeze">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotunfreeze" class="mkapi-object-body method"><code class="mkapi-object-name">unfreeze</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">recursive=False</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.unfreeze" title="Source for diot.diot.Diot.unfreeze">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Unfreeze the diot object</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">recursive</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Whether unfreeze all diot objects recursively</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.thaw">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object generator code">
+    <div class="mkapi-object-kind generator">generator</div>
+    <h4 id="diotdiotdiotthaw" class="mkapi-object-body generator"><code class="mkapi-object-name">thaw</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">recursive=False</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.thaw" title="Source for diot.diot.Diot.thaw">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>A context manager for temporarily change the diot</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">recursive</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Whether unfreeze all diot objects recursively</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section yields">
+      <div class="mkapi-section-name yields">
+          <span class="mkapi-section-name-body yields">Yields</span> 
+        </div>
+      <div class="mkapi-section-body yields"><p>self, the reference to this diot.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.setdefault">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotsetdefault" class="mkapi-object-body method"><code class="mkapi-object-name">setdefault</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code>, <code class="mkapi-object-signature">value</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.setdefault" title="Source for diot.diot.Diot.setdefault">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Set a default value to a key</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">name</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The key name</span></li>
+
+<li><code class="mkapi-item-name">value</code>
+<span class="mkapi-item-type">(Any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The default value</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Any)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The existing value or the value passed in</p></div>
+    </div>
+  <div class="mkapi-section raises">
+      <div class="mkapi-section-name raises">
+          <span class="mkapi-section-name-body raises">Raises</span> 
+        </div>
+      <div class="mkapi-section-body raises"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">DiotFrozenError</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">when try to set default to a frozen diot</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.accessible_keys">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotaccessible_keys" class="mkapi-object-body method"><code class="mkapi-object-name">accessible_keys</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.accessible_keys" title="Source for diot.diot.Diot.accessible_keys">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get the converted keys</p></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Iterable)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The accessible (transformed) keys</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.get">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotget" class="mkapi-object-body method"><code class="mkapi-object-name">get</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code>, <code class="mkapi-object-signature">value=None</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.get" title="Source for diot.diot.Diot.get">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get the value of a key name</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">name</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The key name</span></li>
+
+<li><code class="mkapi-item-name">value</code>
+<span class="mkapi-item-type">(Any, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The value to return if the key does not exist</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Any)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The corresponding value or the value passed in if the key doesnot exist</p>
+</div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.__contains__">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotcontains" class="mkapi-object-body method"><code class="mkapi-object-name">__contains__</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; bool</span></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.__contains__" title="Source for diot.diot.Diot.__contains__">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>True if the dictionary has the specified key, else False.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.clear">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotclear" class="mkapi-object-body method"><code class="mkapi-object-name">clear</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.clear" title="Source for diot.diot.Diot.clear">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Clear the object</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.copy">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotcopy" class="mkapi-object-body method"><code class="mkapi-object-name">copy</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.copy" title="Source for diot.diot.Diot.copy">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Shallow copy the object</p></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Diot)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The copied object</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.to_dict">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotto_dict" class="mkapi-object-body method"><code class="mkapi-object-name">to_dict</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.to_dict" title="Source for diot.diot.Diot.to_dict">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Turn the Box and sub Boxes back into a nativepython dictionary.</p>
+</div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Dict)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The converted python dictionary</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.to_json">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotto_json" class="mkapi-object-body method"><code class="mkapi-object-name">to_json</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">filename=None</code>, <code class="mkapi-object-signature">encoding=&#39;utf-8&#39;</code>, <code class="mkapi-object-signature">errors=&#39;strict&#39;</code>, <code class="mkapi-object-signature">**json_kwargs</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.to_json" title="Source for diot.diot.Diot.to_json">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Convert to a json string or save it to json file</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">filename</code>
+<span class="mkapi-item-type">(Union, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The filename to save the json to, if not given a jsonstring will be returned
+</span></li>
+
+<li><code class="mkapi-item-name">encoding</code>
+<span class="mkapi-item-type">(str, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The encoding for saving to file</span></li>
+
+<li><code class="mkapi-item-name">errors</code>
+<span class="mkapi-item-type">(str, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The errors handling for saveing to fileSee python's open function
+</span></li>
+
+<li><code class="mkapi-item-name">**json_kwargs</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Other kwargs for json.dumps</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Optional)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The json string with filename is not given</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.to_yaml">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotto_yaml" class="mkapi-object-body method"><code class="mkapi-object-name">to_yaml</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">filename=None</code>, <code class="mkapi-object-signature">default_flow_style=False</code>, <code class="mkapi-object-signature">encoding=&#39;utf-8&#39;</code>, <code class="mkapi-object-signature">errors=&#39;strict&#39;</code>, <code class="mkapi-object-signature">**yaml_kwargs</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.to_yaml" title="Source for diot.diot.Diot.to_yaml">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Convert to a yaml string or save it to yaml file</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">filename</code>
+<span class="mkapi-item-type">(Union, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The filename to save the yaml to, if not given a yamlstring will be returned
+</span></li>
+
+<li><code class="mkapi-item-name">default_flow_style</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The default flow style for yaml dumpingSee <code>yaml.dump</code>
+</span></li>
+
+<li><code class="mkapi-item-name">encoding</code>
+<span class="mkapi-item-type">(str, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The encoding for saving to file</span></li>
+
+<li><code class="mkapi-item-name">errors</code>
+<span class="mkapi-item-type">(str, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The errors handling for saveing to fileSee python's open function
+</span></li>
+
+<li><code class="mkapi-item-name">**yaml_kwargs</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Other kwargs for <code>yaml.dump</code></span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Optional)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The yaml string with filename is not given</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="diot.diot.Diot.to_toml">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="diotdiotdiotto_toml" class="mkapi-object-body method"><code class="mkapi-object-name">to_toml</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">filename=None</code>, <code class="mkapi-object-signature">encoding=&#39;utf-8&#39;</code>, <code class="mkapi-object-signature">errors=&#39;strict&#39;</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/diot.diot/#diot.diot.Diot.to_toml" title="Source for diot.diot.Diot.to_toml">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Convert to a toml string or save it to toml file</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">filename</code>
+<span class="mkapi-item-type">(Union, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The filename to save the toml to, if not given a tomlstring will be returned
+</span></li>
+
+<li><code class="mkapi-item-name">encoding</code>
+<span class="mkapi-item-type">(str, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The encoding for saving to file</span></li>
+
+<li><code class="mkapi-item-name">errors</code>
+<span class="mkapi-item-type">(str, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The errors handling for saveing to fileSee python's open function
+</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Optional)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The toml string with filename is not given</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="biopipen.core.config.ConfigItems.__getitem__">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="biopipencoreconfigconfigitemsgetitem" class="mkapi-object-body method"><code class="mkapi-object-name">__getitem__</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; Any</span></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.core.config/#biopipen.core.config.ConfigItems.__getitem__" title="Source for biopipen.core.config.ConfigItems.__getitem__">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>x.<strong>getitem</strong>(y) &lt;==&gt; x[y]</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+  </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../biopipen.core.testing/" class="btn btn-neutral float-left" title="biopipen.core.testing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../biopipen.core.filters/" class="btn btn-neutral float-right" title="biopipen.core.filters">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../biopipen.core.testing/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../biopipen.core.filters/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/version-select.js"></script>
+      <script src="../../js/mkapi.js"></script>
+      <script src="../../extra.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>biopipen.ns.tcr - biopipen</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.ns.tcr";
+        var mkdocs_page_input_path = "api/source/biopipen.ns.tcr.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">biopipen.ns.tcr</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/source/biopipen.ns.tcr.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">biopipen.ns.</span><span class="mkapi-object-name">tcr</span>
+<span id="biopipen.ns.tcr"></span><a class="mkapi-docs-link" href="../../biopipen.ns.tcr">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Tools to analyze single-cell TCR sequencing data&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">..core.defaults</span> <span class="kn">import</span> <span class="n">SCRIPT_DIR</span>
+<span class="kn">from</span> <span class="nn">..core.proc</span> <span class="kn">import</span> <span class="n">Proc</span>
+<span class="kn">from</span> <span class="nn">..core.config</span> <span class="kn">import</span> <span class="n">config</span>
+
+
+<span class="k">class</span> <span class="nc">ImmunarchLoading</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.ImmunarchLoading"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.ImmunarchLoading" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.ImmunarchLoading">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Immuarch - Loading data</span>
+
+<span class="sd">    Load the raw data into [`immunarch`](https://immunarch.com) object,</span>
+<span class="sd">    using [`immunarch::repLoad()`](https://immunarch.com/reference/repLoad.html).</span>
+
+<span class="sd">    For the data path specified at `TCRData` in the input file, we will first find</span>
+<span class="sd">    `filtered_contig_annotations.csv` and `filtered_config_annotations.csv.gz` in the</span>
+<span class="sd">    path. If neighter of them exists, we will find `all_contig_annotations.csv` and</span>
+<span class="sd">    `all_contig_annotations.csv.gz` in the path and a warning will be raised</span>
+<span class="sd">    (You can find it at `./.pipen/&lt;pipeline-name&gt;/ImmunarchLoading/0/job.stderr`).</span>
+
+<span class="sd">    If none of the files exists, an error will be raised.</span>
+
+<span class="sd">    This process will also generate a text file with the information for each cell.</span>
+<span class="sd">    The file will be saved at</span>
+<span class="sd">    `./.pipen/&lt;pipeline-name&gt;/ImmunarchLoading/0/output/&lt;prefix&gt;.tcr.txt`.</span>
+<span class="sd">    The file can be used by the `SeuratMetadataMutater` process to integrate the</span>
+<span class="sd">    TCR-seq data into the `Seurat` object for further integrative analysis.</span>
+<span class="sd">    `envs.metacols` can be used to specify the columns to be exported to the text file.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        metafile: The meta data of the samples</span>
+<span class="sd">            A tab-delimited file</span>
+<span class="sd">            Two columns are required:</span>
+<span class="sd">            * `Sample` to specify the sample names.</span>
+<span class="sd">            * `TCRData` to assign the path of the data to the samples,</span>
+<span class="sd">            and this column will be excluded as metadata.</span>
+<span class="sd">            Immunarch is able to fetch the sample names from the names of</span>
+<span class="sd">            the target files. However, 10x data yields result like</span>
+<span class="sd">            `filtered_contig_annotations.csv`, which doesn&#39;t have any name</span>
+<span class="sd">            information.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        rdsfile: The RDS file with the data and metadata, which can be processed by</span>
+<span class="sd">            other `immunarch` functions.</span>
+<span class="sd">        metatxt: The meta data at cell level, which can be used to attach to the Seurat object</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        prefix: The prefix to the barcodes. You can use placeholder like `{Sample}_`</span>
+<span class="sd">            to use the meta data from the `immunarch` object. The prefixed barcodes will</span>
+<span class="sd">            be saved in `out.metatxt`. The `immunarch` object keeps the original barcodes, but</span>
+<span class="sd">            the prefix is saved at `immdata$prefix`.</span>
+
+<span class="sd">            /// Note</span>
+<span class="sd">            This option is useful because the barcodes for the cells from scRNA-seq</span>
+<span class="sd">            data are usually prefixed with the sample name, for example,</span>
+<span class="sd">            `Sample1_AAACCTGAGAAGGCTA-1`. However, the barcodes for the cells from</span>
+<span class="sd">            scTCR-seq data are usually not prefixed with the sample name, for example,</span>
+<span class="sd">            `AAACCTGAGAAGGCTA-1`. So we need to add the prefix to the barcodes for</span>
+<span class="sd">            the scTCR-seq data, and it is easier for us to integrate the data from</span>
+<span class="sd">            different sources later.</span>
+<span class="sd">            ///</span>
+
+<span class="sd">        tmpdir: The temporary directory to link all data files.</span>
+<span class="sd">            `Immunarch` scans a directory to find the data files. If the data files</span>
+<span class="sd">            are not in the same directory, we can link them to a temporary directory</span>
+<span class="sd">            and pass the temporary directory to `Immunarch`.</span>
+<span class="sd">            This option is useful when the data files are in different directories.</span>
+<span class="sd">        mode: Either &quot;single&quot; for single chain data or &quot;paired&quot; for</span>
+<span class="sd">            paired chain data. For `single`, only TRB chain will be kept</span>
+<span class="sd">            at `immdata$data`, information for other chains will be</span>
+<span class="sd">            saved at `immdata$tra` and `immdata$multi`.</span>
+<span class="sd">        extracols (list): The extra columns to be exported to the text file.</span>
+<span class="sd">            You can refer to the</span>
+<span class="sd">            [immunarch documentation](https://immunarch.com/articles/v2_data.html#immunarch-data-format)</span>
+<span class="sd">            to get a sense for the full list of the columns.</span>
+<span class="sd">            The columns may vary depending on the data source.</span>
+<span class="sd">            The columns from `immdata$meta` and some core columns, including</span>
+<span class="sd">            `Barcode`, `CDR3.aa`, `Clones`, `Proportion`, `V.name`, `J.name`, and</span>
+<span class="sd">            `D.name` will be exported by default. You can use this option to</span>
+<span class="sd">            specify the extra columns to be exported.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;metafile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;rdsfile:file:{{in.metafile | stem}}.immunarch.RDS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;metatxt:file:{{in.metafile | stem}}.tcr.txt&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;tmpdir&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">tmpdir</span><span class="p">,</span>
+        <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{Sample}</span><span class="s2">_&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;paired&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;extracols&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/ImmunarchLoading.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">ImmunarchFilter</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.ImmunarchFilter"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.ImmunarchFilter" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.ImmunarchFilter">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Immunarch - Filter data</span>
+
+<span class="sd">    See &lt;https://immunarch.com/articles/web_only/repFilter_v3.html&gt;</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        immdata: The data loaded by `immunarch::repLoad()`</span>
+<span class="sd">        filterfile: A config file in TOML.</span>
+<span class="sd">            A dict of configurations with keys as the names of the group and</span>
+<span class="sd">            values dicts with following keys.</span>
+<span class="sd">            See `envs.filters`</span>
+
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The filtered `immdata`</span>
+<span class="sd">        groupfile: Also a group file with rownames as cells and column names as</span>
+<span class="sd">            each of the keys in `in.filterfile` or `envs.filters`. The values</span>
+<span class="sd">            will be subkeys of the dicts in `in.filterfile` or `envs.filters`.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        filters: The filters to filter the data</span>
+<span class="sd">            You can have multiple cases (groups), the names will be the keys of</span>
+<span class="sd">            this dict, values are also dicts with keys the methods supported by</span>
+<span class="sd">            `immunarch::repFilter()`.</span>
+<span class="sd">            There is one more method `by.count` supported to filter the</span>
+<span class="sd">            count matrix. For `by.meta`, `by.repertoire`, `by.rep`,</span>
+<span class="sd">            `by.clonotype` or `by.col` the values will be passed to</span>
+<span class="sd">            `.query` of `repFilter()`.</span>
+<span class="sd">            You can also use the helper functions provided by `immunarch`,</span>
+<span class="sd">            including `morethan`, `lessthan`, `include`, `exclude` and</span>
+<span class="sd">            `interval`. If these functions are not used, `include(value)` will</span>
+<span class="sd">            be used by default.</span>
+<span class="sd">            For `by.count`, the value of `filter` will be passed to</span>
+<span class="sd">            `dplyr::filter()` to filter the count matrix.</span>
+<span class="sd">            You can also specify `ORDER` to define the filtration order, which</span>
+<span class="sd">            defaults to 0, higher `ORDER` gets later executed.</span>
+<span class="sd">            Each subkey/subgroup must be exclusive</span>
+<span class="sd">            For example:</span>
+<span class="sd">            &gt;&gt;&gt; {</span>
+<span class="sd">            &gt;&gt;&gt;   &quot;name&quot;: &quot;BM_Post_Clones&quot;,</span>
+<span class="sd">            &gt;&gt;&gt;   &quot;filters&quot; {</span>
+<span class="sd">            &gt;&gt;&gt;     &quot;Top_20&quot;: {</span>
+<span class="sd">            &gt;&gt;&gt;       &quot;SAVE&quot;: True,  # Save the filtered data to immdata</span>
+<span class="sd">            &gt;&gt;&gt;       &quot;by.meta&quot;: {&quot;Source&quot;: &quot;BM&quot;, &quot;Status&quot;: &quot;Post&quot;},</span>
+<span class="sd">            &gt;&gt;&gt;       &quot;by.count&quot;: {</span>
+<span class="sd">            &gt;&gt;&gt;         &quot;ORDER&quot;: 1, &quot;filter&quot;: &quot;TOTAL %%in%% TOTAL[1:20]&quot;</span>
+<span class="sd">            &gt;&gt;&gt;        }</span>
+<span class="sd">            &gt;&gt;&gt;     },</span>
+<span class="sd">            &gt;&gt;&gt;     &quot;Rest&quot;: {</span>
+<span class="sd">            &gt;&gt;&gt;       &quot;by.meta&quot;: {&quot;Source&quot;: &quot;BM&quot;, &quot;Status&quot;: &quot;Post&quot;},</span>
+<span class="sd">            &gt;&gt;&gt;       &quot;by.count&quot;: {</span>
+<span class="sd">            &gt;&gt;&gt;         &quot;ORDER&quot;: 1, &quot;filter&quot;: &quot;!TOTAL %%in%% TOTAL[1:20]&quot;</span>
+<span class="sd">            &gt;&gt;&gt;        }</span>
+<span class="sd">            &gt;&gt;&gt;   }</span>
+<span class="sd">            &gt;&gt;&gt; }</span>
+
+<span class="sd">        prefix: The prefix will be added to the cells in the output file</span>
+<span class="sd">            Placeholders like `{Sample}_` can be used to from the meta data</span>
+<span class="sd">        metacols: The extra columns to be exported to the group file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;immdata:file, filterfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        outfile:file:{{in.immdata | stem}}.RDS,</span>
+<span class="s2">        groupfile:file:{</span><span class="si">% i</span><span class="s2">f in.filterfile -%}</span>
+<span class="s2">            {{- in.filterfile | toml_load | attr: &quot;name&quot; | append: &quot;.txt&quot; -}}</span>
+<span class="s2">        {</span><span class="si">%- e</span><span class="s2">lse -%}</span>
+<span class="s2">            {{- envs.filters | attr: &quot;name&quot; | append: &quot;.txt&quot; -}}</span>
+<span class="s2">        {</span><span class="si">%- e</span><span class="s2">ndif -%}</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{Sample}</span><span class="s2">_&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;filters&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;metacols&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Clones&quot;</span><span class="p">,</span> <span class="s2">&quot;Proportion&quot;</span><span class="p">,</span> <span class="s2">&quot;CDR3.aa&quot;</span><span class="p">],</span>
+    <span class="p">}</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/ImmunarchFilter.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Immunarch</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.Immunarch"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.Immunarch" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.Immunarch">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Exploration of Single-cell and Bulk T-cell/Antibody Immune Repertoires</span>
+
+<span class="sd">    See &lt;https://immunarch.com/articles/web_only/v3_basic_analysis.html&gt;</span>
+
+<span class="sd">    After [`ImmunarchLoading`](!!#biopipennstcrimmunarchloading) loads the raw data into an [immunarch](https://immunarch.com) object,</span>
+<span class="sd">    this process wraps the functions from [`immunarch`](https://immunarch.com) to do the following:</span>
+
+<span class="sd">    - Basic statistics, provided by [`immunarch::repExplore`](https://immunarch.com/reference/repExplore.html), such as number of clones or distributions of lengths and counts.</span>
+<span class="sd">    - The clonality of repertoires, provided by [`immunarch::repClonality`](https://immunarch.com/reference/repClonality.html)</span>
+<span class="sd">    - The repertoire overlap, provided by [`immunarch::repOverlap`](https://immunarch.com/reference/repOverlap.html)</span>
+<span class="sd">    - The repertoire overlap, including different clustering procedures and PCA, provided by [`immunarch::repOverlapAnalysis`](https://immunarch.com/reference/repOverlapAnalysis.html)</span>
+<span class="sd">    - The distributions of V or J genes, provided by [`immunarch::geneUsage`](https://immunarch.com/reference/geneUsage.html)</span>
+<span class="sd">    - The diversity of repertoires, provided by [`immunarch::repDiversity`](https://immunarch.com/reference/repDiversity.html)</span>
+<span class="sd">    - The dynamics of repertoires across time points/samples, provided by [`immunarch::trackClonotypes`](https://immunarch.com/reference/trackClonotypes.html)</span>
+<span class="sd">    - The spectratype of clonotypes, provided by [`immunarch::spectratype`](https://immunarch.com/reference/spectratype.html)</span>
+<span class="sd">    - The distributions of kmers and sequence profiles, provided by [`immunarch::getKmers`](https://immunarch.com/reference/getKmers.html)</span>
+<span class="sd">    - The V-J junction circos plots, implemented within the script of this process.</span>
+
+<span class="sd">    Environment Variable Design:</span>
+<span class="sd">        With different sets of arguments, a single function of the above can perform different tasks.</span>
+<span class="sd">        For example, `repExplore` can be used to get the statistics of the size of the repertoire,</span>
+<span class="sd">        the statistics of the length of the CDR3 region, or the statistics of the number of</span>
+<span class="sd">        the clonotypes. Other than that, you can also have different ways to visualize the results,</span>
+<span class="sd">        by passing different arguments to the [`immunarch::vis`](https://immunarch.com/reference/vis.html) function.</span>
+<span class="sd">        For example, you can pass `.by` to `vis` to visualize the results of `repExplore` by different groups.</span>
+
+<span class="sd">        Before we explain each environment variable in details in the next section, we will give some examples here to show how the environment variables are organized in order for a single function to perform different tasks.</span>
+
+<span class="sd">        ```toml</span>
+<span class="sd">        # Repertoire overlapping</span>
+<span class="sd">        [Immunarch.envs.overlaps]</span>
+<span class="sd">        # The method to calculate the overlap, passed to `repOverlap`</span>
+<span class="sd">        method = &quot;public&quot;</span>
+<span class="sd">        ```</span>
+
+<span class="sd">        What if we want to calculate the overlap by different methods at the same time? We can use the following configuration:</span>
+
+<span class="sd">        ```toml</span>
+<span class="sd">        [Immunarch.envs.overlaps.cases]</span>
+<span class="sd">        Public = { method = &quot;public&quot; }</span>
+<span class="sd">        Jaccard = { method = &quot;jaccard&quot; }</span>
+<span class="sd">        ```</span>
+
+<span class="sd">        Then, the `repOverlap` function will be called twice, once with `method = &quot;public&quot;` and once with `method = &quot;jaccard&quot;`. We can also use different arguments to visualize the results. These arguments will be passed to the `vis` function:</span>
+
+<span class="sd">        ```toml</span>
+<span class="sd">        [Immunarch.envs.overlaps.cases.Public]</span>
+<span class="sd">        method = &quot;public&quot;</span>
+<span class="sd">        vis_args = { &quot;-plot&quot;: &quot;heatmap2&quot; }</span>
+
+<span class="sd">        [Immunarch.envs.overlaps.cases.Jaccard]</span>
+<span class="sd">        method = &quot;jaccard&quot;</span>
+<span class="sd">        vis_args = { &quot;-plot&quot;: &quot;heatmap2&quot; }</span>
+<span class="sd">        ```</span>
+
+<span class="sd">        `-plot` will be translated to `.plot` and then passed to `vis`.</span>
+
+<span class="sd">        If multiple cases share the same arguments, we can use the following configuration:</span>
+
+<span class="sd">        ```toml</span>
+<span class="sd">        [Immunarch.envs.overlaps]</span>
+<span class="sd">        vis_args = { &quot;-plot&quot;: &quot;heatmap2&quot; }</span>
+
+<span class="sd">        [Immunarch.envs.overlaps.cases]</span>
+<span class="sd">        Public = { method = &quot;public&quot; }</span>
+<span class="sd">        Jaccard = { method = &quot;jaccard&quot; }</span>
+<span class="sd">        ```</span>
+
+<span class="sd">        For some results, there are futher analysis that can be performed. For example, for the repertoire overlap, we can perform clustering and PCA (see also &lt;https://immunarch.com/articles/web_only/v4_overlap.html&gt;):</span>
+
+<span class="sd">        ```R</span>
+<span class="sd">        imm_ov1 &lt;- repOverlap(immdata$data, .method = &quot;public&quot;, .verbose = F)</span>
+<span class="sd">        repOverlapAnalysis(imm_ov1, &quot;mds&quot;) %&gt;% vis()</span>
+<span class="sd">        repOverlapAnalysis(imm_ov1, &quot;tsne&quot;) %&gt;% vis()</span>
+<span class="sd">        ```</span>
+
+<span class="sd">        In such a case, we can use the following configuration:</span>
+
+<span class="sd">        ```toml</span>
+<span class="sd">        [Immunarch.envs.overlaps]</span>
+<span class="sd">        method = &quot;public&quot;</span>
+
+<span class="sd">        [Immunarch.envs.overlaps.analyses.cases]</span>
+<span class="sd">        MDS = { &quot;-method&quot;: &quot;mds&quot; }</span>
+<span class="sd">        TSNE = { &quot;-method&quot;: &quot;tsne&quot; }</span>
+<span class="sd">        ```</span>
+
+<span class="sd">        Then, the `repOverlapAnalysis` function will be called twice on the result generated by `repOverlap(immdata$data, .method = &quot;public&quot;)`, once with `.method = &quot;mds&quot;` and once with `.method = &quot;tsne&quot;`. We can also use different arguments to visualize the results. These arguments will be passed to the `vis` function:</span>
+
+<span class="sd">        ```toml</span>
+<span class="sd">        [Immunarch.envs.overlaps]</span>
+<span class="sd">        method = &quot;public&quot;</span>
+
+<span class="sd">        [Immunarch.envs.overlaps.analyses]</span>
+<span class="sd">        # See: &lt;https://immunarch.com/reference/vis.immunr_hclust.html&gt;</span>
+<span class="sd">        vis_args = { &quot;-plot&quot;: &quot;best&quot; }</span>
+
+<span class="sd">        [Immunarch.envs.overlaps.analyses.cases]</span>
+<span class="sd">        MDS = { &quot;-method&quot;: &quot;mds&quot; }</span>
+<span class="sd">        TSNE = { &quot;-method&quot;: &quot;tsne&quot; }</span>
+<span class="sd">        ```</span>
+
+<span class="sd">        Generally, you don&#39;t need to specify `cases` if you only have one case. A default case will be created for you. For multiple cases, the arguments at the same level as `cases` will be inherited by all cases.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        ```toml</span>
+<span class="sd">        [Immunarch.envs.kmers]</span>
+<span class="sd">        k = 5</span>
+<span class="sd">        ```</span>
+
+<span class="sd">        ![Immunarch kmers](https://immunarch.com/articles/web_only/v9_kmers_files/figure-html/unnamed-chunk-4-1.png)</span>
+
+<span class="sd">        ```toml</span>
+<span class="sd">        [Immunarch.envs.kmers]</span>
+<span class="sd">        # Shared by cases</span>
+<span class="sd">        k = 5</span>
+
+<span class="sd">        [Immunarch.envs.kmers.cases]</span>
+<span class="sd">        Head5 = { head = 5, -position = &quot;stack&quot; }</span>
+<span class="sd">        Head10 = { head = 10, -position = &quot;fill&quot; }</span>
+<span class="sd">        Head30 = { head = 30, -position = &quot;dodge&quot; }</span>
+<span class="sd">        ```</span>
+
+<span class="sd">        ![Immunarch kmers](https://immunarch.com/articles/web_only/v9_kmers_files/figure-html/unnamed-chunk-6-1.png)</span>
+
+<span class="sd">        With motif profiling:</span>
+
+<span class="sd">        ```toml</span>
+<span class="sd">        [Immunarch.envs.kmers]</span>
+<span class="sd">        k = 5</span>
+
+<span class="sd">        [Immnuarch.envs.kmers.profiles.cases]</span>
+<span class="sd">        TextPlot = { method = &quot;self&quot;, vis_args = { &quot;-plot&quot;: &quot;text&quot; } }</span>
+<span class="sd">        SeqPlot = { method = &quot;self&quot;, vis_args = { &quot;-plot&quot;: &quot;seq&quot; } }</span>
+<span class="sd">        ```</span>
+
+<span class="sd">        ![Immunarch kmers](https://immunarch.com/articles/web_only/v9_kmers_files/figure-html/unnamed-chunk-10-1.png)</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        immdata: The data loaded by `immunarch::repLoad()`</span>
+<span class="sd">        metafile: A cell-level metafile, where the first column must be the cell barcodes</span>
+<span class="sd">            that match the cell barcodes in `immdata`. The other columns can be any</span>
+<span class="sd">            metadata that you want to use for the analysis. The loaded metadata will be</span>
+<span class="sd">            left-joined to the converted cell-level data from `immdata`.</span>
+<span class="sd">            This can also be a Seurat object RDS file. If so, the `sobj@meta.data` will</span>
+<span class="sd">            be used as the metadata.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        mutaters (type=json;order=-9): The mutaters passed to `dplyr::mutate()` on expanded cell-level data</span>
+<span class="sd">            to add new columns.</span>
+<span class="sd">            The keys will be the names of the columns, and the values will be the expressions.</span>
+<span class="sd">            The new names can be used in `volumes`, `lens`, `counts`, `top_clones`, `rare_clones`, `hom_clones`, `gene_usages`, `divs`, etc.</span>
+<span class="sd">        prefix: The prefix to the barcodes. You can use placeholder like `{Sample}_`</span>
+<span class="sd">            The prefixed barcodes will be used to match the barcodes in `in.metafile`.</span>
+<span class="sd">            Not used if `in.metafile` is not specified.</span>
+<span class="sd">            If `None` (default), `immdata$prefix` will be used.</span>
+<span class="sd">        volumes (ns): Explore clonotype volume (sizes).</span>
+<span class="sd">            - by: Groupings when visualize clonotype volumes, passed to the `.by` argument of `vis(imm_vol, .by = &lt;values&gt;)`.</span>
+<span class="sd">                Multiple columns should be separated by `,`.</span>
+<span class="sd">            - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                - width (type=int): The width of the plot.</span>
+<span class="sd">                - height (type=int): The height of the plot.</span>
+<span class="sd">                - res (type=int): The resolution of the plot.</span>
+<span class="sd">            - subset: Subset the data before calculating the clonotype volumes.</span>
+<span class="sd">                The whole data will be expanded to cell level, and then subsetted.</span>
+<span class="sd">                Clone sizes will be re-calculated based on the subsetted data.</span>
+<span class="sd">            - cases (type=json;order=9): If you have multiple cases, you can use this argument to specify them.</span>
+<span class="sd">                The keys will be the names of the cases.</span>
+<span class="sd">                The values will be passed to the corresponding arguments above.</span>
+<span class="sd">                If any of these arguments are not specified, the values in `envs.volumes` will be used.</span>
+<span class="sd">                If NO cases are specified, the default case will be added, with the name `DEFAULT` and the</span>
+<span class="sd">                values of `envs.volume.by`, `envs.volume.devpars`.</span>
+<span class="sd">        lens (ns): Explore clonotype CDR3 lengths.</span>
+<span class="sd">            - by: Groupings when visualize clonotype lengths, passed to the `.by` argument of `vis(imm_len, .by = &lt;values&gt;)`.</span>
+<span class="sd">                Multiple columns should be separated by `,`.</span>
+<span class="sd">            - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                - width (type=int): The width of the plot.</span>
+<span class="sd">                - height (type=int): The height of the plot.</span>
+<span class="sd">                - res (type=int): The resolution of the plot.</span>
+<span class="sd">            - subset: Subset the data before calculating the clonotype volumes.</span>
+<span class="sd">                The whole data will be expanded to cell level, and then subsetted.</span>
+<span class="sd">                Clone sizes will be re-calculated based on the subsetted data.</span>
+<span class="sd">            - cases (type=json;order=9): If you have multiple cases, you can use this argument to specify them.</span>
+<span class="sd">                The keys will be the names of the cases.</span>
+<span class="sd">                The values will be passed to the corresponding arguments above.</span>
+<span class="sd">                If any of these arguments are not specified, the values in `envs.lens` will be used.</span>
+<span class="sd">                If NO cases are specified, the default case will be added, with the name `DEFAULT` and the</span>
+<span class="sd">                values of `envs.lens.by`, `envs.lens.devpars`.</span>
+<span class="sd">        counts (ns): Explore clonotype counts.</span>
+<span class="sd">            - by: Groupings when visualize clonotype counts, passed to the `.by` argument of `vis(imm_count, .by = &lt;values&gt;)`.</span>
+<span class="sd">                Multiple columns should be separated by `,`.</span>
+<span class="sd">            - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                - width (type=int): The width of the plot.</span>
+<span class="sd">                - height (type=int): The height of the plot.</span>
+<span class="sd">                - res (type=int): The resolution of the plot.</span>
+<span class="sd">            - subset: Subset the data before calculating the clonotype volumes.</span>
+<span class="sd">                The whole data will be expanded to cell level, and then subsetted.</span>
+<span class="sd">                Clone sizes will be re-calculated based on the subsetted data.</span>
+<span class="sd">            - cases (type=json;order=9): If you have multiple cases, you can use this argument to specify them.</span>
+<span class="sd">                The keys will be the names of the cases.</span>
+<span class="sd">                The values will be passed to the corresponding arguments above.</span>
+<span class="sd">                If any of these arguments are not specified, the values in `envs.counts` will be used.</span>
+<span class="sd">                If NO cases are specified, the default case will be added, with the name `DEFAULT` and the</span>
+<span class="sd">                values of `envs.counts.by`, `envs.counts.devpars`.</span>
+<span class="sd">        top_clones (ns): Explore top clonotypes.</span>
+<span class="sd">            - by: Groupings when visualize top clones, passed to the `.by` argument of `vis(imm_top, .by = &lt;values&gt;)`.</span>
+<span class="sd">                Multiple columns should be separated by `,`.</span>
+<span class="sd">            - marks (list;itype=int): A numerical vector with ranges of the top clonotypes. Passed to the `.head` argument of `repClonoality()`.</span>
+<span class="sd">            - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                - width (type=int): The width of the plot.</span>
+<span class="sd">                - height (type=int): The height of the plot.</span>
+<span class="sd">                - res (type=int): The resolution of the plot.</span>
+<span class="sd">            - subset: Subset the data before calculating the clonotype volumes.</span>
+<span class="sd">                The whole data will be expanded to cell level, and then subsetted.</span>
+<span class="sd">                Clone sizes will be re-calculated based on the subsetted data.</span>
+<span class="sd">            - cases (type=json;order=9): If you have multiple cases, you can use this argument to specify them.</span>
+<span class="sd">                The keys will be the names of the cases.</span>
+<span class="sd">                The values will be passed to the corresponding arguments above.</span>
+<span class="sd">                If any of these arguments are not specified, the values in `envs.top_clones` will be used.</span>
+<span class="sd">                If NO cases are specified, the default case will be added, with the name `DEFAULT` and the</span>
+<span class="sd">                values of `envs.top_clones.by`, `envs.top_clones.marks` and `envs.top_clones.devpars`.</span>
+<span class="sd">        rare_clones (ns): Explore rare clonotypes.</span>
+<span class="sd">            - by: Groupings when visualize rare clones, passed to the `.by` argument of `vis(imm_rare, .by = &lt;values&gt;)`.</span>
+<span class="sd">                Multiple columns should be separated by `,`.</span>
+<span class="sd">            - marks (list;itype=int): A numerical vector with ranges of abundance for the rare clonotypes in the dataset.</span>
+<span class="sd">                Passed to the `.bound` argument of `repClonoality()`.</span>
+<span class="sd">            - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                - width (type=int): The width of the plot.</span>
+<span class="sd">                - height (type=int): The height of the plot.</span>
+<span class="sd">                - res (type=int): The resolution of the plot.</span>
+<span class="sd">            - subset: Subset the data before calculating the clonotype volumes.</span>
+<span class="sd">                The whole data will be expanded to cell level, and then subsetted.</span>
+<span class="sd">                Clone sizes will be re-calculated based on the subsetted data.</span>
+<span class="sd">            - cases (type=json;order=9): If you have multiple cases, you can use this argument to specify them.</span>
+<span class="sd">                The keys will be the names of the cases.</span>
+<span class="sd">                The values will be passed to the corresponding arguments above.</span>
+<span class="sd">                If any of these arguments are not specified, the values in `envs.rare_clones` will be used.</span>
+<span class="sd">                If NO cases are specified, the default case will be added, with the name `DEFAULT` and the</span>
+<span class="sd">                values of `envs.rare_clones.by`, `envs.rare_clones.marks` and `envs.rare_clones.devpars`.</span>
+<span class="sd">        hom_clones (ns): Explore homeo clonotypes.</span>
+<span class="sd">            - by: Groupings when visualize homeo clones, passed to the `.by` argument of `vis(imm_hom, .by = &lt;values&gt;)`.</span>
+<span class="sd">                Multiple columns should be separated by `,`.</span>
+<span class="sd">            - marks (ns): A dict with the threshold of the half-closed intervals that mark off clonal groups.</span>
+<span class="sd">                Passed to the `.clone.types` arguments of `repClonoality()`.</span>
+<span class="sd">                The keys could be:</span>
+<span class="sd">                - Rare (type=float): the rare clonotypes</span>
+<span class="sd">                - Small (type=float): the small clonotypes</span>
+<span class="sd">                - Medium (type=float): the medium clonotypes</span>
+<span class="sd">                - Large (type=float): the large clonotypes</span>
+<span class="sd">                - Hyperexpanded (type=float): the hyperexpanded clonotypes</span>
+<span class="sd">            - subset: Subset the data before calculating the clonotype volumes.</span>
+<span class="sd">                The whole data will be expanded to cell level, and then subsetted.</span>
+<span class="sd">                Clone sizes will be re-calculated based on the subsetted data.</span>
+<span class="sd">            - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                - width (type=int): The width of the plot.</span>
+<span class="sd">                - height (type=int): The height of the plot.</span>
+<span class="sd">                - res (type=int): The resolution of the plot.</span>
+<span class="sd">            - cases (type=json;order=9): If you have multiple cases, you can use this argument to specify them.</span>
+<span class="sd">                The keys will be the names of the cases.</span>
+<span class="sd">                The values will be passed to the corresponding arguments above.</span>
+<span class="sd">                If any of these arguments are not specified, the values in `envs.hom_clones` will be used.</span>
+<span class="sd">                If NO cases are specified, the default case will be added, with the name `DEFAULT` and the</span>
+<span class="sd">                values of `envs.hom_clones.by`, `envs.hom_clones.marks` and `envs.hom_clones.devpars`.</span>
+<span class="sd">        overlaps (ns): Explore clonotype overlaps.</span>
+<span class="sd">            - method (choice): The method to calculate overlaps.</span>
+<span class="sd">                - public: number of public clonotypes between two samples.</span>
+<span class="sd">                - overlap: a normalised measure of overlap similarity.</span>
+<span class="sd">                    It is defined as the size of the intersection divided by the smaller of the size of the two sets.</span>
+<span class="sd">                - jaccard: conceptually a percentage of how many objects two sets have in common out of how many objects they have total.</span>
+<span class="sd">                - tversky: an asymmetric similarity measure on sets that compares a variant to a prototype.</span>
+<span class="sd">                - cosine: a measure of similarity between two non-zero vectors of an inner product space that measures the cosine of the angle between them.</span>
+<span class="sd">                - morisita: how many times it is more likely to randomly select two sampled points from the same quadrat (the dataset is</span>
+<span class="sd">                    covered by a regular grid of changing size) then it would be in the case of a random distribution generated from</span>
+<span class="sd">                    a Poisson process. Duplicate objects are merged with their counts are summed up.</span>
+<span class="sd">                - inc+public: incremental overlaps of the N most abundant clonotypes with incrementally growing N using the public method.</span>
+<span class="sd">                - inc+morisita: incremental overlaps of the N most abundant clonotypes with incrementally growing N using the morisita method.</span>
+<span class="sd">            - subset: Subset the data before calculating the clonotype volumes.</span>
+<span class="sd">                The whole data will be expanded to cell level, and then subsetted.</span>
+<span class="sd">                Clone sizes will be re-calculated based on the subsetted data.</span>
+<span class="sd">            - vis_args (type=json): Other arguments for the plotting functions `vis(imm_ov, ...)`.</span>
+<span class="sd">            - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                - width (type=int): The width of the plot.</span>
+<span class="sd">                - height (type=int): The height of the plot.</span>
+<span class="sd">                - res (type=int): The resolution of the plot.</span>
+<span class="sd">            - analyses (ns;order=8): Perform overlap analyses.</span>
+<span class="sd">                - method: Plot the samples with these dimension reduction methods.</span>
+<span class="sd">                    The methods could be `hclust`, `tsne`, `mds` or combination of them, such as `mds+hclust`.</span>
+<span class="sd">                    You can also set to `none` to skip the analyses.</span>
+<span class="sd">                    They could also be combined, for example, `mds+hclust`.</span>
+<span class="sd">                    See &lt;https://immunarch.com/reference/repOverlapAnalysis.html&gt;.</span>
+<span class="sd">                - vis_args (type=json): Other arguments for the plotting functions.</span>
+<span class="sd">                - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                    - width (type=int): The width of the plot.</span>
+<span class="sd">                    - height (type=int): The height of the plot.</span>
+<span class="sd">                    - res (type=int): The resolution of the plot.</span>
+<span class="sd">                - cases (type=json): If you have multiple cases, you can use this argument to specify them.</span>
+<span class="sd">                    The keys will be the names of the cases.</span>
+<span class="sd">                    The values will be passed to the corresponding arguments above.</span>
+<span class="sd">                    If any of these arguments are not specified, the values in `envs.overlaps.analyses` will be used.</span>
+<span class="sd">                    If NO cases are specified, the default case will be added, with the name `DEFAULT` and the</span>
+<span class="sd">                    values of `envs.overlaps.analyses.method`, `envs.overlaps.analyses.vis_args` and `envs.overlaps.analyses.devpars`.</span>
+<span class="sd">            - cases (type=json;order=9): If you have multiple cases, you can use this argument to specify them.</span>
+<span class="sd">                The keys will be the names of the cases.</span>
+<span class="sd">                The values will be passed to the corresponding arguments above.</span>
+<span class="sd">                If any of these arguments are not specified, the values in `envs.overlaps` will be used.</span>
+<span class="sd">                If NO cases are specified, the default case will be added, with the key the default method and the</span>
+<span class="sd">                values of `envs.overlaps.method`, `envs.overlaps.vis_args`, `envs.overlaps.devpars` and `envs.overlaps.analyses`.</span>
+<span class="sd">        gene_usages (ns): Explore gene usages.</span>
+<span class="sd">            - top (type=int): How many top (ranked by total usage across samples) genes to show in the plots.</span>
+<span class="sd">                Use `0` to use all genes.</span>
+<span class="sd">            - norm (flag): If True then use proportions of genes, else use counts of genes.</span>
+<span class="sd">            - by: Groupings to show gene usages, passed to the `.by` argument of `vis(imm_gu_top, .by = &lt;values&gt;)`.</span>
+<span class="sd">                Multiple columns should be separated by `,`.</span>
+<span class="sd">            - vis_args (type=json): Other arguments for the plotting functions.</span>
+<span class="sd">            - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                - width (type=int): The width of the plot.</span>
+<span class="sd">                - height (type=int): The height of the plot.</span>
+<span class="sd">                - res (type=int): The resolution of the plot.</span>
+<span class="sd">            - subset: Subset the data before calculating the clonotype volumes.</span>
+<span class="sd">                The whole data will be expanded to cell level, and then subsetted.</span>
+<span class="sd">                Clone sizes will be re-calculated based on the subsetted data.</span>
+<span class="sd">            - analyses (ns;order=8): Perform gene usage analyses.</span>
+<span class="sd">                - method: The method to control how the data is going to be preprocessed and analysed.</span>
+<span class="sd">                    One of `js`, `cor`, `cosine`, `pca`, `mds` and `tsne`. Can also be combined with following methods</span>
+<span class="sd">                    for the actual analyses: `hclust`, `kmeans`, `dbscan`, and `kruskal`. For example: `cosine+hclust`.</span>
+<span class="sd">                    You can also set to `none` to skip the analyses.</span>
+<span class="sd">                    See &lt;https://immunarch.com/articles/web_only/v5_gene_usage.html&gt;.</span>
+<span class="sd">                - vis_args (type=json): Other arguments for the plotting functions.</span>
+<span class="sd">                - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                    - width (type=int): The width of the plot.</span>
+<span class="sd">                    - height (type=int): The height of the plot.</span>
+<span class="sd">                    - res (type=int): The resolution of the plot.</span>
+<span class="sd">                - cases (type=json): If you have multiple cases, you can use this argument to specify them.</span>
+<span class="sd">                    The keys will be the names of the cases.</span>
+<span class="sd">                    The values will be passed to the corresponding arguments above.</span>
+<span class="sd">                    If any of these arguments are not specified, the values in `envs.gene_usages.analyses` will be used.</span>
+<span class="sd">                    If NO cases are specified, the default case will be added, with the name `DEFAULT` and the</span>
+<span class="sd">                    values of `envs.gene_usages.analyses.method`, `envs.gene_usages.analyses.vis_args` and `envs.gene_usages.analyses.devpars`.</span>
+<span class="sd">            - cases (type=json;order=9): If you have multiple cases, you can use this argument to specify them.</span>
+<span class="sd">                The keys will be used as the names of the cases.</span>
+<span class="sd">                The values will be passed to the corresponding arguments above.</span>
+<span class="sd">                If any of these arguments are not specified, the values in `envs.gene_usages` will be used.</span>
+<span class="sd">                If NO cases are specified, the default case will be added, with the name `DEFAULT` and the</span>
+<span class="sd">                values of `envs.gene_usages.top`, `envs.gene_usages.norm`, `envs.gene_usages.by`, `envs.gene_usages.vis_args`, `envs.gene_usages.devpars` and `envs.gene_usages.analyses`.</span>
+<span class="sd">        spects (ns): Spectratyping analysis.</span>
+<span class="sd">            - quant: Select the column with clonal counts to evaluate.</span>
+<span class="sd">                Set to `id` to count every clonotype once.</span>
+<span class="sd">                Set to `count` to take into the account number of clones per clonotype.</span>
+<span class="sd">                Multiple columns should be separated by `,`.</span>
+<span class="sd">            - col: A string that specifies the column(s) to be processed.</span>
+<span class="sd">                The output is one of the following strings, separated by the plus sign: &quot;nt&quot; for nucleotide sequences,</span>
+<span class="sd">                &quot;aa&quot; for amino acid sequences, &quot;v&quot; for V gene segments, &quot;j&quot; for J gene segments.</span>
+<span class="sd">                E.g., pass &quot;aa+v&quot; for spectratyping on CDR3 amino acid sequences paired with V gene segments,</span>
+<span class="sd">                i.e., in this case a unique clonotype is a pair of CDR3 amino acid and V gene segment.</span>
+<span class="sd">                Clonal counts of equal clonotypes will be summed up.</span>
+<span class="sd">            - subset: Subset the data before calculating the clonotype volumes.</span>
+<span class="sd">                The whole data will be expanded to cell level, and then subsetted.</span>
+<span class="sd">                Clone sizes will be re-calculated based on the subsetted data.</span>
+<span class="sd">            - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                - width (type=int): The width of the plot.</span>
+<span class="sd">                - height (type=int): The height of the plot.</span>
+<span class="sd">                - res (type=int): The resolution of the plot.</span>
+<span class="sd">            - cases (type=json;order=9): If you have multiple cases, you can use this argument to specify them.</span>
+<span class="sd">                The keys will be the names of the cases.</span>
+<span class="sd">                The values will be passed to the corresponding arguments above.</span>
+<span class="sd">                If any of these arguments are not specified, the values in `envs.spects` will be used.</span>
+<span class="sd">                By default, a `By_Clonotype` case will be added, with the values of `quant = &quot;id&quot;` and `col = &quot;nt&quot;`, and</span>
+<span class="sd">                a `By_Num_Clones` case will be added, with the values of `quant = &quot;count&quot;` and `col = &quot;aa+v&quot;`.</span>
+<span class="sd">        divs (ns): Parameters to control the diversity analysis.</span>
+<span class="sd">            - method (choice): The method to calculate diversity.</span>
+<span class="sd">                - chao1: a nonparameteric asymptotic estimator of species richness.</span>
+<span class="sd">                    (number of species in a population).</span>
+<span class="sd">                - hill: Hill numbers are a mathematically unified family of diversity indices.</span>
+<span class="sd">                    (differing only by an exponent q).</span>
+<span class="sd">                - div: true diversity, or the effective number of types.</span>
+<span class="sd">                    It refers to the number of equally abundant types needed for the average proportional abundance of the types to equal</span>
+<span class="sd">                    that observed in the dataset of interest where all types may not be equally abundant.</span>
+<span class="sd">                - gini.simp: The Gini-Simpson index.</span>
+<span class="sd">                    It is the probability of interspecific encounter, i.e., probability that two entities represent different types.</span>
+<span class="sd">                - inv.simp: Inverse Simpson index.</span>
+<span class="sd">                    It is the effective number of types that is obtained when the weighted arithmetic mean is used to quantify</span>
+<span class="sd">                    average proportional abundance of types in the dataset of interest.</span>
+<span class="sd">                - gini: The Gini coefficient.</span>
+<span class="sd">                    It measures the inequality among values of a frequency distribution (for example levels of income).</span>
+<span class="sd">                    A Gini coefficient of zero expresses perfect equality, where all values are the same (for example, where everyone has the same income).</span>
+<span class="sd">                    A Gini coefficient of one (or 100 percents) expresses maximal inequality among values (for example where only one person has all the income).</span>
+<span class="sd">                - d50: The D50 index.</span>
+<span class="sd">                    It is the number of types that are needed to cover 50%% of the total abundance.</span>
+<span class="sd">                - raref: Species richness from the results of sampling through extrapolation.</span>
+<span class="sd">            - by: The variables (column names) to group samples.</span>
+<span class="sd">                Multiple columns should be separated by `,`.</span>
+<span class="sd">            - plot_type (choice): The type of the plot, works when `by` is specified.</span>
+<span class="sd">                Not working for `raref`.</span>
+<span class="sd">                - box: Boxplot</span>
+<span class="sd">                - bar: Barplot with error bars</span>
+<span class="sd">            - subset: Subset the data before calculating the clonotype volumes.</span>
+<span class="sd">                The whole data will be expanded to cell level, and then subsetted.</span>
+<span class="sd">                Clone sizes will be re-calculated based on the subsetted data.</span>
+<span class="sd">            - args (type=json): Other arguments for `repDiversity()`.</span>
+<span class="sd">                Do not include the preceding `.` and use `-` instead of `.` in the argument names.</span>
+<span class="sd">                For example, `do-norm` will be compiled to `.do.norm`.</span>
+<span class="sd">                See all arguments at</span>
+<span class="sd">                &lt;https://immunarch.com/reference/repDiversity.html&gt;.</span>
+<span class="sd">            - order (list): The order of the values in `by` on the x-axis of the plots.</span>
+<span class="sd">                If not specified, the values will be used as-is.</span>
+<span class="sd">            - test (ns): Perform statistical tests between each pair of groups.</span>
+<span class="sd">                Does NOT work for `raref`.</span>
+<span class="sd">                - method (choice): The method to perform the test</span>
+<span class="sd">                    - none: No test</span>
+<span class="sd">                    - t.test: Welch&#39;s t-test</span>
+<span class="sd">                    - wilcox.test: Wilcoxon rank sum test</span>
+<span class="sd">                - padjust (choice): The method to adjust p-values.</span>
+<span class="sd">                    Defaults to `none`.</span>
+<span class="sd">                    - bonferroni: one-step correction</span>
+<span class="sd">                    - holm: step-down method using Bonferroni adjustments</span>
+<span class="sd">                    - hochberg: step-up method (independent)</span>
+<span class="sd">                    - hommel: closed method based on Simes tests (non-negative)</span>
+<span class="sd">                    - BH: Benjamini &amp; Hochberg (non-negative)</span>
+<span class="sd">                    - BY: Benjamini &amp; Yekutieli (negative)</span>
+<span class="sd">                    - fdr: Benjamini &amp; Hochberg (non-negative)</span>
+<span class="sd">                    - none: no correction.</span>
+<span class="sd">            - separate_by: A column name used to separate the samples into different plots.</span>
+<span class="sd">            - split_by: A column name used to split the samples into different subplots.</span>
+<span class="sd">                Like `separate_by`, but the plots will be put in the same figure.</span>
+<span class="sd">                y-axis will be shared, even if `align_y` is `False` or `ymin`/`ymax` are not specified.</span>
+<span class="sd">                `ncol` will be ignored.</span>
+<span class="sd">            - split_order: The order of the values in `split_by` on the x-axis of the plots.</span>
+<span class="sd">                It can also be used for `separate_by` to control the order of the plots.</span>
+<span class="sd">                Values can be separated by `,`.</span>
+<span class="sd">            - align_x (flag): Align the x-axis of multiple plots. Only works for `raref`.</span>
+<span class="sd">            - align_y (flag): Align the y-axis of multiple plots.</span>
+<span class="sd">            - ymin (type=float): The minimum value of the y-axis.</span>
+<span class="sd">                The minimum value of the y-axis for plots splitting by `separate_by`.</span>
+<span class="sd">                `align_y` is forced `True` when both `ymin` and `ymax` are specified.</span>
+<span class="sd">            - ymax (type=float): The maximum value of the y-axis.</span>
+<span class="sd">                The maximum value of the y-axis for plots splitting by `separate_by`.</span>
+<span class="sd">                `align_y` is forced `True` when both `ymin` and `ymax` are specified.</span>
+<span class="sd">                Works when both `ymin` and `ymax` are specified.</span>
+<span class="sd">            - log (flag): Indicate whether we should plot with log-transformed x-axis using `vis(.log = TRUE)`. Only works for `raref`.</span>
+<span class="sd">            - ncol (type=int): The number of columns of the plots.</span>
+<span class="sd">            - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                - width (type=int): The width of the device</span>
+<span class="sd">                - height (type=int): The height of the device</span>
+<span class="sd">                - res (type=int): The resolution of the device</span>
+<span class="sd">            - cases (type=json;order=9): If you have multiple cases, you can use this argument to specify them.</span>
+<span class="sd">                The keys will be used as the names of the cases.</span>
+<span class="sd">                The values will be passed to the corresponding arguments above.</span>
+<span class="sd">                If NO cases are specified, the default case will be added, with the name of `envs.div.method`.</span>
+<span class="sd">                The values specified in `envs.div` will be used as the defaults for the cases here.</span>
+<span class="sd">        trackings (ns): Parameters to control the clonotype tracking analysis.</span>
+<span class="sd">            - targets: Either a set of CDR3AA seq of clonotypes to track (separated by `,`), or simply an integer to track the top N clonotypes.</span>
+<span class="sd">            - subject_col: The column name in meta data that contains the subjects/samples on the x-axis of the alluvial plot.</span>
+<span class="sd">                If the values in this column are not unique, the values will be merged with the values in `subject_col` to form the x-axis.</span>
+<span class="sd">                This defaults to `Sample`.</span>
+<span class="sd">            - subset: Subset the data before calculating the clonotype volumes.</span>
+<span class="sd">                The whole data will be expanded to cell level, and then subsetted.</span>
+<span class="sd">                Clone sizes will be re-calculated based on the subsetted data.</span>
+<span class="sd">            - subjects (list): A list of values from `subject_col` to show in the alluvial plot on the x-axis.</span>
+<span class="sd">                If not specified, all values in `subject_col` will be used.</span>
+<span class="sd">                This also specifies the order of the x-axis.</span>
+<span class="sd">            - cases (type=json;order=9): If you have multiple cases, you can use this argument to specify them.</span>
+<span class="sd">                The keys will be used as the names of the cases.</span>
+<span class="sd">                The values will be passed to the corresponding arguments (`target`, `subject_col`, and `subjects`).</span>
+<span class="sd">                If any of these arguments are not specified, the values in `envs.trackings` will be used.</span>
+<span class="sd">                If NO cases are specified, the default case will be added, with the name `DEFAULT` and the</span>
+<span class="sd">                values of `envs.trackings.target`, `envs.trackings.subject_col`, and `envs.trackings.subjects`.</span>
+<span class="sd">        kmers (ns): Arguments for kmer analysis.</span>
+<span class="sd">            - k (type=int): The length of kmer.</span>
+<span class="sd">            - head (type=int): The number of top kmers to show.</span>
+<span class="sd">            - vis_args (type=json): Other arguments for the plotting functions.</span>
+<span class="sd">            - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                - width (type=int): The width of the plot.</span>
+<span class="sd">                - height (type=int): The height of the plot.</span>
+<span class="sd">                - res (type=int): The resolution of the plot.</span>
+<span class="sd">            - subset: Subset the data before calculating the clonotype volumes.</span>
+<span class="sd">                The whole data will be expanded to cell level, and then subsetted.</span>
+<span class="sd">                Clone sizes will be re-calculated based on the subsetted data.</span>
+<span class="sd">            - profiles (ns;order=8): Arguments for sequence profilings.</span>
+<span class="sd">                - method (choice): The method for the position matrix.</span>
+<span class="sd">                    For more information see &lt;https://en.wikipedia.org/wiki/Position_weight_matrix&gt;.</span>
+<span class="sd">                    - freq: position frequency matrix (PFM) - a matrix with occurences of each amino acid in each position.</span>
+<span class="sd">                    - prob: position probability matrix (PPM) - a matrix with probabilities of each amino acid in each position.</span>
+<span class="sd">                    - wei: position weight matrix (PWM) - a matrix with log likelihoods of PPM elements.</span>
+<span class="sd">                    - self: self-information matrix (SIM) - a matrix with self-information of elements in PWM.</span>
+<span class="sd">                - vis_args (type=json): Other arguments for the plotting functions.</span>
+<span class="sd">                - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                    - width (type=int): The width of the plot.</span>
+<span class="sd">                    - height (type=int): The height of the plot.</span>
+<span class="sd">                    - res (type=int): The resolution of the plot.</span>
+<span class="sd">                - cases (type=json): If you have multiple cases, you can use this argument to specify them.</span>
+<span class="sd">                    The keys will be the names of the cases.</span>
+<span class="sd">                    The values will be passed to the corresponding arguments above.</span>
+<span class="sd">                    If any of these arguments are not specified, the values in `envs.kmers.profiles` will be used.</span>
+<span class="sd">                    If NO cases are specified, the default case will be added, with the name `DEFAULT` and the</span>
+<span class="sd">                    values of `envs.kmers.profiles.method`, `envs.kmers.profiles.vis_args` and `envs.kmers.profiles.devpars`.</span>
+<span class="sd">            - cases (type=json;order=9): If you have multiple cases, you can use this argument to specify them.</span>
+<span class="sd">                The keys will be used as the names of the cases.</span>
+<span class="sd">                The values will be passed to the corresponding arguments above.</span>
+<span class="sd">                If any of these arguments are not specified, the default case will be added, with the name `DEFAULT` and the</span>
+<span class="sd">                values of `envs.kmers.k`, `envs.kmers.head`, `envs.kmers.vis_args` and `envs.kmers.devpars`.</span>
+<span class="sd">        vj_junc (ns): Arguments for VJ junction circos plots.</span>
+<span class="sd">            This analysis is not included in `immunarch`. It is a separate implementation using [`circlize`](https://github.com/jokergoo/circlize).</span>
+<span class="sd">            - by: Groupings to show VJ usages. Typically, this is the `Sample` column, so that the VJ usages are shown for each sample.</span>
+<span class="sd">                But you can also use other columns, such as `Subject` to show the VJ usages for each subject.</span>
+<span class="sd">                Multiple columns should be separated by `,`.</span>
+<span class="sd">            - by_clones (flag): If True, the VJ usages will be calculated based on the distinct clonotypes, instead of the individual cells.</span>
+<span class="sd">            - subset: Subset the data before plotting VJ usages.</span>
+<span class="sd">                The whole data will be expanded to cell level, and then subsetted.</span>
+<span class="sd">                Clone sizes will be re-calculated based on the subsetted data, which will affect the VJ usages at cell level (by_clones=False).</span>
+<span class="sd">            - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                - width (type=int): The width of the plot.</span>
+<span class="sd">                - height (type=int): The height of the plot.</span>
+<span class="sd">                - res (type=int): The resolution of the plot.</span>
+<span class="sd">            - cases (type=json;order=9): If you have multiple cases, you can use this argument to specify them.</span>
+<span class="sd">                The keys will be used as the names of the cases. The values will be passed to the corresponding arguments above.</span>
+<span class="sd">                If any of these arguments are not specified, the values in `envs.vj_junc` will be used.</span>
+<span class="sd">                If NO cases are specified, the default case will be added, with the name `DEFAULT` and the</span>
+<span class="sd">                values of `envs.vj_junc.by`, `envs.vj_junc.by_clones` `envs.vj_junc.subset` and `envs.vj_junc.devpars`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;immdata:file,metafile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.immdata | stem}}.immunarch&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;mutaters&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="c1"># basic statistics</span>
+        <span class="s2">&quot;volumes&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;by&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+            <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;lens&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;by&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+            <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;counts&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;by&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+            <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">},</span>
+        <span class="c1"># clonality</span>
+        <span class="s2">&quot;top_clones&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;by&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;marks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">30000</span><span class="p">,</span> <span class="mf">1e5</span><span class="p">],</span>
+            <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+            <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;rare_clones&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;by&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;marks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+            <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+            <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;hom_clones&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;by&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;marks&quot;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span>
+                <span class="n">Rare</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span>
+                <span class="n">Small</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">,</span>
+                <span class="n">Medium</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span>
+                <span class="n">Large</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span>
+                <span class="n">Hyperexpanded</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+            <span class="p">),</span>
+            <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+            <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">},</span>
+        <span class="c1"># overlapping</span>
+        <span class="s2">&quot;overlaps&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;public&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vis_args&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+            <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;analyses&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;vis_args&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+                <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">},</span>
+        <span class="c1"># gene usage</span>
+        <span class="s2">&quot;gene_usages&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;top&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+            <span class="s2">&quot;norm&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&quot;by&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;vis_args&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+            <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;analyses&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;vis_args&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+                <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">},</span>
+        <span class="c1"># Spectratyping</span>
+        <span class="s2">&quot;spects&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;quant&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;col&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+            <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;By_Clonotype&quot;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span><span class="n">quant</span><span class="o">=</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;nt&quot;</span><span class="p">),</span>
+                <span class="s2">&quot;By_Num_Clones&quot;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span><span class="n">quant</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;aa+v&quot;</span><span class="p">),</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="c1"># Diversity</span>
+        <span class="s2">&quot;divs&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;gini&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;by&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;plot_type&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;padjust&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;separate_by&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;split_by&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;split_order&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;align_x&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&quot;align_y&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&quot;log&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span>
+                <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span>
+                <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;ncol&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;ymin&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;ymax&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">},</span>
+        <span class="c1"># Clonotype tracking</span>
+        <span class="s2">&quot;trackings&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;targets&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>  <span class="c1"># Do not do trackings by default</span>
+            <span class="s2">&quot;subject_col&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;subjects&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">},</span>
+        <span class="c1"># Kmer analysis</span>
+        <span class="s2">&quot;kmers&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;k&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="s2">&quot;head&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="s2">&quot;vis_args&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+            <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;profiles&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;self&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;vis_args&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+                <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">},</span>
+        <span class="c1"># VJ junction</span>
+        <span class="s2">&quot;vj_junc&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;by&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;by_clones&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+            <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/Immunarch.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/tcr/Immunarch.svelte&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;report_paging&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;poplog_max&quot;</span><span class="p">:</span> <span class="mi">999</span><span class="p">,</span>
+    <span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">SampleDiversity</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.SampleDiversity"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.SampleDiversity" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.SampleDiversity">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Sample diversity and rarefaction analysis</span>
+
+<span class="sd">    This is part of Immunarch, in case we have multiple dataset to compare.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        immdata: The data loaded by `immunarch::repLoad()`</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        div_methods: Methods to calculate diversities</span>
+<span class="sd">            It is a dict, keys are the method names, values are the groupings.</span>
+<span class="sd">            Each one is a case, multiple columns for a case are separated by `,`</span>
+<span class="sd">            For example: `{&quot;div&quot;: [&quot;Status&quot;, &quot;Sex&quot;, &quot;Status,Sex&quot;]}` will run</span>
+<span class="sd">            true diversity for samples grouped by `Status`, `Sex`, and both.</span>
+<span class="sd">            The diversity for each sample without grouping will also be added</span>
+<span class="sd">            anyway.</span>
+<span class="sd">            Supported methods: `chao1`, `hill`, `div`, `gini.simp`, `inv.simp`,</span>
+<span class="sd">            `gini`, and `raref`. See also</span>
+<span class="sd">            &lt;https://immunarch.com/articles/web_only/v6_diversity.html&gt;.</span>
+<span class="sd">        devpars: The parameters for the plotting device</span>
+<span class="sd">            It is a dict, and keys are the methods and values are dicts with</span>
+<span class="sd">            width, height and res that will be passed to `png()`</span>
+<span class="sd">            If not provided, 1000, 1000 and 100 will be used.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;immdata:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.immdata | stem}}.diversity&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;div_methods&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;chao1&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;hill&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;div&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;gini.simp&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;inv.simp&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;gini&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;raref&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/SampleDiversity.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/tcr/SampleDiversity.svelte&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">CloneResidency</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.CloneResidency"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.CloneResidency" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.CloneResidency">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Identification of clone residency</span>
+
+<span class="sd">    This process is used to investigate the residency of clones in groups, typically two</span>
+<span class="sd">    samples (e.g. tumor and normal) from the same patient. But it can be used for any two groups of clones.</span>
+
+<span class="sd">    There are three types of output from this process</span>
+
+<span class="sd">    - Count tables of the clones in the two groups</span>
+
+<span class="sd">        | CDR3_aa          | Tumor | Normal |</span>
+<span class="sd">        |------------------|-------|--------|</span>
+<span class="sd">        | CASSYGLSWGSYEQYF | 306   | 55     |</span>
+<span class="sd">        | CASSVTGAETQYF    | 295   | 37     |</span>
+<span class="sd">        | CASSVPSAHYNEQFF  | 197   | 9      |</span>
+<span class="sd">        | ...              | ...   | ...    |</span>
+
+<span class="sd">    - Residency plots showing the residency of clones in the two groups</span>
+
+<span class="sd">        ![CloneResidency_residency](https://pwwang.github.io/immunopipe/latest/processes/images/CloneResidency.png)</span>
+
+<span class="sd">        The points in the plot are jittered to avoid overplotting. The x-axis is the residency in the first group and</span>
+<span class="sd">        the y-axis is the residency in the second group. The size of the points are relative to the normalized size of</span>
+<span class="sd">        the clones. You may identify different types of clones in the plot based on their residency in the two groups:</span>
+
+<span class="sd">        - Collapsed (The clones that are collapsed in the second group)</span>
+<span class="sd">        - Dual (The clones that are present in both groups with equal size)</span>
+<span class="sd">        - Expanded (The clones that are expanded in the second group)</span>
+<span class="sd">        - First Group Multiplet (The clones only in the First Group with size &gt; 1)</span>
+<span class="sd">        - Second Group Multiplet (The clones only in the Second Group with size &gt; 1)</span>
+<span class="sd">        - First Group Singlet (The clones only in the First Group with size = 1)</span>
+<span class="sd">        - Second Group Singlet (The clones only in the Second Group with size = 1)</span>
+
+<span class="sd">        This idea is borrowed from this paper:</span>
+
+<span class="sd">        &gt; [Wu, Thomas D., et al. &quot;Peripheral T cell expansion predicts tumour infiltration and clinical response.&quot; Nature 579.7798 (2020): 274-278.](https://www.nature.com/articles/s41586-020-2056-8)</span>
+
+<span class="sd">    - Venn diagrams showing the overlap of the clones in the two groups</span>
+
+<span class="sd">        ![CloneResidency_venn](https://pwwang.github.io/immunopipe/latest/processes/images/CloneResidency_venn.png){: width=&quot;60%&quot;}</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        immdata: The data loaded by `immunarch::repLoad()`</span>
+<span class="sd">        metafile: A cell-level metafile, where the first column must be the cell barcodes</span>
+<span class="sd">            that match the cell barcodes in `immdata`. The other columns can be any</span>
+<span class="sd">            metadata that you want to use for the analysis. The loaded metadata will be</span>
+<span class="sd">            left-joined to the converted cell-level data from `immdata`.</span>
+<span class="sd">            This can also be a Seurat object RDS file. If so, the `sobj@meta.data` will</span>
+<span class="sd">            be used as the metadata.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        subject (list): The key of subject in metadata. The clone</span>
+<span class="sd">            residency will be examined for this subject/patient</span>
+<span class="sd">        group: The key of group in metadata. This usually marks the samples</span>
+<span class="sd">            that you want to compare. For example, Tumor vs Normal,</span>
+<span class="sd">            post-treatment vs baseline</span>
+<span class="sd">            It doesn&#39;t have to be 2 groups always. If there are more than 3</span>
+<span class="sd">            groups, instead of venn diagram, upset plots will be used.</span>
+<span class="sd">        order (list): The order of the values in `group`. In scatter/residency plots,</span>
+<span class="sd">            `X` in `X,Y` will be used as x-axis and `Y` will be used as y-axis.</span>
+<span class="sd">            You can also have multiple orders. For example: `[&quot;X,Y&quot;, &quot;X,Z&quot;]`.</span>
+<span class="sd">            If you only have two groups, you can set `order = [&quot;X&quot;, &quot;Y&quot;]`, which will</span>
+<span class="sd">            be the same as `order = [&quot;X,Y&quot;]`.</span>
+<span class="sd">        section: How the subjects aligned in the report. Multiple subjects with</span>
+<span class="sd">            the same value will be grouped together.</span>
+<span class="sd">            Useful for cohort with large number of samples.</span>
+<span class="sd">        mutaters (type=json): The mutaters passed to `dplyr::mutate()` on</span>
+<span class="sd">            the cell-level data converted from `in.immdata`. If `in.metafile` is</span>
+<span class="sd">            provided, the mutaters will be applied to the joined data.</span>
+<span class="sd">            The keys will be the names of the new columns, and the values will be the</span>
+<span class="sd">            expressions. The new names can be used in `subject`, `group`, `order` and</span>
+<span class="sd">            `section`.</span>
+<span class="sd">        subset: The filter passed to `dplyr::filter()` to filter the data for the cells</span>
+<span class="sd">            before calculating the clone residency. For example, `Clones &gt; 1` to filter</span>
+<span class="sd">            out singletons.</span>
+<span class="sd">        prefix: The prefix of the cell barcodes in the `Seurat` object.</span>
+<span class="sd">        upset_ymax: The maximum value of the y-axis in the upset bar plots.</span>
+<span class="sd">        upset_trans: The transformation to apply to the y axis of upset bar plots.</span>
+<span class="sd">            For example, `log10` or `sqrt`. If not specified, the y axis will be</span>
+<span class="sd">            plotted as is. Note that the position of the bar plots will be dodged</span>
+<span class="sd">            instead of stacked when the transformation is applied.</span>
+<span class="sd">            See also &lt;https://github.com/tidyverse/ggplot2/issues/3671&gt;</span>
+<span class="sd">        cases (type=json): If you have multiple cases, you can use this argument</span>
+<span class="sd">            to specify them. The keys will be used as the names of the cases.</span>
+<span class="sd">            The values will be passed to the corresponding arguments.</span>
+<span class="sd">            If no cases are specified, the default case will be added, with</span>
+<span class="sd">            the name `DEFAULT` and the values of `envs.subject`, `envs.group`,</span>
+<span class="sd">            `envs.order` and `envs.section`. These values are also the</span>
+<span class="sd">            defaults for the other cases.</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;immdata:file,metafile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.immdata | stem}}.cloneov&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;subject&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;group&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;section&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;mutaters&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{Sample}</span><span class="s2">_&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;upset_ymax&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;upset_trans&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/CloneResidency.R&quot;</span>
+    <span class="n">order</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/tcr/CloneResidency.svelte&quot;</span><span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">Immunarch2VDJtools</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.Immunarch2VDJtools"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.Immunarch2VDJtools" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.Immunarch2VDJtools">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert immuarch format into VDJtools input formats.</span>
+
+<span class="sd">    This process converts the [`immunarch`](https://immunarch.com/) object to the</span>
+<span class="sd">    [`VDJtools`](https://vdjtools-doc.readthedocs.io/en/master/) input files,</span>
+<span class="sd">    in order to perform the VJ gene usage analysis by</span>
+<span class="sd">    [`VJUsage`](!!#biopipennstcrvjusage) process.</span>
+
+<span class="sd">    This process will generally generate a tab-delimited file for each sample,</span>
+<span class="sd">    with the following columns.</span>
+
+<span class="sd">    - `count`: The number of reads for this clonotype</span>
+<span class="sd">    - `frequency`: The frequency of this clonotype</span>
+<span class="sd">    - `CDR3nt`: The nucleotide sequence of the CDR3 region</span>
+<span class="sd">    - `CDR3aa`: The amino acid sequence of the CDR3 region</span>
+<span class="sd">    - `V`: The V gene</span>
+<span class="sd">    - `D`: The D gene</span>
+<span class="sd">    - `J`: The J gene</span>
+
+<span class="sd">    See also: &lt;https://vdjtools-doc.readthedocs.io/en/master/input.html#vdjtools-format&gt;.</span>
+
+<span class="sd">    This process has no environment variables.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        immdata: The data loaded by `immunarch::repLoad()`</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory containing the vdjtools input for each</span>
+<span class="sd">            sample</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;immdata:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.immdata | stem}}.vdjtools_input&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/Immunarch2VDJtools.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">ImmunarchSplitIdents</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.ImmunarchSplitIdents"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.ImmunarchSplitIdents" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.ImmunarchSplitIdents">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Split the data into multiple immunarch datasets by Idents from Seurat</span>
+
+<span class="sd">    Note that only the cells in both the `immdata` and `sobjfile` will be</span>
+<span class="sd">    kept.</span>
+
+<span class="sd">    Requires `immunarch &gt;= 0.9.0` to use `select_clusters()`</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        immdata: The data loaded by `immunarch::repLoad()`</span>
+<span class="sd">        sobjfile: The Seurat object file.</span>
+<span class="sd">            You can set a different ident by `Idents(sobj) &lt;- &quot;new_ident&quot;` to</span>
+<span class="sd">            split the data by the new ident, where `&quot;new_ident&quot;` is the an</span>
+<span class="sd">            existing column in meta data</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory containing the RDS files of the splitted</span>
+<span class="sd">            immunarch datasets</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        prefix: The prefix of the cell barcodes in the `Seurat` object.</span>
+<span class="sd">            Once could use a fixed prefix, or a placeholder with the column</span>
+<span class="sd">            name in meta data. For example, `&quot;{Sample}_&quot;` will replace the</span>
+<span class="sd">            placeholder with the value of the column `Sample` in meta data.</span>
+<span class="sd">        sample_col: The column name in meta data that contains the sample name</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;immdata:file, sobjfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.immdata | stem}}.splitidents&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{Sample}</span><span class="s2">_&quot;</span><span class="p">,</span> <span class="s2">&quot;sample_col&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample&quot;</span><span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/ImmunarchSplitIdents.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">VJUsage</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.VJUsage"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.VJUsage" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.VJUsage">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Circos-style V-J usage plot displaying the frequency of</span>
+<span class="sd">    various V-J junctions using vdjtools.</span>
+
+<span class="sd">    This process performs the VJ gene usage analysis using</span>
+<span class="sd">    [`VDJtools`](https://vdjtools-doc.readthedocs.io/en/master/).</span>
+<span class="sd">    It wraps the [`PlotFancyVJUsage`](https://vdjtools-doc.readthedocs.io/en/master/basic.html#plotfancyvjusage) command in `VDJtools`.</span>
+<span class="sd">    The output will be a V-J junction circos plot for a single sample.</span>
+<span class="sd">    Arcs correspond to different V and J segments, scaled to their frequency in sample.</span>
+<span class="sd">    Ribbons represent V-J pairings and their size is scaled to the pairing frequency</span>
+<span class="sd">    (weighted in present case).</span>
+
+<span class="sd">    ![VJUsage](https://vdjtools-doc.readthedocs.io/en/master/_images/basic-fancyvj.png){: width=&quot;80%&quot; }</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input file, in vdjtools input format</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The V-J usage plot</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        vdjtools: The path to the `VDJtools` executable.</span>
+<span class="sd">        vdjtools_patch (hidden): The patch file for `VDJtools`. It&#39;s delivered with the pipeline ([`biopipen`][3] package).</span>
+<span class="sd">            * You don&#39;t need to provide this file, unless you want to use a different patch file by yourself.</span>
+<span class="sd">            * See the issue with `VDJtools` [here](https://github.com/mikessh/vdjtools/issues/139).</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;outfile:file:{{ in.infile | stem | replace: &#39;.vdjtools&#39;, &#39;&#39; }}&quot;</span>
+        <span class="s2">&quot;.fancyvj.wt.png&quot;</span>
+    <span class="p">)</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;vdjtools&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">vdjtools</span><span class="p">,</span>
+        <span class="s2">&quot;vdjtools_patch&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">SCRIPT_DIR</span> <span class="o">/</span> <span class="s2">&quot;tcr&quot;</span> <span class="o">/</span> <span class="s2">&quot;vdjtools-patch.sh&quot;</span><span class="p">),</span>
+    <span class="p">}</span>
+    <span class="n">order</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/VJUsage.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/tcr/VJUsage.svelte&quot;</span><span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">Attach2Seurat</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.Attach2Seurat"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.Attach2Seurat" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.Attach2Seurat">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Attach the clonal information to a Seurat object as metadata</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        immfile: The immunarch object in RDS</span>
+<span class="sd">        sobjfile: The Seurat object file in RDS</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The Seurat object with the clonal information as metadata</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        prefix: The prefix to the barcodes. You can use placeholder like</span>
+<span class="sd">            `{Sample}_` to use the meta data from the immunarch object</span>
+<span class="sd">        metacols: Which meta columns to attach</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;immfile:file, sobjfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.sobjfile | basename}}&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{Sample}</span><span class="s2">_&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;metacols&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Clones&quot;</span><span class="p">,</span> <span class="s2">&quot;Proportion&quot;</span><span class="p">,</span> <span class="s2">&quot;CDR3.aa&quot;</span><span class="p">],</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/Attach2Seurat.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">TCRClustering</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.TCRClustering"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.TCRClustering" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.TCRClustering">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Cluster the TCR clones by their CDR3 sequences</span>
+
+<span class="sd">    This process is used to cluster TCR clones based on their CDR3 sequences.</span>
+
+<span class="sd">    It uses either</span>
+
+<span class="sd">    [GIANA](https://github.com/s175573/GIANA)</span>
+
+<span class="sd">    &gt; Zhang, Hongyi, Xiaowei Zhan, and Bo Li.</span>
+<span class="sd">    &gt; &quot;GIANA allows computationally-efficient TCR clustering and multi-disease</span>
+<span class="sd">    &gt; repertoire classification by isometric transformation.&quot;</span>
+<span class="sd">    &gt; Nature communications 12.1 (2021): 1-11.</span>
+
+<span class="sd">    Or [ClusTCR](https://github.com/svalkiers/clusTCR)</span>
+
+<span class="sd">    &gt; Sebastiaan Valkiers, Max Van Houcke, Kris Laukens, Pieter Meysman,</span>
+<span class="sd">    &gt; ClusTCR: a Python interface for rapid clustering of large sets of CDR3</span>
+<span class="sd">    &gt; sequences with unknown antigen specificity,</span>
+<span class="sd">    &gt; Bioinformatics, 2021.</span>
+
+<span class="sd">    Both methods are based on the</span>
+<span class="sd">    [Faiss Clustering Library](https://github.com/facebookresearch/faiss),</span>
+<span class="sd">    for efficient similarity search and clustering of dense vectors, so both methods</span>
+<span class="sd">    yield similar results.</span>
+
+<span class="sd">    A text file will be generated with the cluster assignments for each cell, together</span>
+<span class="sd">    with the `immunarch` object (in `R`) with the cluster assignments at `TCR_Clsuter`</span>
+<span class="sd">    column. This information will then be merged to a `Seurat` object for further</span>
+<span class="sd">    downstream analysis.</span>
+
+<span class="sd">    The cluster assignments are prefixed with `S_` or `M_` to indicate whether a</span>
+<span class="sd">    cluster has only one unique CDR3 sequence or multiple CDR3 sequences.</span>
+<span class="sd">    Note that a cluster with `S_` prefix may still have multiple cells, as the same</span>
+<span class="sd">    CDR3 sequence may be shared by multiple cells.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        immfile: The immunarch object in RDS</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        immfile: The immnuarch object in RDS with TCR cluster information</span>
+<span class="sd">        clusterfile: The cluster file.</span>
+<span class="sd">            Columns are CDR3.aa, TCR_Cluster, TCR_Cluster_Size and</span>
+<span class="sd">            TCR_Cluster_Size1.</span>
+<span class="sd">            TCR_Cluster_Size is the number of cells in the cluster.</span>
+<span class="sd">            TCR_Cluster_Size1 is the unique CDR3 sequences in the cluster.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        tool (choice): The tool used to do the clustering, either</span>
+<span class="sd">            [GIANA](https://github.com/s175573/GIANA) or</span>
+<span class="sd">            [ClusTCR](https://github.com/svalkiers/clusTCR).</span>
+<span class="sd">            For GIANA, using TRBV mutations is not supported</span>
+<span class="sd">            - GIANA: by Li lab at UT Southwestern Medical Center</span>
+<span class="sd">            - ClusTCR: by Sebastiaan Valkiers, etc</span>
+<span class="sd">        prefix: The prefix to the barcodes. You can use placeholder like `{Sample}_`</span>
+<span class="sd">            The prefixed barcodes will be used to match the barcodes in `in.metafile`.</span>
+<span class="sd">            Not used if `in.metafile` is not specified.</span>
+<span class="sd">            If `None` (default), `immdata$prefix` will be used.</span>
+<span class="sd">        python: The path of python with `GIANA`&#39;s dependencies installed</span>
+<span class="sd">            or with `clusTCR` installed. Depending on the `tool` you choose.</span>
+<span class="sd">        args (type=json): The arguments for the clustering tool</span>
+<span class="sd">            For GIANA, they will be passed to `python GIAna.py`</span>
+<span class="sd">            See &lt;https://github.com/s175573/GIANA#usage&gt;.</span>
+<span class="sd">            For ClusTCR, they will be passed to `clustcr.Clustering(...)`</span>
+<span class="sd">            See &lt;https://svalkiers.github.io/clusTCR/docs/clustering/how-to-use.html#clustering&gt;.</span>
+<span class="sd">        on_multi (flag;hidden): Whether to run clustering on</span>
+<span class="sd">            multi-chain seq or the seq read and processed by immunarch</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        clusTCR:</span>
+<span class="sd">            - if: {{ proc.envs.tool == &#39;ClusTCR&#39; }}</span>
+<span class="sd">            - check: {{ proc.envs.python }} -c &quot;import clustcr&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;immfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;immfile:file:{{in.immfile | basename}}&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;clusterfile:file:{{in.immfile | stem}}.clusters.txt&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;tool&quot;</span><span class="p">:</span> <span class="s2">&quot;GIANA&quot;</span><span class="p">,</span>  <span class="c1"># or ClusTCR</span>
+        <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;on_multi&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;python&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span><span class="p">,</span>
+        <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/TCRClustering.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">TCRClusterStats</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.TCRClusterStats"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.TCRClusterStats" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.TCRClusterStats">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Statistics of TCR clusters, generated by `TCRClustering`.</span>
+
+<span class="sd">    The statistics include</span>
+
+<span class="sd">    - The number of cells in each cluster (cluster size)</span>
+<span class="sd">    - Sample diversity using TCR clusters instead of TCR clones</span>
+<span class="sd">    - Shared TCR clusters between samples</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        ### Cluster size</span>
+
+<span class="sd">        ```toml</span>
+<span class="sd">        [TCRClusterStats.envs.cluster_size]</span>
+<span class="sd">        by = &quot;Sample&quot;</span>
+<span class="sd">        ```</span>
+
+<span class="sd">        ![Cluster_size](https://pwwang.github.io/immunopipe/latest/processes/images/TCRClusteringStats_cluster_size.png){: width=&quot;80%&quot;}</span>
+
+<span class="sd">        ### Shared clusters</span>
+
+<span class="sd">        ```toml</span>
+<span class="sd">        [TCRClusterStats.envs.shared_clusters]</span>
+<span class="sd">        numbers_on_heatmap = true</span>
+<span class="sd">        heatmap_meta = [&quot;region&quot;]</span>
+<span class="sd">        ```</span>
+
+<span class="sd">        ![Shared_clusters](https://pwwang.github.io/immunopipe/latest/processes/images/TCRClusteringStats_shared_clusters.png){: width=&quot;80%&quot;}</span>
+
+<span class="sd">        ### Sample diversity</span>
+
+<span class="sd">        ```toml</span>
+<span class="sd">        [TCRClusterStats.envs.sample_diversity]</span>
+<span class="sd">        method = &quot;gini&quot;</span>
+<span class="sd">        ```</span>
+
+<span class="sd">        ![Sample_diversity](https://pwwang.github.io/immunopipe/latest/processes/images/TCRClusteringStats_sample_diversity.png){: width=&quot;80%&quot;}</span>
+
+<span class="sd">        Compared to the sample diversity using TCR clones:</span>
+
+<span class="sd">        ![Sample_diversity](https://pwwang.github.io/immunopipe/latest/processes/images/Immunarch_sample_diversity.png){: width=&quot;80%&quot;}</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        immfile: The immunarch object with TCR clusters attached</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory containing the stats and reports</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        cluster_size (ns): The distribution of size of each cluster.</span>
+<span class="sd">            - by: The variables (column names) used to fill the histogram.</span>
+<span class="sd">                Only a single column is supported.</span>
+<span class="sd">            - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                - width (type=int): The width of the device</span>
+<span class="sd">                - height (type=int): The height of the device</span>
+<span class="sd">                - res (type=int): The resolution of the device</span>
+<span class="sd">            - cases (type=json): If you have multiple cases, you can use this</span>
+<span class="sd">                argument to specify them. The keys will be the names of the</span>
+<span class="sd">                cases. The values will be passed to the corresponding arguments</span>
+<span class="sd">                above. If any of these arguments are not specified, the values</span>
+<span class="sd">                in `envs.cluster_size` will be used. If NO cases are</span>
+<span class="sd">                specified, the default case will be added, with the name</span>
+<span class="sd">                `DEFAULT`.</span>
+<span class="sd">        shared_clusters (ns): Stats about shared TCR clusters</span>
+<span class="sd">            - numbers_on_heatmap (flag): Whether to show the</span>
+<span class="sd">                numbers on the heatmap.</span>
+<span class="sd">            - heatmap_meta (list): The columns of metadata to show on the</span>
+<span class="sd">                heatmap.</span>
+<span class="sd">            - cluster_rows (flag): Whether to cluster the rows on the heatmap.</span>
+<span class="sd">            - sample_order: The order of the samples on the heatmap.</span>
+<span class="sd">                Either a string separated by `,` or a list of sample names.</span>
+<span class="sd">                This only works for columns if `cluster_rows` is `True`.</span>
+<span class="sd">            - grouping: The groups to investigate the shared clusters.</span>
+<span class="sd">                If specified, venn diagrams will be drawn instead of heatmaps.</span>
+<span class="sd">                In such case, `numbers_on_heatmap` and `heatmap_meta` will be</span>
+<span class="sd">                ignored.</span>
+<span class="sd">            - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                - width (type=int): The width of the device</span>
+<span class="sd">                - height (type=int): The height of the device</span>
+<span class="sd">                - res (type=int): The resolution of the device</span>
+<span class="sd">            - cases (type=json): If you have multiple cases, you can use this</span>
+<span class="sd">                argument to specify them. The keys will be the names of the</span>
+<span class="sd">                cases. The values will be passed to the corresponding arguments</span>
+<span class="sd">                above. If any of these arguments are not specified, the values</span>
+<span class="sd">                in `envs.shared_clusters` will be used. If NO cases are</span>
+<span class="sd">                specified, the default case will be added, with the name</span>
+<span class="sd">                `DEFAULT`.</span>
+<span class="sd">        sample_diversity (ns): Sample diversity using TCR clusters instead of</span>
+<span class="sd">            clones.</span>
+<span class="sd">            - by: The variables (column names) to group samples.</span>
+<span class="sd">                Multiple columns should be separated by `,`.</span>
+<span class="sd">            - method (choice): The method to calculate diversity.</span>
+<span class="sd">                - gini: The Gini coefficient.</span>
+<span class="sd">                    It measures the inequality among values of a frequency</span>
+<span class="sd">                    distribution (for example levels of income).</span>
+<span class="sd">                - gini.simp: The Gini-Simpson index.</span>
+<span class="sd">                    It is the probability of interspecific encounter, i.e.,</span>
+<span class="sd">                    probability that two entities represent different types.</span>
+<span class="sd">                - inv.simp: Inverse Simpson index.</span>
+<span class="sd">                    It is the effective number of types that is obtained when</span>
+<span class="sd">                    the weighted arithmetic mean is used to quantify average</span>
+<span class="sd">                    proportional abundance of types in the dataset of interest.</span>
+<span class="sd">                - div: true diversity, or the effective number of types.</span>
+<span class="sd">                    It refers to the number of equally abundant types needed</span>
+<span class="sd">                    for the average proportional abundance of the types to</span>
+<span class="sd">                    equal that observed in the dataset of interest where all</span>
+<span class="sd">                    types may not be equally abundant.</span>
+<span class="sd">            - devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">                - width (type=int): The width of the device</span>
+<span class="sd">                - height (type=int): The height of the device</span>
+<span class="sd">                - res (type=int): The resolution of the device</span>
+<span class="sd">            - cases (type=json): If you have multiple cases, you can use this</span>
+<span class="sd">                argument to specify them. The keys will be the names of the</span>
+<span class="sd">                cases. The values will be passed to the corresponding arguments</span>
+<span class="sd">                above. If any of these arguments are not specified, the values</span>
+<span class="sd">                in `envs.sample_diversity` will be used. If NO cases are</span>
+<span class="sd">                specified, the default case will be added, with the name</span>
+<span class="sd">                `DEFAULT`.</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        r-immunarch:</span>
+<span class="sd">            - check: {{proc.lang}} -e &quot;library(immunarch)&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;immfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.immfile | stem}}.tcrclusters_stats&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;cluster_size&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;by&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">900</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+            <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;shared_clusters&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;numbers_on_heatmap&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;heatmap_meta&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;cluster_rows&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;sample_order&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;cluster_rows&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;grouping&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+            <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;sample_diversity&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;by&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;gini&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+            <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/TCRClusterStats.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/tcr/TCRClusterStats.svelte&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">CloneSizeQQPlot</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.CloneSizeQQPlot"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.CloneSizeQQPlot" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.CloneSizeQQPlot">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;QQ plot of the clone sizes</span>
+
+<span class="sd">    QQ plots for clones sizes of pairs of samples</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        immdata: The data loaded by `immunarch::repLoad()`</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        subject: The key of subject in metadata, defining the pairs.</span>
+<span class="sd">            The clone residency will be examined for this subject/patient</span>
+<span class="sd">        group: The key of group in metadata. This usually marks the samples</span>
+<span class="sd">            that you want to compare. For example, Tumor vs Normal,</span>
+<span class="sd">            post-treatment vs baseline</span>
+<span class="sd">            It doesn&#39;t have to be 2 groups always. If there are more than 3</span>
+<span class="sd">            groups, for example, [A, B, C], the QQ plots will be generated</span>
+<span class="sd">            for all the combinations of 2 groups, i.e., [A, B], [A, C], [B, C]</span>
+<span class="sd">        order: The order of the values in `group`. Early-ordered group will</span>
+<span class="sd">            be used as x-axis in scatter plots</span>
+<span class="sd">            If there are more than 2 groups, for example, [A, B, C], the</span>
+<span class="sd">            QQ plots will be drawn for pairs: B ~ A, C ~ B.</span>
+<span class="sd">        diag: Whether to draw the diagonal line in the QQ plot</span>
+<span class="sd">        on: The key of the metadata to use for the QQ plot. One/Both of</span>
+<span class="sd">            `[&quot;Clones&quot;, &quot;Proportion&quot;]`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;immdata:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.immdata | stem}}.qqplots&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;subject&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;group&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;diag&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;on&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Clones&quot;</span><span class="p">,</span> <span class="s2">&quot;Proportion&quot;</span><span class="p">],</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/CloneSizeQQPlot.R&quot;</span>
+    <span class="n">order</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/tcr/CloneSizeQQPlot.svelte&quot;</span><span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">CDR3AAPhyschem</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.CDR3AAPhyschem"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.CDR3AAPhyschem" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.CDR3AAPhyschem">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;CDR3 AA physicochemical feature analysis</span>
+
+<span class="sd">    The idea is to perform a regression between two groups of cells</span>
+<span class="sd">    (e.g. Treg vs Tconv) at different length of CDR3 AA sequences.</span>
+<span class="sd">    The regression will be performed for each physicochemical feature of the</span>
+<span class="sd">    AA (hydrophobicity, volume and isolectric point).</span>
+
+<span class="sd">    Reference:</span>
+<span class="sd">    - [Stadinski, Brian D., et al. &quot;Hydrophobic CDR3 residues promote the development of self-reactive T cells.&quot; Nature immunology 17.8 (2016): 946-955.](https://www.nature.com/articles/ni.3491)</span>
+<span class="sd">    - [Lagattuta, Kaitlyn A., et al. &quot;Repertoire analyses reveal T cell antigen receptor sequence features that influence T cell fate.&quot; Nature immunology 23.3 (2022): 446-457.](https://www.nature.com/articles/s41590-022-01129-x)</span>
+<span class="sd">    - [Wimley, W. C. &amp; White, S. H. Experimentally determined hydrophobicity scale for proteins at membrane - interfaces. Nat. Struct. Biol. 3, 842-848 (1996).](https://www.nature.com/articles/nsb1096-842)</span>
+<span class="sd">    - [Handbook of chemistry &amp; physics 72nd edition. (CRC Press, 1991).](https://books.google.com/books?hl=en&amp;lr=&amp;id=bNDMBQAAQBAJ&amp;oi=fnd&amp;pg=PP1&amp;dq=Hdbk+of+chemistry+%26+physics&amp;ots=H9fzwhwz-C&amp;sig=EXHI9N3q4OW9TYEBWlldqkvADfM#v=onepage&amp;q=Hdbk%20of%20chemistry%20%26%20physics&amp;f=false)</span>
+<span class="sd">    - [Zamyatnin, A. A. Protein volume in solution. Prog. Biophys. Mol. Biol. 24, 107-123 (1972).](https://www.sciencedirect.com/science/article/pii/0079610772900053)</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        immdata: The data loaded by `immunarch::repLoad()`, saved in RDS format</span>
+<span class="sd">        srtobj: The `Seurat` object, saved in RDS format, used to get the</span>
+<span class="sd">            metadata for each cell (e.g. cell type)</span>
+<span class="sd">            It could also be a tab delimited file with `meta.data` of the</span>
+<span class="sd">            `Seurat` object.</span>
+<span class="sd">            It has to have a `Sample` column, which is used to match the</span>
+<span class="sd">            `immdata` object.</span>
+<span class="sd">            It is optional, if not provided, the metadata from the `immdata`</span>
+<span class="sd">            object will be used.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        group: The key of group in metadata to define the groups to</span>
+<span class="sd">            compare. For example, `CellType`, which has cell types annotated</span>
+<span class="sd">            for each cell in the combined object (immdata + Seurat metadata)</span>
+<span class="sd">        comparison (type=json): A dict of two groups, with keys as the</span>
+<span class="sd">            group names and values as the group labels. For example,</span>
+<span class="sd">            ```toml</span>
+<span class="sd">            Treg = [&quot;CD4 CTL&quot;, &quot;CD4 Naive&quot;, &quot;CD4 TCM&quot;, &quot;CD4 TEM&quot;]</span>
+<span class="sd">            Tconv = &quot;Tconv&quot;</span>
+<span class="sd">            ```</span>
+<span class="sd">        prefix: The prefix of the cell names (rownames) in the metadata.</span>
+<span class="sd">            The prefix is usually not needed in immdata, as the data is stored</span>
+<span class="sd">            in the `immdata` object separately for each sample. However, the</span>
+<span class="sd">            `Seurat` object has a combined `meta.data` for all the samples,</span>
+<span class="sd">            so the prefix is needed. Usually, the prefix is the sample name.</span>
+<span class="sd">            For example, `Sample1-AACGTTGAGGCTACGT-1`.</span>
+<span class="sd">            We need this prefix to add the sample name to the cell names in</span>
+<span class="sd">            immdata, so that we can match the cells in `immdata` and</span>
+<span class="sd">            `Seurat` object. Set it to `None` or an empty string if the</span>
+<span class="sd">            `Seurat` object has the same cell names as `immdata`. You can use</span>
+<span class="sd">            placeholders to specify the prefix, e.g., `{Sample}_`. In such a</span>
+<span class="sd">            case, the `Sample` column must exist in the `Seurat` object.</span>
+<span class="sd">        target: Which group to use as the target group. The target</span>
+<span class="sd">            group will be labeled as 1, and the other group will be labeled as</span>
+<span class="sd">            0 in the regression.</span>
+<span class="sd">        subset: A column, or a list of columns separated by comma,</span>
+<span class="sd">            in the merged object to subset the cells to perform the regression,</span>
+<span class="sd">            for each group in the columns.</span>
+<span class="sd">            If not provided, all the cells will be used.</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;immdata:file,srtobj:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.immdata | stem}}.cdr3aaphyschem&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;group&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;comparison&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{Sample}</span><span class="s2">_&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/CDR3AAPhyschem.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/tcr/CDR3AAPhyschem.svelte&quot;</span><span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">TESSA</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.TESSA"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.TESSA" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.TESSA">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Tessa is a Bayesian model to integrate T cell receptor (TCR) sequence</span>
+<span class="sd">    profiling with transcriptomes of T cells.</span>
+
+<span class="sd">    Enabled by the recently developed single cell sequencing techniques, which provide</span>
+<span class="sd">    both TCR sequences and RNA sequences of each T cell concurrently, Tessa maps the</span>
+<span class="sd">    functional landscape of the TCR repertoire, and generates insights into</span>
+<span class="sd">    understanding human immune response to diseases. As the first part of tessa,</span>
+<span class="sd">    BriseisEncoder is employed prior to the Bayesian algorithm to capture the TCR</span>
+<span class="sd">    sequence features and create numerical embeddings. We showed that the reconstructed</span>
+<span class="sd">    Atchley Factor matrices and CDR3 sequences, generated through the numerical</span>
+<span class="sd">    embeddings, are highly similar to their original counterparts. The CDR3 peptide</span>
+<span class="sd">    sequences are constructed via a RandomForest model applied on the reconstructed</span>
+<span class="sd">    Atchley Factor matrices.</span>
+
+<span class="sd">    See &lt;https://github.com/jcao89757/TESSA&gt;</span>
+
+<span class="sd">    When finished, two columns will be added to the `meta.data` of the `Seurat` object:</span>
+
+<span class="sd">    - `TESSA_Cluster`: The cluster assignments from TESSA.</span>
+<span class="sd">    - `TESSA_Cluster_Size`: The number of cells in each cluster.</span>
+
+<span class="sd">    These columns can be then used for further downstream analysis to explore the</span>
+<span class="sd">    functional landscape of the TCR repertoire.</span>
+
+<span class="sd">    Reference:</span>
+<span class="sd">        - &#39;Mapping the Functional Landscape of TCR Repertoire.&#39;,</span>
+<span class="sd">            Zhang, Z., Xiong, D., Wang, X. et al. 2021.</span>
+<span class="sd">            [link](https://www.nature.com/articles/s41592-020-01020-3)</span>
+<span class="sd">        - &#39;Deep learning-based prediction of the T cell receptor-antigen</span>
+<span class="sd">            binding specificity.&#39;, Lu, T., Zhang, Z., Zhu, J. et al. 2021.</span>
+<span class="sd">            [link](https://www.nature.com/articles/s42256-021-00383-2)</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        immdata: The immunarch object in RDS file or text file of TCR data loaded by</span>
+<span class="sd">            [`ImmunarchLoading`](!!#biopipennstcrimmunarchloading)</span>
+<span class="sd">        srtobj: The `Seurat` object, saved in RDS format, with dimension</span>
+<span class="sd">            reduction performed if you want to use them to represent the</span>
+<span class="sd">            transcriptome of T cells.</span>
+<span class="sd">            This could also be a tab delimited file (can be gzipped) with</span>
+<span class="sd">            expression matrix or dimension reduction results.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The tab-delimited file with three columns</span>
+<span class="sd">            (`barcode`, `TESSA_Cluster` and `TESSA_Cluster_Size`) or</span>
+<span class="sd">            an RDS file if  `in.srtobj` is an RDS file of a Seurat object, with</span>
+<span class="sd">            `TESSA_Cluster` and `TESSA_Cluster_Size` added to the `meta.data`</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        python: The path of python with `TESSA`&#39;s dependencies installed</span>
+<span class="sd">        prefix: The prefix of the cell barcodes in the `Seurat` object.</span>
+<span class="sd">            Once could use a fixed prefix, or a placeholder with the column</span>
+<span class="sd">            name in meta data. For example, `&quot;{Sample}_&quot;` will replace the</span>
+<span class="sd">            placeholder with the value of the column `Sample` in meta data.</span>
+<span class="sd">            If `in.immdata` is text file, the prefix will be ignored and the</span>
+<span class="sd">            barcode should be already prefixed.</span>
+<span class="sd">            If `None` and `in.immdata` is RDS file, `immdata$prefix` will be used.</span>
+<span class="sd">        within_sample (flag): Whether the TCR networks are constructed only</span>
+<span class="sd">            within TCRs from the same sample/patient (True) or with all the</span>
+<span class="sd">            TCRs in the meta data matrix (False).</span>
+<span class="sd">        assay: Which assay to use to extract the expression matrix.</span>
+<span class="sd">            Only works if `in.srtobj` is an RDS file of a Seurat object.</span>
+<span class="sd">            By default, if `SCTransform` is performed, `SCT` will be used.</span>
+<span class="sd">        predefined_b (flag): Whether use the predefined `b` or not.</span>
+<span class="sd">            Please check the paper of tessa for more details about the b vector.</span>
+<span class="sd">            If True, the tessa will not update b in the MCMC iterations.</span>
+<span class="sd">        max_iter (type=int): The maximum number of iterations for MCMC.</span>
+<span class="sd">        save_tessa (flag): Save tessa detailed results to seurat object?</span>
+<span class="sd">            Only works if `in.srtobj` is an RDS file of a Seurat object.</span>
+<span class="sd">            It will be saved to `sobj@misc$tessa`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;immdata:file,srtobj:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;outfile:file:</span>
+<span class="s2">        {</span><span class="si">%- i</span><span class="s2">f in.srtobj.lower().endswith(&quot;.rds&quot;) -%}</span>
+<span class="s2">        {{in.srtobj | stem}}.tessa.RDS</span>
+<span class="s2">        {</span><span class="si">%- e</span><span class="s2">lse -%}</span>
+<span class="s2">        {{in.immdata | stem}}.tessa.txt</span>
+<span class="s2">        {</span><span class="si">%- e</span><span class="s2">ndif -%}</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;python&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span><span class="p">,</span>
+        <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;assay&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;within_sample&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;predefined_b&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;max_iter&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+        <span class="s2">&quot;save_tessa&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/TESSA.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/tcr/TESSA.svelte&quot;</span><span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">TCRDock</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.TCRDock"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.TCRDock" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.TCRDock">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Using TCRDock to predict the structure of MHC-peptide-TCR complexes</span>
+
+<span class="sd">    See &lt;https://github.com/phbradley/TCRdock&gt;.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        configfile: The config file for TCRDock</span>
+<span class="sd">            It&#39;s should be a toml file with the keys listed in `envs`, including</span>
+<span class="sd">            `organism`, `mhc_class`, `mhc`, `peptide`, `va`, `ja`, `vb`, `jb`,</span>
+<span class="sd">            `cdr3a`, and `cdr3b`.</span>
+<span class="sd">            The values will overwrite the values in `envs`.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory containing the results</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        organism: The organism of the TCR, peptide and MHC</span>
+<span class="sd">        mhc_class (type=int): The MHC class, either `1` or `2`</span>
+<span class="sd">        mhc: The MHC allele, e.g., `A*02:01`</span>
+<span class="sd">        peptide: The peptide sequence</span>
+<span class="sd">        va: The V alpha gene</span>
+<span class="sd">        ja: The J alpha gene</span>
+<span class="sd">        vb: The V beta gene</span>
+<span class="sd">        jb: The J beta gene</span>
+<span class="sd">        cdr3a: The CDR3 alpha sequence</span>
+<span class="sd">        cdr3b: The CDR3 beta sequence</span>
+<span class="sd">        python: The path of python with dependencies for `tcrdock` installed.</span>
+<span class="sd">            If not provided, `TCRDock.lang` will be used (the same interpreter</span>
+<span class="sd">            used for the wrapper script).</span>
+<span class="sd">            It could also be a list to specify, for example, a python in a conda</span>
+<span class="sd">            environment (e.g., `[&quot;conda&quot;, &quot;run&quot;, &quot;-n&quot;, &quot;myenv&quot;, &quot;python&quot;]`).</span>
+<span class="sd">        tmpdir: The temporary directory used to clone the `tcrdock` source code if</span>
+<span class="sd">            `envs.tcrdock` is not provided.</span>
+<span class="sd">        tcrdock: The path to the `tcrdock` source code repo.</span>
+<span class="sd">            You need to clone the source code from the github repository.</span>
+<span class="sd">            &lt;https://github.com/phbradley/TCRdock&gt; at</span>
+<span class="sd">            revision c5a7af42eeb0c2a4492a4d4fe803f1f9aafb6193 at main branch.</span>
+<span class="sd">            You also have to run `download_blast.py` after cloning to download the</span>
+<span class="sd">            blast database in the directory.</span>
+<span class="sd">            If not provided, we will clone the source code to the `envs.tmpdir`</span>
+<span class="sd">            directory and run the `download_blast.py` script.</span>
+<span class="sd">        model_name: The model name to use</span>
+<span class="sd">        model_file: The model file to use.</span>
+<span class="sd">            If provided as a relative path, it should be relative to the</span>
+<span class="sd">            `&lt;envs.data_dir&gt;/params/`, otherwise, it should be the full path.</span>
+<span class="sd">        data_dir: The data directory that contains the model files.</span>
+<span class="sd">            The model files should be in the `params` subdirectory.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;configfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.configfile | stem}}.tcrdock&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;tcrdock&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;organism&quot;</span><span class="p">:</span> <span class="s2">&quot;human&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mhc_class&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;mhc&quot;</span><span class="p">:</span> <span class="s2">&quot;A*02:01&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;peptide&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;va&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;ja&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;vb&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;jb&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;cdr3a&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;cdr3b&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;python&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;model_name&quot;</span><span class="p">:</span> <span class="s2">&quot;model_2_ptm_ft4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;model_file&quot;</span><span class="p">:</span> <span class="s2">&quot;tcrpmhc_run4_af_mhc_params_891.pkl&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;data_dir&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/TCRDock.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">ScRepLoading</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.ScRepLoading"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.ScRepLoading" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.ScRepLoading">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Load the single cell TCR/BCR data into a `scRepertoire` compatible object</span>
+
+<span class="sd">    This process loads the single cell TCR/BCR data into a `scRepertoire`</span>
+<span class="sd">    compatible object. Later, `scRepertoire::combineExpression` can be used to</span>
+<span class="sd">    combine the expression data with the TCR/BCR data.</span>
+
+<span class="sd">    For the data path specified at `TCRData` in the input file, we will first find</span>
+<span class="sd">    `filtered_contig_annotations.csv` and `filtered_config_annotations.csv.gz` in the</span>
+<span class="sd">    path. If neighter of them exists, we will find `all_contig_annotations.csv` and</span>
+<span class="sd">    `all_contig_annotations.csv.gz` in the path and a warning will be raised</span>
+<span class="sd">    (You can find it at `./.pipen/&lt;pipeline-name&gt;/ImmunarchLoading/&lt;job.index&gt;/job.stderr`).</span>
+
+<span class="sd">    If none of the files exists, an error will be raised.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        metafile: The meta data of the samples</span>
+<span class="sd">            A tab-delimited file</span>
+<span class="sd">            Two columns are required:</span>
+<span class="sd">            * `Sample` to specify the sample names.</span>
+<span class="sd">            * `TCRData` to assign the path of the data to the samples,</span>
+<span class="sd">            and this column will be excluded as metadata.</span>
+<span class="sd">            Immunarch is able to fetch the sample names from the names of</span>
+<span class="sd">            the target files. However, 10x data yields result like</span>
+<span class="sd">            `filtered_contig_annotations.csv`, which doesn&#39;t have any name</span>
+<span class="sd">            information.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The `scRepertoire` compatible object in RDS format</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        combineTCR (type=json): The extra arguments for `scRepertoire::combineTCR` function.</span>
+<span class="sd">            See also &lt;https://www.borch.dev/uploads/screpertoire/reference/combinetcr&gt;</span>
+<span class="sd">        exclude (auto): The columns to exclude from the metadata to add to the object.</span>
+<span class="sd">            A list of column names to exclude or a string with column names separated by `,`.</span>
+<span class="sd">            By default, `TCRData` and `RNAData` will be excluded.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;metafile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.metafile | stem}}.scRep.RDS&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;combineTCR&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;samples&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span> <span class="s2">&quot;exclude&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;TCRData&quot;</span><span class="p">,</span> <span class="s2">&quot;RNAData&quot;</span><span class="p">]}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/ScRepLoading.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">ClonalStats</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.tcr.ClonalStats"></span><a class="mkapi-docs-link" title="biopipen.ns.tcr.ClonalStats" href="../../biopipen.ns.tcr/#biopipen.ns.tcr.ClonalStats">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Visualize the clonal information.</span>
+
+<span class="sd">    Using [`scplotter`](https://github.com/pwwang/scplotter) to visualize the clonal</span>
+<span class="sd">    information.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        screpfile: The `scRepertoire` object in RDS format</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: The output directory containing the plots</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        mutaters (type=json;order=-9): The mutaters passed to `dplyr::mutate()` to add new variables.</span>
+<span class="sd">            When the object loaded form `in.screpfile` is a list, the mutaters will be applied to each element.</span>
+<span class="sd">            The keys are the names of the new variables, and the values are the expressions.</span>
+<span class="sd">            When it is a `Seurat` object, typically an output of `scRepertoire::combineExpression()`,</span>
+<span class="sd">            the mutaters will be applied to the `meta.data`.</span>
+<span class="sd">        viz_type (choice): The type of visualization to generate.</span>
+<span class="sd">            - volume: The volume of the clones using [`ClonalVolumePlot`](https://pwwang.github.io/scplotter/reference/ClonalVolumePlot.html)</span>
+<span class="sd">            - abundance: The abundance of the clones using [`ClonalAbundancePlot`](https://pwwang.github.io/scplotter/reference/ClonalAbundancePlot.html)</span>
+<span class="sd">            - length: The length of the CDR3 sequences using [`ClonalLengthPlot`](https://pwwang.github.io/scplotter/reference/ClonalLengthPlot.html)</span>
+<span class="sd">            - residency: The residency of the clones using [`ClonalResidencyPlot`](https://pwwang.github.io/scplotter/reference/ClonalResidencyPlot.html)</span>
+<span class="sd">            - dynamics: The dynamics of the clones using [`ClonalDynamicsPlot`](https://pwwang.github.io/scplotter/reference/ClonalDynamicsPlot.html)</span>
+<span class="sd">            - composition: The composition of the clones using [`ClonalCompositionPlot`](https://pwwang.github.io/scplotter/reference/ClonalCompositionPlot.html)</span>
+<span class="sd">            - overlap: The overlap of the clones using [`ClonalOverlapPlot`](https://pwwang.github.io/scplotter/reference/ClonalOverlapPlot.html)</span>
+<span class="sd">            - diversity: The diversity of the clones using [`ClonalDiversityPlot`](https://pwwang.github.io/scplotter/reference/ClonalDiversityPlot.html)</span>
+<span class="sd">            - geneusage: The gene usage of the clones using [`ClonalGeneUsagePlot`](https://pwwang.github.io/scplotter/reference/ClonalGeneUsagePlot.html)</span>
+<span class="sd">            - positional: The positional information of the clones using [`ClonalPositionalPlot`](https://pwwang.github.io/scplotter/reference/ClonalPositionalPlot.html)</span>
+<span class="sd">            - kmer: The kmer information of the clones using [`ClonalKmerPlot`](https://pwwang.github.io/scplotter/reference/ClonalKmerPlot.html)</span>
+<span class="sd">            - rarefaction: The rarefaction curve of the clones using [`ClonalRarefactionPlot`](https://pwwang.github.io/scplotter/reference/ClonalRarefactionPlot.html)</span>
+<span class="sd">        subset: An expression to subset the data before plotting.</span>
+<span class="sd">            Similar to `mutaters`, it will be applied to each element by `dplyr::filter()` if the object</span>
+<span class="sd">            loaded form `in.screpfile` is a list; otherwise, it will be applied to</span>
+<span class="sd">            `subset(sobj, subset = &lt;expr&gt;)` if the object is a `Seurat` object.</span>
+<span class="sd">        devpars (ns): The parameters for the plotting device.</span>
+<span class="sd">            - width (type=int): The width of the device</span>
+<span class="sd">            - height (type=int): The height of the device</span>
+<span class="sd">            - res (type=int): The resolution of the device</span>
+<span class="sd">        more_formats (list): The extra formats to save the plots in, other than PNG.</span>
+<span class="sd">        save_code (flag): Whether to save the code used to generate the plots</span>
+<span class="sd">            Note that the data directly used to generate the plots will also be saved in an `rda` file.</span>
+<span class="sd">            Be careful if the data is large as it may take a lot of disk space.</span>
+<span class="sd">        descr: The description of the plot, used to show in the report.</span>
+<span class="sd">        &lt;more&gt;: The arguments for the plot function</span>
+<span class="sd">            See the documentation of the corresponding plot function for the details</span>
+<span class="sd">        cases (type=json): The cases to generate the plots if we have multiple cases.</span>
+<span class="sd">            The keys are the names of the cases, and the values are the arguments for the plot function.</span>
+<span class="sd">            The arguments in `envs` will be used if not specified in `cases`, except for `mutaters`.</span>
+<span class="sd">            Sections can be specified as the prefix of the case name, separated by `::`.</span>
+<span class="sd">            For example, if you have a case named `Clonal Volume::Case1`, the plot will be put in the</span>
+<span class="sd">            section `Clonal Volume`. By default, when there are multiple cases for the same &#39;viz_type&#39;, the name of the &#39;viz_type&#39; will be used</span>
+<span class="sd">            as the default section name (for example, when &#39;viz_type&#39; is &#39;volume&#39;, the section name will be &#39;Clonal Volume&#39;).</span>
+<span class="sd">            When there is only a single case, the section name will default to &#39;DEFAULT&#39;, which will not be shown</span>
+<span class="sd">            in the report.</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;screpfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.screpfile | stem}}.clonalstats&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;mutaters&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;viz_type&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+        <span class="s2">&quot;more_formats&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;save_code&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;descr&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;Clonal Volume&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;viz_type&quot;</span><span class="p">:</span> <span class="s2">&quot;volume&quot;</span><span class="p">},</span>
+            <span class="s2">&quot;Clonal Abundance&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;viz_type&quot;</span><span class="p">:</span> <span class="s2">&quot;abundance&quot;</span><span class="p">},</span>
+            <span class="s2">&quot;CDR3 Length&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;viz_type&quot;</span><span class="p">:</span> <span class="s2">&quot;length&quot;</span><span class="p">},</span>
+            <span class="s2">&quot;Clonal Diversity&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;viz_type&quot;</span><span class="p">:</span> <span class="s2">&quot;diversity&quot;</span><span class="p">},</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/tcr/ClonalStats.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/tcr/ClonalStats.svelte&quot;</span><span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/version-select.js"></script>
+      <script src="../../../js/mkapi.js"></script>
+      <script src="../../../extra.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

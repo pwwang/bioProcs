@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>biopipen.ns.delim - biopipen</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.ns.delim";
+        var mkdocs_page_input_path = "api/source/biopipen.ns.delim.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">biopipen.ns.delim</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/source/biopipen.ns.delim.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">biopipen.ns.</span><span class="mkapi-object-name">delim</span>
+<span id="biopipen.ns.delim"></span><a class="mkapi-docs-link" href="../../biopipen.ns.delim">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Tools to deal with csv/tsv files&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">..core.config</span> <span class="kn">import</span> <span class="n">config</span>
+<span class="kn">from</span> <span class="nn">..core.proc</span> <span class="kn">import</span> <span class="n">Proc</span>
+
+
+<span class="k">class</span> <span class="nc">RowsBinder</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.delim.RowsBinder"></span><a class="mkapi-docs-link" title="biopipen.ns.delim.RowsBinder" href="../../biopipen.ns.delim/#biopipen.ns.delim.RowsBinder">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Bind rows of input files</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infiles: The input files to bind.</span>
+<span class="sd">            The input files should have the same number of columns,</span>
+<span class="sd">            and same delimiter.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output file with rows bound</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        sep: The separator of the input files</span>
+<span class="sd">        header (flag): Whether the input files have header</span>
+<span class="sd">        filenames: Whether to add filename as the last column.</span>
+<span class="sd">            Either a string of an R function that starts with `function` or</span>
+<span class="sd">            a list of names (or string separated by comma) to</span>
+<span class="sd">            add for each input file.</span>
+<span class="sd">            The R function takes the path of the input file as the only</span>
+<span class="sd">            argument and should return a string. The string will be added as</span>
+<span class="sd">            the last column of the output file.</span>
+<span class="sd">        filenames_col: The column name for the `filenames` columns</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infiles:files&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;outfile:file:&quot;</span>
+        <span class="s2">&quot;{{in.infiles | first | stem}}_rbound{{in.infiles | first | ext}}&quot;</span>
+    <span class="p">)</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;sep&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;filenames&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;filenames_col&quot;</span><span class="p">:</span> <span class="s2">&quot;Filename&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/delim/RowsBinder.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">SampleInfo</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.delim.SampleInfo"></span><a class="mkapi-docs-link" title="biopipen.ns.delim.SampleInfo" href="../../biopipen.ns.delim/#biopipen.ns.delim.SampleInfo">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;List sample information and perform statistics</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input file to list sample information</span>
+<span class="sd">            The input file should be a csv/tsv file with header</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output file with sample information, with mutated columns</span>
+<span class="sd">            if `envs.save_mutated` is True.</span>
+<span class="sd">            The basename of the output file will be the same as the input file.</span>
+<span class="sd">            The file name of each plot will be slugified from the case name.</span>
+<span class="sd">            Each plot has 3 formats: pdf, png and code.zip, which contains the</span>
+<span class="sd">            data and R code to reproduce the plot.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        sep: The separator of the input file.</span>
+<span class="sd">        mutaters (type=json): A dict of mutaters to mutate the data frame.</span>
+<span class="sd">            The key is the column name and the value is the R expression</span>
+<span class="sd">            to mutate the column. The dict will be transformed to a list in R</span>
+<span class="sd">            and passed to `dplyr::mutate`.</span>
+<span class="sd">            You may also use `paired()` to identify paired samples. The function</span>
+<span class="sd">            takes following arguments:</span>
+<span class="sd">            * `df`: The data frame. Use `.` if the function is called in</span>
+<span class="sd">                a dplyr pipe.</span>
+<span class="sd">            * `id_col`: The column name in `df` for the ids to be returned in</span>
+<span class="sd">                the final output.</span>
+<span class="sd">            * `compare_col`: The column name in `df` to compare the values for</span>
+<span class="sd">                each id in `id_col`.</span>
+<span class="sd">            * `idents`: The values in `compare_col` to compare. It could be</span>
+<span class="sd">                either an an integer or a vector. If it is an integer,</span>
+<span class="sd">                the number of values in `compare_col` must be the same as</span>
+<span class="sd">                the integer for the `id` to be regarded as paired. If it is</span>
+<span class="sd">                a vector, the values in `compare_col` must be the same</span>
+<span class="sd">                as the values in `idents` for the `id` to be regarded as paired.</span>
+<span class="sd">            * `uniq`: Whether to return unique ids or not. Default is `TRUE`.</span>
+<span class="sd">                If `FALSE`, you can mutate the meta data frame with the</span>
+<span class="sd">                returned ids. Non-paired ids will be `NA`.</span>
+<span class="sd">        save_mutated (flag): Whether to save the mutated columns.</span>
+<span class="sd">        exclude_cols (auto): The columns to exclude in the table in the report.</span>
+<span class="sd">            Could be a list or a string separated by comma.</span>
+<span class="sd">        defaults (ns): The default parameters for `envs.stats`.</span>
+<span class="sd">            - plot_type: The type of the plot.</span>
+<span class="sd">                See the supported plot types here:</span>
+<span class="sd">                &lt;https://pwwang.github.io/plotthis/reference/index.html&gt;</span>
+<span class="sd">                The plot_type should be lower case and the plot function used in</span>
+<span class="sd">                `plotthis` should be used. The mapping from plot_type to the</span>
+<span class="sd">                plot function is like `bar -&gt; BarPlot`, `box -&gt; BoxPlot`, etc.</span>
+<span class="sd">            - more_formats (list): The additional formats to save the plot.</span>
+<span class="sd">                By default, the plot will be saved in png, which is also used to</span>
+<span class="sd">                display in the report. You can add more formats to save the plot.</span>
+<span class="sd">                For example, `more_formats = [&quot;pdf&quot;, &quot;svg&quot;]`.</span>
+<span class="sd">            - save_code (flag): Whether to save the R code to reproduce the plot.</span>
+<span class="sd">                The data used to plot will also be saved.</span>
+<span class="sd">            - subset: An expression to subset the data frame before plotting.</span>
+<span class="sd">                The expression should be a string of R expression that will be passed</span>
+<span class="sd">                to `dplyr::filter`. For example, `subset = &quot;Sample == &#39;A&#39;&quot;`.</span>
+<span class="sd">            - section: The section name in the report.</span>
+<span class="sd">                In case you want to group the plots in the report.</span>
+<span class="sd">            - devpars (ns): The device parameters for the plot.</span>
+<span class="sd">                - width (type=int): The width of the plot.</span>
+<span class="sd">                - height (type=int): The height of the plot.</span>
+<span class="sd">                - res (type=int): The resolution of the plot.</span>
+<span class="sd">            - descr: The description of the plot, shown in the report.</span>
+<span class="sd">            - &lt;more&gt;: You can add more parameters to the defaults.</span>
+<span class="sd">                These parameters will be expanded to the `envs.stats` for each case,</span>
+<span class="sd">                and passed to individual plot functions.</span>
+<span class="sd">        stats (type=json): The statistics to perform.</span>
+<span class="sd">            The keys are the case names and the values are the parameters</span>
+<span class="sd">            inheirted from `envs.defaults`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.infile | basename}}&quot;</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;sep&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mutaters&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;save_mutated&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;exclude_cols&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;defaults&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;plot_type&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;more_formats&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;save_code&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;section&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;descr&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;stats&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">}</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/delim/SampleInfo.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/delim/SampleInfo.svelte&quot;</span><span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/version-select.js"></script>
+      <script src="../../../js/mkapi.js"></script>
+      <script src="../../../extra.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

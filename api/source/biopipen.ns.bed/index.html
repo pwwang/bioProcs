@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>biopipen.ns.bed - biopipen</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.ns.bed";
+        var mkdocs_page_input_path = "api/source/biopipen.ns.bed.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">biopipen.ns.bed</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/source/biopipen.ns.bed.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">biopipen.ns.</span><span class="mkapi-object-name">bed</span>
+<span id="biopipen.ns.bed"></span><a class="mkapi-docs-link" href="../../biopipen.ns.bed">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Tools to handle BED files&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">..core.proc</span> <span class="kn">import</span> <span class="n">Proc</span>
+<span class="kn">from</span> <span class="nn">..core.config</span> <span class="kn">import</span> <span class="n">config</span>
+
+
+<span class="k">class</span> <span class="nc">BedLiftOver</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.bed.BedLiftOver"></span><a class="mkapi-docs-link" title="biopipen.ns.bed.BedLiftOver" href="../../biopipen.ns.bed/#biopipen.ns.bed.BedLiftOver">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Liftover a BED file using liftOver</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        inbed: The input BED file</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outbed: The output BED file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        liftover: The path to liftOver</span>
+<span class="sd">        chain: The map chain file for liftover</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        liftOver:</span>
+<span class="sd">            - check: {{proc.envs.liftover}} 2&gt;&amp;1 | grep &quot;usage&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;inbed:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outbed:file:{{in.inbed | basename}}&quot;</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;liftover&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">liftover</span><span class="p">,</span>
+        <span class="s2">&quot;chain&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">liftover_chain</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">bash</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/bed/BedLiftOver.sh&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Bed2Vcf</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.bed.Bed2Vcf"></span><a class="mkapi-docs-link" title="biopipen.ns.bed.Bed2Vcf" href="../../biopipen.ns.bed/#biopipen.ns.bed.Bed2Vcf">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert a BED file to a valid VCF file with minimal information</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        inbed: The input BED file</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outvcf: The output VCF file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        sample: The sample name to be used in the VCF file</span>
+<span class="sd">            You can use a lambda function (in string) to generate</span>
+<span class="sd">            the sample name from the stem of input file</span>
+<span class="sd">        ref: The reference fasta file, used to grab the reference allele.</span>
+<span class="sd">            To add contigs in header, the `fai` file is also required at</span>
+<span class="sd">            `&lt;ref&gt;.fai`</span>
+<span class="sd">        genome: The genome assembly, added as `source` in header</span>
+<span class="sd">        base: 0 or 1, whether the coordinates in BED file are 0- or 1-based</span>
+<span class="sd">        headers: The header lines to be added to the VCF file</span>
+<span class="sd">        infos: The INFO dicts to be added to the VCF file</span>
+<span class="sd">        formats: The FORMAT dicts to be added to the VCF file</span>
+<span class="sd">            The keys &#39;ID&#39;, &#39;Description&#39;, &#39;Type&#39;, and &#39;Number&#39; are required.</span>
+<span class="sd">        converters: A dict of converters to be used for each INFO or FORMAT</span>
+<span class="sd">            The key is the ID of an INFO or FORMAT, and the value is</span>
+<span class="sd">            Any converts return `None` will skip the record</span>
+<span class="sd">        nonexisting_contigs: Whether to `keep` or `drop` the non-existing</span>
+<span class="sd">            contigs in `ref`.</span>
+<span class="sd">        helpers: Raw code to be executed to provide some helper functions</span>
+<span class="sd">            since only lambda functions are supported in converters</span>
+<span class="sd">        index: Sort and index output file</span>
+
+<span class="sd">    Requires:</span>
+<span class="sd">        cyvcf2:</span>
+<span class="sd">            - check: {{proc.lang}} -c &quot;import cyvcf2&quot;</span>
+<span class="sd">        pysam:</span>
+<span class="sd">            - check: {{proc.lang}} -c &quot;import pysam&quot;</span>
+<span class="sd">        bcftools:</span>
+<span class="sd">            - if: {{proc.envs.index}}</span>
+<span class="sd">            - check: {{proc.envs.bcftools}} --version</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;inbed:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;outvcf:file:{{in.inbed | stem}}.vcf{{&#39;.gz&#39; if envs.index else &#39;&#39;}}&quot;</span>
+    <span class="p">)</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;bcftools&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">bcftools</span><span class="p">,</span>
+        <span class="s2">&quot;sample&quot;</span><span class="p">:</span> <span class="s2">&quot;lambda stem: stem&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ref&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">reffa</span><span class="p">,</span>
+        <span class="s2">&quot;genome&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">genome</span><span class="p">,</span>
+        <span class="s2">&quot;nonexisting_contigs&quot;</span><span class="p">:</span> <span class="s2">&quot;drop&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;base&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;index&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;headers&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;infos&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;converters&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;helpers&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/bed/Bed2Vcf.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">BedConsensus</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.bed.BedConsensus"></span><a class="mkapi-docs-link" title="biopipen.ns.bed.BedConsensus" href="../../biopipen.ns.bed/#biopipen.ns.bed.BedConsensus">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Find consensus regions from multiple BED files.</span>
+
+<span class="sd">    Unlike `bedtools merge/cluster`, it does not find the union regions nor</span>
+<span class="sd">    intersect regions. Instead, it finds the consensus regions using the</span>
+<span class="sd">    distributions of the scores of the bins</span>
+<span class="sd">    ```</span>
+<span class="sd">                                         bedtools cluster</span>
+<span class="sd">    Bedfile A            |----------|    1</span>
+<span class="sd">    Bedfile B          |--------|        1</span>
+<span class="sd">    Bedfile C              |------|      1</span>
+
+<span class="sd">    BedConsensus         |--------|      with cutoff &gt;= 2</span>
+<span class="sd">    bedtools intesect      |----|</span>
+<span class="sd">    bedtools merge     |------------|</span>
+<span class="sd">    Distribution       |1|2|3333|2|1|    (later normalized into 0~1)</span>
+<span class="sd">    ```</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        bedfiles: Input BED files</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outbed: The output BED file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        bedtools: The path to bedtools</span>
+<span class="sd">        cutoff: The cutoff to determine the ends of consensus regions</span>
+<span class="sd">            If `cutoff` &lt; 1, it applies to the normalized scores (0~1), which</span>
+<span class="sd">            is the percentage of the number of files that cover the region.</span>
+<span class="sd">            If `cutoff` &gt;= 1, it applies to the number of files that cover the</span>
+<span class="sd">            region directly.</span>
+<span class="sd">        chrsize: The chromosome sizes file</span>
+<span class="sd">        distance: When the distance between two bins is smaller than this value,</span>
+<span class="sd">            they are merged into one bin using `bedtools merge -d`. `0` means</span>
+<span class="sd">            no merging.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;bedfiles:files&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;outbed:file:{{in.bedfiles | first | stem | append: &#39;_consensus&#39;}}.bed&quot;</span>
+    <span class="p">)</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;bedtools&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">bedtools</span><span class="p">,</span>
+        <span class="s2">&quot;cutoff&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="s2">&quot;distance&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;chrsize&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">chrsize</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/bed/BedConsensus.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">BedtoolsMerge</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.bed.BedtoolsMerge"></span><a class="mkapi-docs-link" title="biopipen.ns.bed.BedtoolsMerge" href="../../biopipen.ns.bed/#biopipen.ns.bed.BedtoolsMerge">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Merge overlapping intervals in a BED file, using `bedtools merge`</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        inbed: The input BED file</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outbed: The output BED file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        bedtools: The path to bedtools</span>
+<span class="sd">        &lt;more&gt;: Other options to be passed to `bedtools merge`</span>
+<span class="sd">            See https://bedtools.readthedocs.io/en/latest/content/tools/merge.html</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;inbed:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outbed:file:{{in.inbed | stem}}_merged.bed&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;bedtools&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">bedtools</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/bed/BedtoolsMerge.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">BedtoolsIntersect</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.bed.BedtoolsIntersect"></span><a class="mkapi-docs-link" title="biopipen.ns.bed.BedtoolsIntersect" href="../../biopipen.ns.bed/#biopipen.ns.bed.BedtoolsIntersect">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Find the intersection of two BED files, using `bedtools intersect`</span>
+
+<span class="sd">    See &lt;https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html&gt;</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        afile: The first BED file</span>
+<span class="sd">        bfile: The second BED file</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output BED file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        bedtools: The path to bedtools</span>
+<span class="sd">        sort: Sort `afile` and `bfile` before intersecting.</span>
+<span class="sd">            By default, `-sorted` is used, assuming the input files are sorted.</span>
+<span class="sd">            If error occurs, try to set `sort` to `True`.</span>
+<span class="sd">        chrsize: Alias for `g` in `bedtools intersect`.</span>
+<span class="sd">        postcmd: The command to be executed for the output file after intersecting.</span>
+<span class="sd">            You can use `$infile`, `$outfile`, and `$outdir` to refer to the input,</span>
+<span class="sd">            output, and output directory, respectively.</span>
+<span class="sd">        &lt;more&gt;: Other options to be passed to `bedtools intersect`</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;afile:file&quot;</span><span class="p">,</span> <span class="s2">&quot;bfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.afile | stem0}}_{{in.bfile | stem0}}-intersect.bt&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;bedtools&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">bedtools</span><span class="p">,</span>
+        <span class="s2">&quot;sort&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;chrsize&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">chrsize</span><span class="p">,</span>
+        <span class="s2">&quot;postcmd&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/bed/BedtoolsIntersect.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">BedtoolsMakeWindows</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.bed.BedtoolsMakeWindows"></span><a class="mkapi-docs-link" title="biopipen.ns.bed.BedtoolsMakeWindows" href="../../biopipen.ns.bed/#biopipen.ns.bed.BedtoolsMakeWindows">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Make windows from a BED file or genome size file, using `bedtools makewindows`.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: The input BED file or a genome size file</span>
+<span class="sd">            Type will be detected by the number of columns in the file.</span>
+<span class="sd">            If it has 3+ columns, it is treated as a BED file, otherwise</span>
+<span class="sd">            a genome size file.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: The output BED file</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        bedtools: The path to bedtools</span>
+<span class="sd">        window (type=int): The size of the windows</span>
+<span class="sd">        step (type=int): The step size of the windows</span>
+<span class="sd">        nwin (type=int): The number of windows to be generated</span>
+<span class="sd">            Exclusive with `window` and `step`.</span>
+<span class="sd">            Either `nwin` or `window` and `step` should be provided.</span>
+<span class="sd">        reverse (flag): Reverse numbering of windows in the output</span>
+<span class="sd">        name (choice): How to name the generated windows/regions</span>
+<span class="sd">            - none: Do not add any name</span>
+<span class="sd">            - src: Use the source interval&#39;s name</span>
+<span class="sd">            - winnum: Use the window number</span>
+<span class="sd">            - srcwinnum: Use the source interval&#39;s name and window number</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.infile | stem}}_windows.bed&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;bedtools&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">bedtools</span><span class="p">,</span>
+        <span class="s2">&quot;window&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;step&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;nwin&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;reverse&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/bed/BedtoolsMakeWindows.py&quot;</span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/version-select.js"></script>
+      <script src="../../../js/mkapi.js"></script>
+      <script src="../../../extra.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

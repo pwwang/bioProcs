@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>biopipen.ns.snp - biopipen</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.ns.snp";
+        var mkdocs_page_input_path = "api/source/biopipen.ns.snp.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">biopipen.ns.snp</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/source/biopipen.ns.snp.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">biopipen.ns.</span><span class="mkapi-object-name">snp</span>
+<span id="biopipen.ns.snp"></span><a class="mkapi-docs-link" href="../../biopipen.ns.snp">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Plink processes&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">..core.proc</span> <span class="kn">import</span> <span class="n">Proc</span>
+<span class="kn">from</span> <span class="nn">..core.config</span> <span class="kn">import</span> <span class="n">config</span>
+
+
+<span class="k">class</span> <span class="nc">PlinkSimulation</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.snp.PlinkSimulation"></span><a class="mkapi-docs-link" title="biopipen.ns.snp.PlinkSimulation" href="../../biopipen.ns.snp/#biopipen.ns.snp.PlinkSimulation">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Simulate SNPs using PLINK v2</span>
+
+<span class="sd">    See also &lt;https://www.cog-genomics.org/plink/2.0/input#simulate&gt; and</span>
+<span class="sd">    &lt;https://pwwang.github.io/biopipen/api/biopipen.ns.snp/#biopipen.ns.snp.PlinkSimulation&gt;</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        configfile: Configuration file containing the parameters for the simulation.</span>
+<span class="sd">            The configuration file (in toml, yaml or json format) should contain a</span>
+<span class="sd">            dictionary of parameters.  The parameters are listed in `envs` except</span>
+<span class="sd">            `ncores`, which is used for parallelization. You can set parameters</span>
+<span class="sd">            in `envs` and override them in the configuration file.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: Output directory containing the simulated data</span>
+<span class="sd">            `plink_sim.bed`, `plink_sim.bim`, and `plink_sim.fam` will be generated.</span>
+<span class="sd">        gtmat: Genotype matrix file containing the simulated data with rows representing</span>
+<span class="sd">            SNPs and columns representing samples.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        nsnps (type=int): Number of SNPs to simulate</span>
+<span class="sd">        ncases (type=int): Number of cases to simulate</span>
+<span class="sd">        nctrls (type=int): Number of controls to simulate</span>
+<span class="sd">        plink: Path to PLINK v2</span>
+<span class="sd">        seed (type=int): Random seed. If not set, seed will not be set.</span>
+<span class="sd">        label: Prefix label for the SNPs.</span>
+<span class="sd">        prevalence  (type=float): Disease prevalence.</span>
+<span class="sd">        minfreq (type=float): Minimum allele frequency.</span>
+<span class="sd">        maxfreq (type=float): Maximum allele frequency.</span>
+<span class="sd">        hetodds (type=float): Odds ratio for heterozygous genotypes.</span>
+<span class="sd">        homodds (type=float): Odds ratio for homozygous genotypes.</span>
+<span class="sd">        missing (type=float): Proportion of missing genotypes.</span>
+<span class="sd">        args (ns): Additional arguments to pass to PLINK.</span>
+<span class="sd">            - &lt;more&gt;: see &lt;https://www.cog-genomics.org/plink/2.0/input#simulate&gt;.</span>
+<span class="sd">        transpose_gtmat (flag): If set, the genotype matrix (`out.gtmat`) will</span>
+<span class="sd">            be transposed.</span>
+<span class="sd">        sample_prefix: Use this prefix for the sample names. If not set, the sample</span>
+<span class="sd">            names will be `per0_per0`, `per1_per1`, `per2_per2`, etc. If set, the</span>
+<span class="sd">            sample names will be `prefix0`, `prefix1`, `prefix2`, etc.</span>
+<span class="sd">            This only affects the sample names in the genotype matrix file</span>
+<span class="sd">            (`out.gtmat`).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;configfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;outdir:dir:{{in.configfile | stem}}.plink_sim&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gtmat:file:{{in.configfile | stem}}.plink_sim/&quot;</span>
+        <span class="s2">&quot;{{in.configfile | stem}}-gtmat.txt&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;nsnps&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;ncases&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;nctrls&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;plink&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">plink</span><span class="p">,</span>
+        <span class="s2">&quot;seed&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;SNP&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;prevalence&quot;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span>
+        <span class="s2">&quot;minfreq&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="s2">&quot;maxfreq&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="s2">&quot;hetodds&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="s2">&quot;homodds&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="s2">&quot;missing&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;transpose_gtmat&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;sample_prefix&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/snp/PlinkSimulation.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">MatrixEQTL</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.snp.MatrixEQTL"></span><a class="mkapi-docs-link" title="biopipen.ns.snp.MatrixEQTL" href="../../biopipen.ns.snp/#biopipen.ns.snp.MatrixEQTL">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run Matrix eQTL</span>
+
+<span class="sd">    See also &lt;https://www.bios.unc.edu/research/genomic_software/Matrix_eQTL/&gt;</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        geno: Genotype matrix file with rows representing SNPs and columns</span>
+<span class="sd">            representing samples.</span>
+<span class="sd">        expr: Expression matrix file with rows representing genes and columns</span>
+<span class="sd">            representing samples.</span>
+<span class="sd">        cov: Covariate matrix file with rows representing covariates and columns</span>
+<span class="sd">            representing samples.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        alleqtls: Matrix eQTL output file</span>
+<span class="sd">        cisqtls: The cis-eQTL file if `snppos` and `genepos` are provided.</span>
+<span class="sd">            Otherwise it&#39;ll be empty.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        model (choice): The model to use.</span>
+<span class="sd">            - linear: Linear model</span>
+<span class="sd">            - modelLINEAR: Same as `linear`</span>
+<span class="sd">            - anova: ANOVA model</span>
+<span class="sd">            - modelANOVA: Same as `anova`</span>
+<span class="sd">        pval (type=float): P-value threshold for eQTLs</span>
+<span class="sd">        match_samples (flag): Match samples in the genotype and expression matrices.</span>
+<span class="sd">            If True, an error will be raised if samples from `in.geno`, `in.expr`,</span>
+<span class="sd">            and `in.cov` (if provided) are not the same.</span>
+<span class="sd">            If False, common samples will be used to subset the matrices.</span>
+<span class="sd">        transp (type=float): P-value threshold for trans-eQTLs.</span>
+<span class="sd">            If cis-eQTLs are not enabled (`snppos` and `genepos` are not set),</span>
+<span class="sd">            this defaults to 1e-5.</span>
+<span class="sd">            If cis-eQTLs are enabled, this defaults to `None`, which will disable</span>
+<span class="sd">            trans-eQTL analysis.</span>
+<span class="sd">        fdr (flag): Do FDR calculation or not (save memory if not).</span>
+<span class="sd">        snppos: The path of the SNP position file.</span>
+<span class="sd">            It could be a BED, GFF, VCF or a tab-delimited file with</span>
+<span class="sd">            `snp`, `chr`, `pos` as the first 3 columns.</span>
+<span class="sd">        genepos: The path of the gene position file.</span>
+<span class="sd">            It could be a BED or GFF file.</span>
+<span class="sd">        dist (type=int): Distance threshold for cis-eQTLs.</span>
+<span class="sd">        transpose_geno (flag): If set, the genotype matrix (`in.geno`)</span>
+<span class="sd">            will be transposed.</span>
+<span class="sd">        transpose_expr (flag): If set, the expression matrix (`in.expr`)</span>
+<span class="sd">            will be transposed.</span>
+<span class="sd">        transpose_cov (flag): If set, the covariate matrix (`in.cov`)</span>
+<span class="sd">            will be transposed.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;geno:file, expr:file, cov:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;alleqtls:file:{{in.geno | stem}}.alleqtls.txt&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cisqtls:file:{{in.geno | stem}}.cisqtls.txt&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;pval&quot;</span><span class="p">:</span> <span class="mf">1e-3</span><span class="p">,</span>
+        <span class="s2">&quot;match_samples&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;transp&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;fdr&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;snppos&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;genepos&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">refgene</span><span class="p">,</span>
+        <span class="s2">&quot;dist&quot;</span><span class="p">:</span> <span class="mi">250000</span><span class="p">,</span>
+        <span class="s2">&quot;transpose_geno&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;transpose_expr&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;transpose_cov&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/snp/MatrixEQTL.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">PlinkFromVcf</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.snp.PlinkFromVcf"></span><a class="mkapi-docs-link" title="biopipen.ns.snp.PlinkFromVcf" href="../../biopipen.ns.snp/#biopipen.ns.snp.PlinkFromVcf">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert VCF to PLINK format.</span>
+
+<span class="sd">    The PLINK format consists of 3 files: `.bed`, `.bim`, and `.fam`.</span>
+
+<span class="sd">    Requires PLINK v2</span>
+
+<span class="sd">    TODO:</span>
+<span class="sd">        Handle sex when sex chromosomes are included.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        invcf: VCF file</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: Output directory containing the PLINK files</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        plink: Path to PLINK v2</span>
+<span class="sd">        tabix: Path to tabix</span>
+<span class="sd">        ncores (type=int): Number of cores/threads to use, will pass to plink</span>
+<span class="sd">            `--threads` option</span>
+<span class="sd">        vcf_half_call (choice): The current VCF standard does not specify</span>
+<span class="sd">            how &#39;0/.&#39; and similar GT values should be interpreted.</span>
+<span class="sd">            - error: error out and reports the line number of the anomaly</span>
+<span class="sd">            - e: alias for `error`</span>
+<span class="sd">            - haploid: treat half-calls as haploid/homozygous</span>
+<span class="sd">            - h: alias for `haploid`</span>
+<span class="sd">            - missing: treat half-calls as missing</span>
+<span class="sd">            - m: alias for `missing`</span>
+<span class="sd">            - reference: treat the missing part as reference</span>
+<span class="sd">            - r: alias for `reference`</span>
+<span class="sd">        double_id (flag): set both FIDs and IIDs to the VCF/BCF sample ID.</span>
+<span class="sd">        vcf_filter (auto): skip variants which failed one or more filters tracked</span>
+<span class="sd">            by the FILTER field.</span>
+<span class="sd">            If True, only FILTER with `PASS` or `.` will be kept.</span>
+<span class="sd">            Multiple filters can be specified by separating them with space or</span>
+<span class="sd">            as a list.</span>
+<span class="sd">        vcf_idspace_to: convert all spaces in sample IDs to this character.</span>
+<span class="sd">        set_missing_var_ids: update variant IDs using a template string,</span>
+<span class="sd">            with a &#39;@&#39; where the chromosome code should go, and a &#39;#&#39; where the</span>
+<span class="sd">            base-pair position belongs. You can also specify `\\$r` and `\\$a` for</span>
+<span class="sd">            the reference and alternate alleles, respectively.</span>
+<span class="sd">            See &lt;https://www.cog-genomics.org/plink/2.0/data#set_all_var_ids&gt;</span>
+<span class="sd">        max_alleles (type=int): Maximum number of alleles per variant.</span>
+<span class="sd">        &lt;more&gt;: see &lt;https://www.cog-genomics.org/plink/2.0/&gt; for more options.</span>
+<span class="sd">            Note that `_` will be replaced by `-` in the argument names.</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;invcf:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.invcf | regex_replace: &#39;</span><span class="se">\\</span><span class="s2">.gz$&#39;, &#39;&#39; | stem}}&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;plink&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">plink2</span><span class="p">,</span>
+        <span class="s2">&quot;tabix&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">tabix</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;vcf_half_call&quot;</span><span class="p">:</span> <span class="s2">&quot;missing&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;double_id&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;vcf_filter&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;vcf_idspace_to&quot;</span><span class="p">:</span> <span class="s2">&quot;_&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;set_missing_var_ids&quot;</span><span class="p">:</span> <span class="s2">&quot;@_#&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;max_alleles&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/snp/PlinkFromVcf.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Plink2GTMat</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.snp.Plink2GTMat"></span><a class="mkapi-docs-link" title="biopipen.ns.snp.Plink2GTMat" href="../../biopipen.ns.snp/#biopipen.ns.snp.Plink2GTMat">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert PLINK files to genotype matrix.</span>
+
+<span class="sd">    Requires PLINK v2. The .raw/.traw file is generated by plink and then transformed</span>
+<span class="sd">    to a genotype matrix file.</span>
+<span class="sd">    See &lt;https://www.cog-genomics.org/plink/2.0/formats#raw&gt; and</span>
+<span class="sd">    &lt;https://www.cog-genomics.org/plink/2.0/formats#traw&gt; for more information.</span>
+
+<span class="sd">    The allelic dosage is used as the values of genotype matrix.</span>
+<span class="sd">    &quot;--keep-allele-order&quot; is used to keep the allele order consistent with the</span>
+<span class="sd">    reference allele first. This way, the genotype of homozygous reference alleles</span>
+<span class="sd">    will be encoded as 2, heterozygous as 1, and homozygous alternate alleles as 0.</span>
+<span class="sd">    This is the PLINK dosage encoding. If you want to use this encoding, you can</span>
+<span class="sd">    set `envs.gtcoding` to `plink`. Otherwise, the default encoding is `vcf`, which</span>
+<span class="sd">    will encode the genotype as 0, 1, and 2 for homozygous reference, heterozygous,</span>
+<span class="sd">    and homozygous alternate alleles, respectively.</span>
+
+<span class="sd">    Note that `envs.gtcoding = &quot;vcf&quot;` only works for biallelic variants for now.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        indir: Input directory containing the PLINK files.</span>
+<span class="sd">            Including `.bed`, `.bim`, and `.fam` files</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outfile: Genotype matrix file with rows representing SNPs and columns</span>
+<span class="sd">            representing samples if `envs.transpose` is `False`.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        plink: Path to PLINK v2.0</span>
+<span class="sd">        ncores (type=int): Number of cores/threads to use, will pass to plink</span>
+<span class="sd">            `--threads` option</span>
+<span class="sd">        transpose (flag): If set, the genotype matrix (`out.outfile`) is transposed.</span>
+<span class="sd">        samid: what to use as sample ID.</span>
+<span class="sd">            Placeholders include `{fid}` and `{iid}` for family and individual IDs,</span>
+<span class="sd">            respectively.</span>
+<span class="sd">        varid: what to use as variant ID.</span>
+<span class="sd">            Placeholders include `{chr}`, `{pos}`, `{rs}`, `{ref}`, and `{alt}` for</span>
+<span class="sd">            chromosome, position, rsID, reference allele, and alternate allele,</span>
+<span class="sd">            respectively.</span>
+<span class="sd">        trans_chr: A dictionary to translate chromosome numbers to chromosome names.</span>
+<span class="sd">        missing_id: what to use as the rs if missing.</span>
+<span class="sd">        gtcoding (choice): The genotype coding to use.</span>
+<span class="sd">            - vcf: 0/1/2 for homozygous reference, heterozygous, and homozygous</span>
+<span class="sd">                alternate alleles, respectively.</span>
+<span class="sd">            - plink: 2/1/0 for homozygous reference, heterozygous, and homozygous</span>
+<span class="sd">                alternate alleles, respectively.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;indir:dir&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outfile:file:{{in.indir | stem}}-gtmat.txt&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;plink&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">plink2</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;transpose&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;samid&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{fid}</span><span class="s2">_</span><span class="si">{iid}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;varid&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{chr}</span><span class="s2">_</span><span class="si">{pos}</span><span class="s2">_</span><span class="si">{varid}</span><span class="s2">_</span><span class="si">{ref}</span><span class="s2">_</span><span class="si">{alt}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;trans_chr&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;23&quot;</span><span class="p">:</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="s2">&quot;24&quot;</span><span class="p">:</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="s2">&quot;25&quot;</span><span class="p">:</span> <span class="s2">&quot;XY&quot;</span><span class="p">,</span> <span class="s2">&quot;26&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">},</span>
+        <span class="s2">&quot;missing_id&quot;</span><span class="p">:</span> <span class="s2">&quot;NA&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gtcoding&quot;</span><span class="p">:</span> <span class="s2">&quot;vcf&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/snp/Plink2GTMat.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">PlinkIBD</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.snp.PlinkIBD"></span><a class="mkapi-docs-link" title="biopipen.ns.snp.PlinkIBD" href="../../biopipen.ns.snp/#biopipen.ns.snp.PlinkIBD">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run PLINK IBD analysis (identity by descent)</span>
+
+<span class="sd">    See also &lt;https://www.cog-genomics.org/plink/1.9/ibd&gt;</span>
+<span class="sd">    This has to run with PLINK v1.9. Plink v2 does not support IBD analysis yet.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        indir: Input directory containing the PLINK files.</span>
+<span class="sd">            Including `.bed`, `.bim`, and `.fam` files</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: Output file containing the IBD results.</span>
+<span class="sd">            Including [`.genome`](https://www.cog-genomics.org/plink/2.0/formats#genome)</span>
+<span class="sd">            file for the original IBD report from PLINK, and `.ibd.png` for the</span>
+<span class="sd">            heatmap of `PI_HAT` values.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        plink: Path to PLINK v1.9</span>
+<span class="sd">        ncores (type=int): Number of cores/threads to use, will pass to plink</span>
+<span class="sd">            `--threads` option</span>
+<span class="sd">        highld: High LD regions to be excluded from the analysis.</span>
+<span class="sd">            If not set, no regions will be excluded.</span>
+<span class="sd">        samid: what to use as sample ID.</span>
+<span class="sd">            Placeholders include `{fid}` and `{iid}` for family and individual IDs,</span>
+<span class="sd">            respectively</span>
+<span class="sd">        indep (type=auto): LD pruning parameters. Either a list of numerics or a string</span>
+<span class="sd">            concatenated by `,` to specify</span>
+<span class="sd">            1) consider a window of N SNPs (e.g. 50),</span>
+<span class="sd">            2) calculate LD between each pair of SNPs in the window (e.g. 5),</span>
+<span class="sd">            3) remove one of a pair of SNPs if the LD is greater than X (e.g. 0.2).</span>
+<span class="sd">        pihat (type=float): PI_HAT threshold for IBD analysis.</span>
+<span class="sd">            See also &lt;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5007749/&gt;</span>
+<span class="sd">        plot (flag): If set, plot the heatmap of `PI_HAT` values.</span>
+<span class="sd">        anno: The annotation file for the samples, used to plot on the heatmap.</span>
+<span class="sd">            Names must match the ones that are transformed by `args.samid`.</span>
+<span class="sd">        seed (type=int): Random seed for the analysis.</span>
+<span class="sd">        devpars (ns): The device parameters for the plot.</span>
+<span class="sd">            - width (type=int): Width of the plot</span>
+<span class="sd">            - height (type=int): Height of the plot</span>
+<span class="sd">            - res (type=int): Resolution of the plot</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;indir:dir&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.indir | stem}}.ibd&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;plink&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">plink</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;highld&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;samid&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{fid}</span><span class="s2">_</span><span class="si">{iid}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;indep&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
+        <span class="s2">&quot;pihat&quot;</span><span class="p">:</span> <span class="mf">0.1875</span><span class="p">,</span>
+        <span class="s2">&quot;plot&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;anno&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;seed&quot;</span><span class="p">:</span> <span class="mi">8525</span><span class="p">,</span>
+        <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/snp/PlinkIBD.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/snp/PlinkIBD.svelte&quot;</span><span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">PlinkHWE</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.snp.PlinkHWE"></span><a class="mkapi-docs-link" title="biopipen.ns.snp.PlinkHWE" href="../../biopipen.ns.snp/#biopipen.ns.snp.PlinkHWE">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Hardy-Weinberg Equilibrium report and filtering</span>
+
+<span class="sd">    See also &lt;https://www.cog-genomics.org/plink/2.0/basic_stats#hardy&gt;</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        indir: Input directory containing the PLINK files.</span>
+<span class="sd">            Including `.bed`, `.bim`, and `.fam` files</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: Output file containing the HWE results.</span>
+<span class="sd">            Including [`.hwe`](https://www.cog-genomics.org/plink/2.0/formats#hwe)</span>
+<span class="sd">            file for the original HWE report from PLINK and</span>
+<span class="sd">            `.hardy.fail` for the variants that failed the HWE test.</span>
+<span class="sd">            It also includes binary files `.bed`, `.bim`, and `.fam`</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        plink: Path to PLINK v2</span>
+<span class="sd">        ncores (type=int): Number of cores/threads to use, will pass to plink</span>
+<span class="sd">            `--threads` option</span>
+<span class="sd">        cutoff (type=float): P-value cutoff for HWE test</span>
+<span class="sd">        plot (flag): If set, plot the distribution of HWE p-values.</span>
+<span class="sd">        devpars (ns): The device parameters for the plot.</span>
+<span class="sd">            - width (type=int): Width of the plot</span>
+<span class="sd">            - height (type=int): Height of the plot</span>
+<span class="sd">            - res (type=int): Resolution of the plot</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;indir:dir&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.indir | stem}}.hwe&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;plink&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">plink2</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;cutoff&quot;</span><span class="p">:</span> <span class="mf">1e-5</span><span class="p">,</span>
+        <span class="s2">&quot;plot&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/snp/PlinkHWE.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/snp/PlinkHWE.svelte&quot;</span><span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">PlinkHet</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.snp.PlinkHet"></span><a class="mkapi-docs-link" title="biopipen.ns.snp.PlinkHet" href="../../biopipen.ns.snp/#biopipen.ns.snp.PlinkHet">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculation of sample heterozygosity.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        indir: Input directory containing the PLINK files.</span>
+<span class="sd">            Including `.bed`, `.bim`, and `.fam` files</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: Output file containing the heterozygosity results.</span>
+<span class="sd">            Including [`.het`](https://www.cog-genomics.org/plink/2.0/formats#het)</span>
+<span class="sd">            file for the original heterozygosity report from PLINK and</span>
+<span class="sd">            `.het.fail` for the samples that failed the heterozygosity test.</span>
+<span class="sd">            It also includes binary files `.bed`, `.bim`, and `.fam`</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        plink: Path to PLINK v2, at least v2.00a5.10</span>
+<span class="sd">        ncores (type=int): Number of cores/threads to use, will pass to plink</span>
+<span class="sd">            `--threads` option</span>
+<span class="sd">        cutoff (type=float): Heterozygosity cutoff, samples with heterozygosity</span>
+<span class="sd">            beyond `mean - cutoff * sd` or `mean + cutoff * sd` will be considered</span>
+<span class="sd">            as outliers.</span>
+<span class="sd">        plot (flag): If set, plot the distribution of heterozygosity values.</span>
+<span class="sd">        devpars (ns): The device parameters for the plot.</span>
+<span class="sd">            - width (type=int): Width of the plot</span>
+<span class="sd">            - height (type=int): Height of the plot</span>
+<span class="sd">            - res (type=int): Resolution of the plot</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;indir:dir&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.indir | stem}}.het&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;plink&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">plink2</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;cutoff&quot;</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">,</span>
+        <span class="s2">&quot;plot&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/snp/PlinkHet.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/snp/PlinkHet.svelte&quot;</span><span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">PlinkCallRate</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.snp.PlinkCallRate"></span><a class="mkapi-docs-link" title="biopipen.ns.snp.PlinkCallRate" href="../../biopipen.ns.snp/#biopipen.ns.snp.PlinkCallRate">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculation of call rate for the samples and variants.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        indir: Input directory containing the PLINK files.</span>
+<span class="sd">            Including `.bed`, `.bim`, and `.fam` files</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: Output file containing the call rate results.</span>
+<span class="sd">            Including [`.imiss`](https://www.cog-genomics.org/plink/2.0/formats#imiss)</span>
+<span class="sd">            file for missing calls for samples,</span>
+<span class="sd">            [`.lmiss`](https://www.cog-genomics.org/plink/2.0/formats#lmiss) for</span>
+<span class="sd">            missing calls for variants, `.samplecr.fail` for the samples fail</span>
+<span class="sd">            sample call rate cutoff (`args.samplecr`), and `.varcr.fail` for the SNPs</span>
+<span class="sd">            fail snp call rate cutoff (`args.varcr`).</span>
+<span class="sd">            It also includes binary files `.bed`, `.bim`, and `.fam`.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        plink: Path to PLINK v2</span>
+<span class="sd">        ncores (type=int): Number of cores/threads to use, will pass to plink</span>
+<span class="sd">            `--threads` option</span>
+<span class="sd">        samplecr (type=float): Sample call rate cutoff</span>
+<span class="sd">        varcr (type=float): Variant call rate cutoff</span>
+<span class="sd">        max_iter (type=int): Maximum number of iterations to run the call rate</span>
+<span class="sd">            calculation.</span>
+<span class="sd">            Since the sample and variant call rates are affected by each other,</span>
+<span class="sd">            it may be necessary to iterate the calculation to get the stable results.</span>
+<span class="sd">        plot (flag): If set, plot the distribution of call rates.</span>
+<span class="sd">        devpars (ns): The device parameters for the plot.</span>
+<span class="sd">            - width (type=int): Width of the plot</span>
+<span class="sd">            - height (type=int): Height of the plot</span>
+<span class="sd">            - res (type=int): Resolution of the plot</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;indir:dir&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.indir | stem}}.callrate&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;plink&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">plink2</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;samplecr&quot;</span><span class="p">:</span> <span class="mf">0.95</span><span class="p">,</span>
+        <span class="s2">&quot;varcr&quot;</span><span class="p">:</span> <span class="mf">0.95</span><span class="p">,</span>
+        <span class="s2">&quot;max_iter&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;plot&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/snp/PlinkCallRate.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/snp/PlinkCallRate.svelte&quot;</span><span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">PlinkFilter</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.snp.PlinkFilter"></span><a class="mkapi-docs-link" title="biopipen.ns.snp.PlinkFilter" href="../../biopipen.ns.snp/#biopipen.ns.snp.PlinkFilter">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Filter samples and variants for PLINK files.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        indir: Input directory containing the PLINK files.</span>
+<span class="sd">            Including `.bed`, `.bim`, and `.fam` files</span>
+<span class="sd">        samples_file: File containing the sample IDs.</span>
+<span class="sd">        variants_file: File containing the variant IDs or regions.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: Output directory containing the filtered PLINK files.</span>
+<span class="sd">            Including `.bed`, `.bim`, and `.fam` files</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        plink: Path to PLINK v2</span>
+<span class="sd">        ncores (type=int): Number of cores/threads to use, will pass to plink</span>
+<span class="sd">            `--threads` option</span>
+<span class="sd">        samples (auto): Sample IDs.</span>
+<span class="sd">            If both FID and IID should be provided and separatedby `/`. Otherwise,</span>
+<span class="sd">            assuming the same FID and IID.</span>
+<span class="sd">            A list of sample IDs or string concatenated by `,`.</span>
+<span class="sd">            If either `in.samples_file` or `envs.samples_file` is set,</span>
+<span class="sd">            this will be ignored.</span>
+<span class="sd">        variants (auto): Variant IDs.</span>
+<span class="sd">            A list of variant IDs or string concatenated by `,`.</span>
+<span class="sd">            If either `in.variants_file` or `envs.variants_file` is set,</span>
+<span class="sd">            this will be ignored.</span>
+<span class="sd">        samples_file: File containing the sample IDs.</span>
+<span class="sd">            If `in.samples_file` is set, this will be ignored.</span>
+<span class="sd">        variants_file: File containing the variant IDs.</span>
+<span class="sd">            If `in.variants_file` is set, this will be ignored.</span>
+<span class="sd">        keep (flag): Use `samples`/`variants`/`samples_file`/`variants_file` to</span>
+<span class="sd">            only keep the specified samples/variants, instead of removing them.</span>
+<span class="sd">        vfile_type (choice): The type of the variants file.</span>
+<span class="sd">            - id: Variant IDs</span>
+<span class="sd">            - bed0: 0-based BED file</span>
+<span class="sd">            - bed1: 1-based BED file</span>
+<span class="sd">        chr: Chromosome to keep.</span>
+<span class="sd">            For example, `1-4 22 XY` will keep chromosomes 1 to 4, 22, and XY.</span>
+<span class="sd">        not_chr: Chromosome to remove.</span>
+<span class="sd">            For example, `1-4 22 XY` will remove chromosomes 1 to 4, 22, and XY.</span>
+<span class="sd">        autosome (flag): Excludes all unplaced and non-autosomal variants</span>
+<span class="sd">        autosome_xy (flag): Does `autosome` but does not exclude the pseudo-autosomal</span>
+<span class="sd">            region of X.</span>
+<span class="sd">        snps_only (auto): Excludes all variants with one or more multi-character</span>
+<span class="sd">            allele codes. With &#39;just-acgt&#39;, variants with single-character allele codes</span>
+<span class="sd">            outside of {&#39;A&#39;, &#39;C&#39;, &#39;G&#39;, &#39;T&#39;, &#39;a&#39;, &#39;c&#39;, &#39;g&#39;, &#39;t&#39;, &lt;missing code&gt;}</span>
+<span class="sd">            are also excluded.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;indir:dir&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;samples_file:file&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;variants_file:file&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.indir | stem}}.filtered&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;plink&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">plink2</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;samples&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;variants&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;samples_file&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;variants_file&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;keep&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;vfile_type&quot;</span><span class="p">:</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;chr&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;not_chr&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;autosome&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;autosome_xy&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;snps_only&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/snp/PlinkFilter.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">PlinkFreq</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.snp.PlinkFreq"></span><a class="mkapi-docs-link" title="biopipen.ns.snp.PlinkFreq" href="../../biopipen.ns.snp/#biopipen.ns.snp.PlinkFreq">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate allele frequencies for the variants.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        indir: Input directory containing the PLINK files.</span>
+<span class="sd">            Including `.bed`, `.bim`, and `.fam` files</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: Output file containing the allele frequency results.</span>
+<span class="sd">            By default, it includes</span>
+<span class="sd">            [`.afreq`](https://www.cog-genomics.org/plink/2.0/formats#afreq)</span>
+<span class="sd">            file for the allele frequency report from PLINK.</span>
+<span class="sd">            Modifiers can be added to change this behavior.</span>
+<span class="sd">            See `envs.modifier` for more information.</span>
+<span class="sd">            When `envs.filter != no`, it also includes binary files `.bed`, `.bim`,</span>
+<span class="sd">            and `.fam` after filtering with `envs.cutoff`.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        plink: Path to PLINK v2</span>
+<span class="sd">        ncores (type=int): Number of cores/threads to use, will pass to plink</span>
+<span class="sd">            `--threads` option</span>
+<span class="sd">        modifier (choice): The modifier of `--freq` to control the output behavior.</span>
+<span class="sd">            - none: No modifier, only the `.afreq` file will be generated.</span>
+<span class="sd">                `MAF` (minor allele frequency) will be added in addition to the</span>
+<span class="sd">                `REF_FREQ` and `ALT1_FREQ` columns. Check `.afreqx` for the added</span>
+<span class="sd">                columns.</span>
+<span class="sd">            - counts: write allele count report to `.acount`.</span>
+<span class="sd">                See &lt;https://www.cog-genomics.org/plink/2.0/formats#afreq&gt;.</span>
+<span class="sd">                `ALT1`, `ALT1_CT`, and `REF_CT` are added. Check `.acountx` for</span>
+<span class="sd">                the added columns.</span>
+<span class="sd">            - x: write genotype count report to `.gcount`</span>
+<span class="sd">                Like `--freqx` in v1.9, `--geno-counts` will be run to generate</span>
+<span class="sd">                the genotype counts.</span>
+<span class="sd">                `ALT1`, `HET_REF_ALT1_CT`, and `HOM_ALT1_CT` are added. Check</span>
+<span class="sd">                `.gcountx` for the added columns.</span>
+<span class="sd">        gz (flag): If set, compress the output files.</span>
+<span class="sd">        cutoff (auto): Cutoffs to mark or filter the variants.</span>
+<span class="sd">            If a float is given, default column will be used based on the modifier.</span>
+<span class="sd">            For `modifier=&quot;none&quot;`, it defaults to `MAF`.</span>
+<span class="sd">            For `modifier=&quot;counts&quot;`, it defaults to `ALT1_CT`.</span>
+<span class="sd">            For `modifier=&quot;x&quot;`, it defaults to `HOM_ALT1_CT`.</span>
+<span class="sd">            Or this could be a dictionary to specify the column names and cutoffs.</span>
+<span class="sd">            For example, `{&quot;MAF&quot;: 0.05}`.</span>
+<span class="sd">        filter (auto): The direction of filtering variants based on `cutoff`.</span>
+<span class="sd">            If a single value is given, it will apply to all columns provided in</span>
+<span class="sd">            `cutoff`. If a dictionary is given, it will apply to the corresponding</span>
+<span class="sd">            column. If a column cannot be found in the dictionary, it defaults to</span>
+<span class="sd">            `no`.</span>
+<span class="sd">            no: Do not filter variants (no binary files are generated in outdir).</span>
+<span class="sd">            gt: Filter variants with MAF greater than `cutoff`.</span>
+<span class="sd">            lt: Filter variants with MAF less than `cutoff`.</span>
+<span class="sd">            ge: Filter variants with MAF greater than or equal to `cutoff`.</span>
+<span class="sd">            le: Filter variants with MAF less than or equal to `cutoff`.</span>
+<span class="sd">        plot (flag): If set, plot the distribution of allele frequencies.</span>
+<span class="sd">        devpars (ns): The device parameters for the plot.</span>
+<span class="sd">            - width (type=int): Width of the plot</span>
+<span class="sd">            - height (type=int): Height of the plot</span>
+<span class="sd">            - res (type=int): Resolution of the plot</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;indir:dir&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.indir | stem}}.freq&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;plink&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">plink2</span><span class="p">,</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;modifier&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gz&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;cutoff&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;plot&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/snp/PlinkFreq.R&quot;</span>
+    <span class="n">plugin_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report&quot;</span><span class="p">:</span> <span class="s2">&quot;file://../reports/snp/PlinkFreq.svelte&quot;</span><span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">PlinkUpdateName</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.snp.PlinkUpdateName"></span><a class="mkapi-docs-link" title="biopipen.ns.snp.PlinkUpdateName" href="../../biopipen.ns.snp/#biopipen.ns.snp.PlinkUpdateName">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Update variant names in PLINK files.</span>
+
+<span class="sd">    See also &lt;https://www.cog-genomics.org/plink/2.0/data#update_map&gt;.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        indir: Input directory containing the PLINK files.</span>
+<span class="sd">            Including `.bed`, `.bim`, and `.fam` files</span>
+<span class="sd">        namefile: File containing the variant names to update.</span>
+<span class="sd">            Either a file containing two columns, the first column is the old</span>
+<span class="sd">            variant name, and the second column is the new variant name.</span>
+<span class="sd">            Or a VCF file containing the variant names to update.</span>
+<span class="sd">            When a VCF file is given, the chromosome, position, and reference and</span>
+<span class="sd">            alternate alleles will be used to match the variants.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: Output directory containing the updated PLINK files.</span>
+<span class="sd">            Including `.bed`, `.bim`, and `.fam` files</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        ncores: Number of cores/threads to use, will pass to plink `--threads` option</span>
+<span class="sd">        plink: Path to PLINK v2</span>
+<span class="sd">        bcftools: Path to bcftools</span>
+<span class="sd">        match_alt (choice): How to match alternate alleles when `in.namefile`</span>
+<span class="sd">            is a VCF file.</span>
+<span class="sd">            - exact: Matches alternate alleles exactly.</span>
+<span class="sd">            - all: Matches alternate alleles regardless of the order.</span>
+<span class="sd">                `chr1:100:A:T,G` matches `chr1:100:A:G,T` or `chr1:100:A:T,G`.</span>
+<span class="sd">            - any: Matches any alternate allele.</span>
+<span class="sd">                For example, `chr1:100:A:T,G` matches `chr1:100:A:G,C`</span>
+<span class="sd">            - first_included: Matches when the first allele is included.</span>
+<span class="sd">                For example, `chr1:100:A:T,G` matches `chr1:100:A:C,T`.</span>
+<span class="sd">            - first: Match first alternate allele</span>
+<span class="sd">                For example, `chr1:100:A:T,G` matches `chr1:100:A:T`.</span>
+<span class="sd">            - none: Do not match alternate alleles</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;indir:dir, namefile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.indir | stem}}.newnames&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;plink&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">plink2</span><span class="p">,</span>
+        <span class="s2">&quot;bcftools&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">bcftools</span><span class="p">,</span>
+        <span class="s2">&quot;match_alt&quot;</span><span class="p">:</span> <span class="s2">&quot;exact&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/snp/PlinkUpdateName.py&quot;</span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/version-select.js"></script>
+      <script src="../../../js/mkapi.js"></script>
+      <script src="../../../extra.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

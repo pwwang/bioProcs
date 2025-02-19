@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>biopipen.ns.regulatory - biopipen</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.ns.regulatory";
+        var mkdocs_page_input_path = "api/source/biopipen.ns.regulatory.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">biopipen.ns.regulatory</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/source/biopipen.ns.regulatory.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">biopipen.ns.</span><span class="mkapi-object-name">regulatory</span>
+<span id="biopipen.ns.regulatory"></span><a class="mkapi-docs-link" href="../../biopipen.ns.regulatory">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Provides processes for the regulatory related&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">..core.proc</span> <span class="kn">import</span> <span class="n">Proc</span>
+<span class="kn">from</span> <span class="nn">..core.config</span> <span class="kn">import</span> <span class="n">config</span>
+
+
+<span class="k">class</span> <span class="nc">MotifScan</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.regulatory.MotifScan"></span><a class="mkapi-docs-link" title="biopipen.ns.regulatory.MotifScan" href="../../biopipen.ns.regulatory/#biopipen.ns.regulatory.MotifScan">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Scan the input sequences for binding sites using motifs.</span>
+
+<span class="sd">    Currently only [fimo](https://meme-suite.org/meme/tools/fimo) from MEME suite</span>
+<span class="sd">    is supported, based on the research/comparisons done by the following reference.</span>
+
+<span class="sd">    Reference:</span>
+<span class="sd">        - [Evaluating tools for transcription factor binding site prediction](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6889335/)</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        motiffile: File containing motif names.</span>
+<span class="sd">            The file contains the motif and regulator names.</span>
+<span class="sd">            The motif names should match the names in the motif database.</span>
+<span class="sd">            This file must have a header.</span>
+<span class="sd">            If multiple columns are present, it should be delimited by tab.</span>
+<span class="sd">        seqfile: File containing sequences in FASTA format.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: Directory containing the results.</span>
+<span class="sd">            Especially `fimo_output.txt` extending from `fimo.tsv`, which contains:</span>
+<span class="sd">            1. the results with the regulator information if `envs.regulator_col`</span>
+<span class="sd">                is provided, otherwise, the `regulator` columns will be filled with</span>
+<span class="sd">                the motif names.</span>
+<span class="sd">            2. the original sequence from the fasta file (in.seqfile)</span>
+<span class="sd">            3. corrected genomic coordinates if the genomic coordinates are included</span>
+<span class="sd">                in the sequence names.</span>
+
+<span class="sd">            See also the `Output` section of</span>
+<span class="sd">            &lt;https://meme-suite.org/meme/doc/fimo.html&gt;.</span>
+<span class="sd">            Note that `--no-pgc` is passed to fimo to not parse the genomic coordinates</span>
+<span class="sd">            from the sequence names by fimo. When fimo parses the genomic coordinates,</span>
+<span class="sd">            `DDX11L1` in `&gt;DDX11L1::chr1:11869-14412` will be lost.</span>
+<span class="sd">            The purpose of this is to keep the sequence names as they are in the output.</span>
+<span class="sd">            If the sequence names are in the format of `&gt;NAME::chr1:START-END`, we will</span>
+<span class="sd">            correct the coordinates in the output.</span>
+<span class="sd">            Also note that it requires meme/fimo v5.5.5+ to do this</span>
+<span class="sd">            (where the --no-pgc option is available).</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        tool (choice): The tool to use for scanning.</span>
+<span class="sd">            Currently only fimo is supported.</span>
+<span class="sd">            - fimo: Use fimo from MEME suite.</span>
+<span class="sd">        fimo: The path to fimo binary.</span>
+<span class="sd">        motif_col: The column name in the motif file containing the motif names.</span>
+<span class="sd">        regulator_col: The column name in the motif file containing the regulator names.</span>
+<span class="sd">            Both `motif_col` and `regulator_col` should be the direct column names or</span>
+<span class="sd">            the index (1-based) of the columns.</span>
+<span class="sd">            If no `regulator_col` is provided, no regulator information is written in</span>
+<span class="sd">            the output.</span>
+<span class="sd">        notfound (choice): What to do if a motif is not found in the database.</span>
+<span class="sd">            - error: Report error and stop the process.</span>
+<span class="sd">            - ignore: Ignore the motif and continue.</span>
+<span class="sd">        motifdb: The path to the motif database. This is required.</span>
+<span class="sd">            It should be in the format of MEME motif database.</span>
+<span class="sd">            Databases can be downloaded here: &lt;https://meme-suite.org/meme/doc/download.html&gt;.</span>
+<span class="sd">            See also introduction to the databases: &lt;https://meme-suite.org/meme/db/motifs&gt;.</span>
+<span class="sd">        cutoff (type=float): The cutoff for p-value to write the results.</span>
+<span class="sd">            When `envs.q_cutoff` is set, this is applied to the q-value.</span>
+<span class="sd">            This is passed to `--thresh` in fimo.</span>
+<span class="sd">        q (flag): Calculate q-value.</span>
+<span class="sd">            When `False`, `--no-qvalue` is passed to fimo.</span>
+<span class="sd">            The q-value calculation is that of Benjamini and Hochberg (BH) (1995).</span>
+<span class="sd">        q_cutoff (flag): Apply `envs.cutoff` to q-value.</span>
+<span class="sd">        args (ns): Additional arguments to pass to the tool.</span>
+<span class="sd">            - &lt;more&gt;: Additional arguments for fimo.</span>
+<span class="sd">                See: &lt;https://meme-suite.org/meme/doc/fimo.html&gt;</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;motiffile:file, seqfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.motiffile | stem}}.fimo&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">python</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;tool&quot;</span><span class="p">:</span> <span class="s2">&quot;fimo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fimo&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">fimo</span><span class="p">,</span>
+        <span class="s2">&quot;motif_col&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;regulator_col&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;notfound&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;motifdb&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">tf_motifdb</span><span class="p">,</span>
+        <span class="s2">&quot;cutoff&quot;</span><span class="p">:</span> <span class="mf">1e-4</span><span class="p">,</span>
+        <span class="s2">&quot;q&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;q_cutoff&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/regulatory/MotifScan.py&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">MotifAffinityTest</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.regulatory.MotifAffinityTest"></span><a class="mkapi-docs-link" title="biopipen.ns.regulatory.MotifAffinityTest" href="../../biopipen.ns.regulatory/#biopipen.ns.regulatory.MotifAffinityTest">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test the affinity of motifs to the sequences and the affinity change</span>
+<span class="sd">    due the mutations.</span>
+
+<span class="sd">    See also &lt;https://simon-coetzee.github.io/motifBreakR&gt; and</span>
+<span class="sd">    &lt;https://www.bioconductor.org/packages/release/bioc/vignettes/atSNP/inst/doc/atsnp-vignette.html&gt;</span>
+
+<span class="sd">    When using atSNP, motifBreakR is also required to plot the variants and motifs.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        motiffile: File containing motif names.</span>
+<span class="sd">            The file contains the motif and regulator names.</span>
+<span class="sd">            The motif names should match the names in the motif database.</span>
+<span class="sd">            This file must have a header.</span>
+<span class="sd">            If multiple columns are present, it should be delimited by tab.</span>
+<span class="sd">        varfile: File containing the variants.</span>
+<span class="sd">            It could be a VCF file or a BED-like file.</span>
+<span class="sd">            If it is a VCF file, it does not need to be indexed. Only records with `PASS` in the `FILTER` column are used.</span>
+<span class="sd">            If it is a BED-like file, it should contain the following columns, `chrom`, `start`, `end`, `name`, `score`, `strand`, `ref`, `alt`.</span>
+
+<span class="sd">    Output:</span>
+<span class="sd">        outdir: Directory containing the results.</span>
+<span class="sd">            For motifBreakR, `motifbreakr.txt` will be created. Records with effect `strong`/`weak` are written (`neutral` is not).</span>
+<span class="sd">            For atSNP, `atsnp.txt` will be created. Records with p-value (`envs.atsnp_args.p`) &lt; `envs.cutoff` are written.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        ncores (type=int): The number of cores to use.</span>
+<span class="sd">        tool (choice): The tool to use for the test.</span>
+<span class="sd">            - motifbreakr: Use motifBreakR.</span>
+<span class="sd">            - motifBreakR: Use motifBreakR.</span>
+<span class="sd">            - atsnp: Use atSNP.</span>
+<span class="sd">            - atSNP: Use atSNP.</span>
+<span class="sd">        bcftools: The path to bcftools binary.</span>
+<span class="sd">            Used to convert the VCF file to the BED file when the input is a VCF file.</span>
+<span class="sd">        motif_col: The column name in the motif file containing the motif names.</span>
+<span class="sd">            If this is not provided, `envs.regulator_col` and `envs.regmotifs` are required,</span>
+<span class="sd">            which are used to infer the motif names from the regulator names.</span>
+<span class="sd">        regulator_col: The column name in the motif file containing the regulator names.</span>
+<span class="sd">            Both `motif_col` and `regulator_col` should be the direct column names or</span>
+<span class="sd">            the index (1-based) of the columns.</span>
+<span class="sd">            If no `regulator_col` is provided, no regulator information is written in</span>
+<span class="sd">            the output. Otherwise, the regulator information is written in the output in</span>
+<span class="sd">            the `Regulator` column.</span>
+<span class="sd">        notfound (choice): What to do if a motif is not found in the database,</span>
+<span class="sd">            or a regulator is not found in the regulator-motif mapping (envs.regmotifs)</span>
+<span class="sd">            file.</span>
+<span class="sd">            - error: Report error and stop the process.</span>
+<span class="sd">            - ignore: Ignore the motif and continue.</span>
+<span class="sd">        motifdb: The path to the motif database. This is required.</span>
+<span class="sd">            It should be in the format of MEME motif database.</span>
+<span class="sd">            Databases can be downloaded here: &lt;https://meme-suite.org/meme/doc/download.html&gt;.</span>
+<span class="sd">            See also introduction to the databases: &lt;https://meme-suite.org/meme/db/motifs&gt;.</span>
+<span class="sd">            [universalmotif](https://github.com/bjmt/universalmotif) is required to read the motif database.</span>
+<span class="sd">        genome: The genome assembly.</span>
+<span class="sd">            Used to fetch the sequences around the variants by package, for example, `BSgenome.Hsapiens.UCSC.hg19` is required if</span>
+<span class="sd">            `hg19`. If it is an organism other than human, please specify the full name of the package, for example, `BSgenome.Mmusculus.UCSC.mm10`.</span>
+<span class="sd">        cutoff (type=float): The cutoff for p-value to write the results.</span>
+<span class="sd">        devpars (ns): The default device parameters for the plot.</span>
+<span class="sd">            - width (type=int): The width of the plot.</span>
+<span class="sd">            - height (type=int): The height of the plot.</span>
+<span class="sd">            - res (type=int): The resolution of the plot.</span>
+<span class="sd">        plot_nvars (type=int): Number of variants to plot.</span>
+<span class="sd">            Plot top `&lt;plot_nvars&gt;` variants with the largest `abs(alleleDiff)` (motifBreakR) or smallest p-values (atSNP).</span>
+<span class="sd">        plots (type=json): Specify the details for the plots.</span>
+<span class="sd">            When specified, `plot_nvars` is ignored.</span>
+<span class="sd">            The keys are the variant names and the values are the details for the plots, including:</span>
+<span class="sd">            devpars: The device parameters for the plot to override the default (envs.devpars).</span>
+<span class="sd">            which: An expression passed to `subset(results, subset = ...)` to get the motifs for the variant to plot.</span>
+<span class="sd">                Or an integer to get the top `which` motifs.</span>
+<span class="sd">                For example, `effect == &quot;strong&quot;` to get the motifs with strong effect in motifBreakR result.</span>
+<span class="sd">        regmotifs: The path to the regulator-motif mapping file.</span>
+<span class="sd">            It must have header and the columns `Motif` or `Model` for motif names and</span>
+<span class="sd">            `TF`, `Regulator` or `Transcription factor`  for regulator names.</span>
+<span class="sd">        motifbreakr_args (ns): Additional arguments to pass to motifBreakR.</span>
+<span class="sd">            - method (choice): The method to use.</span>
+<span class="sd">                See details of &lt;https://rdrr.io/bioc/motifbreakR/man/motifbreakR.html&gt;</span>
+<span class="sd">                and &lt;https://simon-coetzee.github.io/motifBreakR/#methods&gt;.</span>
+<span class="sd">                - default: Use the default method.</span>
+<span class="sd">                - log: Use the standard summation of log probabilities</span>
+<span class="sd">                - ic: Use information content</span>
+<span class="sd">                - notrans: Use the default method without transformation</span>
+<span class="sd">        atsnp_args (ns): Additional arguments to pass to atSNP.</span>
+<span class="sd">            - padj_cutoff (flag): The `envs.cutoff` will be applied to the adjusted p-value.</span>
+<span class="sd">                Only works for `atSNP`.</span>
+<span class="sd">            - padj (choice): The method to adjust the p-values.</span>
+<span class="sd">                Only works for `atSNP`</span>
+<span class="sd">                - holm: Holm&#39;s method</span>
+<span class="sd">                - hochberg: Hochberg&#39;s method</span>
+<span class="sd">                - hommel: Hommel&#39;s method</span>
+<span class="sd">                - bonferroni: Bonferroni method</span>
+<span class="sd">                - BH: Benjamini &amp; Hochberg&#39;s method</span>
+<span class="sd">                - BY: Benjamini &amp; Yekutieli&#39;s method</span>
+<span class="sd">                - fdr: False discovery rate</span>
+<span class="sd">                - none: No adjustment</span>
+<span class="sd">            - p (choice): Which p-value to use for adjustment and cutoff.</span>
+<span class="sd">                - pval_ref: p-value for the reference allele affinity score.</span>
+<span class="sd">                - pval_snp: p-value for the SNP allele affinity score.</span>
+<span class="sd">                - pval_cond_ref: and</span>
+<span class="sd">                - pval_cond_snp: conditional p-values for the affinity scores of the reference and SNP alleles.</span>
+<span class="sd">                - pval_diff: p-value for the affinity score change between the two alleles.</span>
+<span class="sd">                - pval_rank: p-value for the rank test between the two alleles.</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;motiffile:file, varfile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.motiffile | stem}}.{{envs.tool | lower}}&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;ncores&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">ncores</span><span class="p">,</span>
+        <span class="s2">&quot;tool&quot;</span><span class="p">:</span> <span class="s2">&quot;atsnp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bcftools&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">exe</span><span class="o">.</span><span class="n">bcftools</span><span class="p">,</span>
+        <span class="s2">&quot;motif_col&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;regulator_col&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;notfound&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;motifdb&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">tf_motifdb</span><span class="p">,</span>
+        <span class="s2">&quot;regmotifs&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">tf_motifs</span><span class="p">,</span>
+        <span class="s2">&quot;genome&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">genome</span><span class="p">,</span>
+        <span class="s2">&quot;cutoff&quot;</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">,</span>
+        <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+        <span class="s2">&quot;plot_nvars&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;plots&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;motifbreakr_args&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">},</span>
+        <span class="s2">&quot;atsnp_args&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;padj_cutoff&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;padj&quot;</span><span class="p">:</span> <span class="s2">&quot;BH&quot;</span><span class="p">,</span> <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="s2">&quot;pval_diff&quot;</span><span class="p">},</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/regulatory/MotifAffinityTest.R&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">VariantMotifPlot</span><span class="p">(</span><span class="n">Proc</span><span class="p">):</span><span id="biopipen.ns.regulatory.VariantMotifPlot"></span><a class="mkapi-docs-link" title="biopipen.ns.regulatory.VariantMotifPlot" href="../../biopipen.ns.regulatory/#biopipen.ns.regulatory.VariantMotifPlot">DOCS</a>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A plot with a genomic region surrounding a genomic variant, and</span>
+<span class="sd">    potentially disrupted motifs.</span>
+
+<span class="sd">    Currently only SNVs are supported.</span>
+
+<span class="sd">    Input:</span>
+<span class="sd">        infile: File containing the variants and motifs.</span>
+<span class="sd">            It is a TAB-delimited file with the following columns:</span>
+<span class="sd">            - chrom: The chromosome of the SNV. Alias: chr, seqnames.</span>
+<span class="sd">            - start: The start position of the SNV, no matter 0- or 1-based.</span>
+<span class="sd">            - end: The end position of the SNV, which will be used as the position of the SNV.</span>
+<span class="sd">            - strand: Indicating the direction of the surrounding sequence matching the motif.</span>
+<span class="sd">            - SNP_id: The name of the SNV.</span>
+<span class="sd">            - REF: The reference allele of the SNV.</span>
+<span class="sd">            - ALT: The alternative allele of the SNV.</span>
+<span class="sd">            - providerId: The motif id. It can be specified by `envs.motif_col`.</span>
+<span class="sd">            - providerName: The name of the motif provider. Optional.</span>
+<span class="sd">            - Regulator: The regulator name. Optional, can be specified by `envs.regulator_col`.</span>
+<span class="sd">            - motifPos: The position of the motif, relative to the position of the SNV.</span>
+<span class="sd">                For example, &#39;-8, 4&#39; means the motif is 8 bp upstream and 4 bp downstream of the SNV.</span>
+
+<span class="sd">    Envs:</span>
+<span class="sd">        genome: The genome assembly.</span>
+<span class="sd">            Used to fetch the sequences around the variants by package, for example, `BSgenome.Hsapiens.UCSC.hg19` is required if</span>
+<span class="sd">            `hg19`. If it is an organism other than human, please specify the full name of the package, for example, `BSgenome.Mmusculus.UCSC.mm10`.</span>
+<span class="sd">        motifdb: The path to the motif database. This is required.</span>
+<span class="sd">            It should be in the format of MEME motif database.</span>
+<span class="sd">            Databases can be downloaded here: &lt;https://meme-suite.org/meme/doc/download.html&gt;.</span>
+<span class="sd">            See also introduction to the databases: &lt;https://meme-suite.org/meme/db/motifs&gt;.</span>
+<span class="sd">            [universalmotif](https://github.com/bjmt/universalmotif) is required to read the motif database.</span>
+<span class="sd">        motif_col: The column name in the motif file containing the motif names.</span>
+<span class="sd">            If this is not provided, `envs.regulator_col` and `envs.regmotifs` are required,</span>
+<span class="sd">            which are used to infer the motif names from the regulator names.</span>
+<span class="sd">        regulator_col: The column name in the motif file containing the regulator names.</span>
+<span class="sd">            Both `motif_col` and `regulator_col` should be the direct column names or</span>
+<span class="sd">            the index (1-based) of the columns.</span>
+<span class="sd">            If no `regulator_col` is provided, no regulator information is written in</span>
+<span class="sd">            the output. Otherwise, the regulator information is written in the output in</span>
+<span class="sd">            the `Regulator` column.</span>
+<span class="sd">        regmotifs: The path to the regulator-motif mapping file.</span>
+<span class="sd">            It must have header and the columns `Motif` or `Model` for motif names and</span>
+<span class="sd">            `TF`, `Regulator` or `Transcription factor`  for regulator names.</span>
+<span class="sd">        notfound (choice): What to do if a motif is not found in the database,</span>
+<span class="sd">            or a regulator is not found in the regulator-motif mapping (envs.regmotifs)</span>
+<span class="sd">            file.</span>
+<span class="sd">            - error: Report error and stop the process.</span>
+<span class="sd">            - ignore: Ignore the motif and continue.</span>
+<span class="sd">        devpars (ns): The default device parameters for the plot.</span>
+<span class="sd">            - width (type=int): The width of the plot.</span>
+<span class="sd">            - height (type=int): The height of the plot.</span>
+<span class="sd">            - res (type=int): The resolution of the plot.</span>
+<span class="sd">        plot_vars (type=auto): The variants (SNP_id) to plot.</span>
+<span class="sd">            A list of variant names to plot or a string with the variant names separated by comma.</span>
+<span class="sd">            When not specified, all variants are plotted.</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">&quot;infile:file&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;outdir:dir:{{in.infile | stem}}.vmplots&quot;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">rscript</span>
+    <span class="n">envs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;genome&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">genome</span><span class="p">,</span>
+        <span class="s2">&quot;motifdb&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">tf_motifdb</span><span class="p">,</span>
+        <span class="s2">&quot;motif_col&quot;</span><span class="p">:</span> <span class="s2">&quot;providerId&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;regulator_col&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;regmotifs&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">tf_motifs</span><span class="p">,</span>
+        <span class="s2">&quot;notfound&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;devpars&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;res&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+        <span class="s2">&quot;plot_vars&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;file://../scripts/regulatory/VariantMotifPlot.R&quot;</span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/version-select.js"></script>
+      <script src="../../../js/mkapi.js"></script>
+      <script src="../../../extra.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

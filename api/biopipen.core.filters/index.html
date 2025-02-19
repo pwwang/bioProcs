@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>biopipen.core.filters - biopipen</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "biopipen.core.filters";
+        var mkdocs_page_input_path = "api/biopipen.core.filters.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pipelines/cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pipelines/cellranger_pipeline/">CellRanger Pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">biopipen.core</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">biopipen.core.filters</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#biopipencorefiltersdict_to_cli_args">dict_to_cli_args</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipencorefiltersr">r</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#biopipencorefilterssource_r">source_r</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">API</li>
+          <li class="breadcrumb-item">biopipen.core</li>
+      <li class="breadcrumb-item active">biopipen.core.filters</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/api/biopipen.core.filters.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="mkapi-node" id="biopipen.core.filters">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h2 id="biopipencorefilters" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="../biopipen.core/#biopipen.core">biopipen.core</a>.</span><span class="mkapi-object-name">filters</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.core.filters/#biopipen.core.filters" title="Source for biopipen.core.filters">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Additional filters for pipen</p></div>
+    </div>
+  <div class="mkapi-section functions">
+      <div class="mkapi-section-name functions">
+          <span class="mkapi-section-name-body functions">Functions</span> 
+        </div>
+      <div class="mkapi-section-body functions"><ul class="mkapi-items">
+<li class="function"><code class="mkapi-item-name"><a href="#biopipen.core.filters.dict_to_cli_args">dict_to_cli_args</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">dic</code>, <code class="mkapi-object-signature">exclude</code>, <code class="mkapi-object-signature">prefix</code>, <code class="mkapi-object-signature">sep</code>, <code class="mkapi-object-signature">dup_key</code>, <code class="mkapi-object-signature">join</code>, <code class="mkapi-object-signature">start_key</code>, <code class="mkapi-object-signature">end_key</code>, <code class="mkapi-object-signature">dashify</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Union)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert a python dict to a string of CLI arguments<a class="mkapi-src-link" href="../source/biopipen.core.filters/#biopipen.core.filters.dict_to_cli_args" title="Source for biopipen.core.filters.dict_to_cli_args">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#biopipen.core.filters.r">r</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">obj</code>, <code class="mkapi-object-signature">ignoreintkey</code>, <code class="mkapi-object-signature">todot</code>, <code class="mkapi-object-signature">sortkeys</code>, <code class="mkapi-object-signature">skip</code>, <code class="mkapi-object-signature">_i</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Convert a python object into R repr<a class="mkapi-src-link" href="../source/biopipen.core.filters/#biopipen.core.filters.r" title="Source for biopipen.core.filters.r">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#biopipen.core.filters.source_r">source_r</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">path</code>, <code class="mkapi-object-signature">chdir</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Source an R script.<a class="mkapi-src-link" href="../source/biopipen.core.filters/#biopipen.core.filters.source_r" title="Source for biopipen.core.filters.source_r">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.core.filters.dict_to_cli_args">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="biopipencorefiltersdict_to_cli_args" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#biopipen.core.filters">biopipen.core.filters</a>.</code><code class="mkapi-object-name">dict_to_cli_args</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">dic</code>, <code class="mkapi-object-signature">exclude=None</code>, <code class="mkapi-object-signature">prefix=None</code>, <code class="mkapi-object-signature">sep=&#39; &#39;</code>, <code class="mkapi-object-signature">dup_key=True</code>, <code class="mkapi-object-signature">join=False</code>, <code class="mkapi-object-signature">start_key=&#39;&#39;</code>, <code class="mkapi-object-signature">end_key=&#39;_&#39;</code>, <code class="mkapi-object-signature">dashify=False</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.core.filters/#biopipen.core.filters.dict_to_cli_args" title="Source for biopipen.core.filters.dict_to_cli_args">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Convert a python dict to a string of CLI arguments</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">dic</code>
+<span class="mkapi-item-type">(Mapping)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The dict to convert</span></li>
+
+<li><code class="mkapi-item-name">exclude</code>
+<span class="mkapi-item-type">(Optional, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The keys to exclude</span></li>
+
+<li><code class="mkapi-item-name">prefix</code>
+<span class="mkapi-item-type">(str | none, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The prefix of the keys after conversionDefaults to <code>None</code>, mean <code>-</code> for short keys and <code>--</code> for long keys
+</span></li>
+
+<li><code class="mkapi-item-name">sep</code>
+<span class="mkapi-item-type">(str | none, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The separator between key and valueIf <code>None</code>, using <code>" "</code> for short keys and <code>"="</code> for long keys
+</span></li>
+
+<li><code class="mkapi-item-name">dup_key</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Whether to duplicate the key in cli arguments for list valuesWhen <code>True</code>, <code>{"a": [1, 2]}</code> will be converted to <code>"-a 1 -a 2"</code>
+When <code>False</code>, <code>{"a": [1, 2]}</code> will be converted to <code>"-a 1 2"</code>
+If <code>sep</code> is <code>None</code> or <code>=</code>, this must be True, otherwise an error
+will be raised
+</span></li>
+
+<li><code class="mkapi-item-name">join</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Whether to join the arguments into a single string</span></li>
+
+<li><code class="mkapi-item-name">start_key</code>
+<span class="mkapi-item-type">(str, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The key to start the argumentsThis is useful when you want to put some arguments at the beginning
+of the command line
+</span></li>
+
+<li><code class="mkapi-item-name">end_key</code>
+<span class="mkapi-item-type">(str, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The key to end the argumentsThis is useful when you want to put some arguments at the end
+of the command line
+</span></li>
+
+<li><code class="mkapi-item-name">dashify</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Whether to replace <code>_</code> with <code>-</code> in the keys</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Union)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The converted string or list of strings</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.core.filters.r">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="biopipencorefiltersr" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#biopipen.core.filters">biopipen.core.filters</a>.</code><code class="mkapi-object-name">r</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">obj</code>, <code class="mkapi-object-signature">ignoreintkey=True</code>, <code class="mkapi-object-signature">todot=None</code>, <code class="mkapi-object-signature">sortkeys=False</code>, <code class="mkapi-object-signature">skip=0</code>, <code class="mkapi-object-signature">_i=0</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.core.filters/#biopipen.core.filters.r" title="Source for biopipen.core.filters.r">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Convert a python object into R repr</p></div>
+    </div>
+  <div class="mkapi-section examples">
+      <div class="mkapi-section-name examples">
+          <span class="mkapi-section-name-body examples">Examples</span> 
+        </div>
+      <div class="mkapi-section-body examples"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kc">True</span> <span class="o">-&gt;</span> <span class="s2">&quot;TRUE&quot;</span><span class="o">&gt;&gt;&gt;</span> <span class="kc">None</span> <span class="o">-&gt;</span> <span class="s2">&quot;NULL&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+</div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">obj</code>
+<span class="mkapi-item-type">(Any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The object to convert</span></li>
+
+<li><code class="mkapi-item-name">ignoreintkey</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">When keys of a dict are integers, whether we shouldignore them. For example, when <code>True</code>, <code>{1: 1, 2: 2}</code> will be
+translated into <code>"list(1, 2)"</code>, but <code>"list(</code>1<code>= 1,</code>2<code>= 2)"</code>
+when <code>False</code>
+</span></li>
+
+<li><code class="mkapi-item-name">todot</code>
+<span class="mkapi-item-type">(str | none, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">If not None, the string will be converted to a dotFor example, <code>todot="-"</code> will convert <code>"a-b"</code> to <code>"a.b"</code>
+Only applies to the keys of obj when it is a dict
+</span></li>
+
+<li><code class="mkapi-item-name">sortkeys</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Whether to sort the keys of a dict.True by default, in case the order of keys matters, for example,
+it could affect whether a job is cached.
+But sometimes, you want to keep orginal order, for example,
+arguments passed the <code>dplyr::mutate</code> function. Because the later
+arguments can refer to the earlier ones.
+</span></li>
+
+<li><code class="mkapi-item-name">skip</code>
+<span class="mkapi-item-type">(int, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Levels to skip for <code>todot</code>. For example, <code>skip=1</code> will skipthe first level of the keys. When <code>todot</code> is <code>"-"</code>, <code>skip=1</code> will
+convert <code>{"a-b": {"c-d": 1}}</code> to <code>list(`a-b` = list(`c.d` = 1))</code>
+</span></li>
+
+<li><code class="mkapi-item-name">_i</code>
+<span class="mkapi-item-type">(int, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Current level of the keys. Used internally</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(str)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>Then converted string representation of the object</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="biopipen.core.filters.source_r">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="biopipencorefilterssource_r" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#biopipen.core.filters">biopipen.core.filters</a>.</code><code class="mkapi-object-name">source_r</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">path</code>, <code class="mkapi-object-signature">chdir=False</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/biopipen.core.filters/#biopipen.core.filters.source_r" title="Source for biopipen.core.filters.source_r">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Source an R script.</p><p>In addition to generating <code>source(path)</code>, we also include the mtime for the script
+to trigger the job not cached when the script is updated.</p>
+</div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">path</code>
+<span class="mkapi-item-type">(str | pathlib.path)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The path to the R script</span></li>
+
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(str)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The R code to source the script</p></div>
+    </div>
+  </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../biopipen.core.config/" class="btn btn-neutral float-left" title="biopipen.core.config"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../biopipen.core.defaults/" class="btn btn-neutral float-right" title="biopipen.core.defaults">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../biopipen.core.config/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../biopipen.core.defaults/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/version-select.js"></script>
+      <script src="../../js/mkapi.js"></script>
+      <script src="../../extra.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

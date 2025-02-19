@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>CellRanger Pipeline - biopipen</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+        <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+        <link href="../../css/mkapi-common.css" rel="stylesheet" />
+        <link href="../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "CellRanger Pipeline";
+        var mkdocs_page_input_path = "pipelines/cellranger_pipeline.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.configure({ ignoreUnescapedHTML: true }); hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="nav-scrollable-wrapper">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../cnvkit_pipeline/">CNVkit Pipeline</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">CellRanger Pipeline</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pipeline-overview">Pipeline overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#input-files">Input files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configurations">Configurations</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#reference">Reference</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#docker-image">Docker image</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.core/">biopipen.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.core.testing/">biopipen.core.testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.core.config/">biopipen.core.config</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.core.filters/">biopipen.core.filters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.core.defaults/">biopipen.core.defaults</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.core.proc/">biopipen.core.proc</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.utils</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.utils/">biopipen.utils</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.utils.gene/">biopipen.utils.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.utils.reference/">biopipen.utils.reference</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.utils.vcf/">biopipen.utils.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.utils.misc/">biopipen.utils.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.utils.common_docstrs/">biopipen.utils.common_docstrs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">biopipen.ns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns/">biopipen.ns</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.cnvkit_pipeline/">biopipen.ns.cnvkit_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.tcr/">biopipen.ns.tcr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.gene/">biopipen.ns.gene</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.snp/">biopipen.ns.snp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.gsea/">biopipen.ns.gsea</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.rnaseq/">biopipen.ns.rnaseq</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.bam/">biopipen.ns.bam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.scrna/">biopipen.ns.scrna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.protein/">biopipen.ns.protein</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.scrna_metabolic_landscape/">biopipen.ns.scrna_metabolic_landscape</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.vcf/">biopipen.ns.vcf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.cnvkit/">biopipen.ns.cnvkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.plot/">biopipen.ns.plot</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.web/">biopipen.ns.web</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.misc/">biopipen.ns.misc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.bed/">biopipen.ns.bed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.cellranger/">biopipen.ns.cellranger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.cnv/">biopipen.ns.cnv</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.cellranger_pipeline/">biopipen.ns.cellranger_pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.delim/">biopipen.ns.delim</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.stats/">biopipen.ns.stats</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.tcgamaf/">biopipen.ns.tcgamaf</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/biopipen.ns.regulatory/">biopipen.ns.regulatory</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG/">Change log</a>
+                </li>
+              </ul>
+      </div>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">biopipen</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Pipelines</li>
+      <li class="breadcrumb-item active">CellRanger Pipeline</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/pwwang/biopipen/edit/master/docs/pipelines/cellranger_pipeline.md">Edit on pwwang/biopipen</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="cellranger-pipeline">CellRanger pipeline</h2>
+<p>Including two pipelines: <code>CellRangerCountPipeline</code> and <code>CellRangerVdjPipeline</code>.</p>
+<h3 id="pipeline-overview">Pipeline overview</h3>
+<p>Each pipeline contains two processes.</p>
+<ul>
+<li><code>CellRangerCount</code>/<code>CellRangerVdj</code>: Run cellranger count/vdj on each sample.</li>
+<li><code>CellRangerSummary</code>: Summarize the results from each sample.</li>
+</ul>
+<h3 id="input-files">Input files</h3>
+<p>Each sample should have a set of fastq files, in the format of:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+    <span class="c1"># fastq files for sample 1</span>
+    <span class="p">[</span>
+        <span class="s2">&quot;sample1_S1_L001_R1_001.fastq.gz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sample1_S1_L001_R2_001.fastq.gz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sample1_S1_L002_R1_001.fastq.gz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sample1_S1_L002_R2_001.fastq.gz&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="c1"># fastq files for sample 2</span>
+    <span class="p">[</span>
+        <span class="s2">&quot;sample2_S1_L001_R1_001.fastq.gz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sample2_S1_L001_R2_001.fastq.gz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sample2_S1_L002_R1_001.fastq.gz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sample2_S1_L002_R2_001.fastq.gz&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="o">...</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>If the ids cannot be inferred from the fastq file names, or you want to use a different
+id than the inferred one, you can specify the ids in the input:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">input</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># fastq files for sample 1</span>
+    <span class="p">[</span>
+        <span class="s2">&quot;sample1_S1_L001_R1_001.fastq.gz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sample1_S1_L001_R2_001.fastq.gz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sample1_S1_L002_R1_001.fastq.gz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sample1_S1_L002_R2_001.fastq.gz&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="c1"># fastq files for sample 2</span>
+    <span class="p">[</span>
+        <span class="s2">&quot;sample2_S1_L001_R1_001.fastq.gz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sample2_S1_L001_R2_001.fastq.gz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sample2_S1_L002_R1_001.fastq.gz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sample2_S1_L002_R2_001.fastq.gz&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="o">...</span>
+<span class="p">]</span>
+<span class="n">ids</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;sampleA&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sampleB&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">]</span>
+</code></pre></div>
+<h3 id="configurations">Configurations</h3>
+<ul>
+<li><code>input</code>: The input fastq files for each sample. See <code>Input files</code> for details.</li>
+<li><code>ids</code>: The ids for each sample. See <code>Input files</code> for details.</li>
+</ul>
+<p>Other than the input, you should provide other configurations to the processes to each individual
+process. Check the documentation of each process for more details.</p>
+<ul>
+<li><a href="https://pwwang.github.io/biopipen/api/biopipen.ns.cellranger/#biopipen.ns.cellranger.CellRangerCount"><code>CellRangerCount</code></a></li>
+<li><a href="https://pwwang.github.io/biopipen/api/biopipen.ns.cellranger/#biopipen.ns.cellranger.CellRangerVdj"><code>CellRangerVdj</code></a></li>
+<li><a href="https://pwwang.github.io/biopipen/api/biopipen.ns.cellranger/#biopipen.ns.cellranger.CellRangerSummary"><code>CellRangerSummary</code></a></li>
+</ul>
+<h4 id="reference">Reference</h4>
+<p>To run the pipeline, you need to provide the reference genome for the cellranger pipeline. You can
+provide the reference genome in the configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[CellRangerCount.envs]</span>
+<span class="n">ref</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/path/to/reference&quot;</span>
+</code></pre></div>
+<p>To obtain the reference genome, please refer to:</p>
+<ul>
+<li>https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/inputs/cr-inputs-overview#count</li>
+<li>https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/inputs/cr-inputs-overview#vdj</li>
+</ul>
+<p>You may also make your own reference by <code>cellranger mkref</code> for gene expression. See the cellranger documentation:</p>
+<ul>
+<li>https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/inputs/cr-3p-references</li>
+</ul>
+<p>Also check out docker/cellranger_pipeline/make-examples.sh to see how the references are prepared.</p>
+<h3 id="docker-image">Docker image</h3>
+<p>You can use the docker image [<code>biopipen/cellranger-pipeline</code>] to run the pipeline. The image contains
+the cellranger software and the biopipen package. It is also built with an example dataset for you to
+test the pipeline:</p>
+<div class="highlight"><pre><span></span><code>/example/example-data/Sample_X_S1_L001_R1_001.fastq.gz
+/example/example-data/Sample_X_S1_L001_R2_001.fastq.gz
+/example/example-data/Sample_Y_S1_L001_R1_001.fastq.gz
+/example/example-data/Sample_Y_S1_L001_R2_001.fastq.gz
+/example/example-data/Sample_Y_S1_L002_R1_001.fastq.gz
+/example/example-data/Sample_Y_S1_L002_R2_001.fastq.gz
+</code></pre></div>
+<p>A sample configuration file is also provided at <code>/biopipen/docker/cellranger_pipeline/CellrangerCountPipeline.config.toml</code>.</p>
+<p>Note that the docker image was not built with the reference genome. You need to provide the reference genome
+by yourself.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../cnvkit_pipeline/" class="btn btn-neutral float-left" title="CNVkit Pipeline"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../api/biopipen.core/" class="btn btn-neutral float-right" title="biopipen.core">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  <div class="footer-notes">
+    <a href="https://github.com/pwwang/biopipen" title="Open repository in GitHub">Github Repo</a>
+    <div class="footer-sep"></div>Built with <a href="https://www.mkdocs.org/">MkDocs</a> using theme <a href="https://github.com/pwwang/mkdocs-rtd">mkdocs-rtd</a>.
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../cnvkit_pipeline/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../api/biopipen.core/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/version-select.js"></script>
+      <script src="../../js/mkapi.js"></script>
+      <script src="../../extra.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
